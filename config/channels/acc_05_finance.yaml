@@ -53,13 +53,13 @@ vertical_style: "meme_card"
 
 meme_template:
   theme: "dark"
-  handle: "@wealthnexus"
+  handle: "@wealthnexus_hq"
   badge: true
 
 branding:
   enabled: true
   channel_name: "WEALTH NEXUS"
-  handle: "@wealthnexus"
+  handle: "@wealthnexus_hq"
   tagline: "SMART MONEY & GENERATIONAL WEALTH 📈"
   icon: "📈"
   outro_seconds: 1.8

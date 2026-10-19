@@ -53,13 +53,13 @@ vertical_style: "meme_card"
 
 meme_template:
   theme: "dark"
-  handle: "@aitoolsdaily"
+  handle: "@ai.tools.dailyyy"
   badge: true
 
 branding:
   enabled: true
   channel_name: "AI TOOLS DAILY"
-  handle: "@aitoolsdaily"
+  handle: "@ai.tools.dailyyy"
   tagline: "AI TOOLS THAT 10X YOUR PRODUCTIVITY 🤖"
   icon: "🤖"
   outro_seconds: 1.8

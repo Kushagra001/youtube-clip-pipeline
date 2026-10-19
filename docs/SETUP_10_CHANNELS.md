@@ -70,16 +70,16 @@ Repeat these quick steps for each of your 10 Gmail accounts:
 
 | Account ID | Channel Name | Handle | Matching IG |
 |---|---|---|---|
-| **`acc_01`** | **Daily Whiskers** | `@dailywhiskers` | `_dailywhiskers` |
-| **`acc_02`** | **Good Boys Club** | `@goodboysclub` | `_goodboys_club` |
+| **`acc_01`** | **Daily Whiskers** | `@daily_whiskers` | `_dailywhiskers` |
+| **`acc_02`** | **Good Boys Club** | `@goodboys_club` | `_goodboys_club` |
 | **`acc_03`** | **Grind & Build** | `@grindandbuild` | `_grindandbuild` |
-| **`acc_04`** | **Stoic Society** | `@stoicsociety` | `stoic.societyy` |
-| **`acc_05`** | **Wealth Nexus** | `@wealthnexus` | `wealthnexus.hq` |
-| **`acc_06`** | **Founder Central** | `@foundercentral` | `_founder.central` |
-| **`acc_07`** | **Food Videos Daily** | `@foodvideosdaily` | `food.videos.dailyy` |
-| **`acc_08`** | **AI Tools Daily** | `@aitoolsdaily` | `ai.tools.dailyy` |
-| **`acc_09`** | **The Groomed Man** | `@thegroomedman` | `thegroomedman.co` |
-| **`acc_10`** | **Calm Your Mind** | `@calmyourmind` | `calmyourmind.ig` |
+| **`acc_04`** | **Stoic Society** | `@stoic.societyy` | `stoic.societyy` |
+| **`acc_05`** | **Wealth Nexus** | `@wealthnexus_hq` | `wealthnexus.hq` |
+| **`acc_06`** | **Founder Central** | `@founderr.central` | `_founder.central` |
+| **`acc_07`** | **Food Videos Daily** | `@food_videos_daily` | `food.videos.dailyy` |
+| **`acc_08`** | **AI Tools Daily** | `@ai.tools.dailyyy` | `ai.tools.dailyy` |
+| **`acc_09`** | **The Groomed Man** | `@the.GroomedMan` | `thegroomedman.co` |
+| **`acc_10`** | **Calm Your Mind** | `@calmyourmind.youtube` | `calmyourmind.ig` |
 
 ### 1.2 Channel Customization (Bio, Links & Avatar)
 1. In the left sidebar, click **Customization** → **Basic info**:

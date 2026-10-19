@@ -53,13 +53,13 @@ vertical_style: "meme_card"
 
 meme_template:
   theme: "light"
-  handle: "@calmyourmind"
+  handle: "@calmyourmind.youtube"
   badge: true
 
 branding:
   enabled: true
   channel_name: "CALM YOUR MIND"
-  handle: "@calmyourmind"
+  handle: "@calmyourmind.youtube"
   tagline: "RESET YOUR NERVOUS SYSTEM & FIND PEACE 🧘"
   icon: "🧘"
   outro_seconds: 1.8

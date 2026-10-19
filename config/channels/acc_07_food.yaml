@@ -53,13 +53,13 @@ vertical_style: "meme_card"
 
 meme_template:
   theme: "light"
-  handle: "@foodvideosdaily"
+  handle: "@food_videos_daily"
   badge: true
 
 branding:
   enabled: true
   channel_name: "FOOD VIDEOS DAILY"
-  handle: "@foodvideosdaily"
+  handle: "@food_videos_daily"
   tagline: "SATISFY YOUR CRAVINGS IN 60 SECONDS 🍳"
   icon: "🍳"
   outro_seconds: 1.8
