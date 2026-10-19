@@ -1,0 +1,78 @@
+name: YouTube Clipping Pipeline
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # every 6 hours — adjust as needed
+  workflow_dispatch:
+    inputs:
+      channel:
+        description: "Channel to run (e.g. acc_01_cats, all, or empty for default)"
+        required: false
+        default: "all"
+
+permissions:
+  contents: write   # needed to commit state/*.json back
+
+jobs:
+  clip:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install ffmpeg and fonts
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-liberation fonts-freefont-ttf
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_REFRESH_TOKEN_ACC_01: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_01 }}
+          YOUTUBE_REFRESH_TOKEN_ACC_02: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_02 }}
+          YOUTUBE_REFRESH_TOKEN_ACC_03: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_03 }}
+          YOUTUBE_REFRESH_TOKEN_ACC_04: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_04 }}
+          YOUTUBE_REFRESH_TOKEN_ACC_05: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_05 }}
+          YOUTUBE_REFRESH_TOKEN_ACC_06: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_06 }}
+          YOUTUBE_REFRESH_TOKEN_ACC_07: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_07 }}
+          YOUTUBE_REFRESH_TOKEN_ACC_08: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_08 }}
+          YOUTUBE_REFRESH_TOKEN_ACC_09: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_09 }}
+          YOUTUBE_REFRESH_TOKEN_ACC_10: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_10 }}
+        run: |
+          CHANNEL_ARG="${{ github.event.inputs.channel || 'all' }}"
+          if [ -n "$CHANNEL_ARG" ]; then
+            python main.py --channel "$CHANNEL_ARG"
+          else
+            python main.py
+          fi
+
+      - name: Upload clips as workflow artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: clips-${{ github.run_id }}
+          path: output/clips/
+          retention-days: 14
+
+      - name: Clean up download cache
+        if: always()
+        run: rm -rf output/downloads/*
+
+      - name: Commit updated processed-state
+        if: always()
+        run: |
+          git config user.name "clip-pipeline-bot"
+          git config user.email "actions@github.com"
+          git add state/*.json
+          git diff --cached --quiet || (git pull --rebase && git commit -m "chore: update processed video state [skip ci]" && git push)

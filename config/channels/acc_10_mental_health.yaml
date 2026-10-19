@@ -1,0 +1,74 @@
+# ==============================================================================
+# Channel Profile: acc_10_mental_health (Calm Your Mind)
+# Matching IG: calmyourmind.ig
+# ==============================================================================
+channel_id: "acc_10_mental_health"
+
+discovery:
+  enabled: true
+  niches:
+    - "anxiety relief nervous system reset"
+    - "adhd focus dopamine hacks neuroscience"
+    - "deep sleep hygiene calm racing thoughts"
+    - "overcoming burnout emotional regulation"
+    - "vagus nerve stimulation calm panic"
+  creators:
+    - "@HealthyGamerGG"
+    - "@hubermanlab"
+    - "@TherapyinaNutshell"
+    - "@TheDiaryOfACEO"
+    - "@TheHolisticPsychologist"
+    - "@MelRobbins"
+  blacklist_terms:
+    - "ufc"
+    - "nfl"
+    - "nba"
+    - "disney"
+    - "bbc"
+  min_views: 60000
+  min_duration_minutes: 8
+  max_duration_minutes: 90
+  max_videos_per_creator: 1
+  max_videos_per_run: 2
+
+videos: []
+
+min_clip_seconds: 25
+max_clip_seconds: 48
+max_clips_per_video: 2
+
+burner_text: true
+progress_bar: true
+
+fair_use:
+  enable_takeaway_outro: true
+  audio_conditioning: true
+  seamless_loop: true
+
+speed_microshift: 1.02
+audio_loudnorm: true
+targeted_download: true
+highlight_method: "heuristic"
+vertical_style: "meme_card"
+
+meme_template:
+  theme: "light"
+  handle: "@calmyourmind"
+  badge: true
+
+branding:
+  enabled: true
+  channel_name: "CALM YOUR MIND"
+  handle: "@calmyourmind"
+  tagline: "RESET YOUR NERVOUS SYSTEM & FIND PEACE 🧘"
+  icon: "🧘"
+  outro_seconds: 1.8
+
+auto_upload: true
+
+youtube:
+  privacy_status: "private"
+  category_id: "27" # Education / Science
+  title_suffix: " #shorts"
+  max_uploads_per_day: 2
+  token_env_var: "YOUTUBE_REFRESH_TOKEN_ACC_10"

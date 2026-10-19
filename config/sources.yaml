@@ -1,0 +1,110 @@
+# ==============================================================================
+# Autonomous Viral Creator & Video Discovery Configuration
+# ==============================================================================
+discovery:
+  enabled: true
+
+  # Content niches / topics to explore for viral long-form episodes
+  niches:
+    - "ai and tech podcast"
+    - "business and finance interview"
+    - "science psychology discussion"
+
+  # Clip-Friendly Creators: Curated creators who publicly endorse community clipping
+  creators:
+    - "@hubermanlab"
+    - "@lexfridman"
+    - "@TheDiaryOfACEO"
+    - "@ChrisWillx"
+    - "@TomBilyeu"
+
+  # Blacklist: Traditional broadcast networks, sports leagues, and studios that auto-DMCA strike
+  blacklist_terms:
+    - "ufc"
+    - "nfl"
+    - "nba"
+    - "bbc"
+    - "cnn"
+    - "fox"
+    - "netflix"
+    - "disney"
+    - "hbo"
+    - "nintendo"
+
+  # Virality criteria
+  min_views: 100000             # Minimum view count to consider a video "viral"
+  min_duration_minutes: 10      # Exclude short clips / trailers
+  max_duration_minutes: 120     # Exclude 10-hour ambient loops / marathons
+  max_videos_per_creator: 1     # Avoid dominating with a single creator
+  max_videos_per_run: 2         # Cap candidate videos processed per run to manage time/quota
+
+# ==============================================================================
+# Manual Video List (Optional override / fallback)
+# Add specific URLs here if you want to force-process particular videos
+# ==============================================================================
+videos: []
+
+# ==============================================================================
+# YouTube Shorts Compliance & Anti-Shadowban Tuning (< 60 seconds)
+# ==============================================================================
+min_clip_seconds: 25            # Optimal retention lower bound (sweet spot 28s-42s)
+max_clip_seconds: 48            # High-retention ceiling (avoids drop-off > 50s)
+max_clips_per_video: 2
+
+# Editorial Framing & Burner Text
+burner_text: true               # Persistent top hook headline badge (Reused Content defense)
+progress_bar: true              # Kinetic completion bar (boosts APV & alters pixel timeline)
+
+# ==============================================================================
+# Fair Use & Virality Growth Engine (2025-2026 YouTube Policy Compliance)
+# ==============================================================================
+fair_use:
+  # Transformative Editorial Takeaway: adds 3-4s synthesized analytical outro banner
+  enable_takeaway_outro: true
+  
+  # Anti-Content-ID Audio Conditioning: filters low-frequency rumble & music cues
+  audio_conditioning: true
+
+  # Algorithmic Loop Optimization: aligns start and end for infinite loop (APV > 100%)
+  seamless_loop: true
+
+# Digital Footprint Alteration (Defeats duplicate hash matching & Content ID clustering)
+speed_microshift: 1.02          # 1.02x speed shift (alters frame timestamps & audio pitch)
+audio_loudnorm: true            # Normalizes audio to -14 LUFS (YouTube Shorts broadcast standard)
+
+# Performance & Bandwidth Optimization
+targeted_download: true         # Download subtitles first, then only 30-55s clip sections (saves 98% bandwidth)
+
+# Highlight selection method:
+# "heuristic" = 100% free, offline, scores windows on hook words, punctuation, and pacing
+# "groq"      = free-tier hosted LLM (console.groq.com) for intelligent hook & punchline selection
+highlight_method: "heuristic"
+
+# Vertical framing layout:
+# "meme_card" = 9GAG / Memezar viral meme template (header card with handle + hook, framed video)
+# "blur_pad"  = framed editorial video card with custom border & darkened blurred backdrop
+# "crop"      = center-crop to 1080x1920 with micro-zoom & color grade
+vertical_style: "meme_card"
+
+meme_template:
+  theme: "dark"                 # "dark" (sleek dark mode) or "light" (classic white 9GAG meme box)
+  handle: "@viralinsights"       # Channel handle or page name displayed on the card
+  badge: true                   # Show verified badge / dot next to handle
+
+# Channel & Page Branding Outro (stays for 1-2s at the end of each Short)
+branding:
+  enabled: true
+  channel_name: "VIRAL INSIGHTS"        # Placeholder channel/page name
+  handle: "@viralinsights"               # Channel handle
+  tagline: "FOLLOW FOR DAILY INSIGHTS"   # Outro call to action
+  icon: "⚡"                             # Placeholder icon/badge
+  outro_seconds: 1.8                     # Outro duration in final seconds
+
+# Auto-upload to YouTube Shorts
+auto_upload: false
+
+youtube:
+  privacy_status: "private"     # private | unlisted | public
+  category_id: "24"             # Entertainment
+  title_suffix: " #shorts"
+  max_uploads_per_day: 2        # Strict anti-spam rate limit to prevent bot-farm shadowban (1-2/day max)

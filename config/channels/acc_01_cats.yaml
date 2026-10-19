@@ -1,0 +1,75 @@
+# ==============================================================================
+# Channel Profile: acc_01_cats (Daily Whiskers)
+# Matching IG: _dailywhiskers
+# ==============================================================================
+channel_id: "acc_01_cats"
+
+discovery:
+  enabled: true
+  niches:
+    - "cat behavior psychology explainer"
+    - "cat body language signs explained"
+    - "why cats do weird things facts"
+    - "cute kitten breed spotlight story"
+    - "wholesome cat rescue heartwarming"
+  creators:
+    - "@JacksonGalaxy"
+    - "@TheDodo"
+    - "@ColeandMarmalade"
+    - "@KittenLady"
+    - "@HalfAsleepChris"
+    - "@AaronsAnimals"
+  blacklist_terms:
+    - "ufc"
+    - "nfl"
+    - "nba"
+    - "disney"
+    - "bbc"
+    - "news"
+  min_views: 60000
+  min_duration_minutes: 5
+  max_duration_minutes: 60
+  max_videos_per_creator: 1
+  max_videos_per_run: 2
+
+videos: []
+
+min_clip_seconds: 22
+max_clip_seconds: 45
+max_clips_per_video: 2
+
+burner_text: true
+progress_bar: true
+
+fair_use:
+  enable_takeaway_outro: true
+  audio_conditioning: true
+  seamless_loop: true
+
+speed_microshift: 1.02
+audio_loudnorm: true
+targeted_download: true
+highlight_method: "heuristic"
+vertical_style: "meme_card"
+
+meme_template:
+  theme: "light"
+  handle: "@dailywhiskers"
+  badge: true
+
+branding:
+  enabled: true
+  channel_name: "DAILY WHISKERS"
+  handle: "@dailywhiskers"
+  tagline: "DAILY DOSE OF FELINE SEROTONIN 🐾"
+  icon: "🐱"
+  outro_seconds: 1.8
+
+auto_upload: true
+
+youtube:
+  privacy_status: "private"  # Review first in private mode, flip to "public" when ready
+  category_id: "15"          # Pets & Animals
+  title_suffix: " #shorts"
+  max_uploads_per_day: 2
+  token_env_var: "YOUTUBE_REFRESH_TOKEN_ACC_01"

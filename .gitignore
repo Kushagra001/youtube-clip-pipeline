@@ -1,0 +1,11 @@
+output/downloads/*
+!output/downloads/.gitkeep
+output/clips/*
+!output/clips/.gitkeep
+client_secret*.json
+auth_url.txt
+.env
+*.env
+*.pyc
+__pycache__/
+.venv/
