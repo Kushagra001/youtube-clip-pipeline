@@ -1,74 +1,66 @@
-# ==============================================================================
-# Channel Profile: acc_03_fitness (Grind & Build)
-# Matching IG: _grindandbuild
-# ==============================================================================
-channel_id: "acc_03_fitness"
-
+channel_id: acc_03_fitness
 discovery:
   enabled: true
   niches:
-    - "science based workout hypertrophy tips"
-    - "muscle building biomechanics myths"
-    - "fat loss nutrition science podcast"
-    - "longevity strength training protocol"
-    - "exercise recovery sleep science"
+  - fitness motivation home workouts gym training
+  - bodyweight calisthenics home workout routine
+  - gym training hypertrophy science tips
+  - healthy lifestyle habits discipline workout
   creators:
-    - "@JeffNippard"
-    - "@RenaissancePeriodization"
-    - "@hubermanlab"
-    - "@PeterAttiaMD"
-    - "@ChrisWillx"
-    - "@JeremyEthier"
+  - '@ChrisHeria'
+  - '@THENX'
+  - '@JeffNippard'
+  - '@JeremyEthier'
+  - '@Calisthenicmovement'
+  - '@RenaissancePeriodization'
   blacklist_terms:
-    - "ufc"
-    - "nfl"
-    - "nba"
-    - "disney"
-    - "bbc"
+  - ufc
+  - nfl
+  - nba
+  - disney
+  - bbc
   min_views: 100000
   min_duration_minutes: 10
   max_duration_minutes: 120
   max_videos_per_creator: 1
   max_videos_per_run: 2
-
+  niche_desc: fitness motivation, home workouts, gym training and healthy lifestyle
+  scrape_hashtags:
+  - homeworkout
+  - fitnessmotivation
+  - gymlife
+  - calisthenics
+  - fitfam
 videos: []
-
 min_clip_seconds: 25
 max_clip_seconds: 48
 max_clips_per_video: 2
-
 burner_text: true
 progress_bar: true
-
 fair_use:
   enable_takeaway_outro: true
   audio_conditioning: true
   seamless_loop: true
-
 speed_microshift: 1.02
 audio_loudnorm: true
 targeted_download: true
-highlight_method: "groq"
-vertical_style: "meme_card"
-
+highlight_method: groq
+vertical_style: meme_card
 meme_template:
-  theme: "light"
-  handle: "@grindandbuild"
+  theme: light
+  handle: '@grindandbuild'
   badge: true
-
 branding:
   enabled: true
-  channel_name: "GRIND & BUILD"
-  handle: "@grindandbuild"
-  tagline: "FORGE YOUR STRONGEST BODY & MIND ⚡"
-  icon: "💪"
+  channel_name: GRIND & BUILD
+  handle: '@grindandbuild'
+  tagline: FORGE YOUR STRONGEST BODY & MIND ⚡
+  icon: 💪
   outro_seconds: 1.8
-
 auto_upload: true
-
 youtube:
-  privacy_status: "private"
-  category_id: "17" # Sports / Fitness
-  title_suffix: " #shorts"
+  privacy_status: private
+  category_id: '17'
+  title_suffix: ' #shorts'
   max_uploads_per_day: 2
-  token_env_var: "YOUTUBE_REFRESH_TOKEN_ACC_03"
+  token_env_var: YOUTUBE_REFRESH_TOKEN_ACC_03

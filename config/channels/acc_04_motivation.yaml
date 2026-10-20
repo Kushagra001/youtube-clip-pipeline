@@ -1,74 +1,67 @@
-# ==============================================================================
-# Channel Profile: acc_04_motivation (Stoic Society)
-# Matching IG: stoic.societyy
-# ==============================================================================
-channel_id: "acc_04_motivation"
-
+channel_id: acc_04_motivation
 discovery:
   enabled: true
   niches:
-    - "stoic philosophy discipline speech"
-    - "marcus aurelius seneca wisdom lessons"
-    - "mental toughness habits conquering weakness"
-    - "psychology of self discipline motivation"
-    - "emotional resilience overcoming hardship"
+  - stoicism discipline success mindset young men
+  - marcus aurelius stoic mental toughness speech
+  - how to build self discipline conquering weakness
+  - success mindset mental strength rules
   creators:
-    - "@DailyStoic"
-    - "@JockoPodcastOfficial"
-    - "@ChrisWillx"
-    - "@JordanBPeterson"
-    - "@DavidGoggins"
-    - "@TomBilyeu"
+  - '@DailyStoic'
+  - '@JockoPodcastOfficial'
+  - '@ChrisWillx'
+  - '@JordanBPeterson'
+  - '@DavidGoggins'
+  - '@TomBilyeu'
   blacklist_terms:
-    - "ufc"
-    - "nfl"
-    - "nba"
-    - "disney"
-    - "bbc"
+  - ufc
+  - nfl
+  - nba
+  - disney
+  - bbc
   min_views: 100000
   min_duration_minutes: 10
   max_duration_minutes: 120
   max_videos_per_creator: 1
   max_videos_per_run: 2
-
+  niche_desc: stoicism, discipline, success mindset and mental toughness for young
+    men
+  scrape_hashtags:
+  - mindset
+  - discipline
+  - stoicism
+  - successmindset
+  - mentalstrength
 videos: []
-
 min_clip_seconds: 25
 max_clip_seconds: 48
 max_clips_per_video: 2
-
 burner_text: true
 progress_bar: true
-
 fair_use:
   enable_takeaway_outro: true
   audio_conditioning: true
   seamless_loop: true
-
 speed_microshift: 1.02
 audio_loudnorm: true
 targeted_download: true
-highlight_method: "groq"
-vertical_style: "meme_card"
-
+highlight_method: groq
+vertical_style: meme_card
 meme_template:
-  theme: "light"
-  handle: "@stoic.societyy"
+  theme: light
+  handle: '@stoic.societyy'
   badge: true
-
 branding:
   enabled: true
-  channel_name: "STOIC SOCIETY"
-  handle: "@stoic.societyy"
-  tagline: "MASTER DISCIPLINE. CONQUER YOURSELF 🏛️"
-  icon: "🏛️"
+  channel_name: STOIC SOCIETY
+  handle: '@stoic.societyy'
+  tagline: MASTER DISCIPLINE. CONQUER YOURSELF 🏛️
+  icon: 🏛️
   outro_seconds: 1.8
-
 auto_upload: true
-
 youtube:
-  privacy_status: "private"
-  category_id: "27" # Education
-  title_suffix: " #shorts"
+  privacy_status: private
+  category_id: '27'
+  title_suffix: ' #shorts'
   max_uploads_per_day: 2
-  token_env_var: "YOUTUBE_REFRESH_TOKEN_ACC_04"
+  token_env_var: YOUTUBE_REFRESH_TOKEN_ACC_04

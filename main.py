@@ -201,6 +201,13 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
                 timestamp_str = f"{start_mins}:{start_secs:02d}"
 
                 takeaway_line = f"💡 {pick.get('takeaway', '')}\n\n" if pick.get("takeaway") else ""
+                disc_cfg = cfg.get("discovery", {})
+                raw_tags = disc_cfg.get("scrape_hashtags", [])
+                clean_tags = [t.lstrip("#").strip() for t in raw_tags if t.strip()]
+                hashtags_str = " ".join([f"#{t}" for t in clean_tags]) if clean_tags else "#shorts #viral"
+                if "#shorts" not in hashtags_str.lower():
+                    hashtags_str += " #shorts"
+
                 description = (
                     f"{pick.get('burner_text', '')}\n\n"
                     f"{pick['hook']}\n\n"
@@ -209,14 +216,16 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
                     f"Transformative analysis & educational commentary under Fair Use (17 U.S.C. § 107).\n"
                     f"Creator Attribution: {channel_name}\n"
                     f"Original Source: {url} (Segment ~{timestamp_str})\n\n"
-                    f"#shorts #podcast #insights #viral"
+                    f"{hashtags_str}"
                 )
+                upload_tags = clean_tags + ["shorts", "viral"]
                 video_id_uploaded = upload_youtube.upload_short(
                     str(captioned_path),
                     title=short_title,
                     description=description,
                     privacy_status=yt_cfg.get("privacy_status", "private"),
                     category_id=yt_cfg.get("category_id", "24"),
+                    tags=upload_tags,
                     token_env_var=yt_cfg.get("token_env_var"),
                 )
                 if video_id_uploaded:

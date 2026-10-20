@@ -1,75 +1,65 @@
-# ==============================================================================
-# Channel Profile: acc_08_ai_tools (AI Tools Daily)
-# Matching IG: ai.tools.dailyy
-# ==============================================================================
-channel_id: "acc_08_ai_tools"
-
+channel_id: acc_08_ai_tools
 discovery:
   enabled: true
   niches:
-    - "new ai websites tools save hours"
-    - "chatgpt prompting hacks secret tricks"
-    - "claude ai workflow automation tools"
-    - "free ai websites that feel illegal to know"
-    - "ai productivity tools automation stack"
+  - free AI tools that feel illegal to know everyday users
+  - best AI tools to save hours productivity hacks
+  - simple ChatGPT hacks automation non technical beginners
+  - insane new AI websites tools everyday life
   creators:
-    - "@TheRundownAI"
-    - "@MattWolfe"
-    - "@LiamOttley"
-    - "@AIJason"
-    - "@WesRoth"
-    - "@Fireship"
-    - "@DavidOndrej"
+  - '@MattWolfe'
+  - '@AIJason'
+  - '@LiamOttley'
+  - '@Fireship'
+  - '@DavidOndrej'
+  - '@WesRoth'
   blacklist_terms:
-    - "ufc"
-    - "nfl"
-    - "nba"
-    - "disney"
-    - "bbc"
+  - ufc
+  - nfl
+  - nba
+  - disney
+  - bbc
   min_views: 60000
   min_duration_minutes: 6
   max_duration_minutes: 75
   max_videos_per_creator: 1
   max_videos_per_run: 2
-
+  niche_desc: AI tools, automation and productivity hacks for non-technical everyday
+    users
+  scrape_hashtags:
+  - aitools
+  - artificialintelligence
+  - automation
 videos: []
-
 min_clip_seconds: 25
 max_clip_seconds: 48
 max_clips_per_video: 2
-
 burner_text: true
 progress_bar: true
-
 fair_use:
   enable_takeaway_outro: true
   audio_conditioning: true
   seamless_loop: true
-
 speed_microshift: 1.02
 audio_loudnorm: true
 targeted_download: true
-highlight_method: "groq"
-vertical_style: "meme_card"
-
+highlight_method: groq
+vertical_style: meme_card
 meme_template:
-  theme: "light"
-  handle: "@ai.tools.dailyyy"
+  theme: light
+  handle: '@ai.tools.dailyyy'
   badge: true
-
 branding:
   enabled: true
-  channel_name: "AI TOOLS DAILY"
-  handle: "@ai.tools.dailyyy"
-  tagline: "AI TOOLS THAT 10X YOUR PRODUCTIVITY 🤖"
-  icon: "🤖"
+  channel_name: AI TOOLS DAILY
+  handle: '@ai.tools.dailyyy'
+  tagline: AI TOOLS THAT 10X YOUR PRODUCTIVITY 🤖
+  icon: 🤖
   outro_seconds: 1.8
-
 auto_upload: true
-
 youtube:
-  privacy_status: "private"
-  category_id: "28" # Science & Technology
-  title_suffix: " #shorts"
+  privacy_status: private
+  category_id: '28'
+  title_suffix: ' #shorts'
   max_uploads_per_day: 2
-  token_env_var: "YOUTUBE_REFRESH_TOKEN_ACC_08"
+  token_env_var: YOUTUBE_REFRESH_TOKEN_ACC_08

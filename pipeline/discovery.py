@@ -59,26 +59,53 @@ def get_creator_viral_videos(creator: str, max_results: int = 15, niche_hint: st
 
 
 def extract_niche_keywords(disc_cfg: dict) -> set[str]:
-    """Extracts distinctive content keywords from channel niche descriptions."""
+    """Extracts distinctive content keywords from channel niche descriptions, hashtags, and subwords."""
     stopwords = {
         "the", "and", "for", "with", "that", "this", "from", "how", "why", "what",
         "to", "in", "on", "of", "a", "an", "full", "episode", "podcast", "video",
-        "best", "top", "viral", "interview", "new", "things", "facts", "lessons",
-        "story", "speech", "talk", "guide", "routine"
+        "videos", "best", "top", "viral", "interview", "new", "things", "facts", "lessons",
+        "story", "speech", "talk", "guide", "routine", "everyday", "users"
     }
     keywords = set()
     explicit = disc_cfg.get("niche_keywords", [])
     for k in explicit:
         keywords.add(k.lower().strip())
 
+    # 1. Extract from exact niche_desc
+    niche_desc = disc_cfg.get("niche_desc", "")
+    for w in re.findall(r"[a-zA-Z0-9]+", niche_desc.lower()):
+        if len(w) > 2 and w not in stopwords:
+            keywords.add(w)
+
+    # 2. Extract and decompose scrape_hashtags
+    subwords_bank = [
+        "cats", "cat", "dogs", "dog", "puppy", "kittens", "kitten", "cute", "funny",
+        "workout", "fitness", "gym", "calisthenics", "mindset", "discipline",
+        "stoicism", "success", "mental", "strength", "finance", "investing",
+        "side", "hustle", "hustles", "freedom", "stock", "market", "startup",
+        "business", "founder", "grooming", "skincare", "haircare", "style",
+        "recipes", "recipe", "meal", "prep", "food", "hacks", "indian", "quick",
+        "tools", "automation", "intelligence", "anxiety", "adhd", "wellness",
+        "selfcare", "indians", "india", "budgeting", "home", "training", "life"
+    ]
+    for tag in disc_cfg.get("scrape_hashtags", []):
+        t_clean = tag.lower().lstrip("#")
+        if len(t_clean) > 2 and t_clean not in stopwords:
+            keywords.add(t_clean)
+        for sw in subwords_bank:
+            if sw in t_clean:
+                keywords.add(sw)
+
+    # 3. Extract from niches list
     for niche in disc_cfg.get("niches", []):
         for w in re.findall(r"[a-zA-Z0-9]+", niche.lower()):
             if len(w) > 2 and w not in stopwords:
                 keywords.add(w)
+
     return keywords
 
 
-def expand_niches_with_groq(niches: list[str]) -> list[str]:
+def expand_niches_with_groq(niche_desc: str, scrape_hashtags: list[str], niches: list[str]) -> list[str]:
     """Optionally uses free-tier Groq to brainstorm highly specific, non-random search queries."""
     api_key = os.environ.get("GROQ_API_KEY")
     if not api_key:
@@ -87,15 +114,16 @@ def expand_niches_with_groq(niches: list[str]) -> list[str]:
     try:
         from groq import Groq
         client = Groq(api_key=api_key)
+        tags_str = ", ".join(f"#{t.lstrip('#')}" for t in scrape_hashtags)
+        context = f"Target Audience / Niche Description: '{niche_desc}'\nRelevant Hashtags: {tags_str}\nTopic Queries: {json.dumps(niches)}"
         prompt = (
-            f"Given these specific YouTube channel niches: {json.dumps(niches)}\n"
-            "Generate 4 highly specific, high-converting YouTube search queries that will find the most viewed, "
-            "highest quality videos specifically on these exact topics. Do NOT generate generic podcast or celebrity interview queries. "
-            "Focus purely on high-retention educational, explainer, or tutorial content in these niches.\n"
+            f"You are a YouTube search expert for this specific channel audience:\n{context}\n\n"
+            "Generate 3-4 highly specific YouTube search queries that will discover the most viewed, "
+            "highest quality long-form videos that directly serve this exact audience. "
+            "Do NOT suggest generic podcasts, gossip, or celebrity interviews. Keep queries strictly focused on this niche.\n"
             "Respond ONLY with a JSON object: {\"queries\": [\"...\"]}"
         )
         models_to_try = ["openai/gpt-oss-120b", "openai/gpt-oss-20b", "qwen/qwen3.8-27b"]
-        data = None
         for model_name in models_to_try:
             try:
                 response = client.chat.completions.create(
@@ -111,23 +139,16 @@ def expand_niches_with_groq(niches: list[str]) -> list[str]:
                 raw = re.sub(r"^```(json)?|```$", "", raw.strip(), flags=re.MULTILINE).strip()
                 data = json.loads(raw)
                 if data and data.get("queries"):
-                    break
+                    return data["queries"]
             except Exception:
                 continue
-
-        if not data:
-            return []
-
-        expanded = []
-        if isinstance(data.get("queries"), list):
-            expanded.extend(data["queries"])
-        return expanded
+        return []
     except Exception as e:
         print(f"  [Discovery] Groq niche expansion skipped: {e}")
         return []
 
 
-def verify_niche_with_groq(candidates: list[dict], niches: list[str]) -> list[dict]:
+def verify_niche_with_groq(candidates: list[dict], niche_desc: str, scrape_hashtags: list[str]) -> list[dict]:
     """Semantic Gatekeeper: Uses Groq to verify that candidate videos strictly match the channel niche."""
     api_key = os.environ.get("GROQ_API_KEY")
     if not api_key or not candidates:
@@ -140,11 +161,13 @@ def verify_niche_with_groq(candidates: list[dict], niches: list[str]) -> list[di
             {"id": c["video_id"], "title": c["title"], "channel": str(c.get("channel", ""))}
             for c in candidates[:10]
         ]
+        tags_str = ", ".join(f"#{t.lstrip('#')}" for t in scrape_hashtags)
         prompt = (
-            f"You are a strict YouTube Channel Director. The channel niche is strictly: {json.dumps(niches)}.\n"
+            f"You are a strict YouTube Channel Director. The channel is strictly targeting:\n"
+            f"Niche Description: '{niche_desc}'\nHashtags: {tags_str}\n\n"
             f"Candidate Videos:\n{json.dumps(items_payload, indent=2)}\n\n"
             "Evaluate each candidate. Return ONLY a JSON array of video IDs that are genuinely, directly, "
-            "and authentically on-topic for this exact niche. Discard any off-topic, celebrity gossip, or unrelated videos.\n"
+            "and authentically on-topic for this exact niche description. Discard any off-topic, generic celebrity, or unrelated videos.\n"
             "Respond ONLY with a JSON array: [\"id1\", \"id2\", ...]"
         )
         models_to_try = ["openai/gpt-oss-120b", "openai/gpt-oss-20b", "qwen/qwen3.8-27b"]
@@ -169,7 +192,7 @@ def verify_niche_with_groq(candidates: list[dict], niches: list[str]) -> list[di
                     id_set = set(accepted_ids)
                     verified = [c for c in candidates if c["video_id"] in id_set]
                     if verified:
-                        print(f"  [Discovery] Groq verified {len(verified)}/{len(candidates)} candidates strictly match the niche.")
+                        print(f"  [Discovery] Groq verified {len(verified)}/{len(candidates)} candidates strictly match '{niche_desc}'.")
                         return verified
             except Exception:
                 continue
@@ -268,7 +291,14 @@ def discover_and_select_videos(cfg: dict, state: dict) -> list[dict]:
     niche_keywords = extract_niche_keywords(disc_cfg)
     all_candidates: list[dict] = []
 
+    niche_desc = disc_cfg.get("niche_desc", "")
+    scrape_hashtags = disc_cfg.get("scrape_hashtags", [])
+
     print("\n=== Running Viral Creator & Content Discovery ===")
+    if niche_desc:
+        print(f"  [Discovery] Niche Focus: '{niche_desc}'")
+    if scrape_hashtags:
+        print(f"  [Discovery] Target Hashtags: {', '.join(f'#{t}' for t in scrape_hashtags)}")
     if niche_keywords:
         print(f"  [Discovery] Active Niche Filter Keywords: {len(niche_keywords)} terms loaded.")
 
@@ -279,14 +309,27 @@ def discover_and_select_videos(cfg: dict, state: dict) -> list[dict]:
         c_videos = get_creator_viral_videos(clean_handle, max_results=12)
         all_candidates.extend(c_videos)
 
-    # 2. Search specified clean niche topics directly (no generic podcast append)
+    # 2. Search exact niche description directly
+    if niche_desc:
+        print(f"  [Discovery] Exploring core niche description: '{niche_desc}'")
+        nd_videos = search_youtube_videos(niche_desc, max_results=15)
+        all_candidates.extend(nd_videos)
+
+    # 3. Search primary scrape hashtags
+    for tag in scrape_hashtags[:2]:
+        clean_tag = tag.strip().lstrip("#")
+        print(f"  [Discovery] Exploring hashtag search: '#{clean_tag}'")
+        h_videos = search_youtube_videos(f"#{clean_tag}", max_results=12)
+        all_candidates.extend(h_videos)
+
+    # 4. Search specified clean niche topics directly
     for niche in niches:
         print(f"  [Discovery] Exploring clean niche query: '{niche}'")
         n_videos = search_youtube_videos(niche, max_results=15)
         all_candidates.extend(n_videos)
 
-    # 3. Optional Groq topic query expansion if key is available
-    groq_expanded = expand_niches_with_groq(niches)
+    # 5. Optional Groq topic query expansion if key is available
+    groq_expanded = expand_niches_with_groq(niche_desc, scrape_hashtags, niches)
     for q in groq_expanded[:3]:
         print(f"  [Discovery] Exploring AI-targeted niche query: '{q}'")
         g_videos = search_youtube_videos(q, max_results=12)
@@ -294,7 +337,7 @@ def discover_and_select_videos(cfg: dict, state: dict) -> list[dict]:
 
     print(f"  [Discovery] Gathered {len(all_candidates)} raw candidate entries across sources.")
 
-    # 4. Strict filter and rank by niche relevance + virality
+    # 6. Strict filter and rank by niche relevance + virality
     ranked = filter_and_rank_candidates(
         all_candidates,
         state=state,
@@ -319,8 +362,8 @@ def discover_and_select_videos(cfg: dict, state: dict) -> list[dict]:
             niche_keywords=niche_keywords,
         )
 
-    # 5. Groq Semantic Verification (verifies top candidates genuinely belong to niche)
-    verified_candidates = verify_niche_with_groq(ranked[:10], niches=niches)
+    # 7. Groq Semantic Verification (verifies top candidates genuinely belong to niche)
+    verified_candidates = verify_niche_with_groq(ranked[:10], niche_desc=niche_desc, scrape_hashtags=scrape_hashtags)
     if not verified_candidates:
         verified_candidates = ranked
 

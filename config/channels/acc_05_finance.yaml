@@ -1,74 +1,66 @@
-# ==============================================================================
-# Channel Profile: acc_05_finance (Wealth Nexus)
-# Matching IG: wealthnexus.hq
-# ==============================================================================
-channel_id: "acc_05_finance"
-
+channel_id: acc_05_finance
 discovery:
   enabled: true
   niches:
-    - "personal finance investing advice beginners"
-    - "psychology of money wealth habits"
-    - "smart passive income index funds"
-    - "warren buffett charlie munger money rules"
-    - "side hustle cash flow lessons"
+  - personal finance investing budgeting side hustles India
+  - stock market investing for beginners India SIP index funds
+  - best side hustles to earn money online in India
+  - how to manage money financial freedom India
   creators:
-    - "@GrahamStephan"
-    - "@AliAbdaal"
-    - "@HumphreyYang"
-    - "@TheDiaryOfACEO"
-    - "@JaspreetSingh"
-    - "@CodieSanchezCT"
+  - '@PranjalKamra'
+  - '@AkshatZWorld'
+  - '@CA_RachanaRanade'
+  - '@AssetYogi'
+  - '@AnkurWarikoo'
+  - '@SharanHegde'
   blacklist_terms:
-    - "ufc"
-    - "nfl"
-    - "nba"
-    - "disney"
-    - "bbc"
+  - ufc
+  - nfl
+  - nba
+  - disney
+  - bbc
   min_views: 100000
   min_duration_minutes: 10
   max_duration_minutes: 120
   max_videos_per_creator: 1
   max_videos_per_run: 2
-
+  niche_desc: personal finance, investing, budgeting and side hustles for Indians
+  scrape_hashtags:
+  - personalfinance
+  - investing
+  - sidehustle
+  - financialfreedom
+  - stockmarket
 videos: []
-
 min_clip_seconds: 25
 max_clip_seconds: 48
 max_clips_per_video: 2
-
 burner_text: true
 progress_bar: true
-
 fair_use:
   enable_takeaway_outro: true
   audio_conditioning: true
   seamless_loop: true
-
 speed_microshift: 1.02
 audio_loudnorm: true
 targeted_download: true
-highlight_method: "groq"
-vertical_style: "meme_card"
-
+highlight_method: groq
+vertical_style: meme_card
 meme_template:
-  theme: "light"
-  handle: "@wealthnexus_hq"
+  theme: light
+  handle: '@wealthnexus_hq'
   badge: true
-
 branding:
   enabled: true
-  channel_name: "WEALTH NEXUS"
-  handle: "@wealthnexus_hq"
-  tagline: "SMART MONEY & GENERATIONAL WEALTH 📈"
-  icon: "📈"
+  channel_name: WEALTH NEXUS
+  handle: '@wealthnexus_hq'
+  tagline: SMART MONEY & GENERATIONAL WEALTH 📈
+  icon: 📈
   outro_seconds: 1.8
-
 auto_upload: true
-
 youtube:
-  privacy_status: "private"
-  category_id: "27" # Education
-  title_suffix: " #shorts"
+  privacy_status: private
+  category_id: '27'
+  title_suffix: ' #shorts'
   max_uploads_per_day: 2
-  token_env_var: "YOUTUBE_REFRESH_TOKEN_ACC_05"
+  token_env_var: YOUTUBE_REFRESH_TOKEN_ACC_05

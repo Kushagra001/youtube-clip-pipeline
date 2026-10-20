@@ -1,74 +1,66 @@
-# ==============================================================================
-# Channel Profile: acc_09_grooming (The Groomed Man)
-# Matching IG: thegroomedman.co
-# ==============================================================================
-channel_id: "acc_09_grooming"
-
+channel_id: acc_09_grooming
 discovery:
   enabled: true
   niches:
-    - "men skincare routine glowing clear skin"
-    - "best haircut for face shape men advice"
-    - "mens grooming attractive hygiene habits"
-    - "fragrance cologne rules for men"
-    - "jawline posture aesthetic physical presence"
+  - men skincare routine clear glowing skin tips
+  - best haircut for face shape men haircare advice
+  - essential grooming habits for modern attractive men
+  - men style cologne fragrance hygiene guide
   creators:
-    - "@AlexCosta"
-    - "@TeachingMensFashion"
-    - "@BenArthur"
-    - "@RobinJames"
-    - "@BrettMaverick"
-    - "@GentlemansGazette"
+  - '@AlexCosta'
+  - '@TeachingMensFashion'
+  - '@RobinJames'
+  - '@BrettMaverick'
+  - '@BenArthur'
+  - '@GentlemansGazette'
   blacklist_terms:
-    - "ufc"
-    - "nfl"
-    - "nba"
-    - "disney"
-    - "bbc"
+  - ufc
+  - nfl
+  - nba
+  - disney
+  - bbc
   min_views: 60000
   min_duration_minutes: 6
   max_duration_minutes: 60
   max_videos_per_creator: 1
   max_videos_per_run: 2
-
+  niche_desc: men's skincare routines, haircare tips and grooming for modern men
+  scrape_hashtags:
+  - mensgrooming
+  - mensskincare
+  - menshaircare
+  - groomingformen
+  - menstyle
 videos: []
-
 min_clip_seconds: 22
 max_clip_seconds: 45
 max_clips_per_video: 2
-
 burner_text: true
 progress_bar: true
-
 fair_use:
   enable_takeaway_outro: true
   audio_conditioning: true
   seamless_loop: true
-
 speed_microshift: 1.02
 audio_loudnorm: true
 targeted_download: true
-highlight_method: "groq"
-vertical_style: "meme_card"
-
+highlight_method: groq
+vertical_style: meme_card
 meme_template:
-  theme: "light"
-  handle: "@the.GroomedMan"
+  theme: light
+  handle: '@the.GroomedMan'
   badge: true
-
 branding:
   enabled: true
-  channel_name: "THE GROOMED MAN"
-  handle: "@the.GroomedMan"
-  tagline: "ELEVATE YOUR LOOK, STYLE & CONFIDENCE 💈"
-  icon: "💈"
+  channel_name: THE GROOMED MAN
+  handle: '@the.GroomedMan'
+  tagline: ELEVATE YOUR LOOK, STYLE & CONFIDENCE 💈
+  icon: 💈
   outro_seconds: 1.8
-
 auto_upload: true
-
 youtube:
-  privacy_status: "private"
-  category_id: "26" # Howto & Style
-  title_suffix: " #shorts"
+  privacy_status: private
+  category_id: '26'
+  title_suffix: ' #shorts'
   max_uploads_per_day: 2
-  token_env_var: "YOUTUBE_REFRESH_TOKEN_ACC_09"
+  token_env_var: YOUTUBE_REFRESH_TOKEN_ACC_09

@@ -1,74 +1,66 @@
-# ==============================================================================
-# Channel Profile: acc_07_food (Food Videos Daily)
-# Matching IG: food.videos.dailyy
-# ==============================================================================
-channel_id: "acc_07_food"
-
+channel_id: acc_07_food
 discovery:
   enabled: true
   niches:
-    - "quick 60 second delicious recipe"
-    - "chef cooking hacks kitchen secrets"
-    - "viral street food preparation cravings"
-    - "food science why you never do this"
-    - "high protein easy meal prep delicious"
+  - quick and easy recipes for home cooks
+  - genius food hacks kitchen tips and tricks
+  - easy healthy meal prep ideas for the week
+  - delicious quick Indian food recipes street food
   creators:
-    - "@JoshuaWeissman"
-    - "@BabishCulinaryUniverse"
-    - "@EthanChlebowski"
-    - "@GordonRamsay"
-    - "@NickDiGiovanni"
-    - "@SamTheCookingGuy"
+  - '@HebbarsKitchen'
+  - '@YourFoodLab'
+  - '@RanveerBrar'
+  - '@JoshuaWeissman'
+  - '@EthanChlebowski'
+  - '@BabishCulinaryUniverse'
   blacklist_terms:
-    - "ufc"
-    - "nfl"
-    - "nba"
-    - "disney"
-    - "bbc"
+  - ufc
+  - nfl
+  - nba
+  - disney
+  - bbc
   min_views: 100000
   min_duration_minutes: 5
   max_duration_minutes: 45
   max_videos_per_creator: 1
   max_videos_per_run: 2
-
+  niche_desc: quick and easy recipes, meal prep ideas and food hacks for home cooks
+  scrape_hashtags:
+  - easyrecipes
+  - mealprep
+  - foodhacks
+  - quickrecipes
+  - indianfood
 videos: []
-
 min_clip_seconds: 22
 max_clip_seconds: 45
 max_clips_per_video: 2
-
 burner_text: true
 progress_bar: true
-
 fair_use:
   enable_takeaway_outro: true
   audio_conditioning: true
   seamless_loop: true
-
 speed_microshift: 1.02
 audio_loudnorm: true
 targeted_download: true
-highlight_method: "groq"
-vertical_style: "meme_card"
-
+highlight_method: groq
+vertical_style: meme_card
 meme_template:
-  theme: "light"
-  handle: "@food_videos_daily"
+  theme: light
+  handle: '@food_videos_daily'
   badge: true
-
 branding:
   enabled: true
-  channel_name: "FOOD VIDEOS DAILY"
-  handle: "@food_videos_daily"
-  tagline: "SATISFY YOUR CRAVINGS IN 60 SECONDS 🍳"
-  icon: "🍳"
+  channel_name: FOOD VIDEOS DAILY
+  handle: '@food_videos_daily'
+  tagline: SATISFY YOUR CRAVINGS IN 60 SECONDS 🍳
+  icon: 🍳
   outro_seconds: 1.8
-
 auto_upload: true
-
 youtube:
-  privacy_status: "private"
-  category_id: "26" # Howto & Style
-  title_suffix: " #shorts"
+  privacy_status: private
+  category_id: '26'
+  title_suffix: ' #shorts'
   max_uploads_per_day: 2
-  token_env_var: "YOUTUBE_REFRESH_TOKEN_ACC_07"
+  token_env_var: YOUTUBE_REFRESH_TOKEN_ACC_07

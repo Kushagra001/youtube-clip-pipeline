@@ -1,74 +1,66 @@
-# ==============================================================================
-# Channel Profile: acc_06_business (Founder Central)
-# Matching IG: _founder.central
-# ==============================================================================
-channel_id: "acc_06_business"
-
+channel_id: acc_06_business
 discovery:
   enabled: true
   niches:
-    - "billionaire founder startup lessons"
-    - "how to scale business 100m playbooks"
-    - "entrepreneur marketing psychology secrets"
-    - "bootstrapped SaaS founder teardown"
-    - "startup wisdom overcoming failure"
+  - startup stories founder lessons entrepreneurship
+  - how to build profitable online business playbooks
+  - entrepreneur business tips scaling case studies
+  - billionaire founder startup teardown wisdom
   creators:
-    - "@MyFirstMillionPod"
-    - "@ycombinator"
-    - "@TheDiaryOfACEO"
-    - "@AlexHormozi"
-    - "@AllInPodcast"
-    - "@HowIBuiltThis"
+  - '@MyFirstMillionPod'
+  - '@ycombinator'
+  - '@TheDiaryOfACEO'
+  - '@AlexHormozi'
+  - '@AllInPodcast'
+  - '@HowIBuiltThis'
   blacklist_terms:
-    - "ufc"
-    - "nfl"
-    - "nba"
-    - "disney"
-    - "bbc"
+  - ufc
+  - nfl
+  - nba
+  - disney
+  - bbc
   min_views: 100000
   min_duration_minutes: 10
   max_duration_minutes: 120
   max_videos_per_creator: 1
   max_videos_per_run: 2
-
+  niche_desc: entrepreneurship, startup stories, online business and founder lessons
+  scrape_hashtags:
+  - entrepreneur
+  - startuplife
+  - businesstips
+  - founder
+  - onlinebusiness
 videos: []
-
 min_clip_seconds: 25
 max_clip_seconds: 48
 max_clips_per_video: 2
-
 burner_text: true
 progress_bar: true
-
 fair_use:
   enable_takeaway_outro: true
   audio_conditioning: true
   seamless_loop: true
-
 speed_microshift: 1.02
 audio_loudnorm: true
 targeted_download: true
-highlight_method: "groq"
-vertical_style: "meme_card"
-
+highlight_method: groq
+vertical_style: meme_card
 meme_template:
-  theme: "light"
-  handle: "@founderr.central"
+  theme: light
+  handle: '@founderr.central'
   badge: true
-
 branding:
   enabled: true
-  channel_name: "FOUNDER CENTRAL"
-  handle: "@founderr.central"
-  tagline: "FOUNDER SECRETS & STARTUP PLAYBOOKS 🚀"
-  icon: "🚀"
+  channel_name: FOUNDER CENTRAL
+  handle: '@founderr.central'
+  tagline: FOUNDER SECRETS & STARTUP PLAYBOOKS 🚀
+  icon: 🚀
   outro_seconds: 1.8
-
 auto_upload: true
-
 youtube:
-  privacy_status: "private"
-  category_id: "28" # Science & Technology / Business
-  title_suffix: " #shorts"
+  privacy_status: private
+  category_id: '28'
+  title_suffix: ' #shorts'
   max_uploads_per_day: 2
-  token_env_var: "YOUTUBE_REFRESH_TOKEN_ACC_06"
+  token_env_var: YOUTUBE_REFRESH_TOKEN_ACC_06
