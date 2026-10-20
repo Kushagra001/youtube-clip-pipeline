@@ -78,18 +78,30 @@ def expand_niches_with_groq(niches: list[str]) -> list[str]:
             "Also list 3 top viral YouTube channel names/handles in these niches.\n"
             "Respond ONLY with a JSON object: {\"queries\": [\"...\"], \"creators\": [\"...\"]}"
         )
-        response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
-            messages=[
-                {"role": "system", "content": "You are a viral YouTube content strategist. Output only valid JSON."},
-                {"role": "user", "content": prompt}
-            ],
-            temperature=0.5,
-            max_tokens=600,
-        )
-        raw = response.choices[0].message.content
-        raw = re.sub(r"^```(json)?|```$", "", raw.strip(), flags=re.MULTILINE).strip()
-        data = json.loads(raw)
+        models_to_try = ["openai/gpt-oss-120b", "openai/gpt-oss-20b", "qwen/qwen3.8-27b"]
+        data = None
+        for model_name in models_to_try:
+            try:
+                response = client.chat.completions.create(
+                    model=model_name,
+                    messages=[
+                        {"role": "system", "content": "You are a viral YouTube content strategist. Output only valid JSON."},
+                        {"role": "user", "content": prompt}
+                    ],
+                    temperature=0.5,
+                    max_tokens=600,
+                )
+                raw = response.choices[0].message.content or ""
+                raw = re.sub(r"^```(json)?|```$", "", raw.strip(), flags=re.MULTILINE).strip()
+                data = json.loads(raw)
+                if data:
+                    break
+            except Exception:
+                continue
+
+        if not data:
+            return []
+
         expanded = []
         if isinstance(data.get("queries"), list):
             expanded.extend(data["queries"])

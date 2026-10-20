@@ -40,11 +40,23 @@ def _score_text(text: str) -> float:
     return (density * 10) + (question_marks * 1.5) + (exclaims * 0.75)
 
 
-def _build_windows(segments: list[dict], min_seconds: int, max_seconds: int) -> list[dict]:
+def _build_windows(
+    segments: list[dict],
+    min_seconds: int,
+    max_seconds: int,
+    min_start_offset: float = 35.0,
+) -> list[dict]:
     """Generates candidate clip windows starting at natural pauses (gaps
-    of >0.6s between segments, a reasonable proxy for a breath/topic break)."""
+    of >0.6s between segments, a reasonable proxy for a breath/topic break).
+    For videos > 120s, automatically skips the opening 35s intro bumper/title cards."""
     windows = []
+    total_duration = segments[-1]["end"] if segments else 0
+    actual_offset = min_start_offset if total_duration > 120 else 0.0
+
     for i, seg in enumerate(segments):
+        if seg["start"] < actual_offset:
+            continue
+
         is_pause_start = (
             i == 0 or (seg["start"] - segments[i - 1]["end"]) > 0.6
         )
@@ -139,6 +151,22 @@ def _generate_catchy_hook(window_text: str, source_title: str | None = None) -> 
 
     # 3. Keyword-driven hooks based on high-retention topics in window
     w_lower = clean_window.lower()
+    if any(k in w_lower for k in ("responsibility", "duty", "stoic", "meaning", "suffering")):
+        return "HOW MUCH CAN YOU ACTUALLY BEAR? 🏛️"
+    if any(k in w_lower for k in ("dog", "puppy", "bark", "leash", "canine")):
+        return "THE SECRET TO TRAINING YOUR DOG 🐶"
+    if any(k in w_lower for k in ("cat", "kitten", "purr", "feline")):
+        return "WHY CATS ACTUALLY DO THIS 🐱"
+    if any(k in w_lower for k in ("muscle", "hypertrophy", "workout", "lifting", "protein")):
+        return "STOP MAKING THIS WORKOUT MISTAKE ⚠️"
+    if any(k in w_lower for k in ("ai", "chatgpt", "claude", "prompt", "automate")):
+        return "THE SECRET AI TOOL NOBODY SHARES 🤖"
+    if any(k in w_lower for k in ("skin", "haircut", "grooming", "cologne", "beard")):
+        return "THIS INSTANTLY ELEVATES YOUR LOOK 💈"
+    if any(k in w_lower for k in ("recipe", "cook", "chef", "delicious", "kitchen")):
+        return "THE BEST 60-SECOND FOOD HACK 🍳"
+    if any(k in w_lower for k in ("anxiety", "adhd", "burnout", "nervous system", "panic")):
+        return "HOW TO RESET YOUR NERVOUS SYSTEM 🧘"
     if "introvert" in w_lower or "extrovert" in w_lower or "personality" in w_lower:
         return "WHY INTROVERTS ACT DIFFERENTLY 🧠"
     if "surveillance" in w_lower or "cia" in w_lower or "phone" in w_lower:
@@ -193,10 +221,28 @@ def _generate_meaningful_takeaway(
         return "KEY INSIGHT: DIGITAL FOOTPRINTS ARE NEVER TRULY PRIVATE"
     if any(k in combo for k in ("money", "billion", "wealth", "invest")):
         return "KEY INSIGHT: STRATEGIC ALLOCATION BEATS SHORT-TERM RISK"
+    if any(k in combo for k in ("founder", "startup", "business", "scale", "revenue")):
+        return "KEY INSIGHT: RELENTLESS EXECUTION BEATS MERE IDEAS"
     if any(k in combo for k in ("habit", "success", "discipline", "mindset")):
         return "KEY INSIGHT: DAILY DISCIPLINE CREATES COMPOUND RESULTS"
     if any(k in combo for k in ("health", "sleep", "body", "brain")):
         return "KEY INSIGHT: DAILY HABITS DIRECTLY DICTATE YOUR BIOLOGY"
+    if any(k in combo for k in ("dog", "puppy", "bark", "leash", "canine")):
+        return "KEY INSIGHT: CONSISTENT REINFORCEMENT SHAPES BEHAVIOR"
+    if any(k in combo for k in ("cat", "kitten", "purr", "feline")):
+        return "KEY INSIGHT: RESPECT AND HARNESS NATURAL FELINE INSTINCTS"
+    if any(k in combo for k in ("muscle", "hypertrophy", "workout", "lifting", "protein")):
+        return "KEY INSIGHT: PROGRESSIVE OVERLOAD DRIVES REAL GROWTH"
+    if any(k in combo for k in ("ai", "chatgpt", "claude", "prompt", "automate")):
+        return "KEY INSIGHT: AI MULTIPLIES LEVERAGE AND SAVES CRUCIAL HOURS"
+    if any(k in combo for k in ("skin", "haircut", "grooming", "cologne", "beard")):
+        return "KEY INSIGHT: CONSISTENT GROOMING ELEVATES FIRST IMPRESSIONS"
+    if any(k in combo for k in ("recipe", "cook", "chef", "delicious", "kitchen")):
+        return "KEY INSIGHT: MASTERING HEAT AND TIMING ELEVATES FLAVOR"
+    if any(k in combo for k in ("anxiety", "adhd", "burnout", "nervous system", "panic")):
+        return "KEY INSIGHT: REGULATING THE NERVOUS SYSTEM RESETS FOCUS"
+    if any(k in combo for k in ("responsibility", "duty", "stoic", "meaning", "suffering")):
+        return "KEY INSIGHT: ACCEPTING RESPONSIBILITY CREATES REAL STRENGTH"
 
     # 3. Fallback: substantive complete sentence with >= 5 words
     for s in reversed(sentences):
@@ -253,7 +299,12 @@ def find_highlights_heuristic(
 # Groq method — free-tier hosted LLM, optional, better judgment
 # ---------------------------------------------------------------------------
 
-GROQ_MODEL = "llama-3.3-70b-versatile"
+GROQ_MODELS = [
+    "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b",
+    "qwen/qwen3.8-27b",
+    "llama-3.3-70b-versatile",
+]
 
 SYSTEM_PROMPT = """You select the most compelling short-form clip moments from a \
 podcast/video transcript for repurposing strictly as YouTube Shorts (< 60 seconds).
@@ -280,20 +331,33 @@ Respond with ONLY a JSON array (no prose, no markdown fences). Each item:
 """
 
 
-def _transcript_to_text(segments: list[dict], max_segments: int = 800) -> str:
-    # If transcript is excessively long, sample candidate windows to protect Groq TPM limit
-    if len(segments) > max_segments:
-        # Sample windows with higher hook word density
-        windows = _build_windows(segments, min_seconds=25, max_seconds=48)
+def _transcript_to_text(
+    segments: list[dict],
+    max_segments: int = 120,
+    min_start_offset: float = 35.0,
+) -> str:
+    # Filter out opening intro bumpers / sponsor graphics for videos > 120s
+    total_duration = segments[-1]["end"] if segments else 0
+    actual_offset = min_start_offset if total_duration > 120 else 0.0
+    usable_segments = [s for s in segments if s["start"] >= actual_offset]
+    if not usable_segments:
+        usable_segments = segments
+
+    raw_text = " ".join(s["text"] for s in usable_segments)
+    # If transcript is long (>120 segments or >4000 chars), condense to top candidate windows
+    # to strictly stay within Groq's 8,000 Tokens-Per-Minute (TPM) limit
+    if len(usable_segments) > max_segments or len(raw_text) > 4000:
+        windows = _build_windows(usable_segments, min_seconds=25, max_seconds=48, min_start_offset=0.0)
         for w in windows:
             w["score"] = _score_text(w["text"])
-        top_windows = sorted(windows, key=lambda w: w["score"], reverse=True)[:15]
+        # Take top 8 high-scoring windows (~1,200 tokens total)
+        top_windows = sorted(windows, key=lambda w: w["score"], reverse=True)[:8]
         top_windows = sorted(top_windows, key=lambda w: w["start"])
         return "\n\n".join(
             f"Candidate Window [{w['start']:.1f}-{w['end']:.1f}]:\n{w['text']}"
             for w in top_windows
         )
-    return "\n".join(f"[{s['start']:.1f}-{s['end']:.1f}] {s['text']}" for s in segments)
+    return "\n".join(f"[{s['start']:.1f}-{s['end']:.1f}] {s['text']}" for s in usable_segments)
 
 
 def find_highlights_groq(
@@ -320,40 +384,53 @@ def find_highlights_groq(
         f"and takeaway is a profound educational summary (<55 chars)."
     )
 
-    response = client.chat.completions.create(
-        model=GROQ_MODEL,
-        messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": user_prompt},
-        ],
-        temperature=0.3,
-        max_tokens=2000,
-    )
+    last_error = None
+    for model_name in GROQ_MODELS:
+        try:
+            print(f"  [Highlights] Requesting AI clip curation via Groq ({model_name})...")
+            response = client.chat.completions.create(
+                model=model_name,
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": user_prompt},
+                ],
+                temperature=0.3,
+                max_tokens=3000,
+            )
 
-    raw = response.choices[0].message.content
-    raw = re.sub(r"^```(json)?|```$", "", raw.strip(), flags=re.MULTILINE).strip()
+            raw = response.choices[0].message.content or ""
+            raw = re.sub(r"^```(json)?|```$", "", raw.strip(), flags=re.MULTILINE).strip()
+            # If model returned text around JSON, extract the JSON array
+            json_match = re.search(r"\[.*\]", raw, re.DOTALL)
+            if json_match:
+                raw = json_match.group(0)
 
-    try:
-        clips = json.loads(raw)
-    except json.JSONDecodeError:
-        raise ValueError(f"Model did not return valid JSON:\n{raw}")
+            clips = json.loads(raw)
+            valid = []
+            for c in clips:
+                if not all(k in c for k in ("start", "end", "title", "hook")):
+                    continue
+                if c["end"] <= c["start"]:
+                    continue
+                duration = c["end"] - c["start"]
+                if duration < min_seconds * 0.7 or duration > 52.0:
+                    continue
+                if "burner_text" not in c:
+                    c["burner_text"] = c["title"].upper()[:42]
+                if "takeaway" not in c:
+                    c["takeaway"] = f"KEY INSIGHT: {c['title'].upper()[:45]}"
+                valid.append(c)
 
-    valid = []
-    for c in clips:
-        if not all(k in c for k in ("start", "end", "title", "hook")):
-            continue
-        if c["end"] <= c["start"]:
-            continue
-        duration = c["end"] - c["start"]
-        # Strictly enforce Shorts limits (max 52s)
-        if duration < min_seconds * 0.7 or duration > 52.0:
-            continue
-        if "burner_text" not in c:
-            c["burner_text"] = c["title"].upper()[:42]
-        if "takeaway" not in c:
-            c["takeaway"] = f"KEY INSIGHT: {c['title'].upper()[:45]}"
-        valid.append(c)
-    return valid[:max_clips]
+            if valid:
+                print(f"  [Highlights] Groq ({model_name}) successfully selected {len(valid)} clip(s).")
+                return valid[:max_clips]
+        except Exception as err:
+            print(f"  [Highlights] Model {model_name} failed: {err}. Trying next fallback model...")
+            last_error = err
+
+    if last_error:
+        raise last_error
+    return []
 
 
 # ---------------------------------------------------------------------------

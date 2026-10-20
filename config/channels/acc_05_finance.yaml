@@ -48,7 +48,7 @@ fair_use:
 speed_microshift: 1.02
 audio_loudnorm: true
 targeted_download: true
-highlight_method: "heuristic"
+highlight_method: "groq"
 vertical_style: "meme_card"
 
 meme_template:

@@ -78,7 +78,7 @@ targeted_download: true         # Download subtitles first, then only 30-55s cli
 # Highlight selection method:
 # "heuristic" = 100% free, offline, scores windows on hook words, punctuation, and pacing
 # "groq"      = free-tier hosted LLM (console.groq.com) for intelligent hook & punchline selection
-highlight_method: "heuristic"
+highlight_method: "groq"
 
 # Vertical framing layout:
 # "meme_card" = 9GAG / Memezar viral meme template (header card with handle + hook, framed video)
