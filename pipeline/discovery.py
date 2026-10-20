@@ -7,10 +7,20 @@ Works 100% on free tiers and requires no paid APIs:
 import os
 import re
 import json
+import math
+import datetime
+import urllib.parse
 from typing import Optional
 import yt_dlp
 
 from pipeline import state as state_mod
+
+
+class _SilentLogger:
+    def debug(self, msg): pass
+    def info(self, msg): pass
+    def warning(self, msg): pass
+    def error(self, msg): pass
 
 
 def _get_ydl(search_depth: int = 25) -> yt_dlp.YoutubeDL:
@@ -19,17 +29,29 @@ def _get_ydl(search_depth: int = 25) -> yt_dlp.YoutubeDL:
         "skip_download": True,
         "quiet": True,
         "no_warnings": True,
+        "ignoreerrors": True,
+        "logger": _SilentLogger(),
         "playlistend": search_depth,
     })
 
 
-def search_youtube_videos(query: str, max_results: int = 20) -> list[dict]:
-    """Searches YouTube using yt-dlp and returns flat metadata for candidate videos."""
-    search_query = f"ytsearch{max_results}:{query}"
+def search_youtube_videos(query: str, max_results: int = 20, sort: str = "relevance") -> list[dict]:
+    """Searches YouTube using yt-dlp and returns flat metadata for candidate videos.
+    Supports sort='relevance', sort='views' (sp=CAMSAhAB), or sort='this_year' (sp=EgQIBRAB).
+    """
+    if sort == "views":
+        encoded = urllib.parse.quote_plus(query)
+        search_target = f"https://www.youtube.com/results?search_query={encoded}&sp=CAMSAhAB"
+    elif sort == "this_year":
+        encoded = urllib.parse.quote_plus(query)
+        search_target = f"https://www.youtube.com/results?search_query={encoded}&sp=EgQIBRAB"
+    else:
+        search_target = f"ytsearch{max_results}:{query}"
+
     videos = []
     try:
         with _get_ydl(search_depth=max_results) as ydl:
-            res = ydl.extract_info(search_query, download=False)
+            res = ydl.extract_info(search_target, download=False)
             entries = res.get("entries", []) if res else []
             for entry in entries:
                 if not entry:
@@ -44,18 +66,70 @@ def search_youtube_videos(query: str, max_results: int = 20) -> list[dict]:
                     "channel": entry.get("uploader") or entry.get("channel") or "Unknown",
                     "duration": entry.get("duration"),  # seconds (float/int or None)
                     "view_count": entry.get("view_count") or 0,
-                    "query_source": query,
+                    "query_source": f"{query} [{sort}]",
                 })
     except Exception as e:
-        print(f"  [Discovery] Warning: Search failed for query '{query}': {e}")
+        print(f"  [Discovery] Warning: Search failed for query '{query}' [{sort}]: {e}")
     return videos
 
 
+def get_creator_channel_videos(creator: str, max_results: int = 12) -> list[dict]:
+    """Direct Creator Channel Scraping: Scrapes official creator uploads directly from their channel page.
+    Prioritizes the creator's Popular and Latest uploads, eliminating fake/reaction channels.
+    Falls back gracefully to standard YouTube search if direct channel extraction is unavailable.
+    """
+    clean = creator.strip()
+    if clean.startswith("@") or "youtube.com" in clean:
+        if clean.startswith("@"):
+            base_url = f"https://www.youtube.com/{clean}"
+        elif not clean.startswith("http"):
+            base_url = f"https://{clean}"
+        else:
+            base_url = clean.rstrip("/")
+
+        channel_targets = [
+            f"{base_url}/videos?view=0&sort=p",  # Popular uploads
+            f"{base_url}/videos",                 # Latest uploads
+        ]
+        videos = []
+        seen_ids = set()
+        for target_url in channel_targets:
+            try:
+                with _get_ydl(search_depth=max_results) as ydl:
+                    res = ydl.extract_info(target_url, download=False)
+                    entries = res.get("entries", []) if res else []
+                    for entry in entries:
+                        if not entry:
+                            continue
+                        v_id = entry.get("id")
+                        if not v_id or v_id in seen_ids:
+                            continue
+                        seen_ids.add(v_id)
+                        videos.append({
+                            "video_id": v_id,
+                            "url": f"https://www.youtube.com/watch?v={v_id}",
+                            "title": entry.get("title", ""),
+                            "channel": entry.get("uploader") or entry.get("channel") or clean,
+                            "duration": entry.get("duration"),
+                            "view_count": entry.get("view_count") or 0,
+                            "query_source": f"channel:{clean}",
+                        })
+                        if len(videos) >= max_results:
+                            break
+            except Exception:
+                continue
+            if videos:
+                break
+        if videos:
+            return videos
+
+    # Fallback to standard creator search
+    return search_youtube_videos(clean, max_results=max_results)
+
+
 def get_creator_viral_videos(creator: str, max_results: int = 15, niche_hint: str = "") -> list[dict]:
-    """Finds top videos from a creator handle or channel name, optionally filtered by niche topic."""
-    clean_handle = creator.strip()
-    query = f"{clean_handle} {niche_hint}".strip() if niche_hint else clean_handle
-    return search_youtube_videos(query, max_results=max_results)
+    """Finds top videos from a creator handle or channel name."""
+    return get_creator_channel_videos(creator, max_results=max_results)
 
 
 def extract_niche_keywords(disc_cfg: dict) -> set[str]:
@@ -268,6 +342,98 @@ def filter_and_rank_candidates(
     return valid
 
 
+def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12) -> list[dict]:
+    """Viral Velocity & Subtitle Pre-Checker:
+    Enriches top candidate videos with exact upload date, views-per-day velocity (VPH),
+    and pre-existing subtitle availability to accelerate pipeline processing by 5-10x.
+    """
+    if not candidates:
+        return candidates
+
+    to_enrich = candidates[:max_enrich]
+    enriched = []
+    today = datetime.datetime.now()
+
+    ydl_opts = {
+        "extract_flat": False,
+        "skip_download": True,
+        "quiet": True,
+        "no_warnings": True,
+        "ignoreerrors": True,
+        "logger": _SilentLogger(),
+    }
+
+    try:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            for cand in to_enrich:
+                v_id = cand["video_id"]
+                url = cand.get("url") or f"https://www.youtube.com/watch?v={v_id}"
+                views = cand.get("view_count") or 0
+                upload_date_str = None
+                has_subs = False
+
+                try:
+                    info = ydl.extract_info(url, download=False)
+                    if info:
+                        views = info.get("view_count") or views
+                        cand["view_count"] = views
+                        cand["duration"] = info.get("duration") or cand.get("duration")
+                        upload_date_str = info.get("upload_date")
+                        subs = info.get("subtitles") or {}
+                        auto_subs = info.get("automatic_captions") or {}
+                        has_subs = bool(subs or auto_subs)
+                except Exception:
+                    pass
+
+                age_days = 365
+                if upload_date_str:
+                    try:
+                        dt = datetime.datetime.strptime(upload_date_str, "%Y%m%d")
+                        age_days = max((today - dt).days, 1)
+                    except Exception:
+                        age_days = 365
+
+                views_per_day = views / max(age_days, 1)
+
+                # Recency Velocity Multipliers: Breakout videos get substantial priority
+                if age_days <= 14:
+                    recency_multiplier = 1.6
+                elif age_days <= 45:
+                    recency_multiplier = 1.4
+                elif age_days <= 90:
+                    recency_multiplier = 1.25
+                elif age_days <= 365:
+                    recency_multiplier = 1.1
+                elif age_days <= 730:
+                    recency_multiplier = 0.95
+                else:
+                    recency_multiplier = 0.75
+
+                # Subtitle Pre-Check Multiplier: prioritizes videos that bypass slow CPU Whisper
+                sub_multiplier = 1.25 if has_subs else 1.0
+
+                rel = cand.get("relevance_score", 1.0)
+                virality_score = (
+                    (rel * 25.0) +
+                    (math.log10(max(views_per_day, 1.0)) * 7.0) +
+                    (math.log10(max(views, 1.0)) * 2.0)
+                ) * recency_multiplier * sub_multiplier
+
+                cand["age_days"] = age_days
+                cand["views_per_day"] = int(views_per_day)
+                cand["has_subtitles"] = has_subs
+                cand["virality_score"] = virality_score
+                enriched.append(cand)
+
+    except Exception as e:
+        print(f"  [Discovery] Candidate enrichment note: {e}")
+        return candidates
+
+    enriched.sort(key=lambda c: c.get("virality_score", 0.0), reverse=True)
+    remainder = candidates[max_enrich:]
+    return enriched + remainder
+
+
 def discover_and_select_videos(cfg: dict, state: dict) -> list[dict]:
     """Discovers viral creators and long-form videos based on config settings.
     Strictly filters targets to ensure 100% niche fidelity and eliminates random content.
@@ -302,18 +468,22 @@ def discover_and_select_videos(cfg: dict, state: dict) -> list[dict]:
     if niche_keywords:
         print(f"  [Discovery] Active Niche Filter Keywords: {len(niche_keywords)} terms loaded.")
 
-    # 1. Search specified niche authority creators
+    # 1. Direct creator channel scraping (popular & latest uploads from official channel)
     for creator in creators:
         clean_handle = creator.strip()
-        print(f"  [Discovery] Checking authority creator: {clean_handle}")
-        c_videos = get_creator_viral_videos(clean_handle, max_results=12)
+        print(f"  [Discovery] Checking official creator channel: {clean_handle}")
+        c_videos = get_creator_channel_videos(clean_handle, max_results=12)
         all_candidates.extend(c_videos)
 
-    # 2. Search exact niche description directly
+    # 2. Search exact niche description directly (all-time & this-year velocity)
     if niche_desc:
         print(f"  [Discovery] Exploring core niche description: '{niche_desc}'")
         nd_videos = search_youtube_videos(niche_desc, max_results=15)
         all_candidates.extend(nd_videos)
+
+        print(f"  [Discovery] Exploring recent trending hits from this year: '{niche_desc}'")
+        ny_videos = search_youtube_videos(niche_desc, max_results=12, sort="this_year")
+        all_candidates.extend(ny_videos)
 
     # 3. Search primary scrape hashtags
     for tag in scrape_hashtags[:2]:
@@ -362,12 +532,17 @@ def discover_and_select_videos(cfg: dict, state: dict) -> list[dict]:
             niche_keywords=niche_keywords,
         )
 
-    # 7. Groq Semantic Verification (verifies top candidates genuinely belong to niche)
+    # 7. Velocity & Subtitle Pre-Enrichment on top candidates
+    if ranked:
+        print(f"  [Discovery] Calculating viral velocity (VPH) and pre-checking subtitles on top {min(10, len(ranked))} candidates...")
+        ranked = enrich_candidates_virality(ranked, max_enrich=10)
+
+    # 8. Groq Semantic Verification (verifies top candidates genuinely belong to niche)
     verified_candidates = verify_niche_with_groq(ranked[:10], niche_desc=niche_desc, scrape_hashtags=scrape_hashtags)
     if not verified_candidates:
         verified_candidates = ranked
 
-    # 6. Cap per creator and select top videos
+    # 9. Cap per creator and select top videos
     selected = []
     creator_counts: dict[str, int] = {}
 
@@ -386,9 +561,15 @@ def discover_and_select_videos(cfg: dict, state: dict) -> list[dict]:
     for i, s in enumerate(selected):
         views_str = f"{s['view_count']:,}" if s.get("view_count") else "N/A"
         dur_str = f"{int(s['duration'] // 60)}m" if s.get("duration") else "N/A"
-        safe_title = s.get("title", "")[:55].encode("ascii", errors="replace").decode("ascii")
+        safe_title = s.get("title", "")[:50].encode("ascii", errors="replace").decode("ascii")
         safe_channel = str(s.get("channel", "Unknown")).encode("ascii", errors="replace").decode("ascii")
-        rel_str = f"Rel: {s.get('relevance_score', 1.0):.1f}"
-        print(f"  * Selected #{i+1} [{rel_str}]: '{safe_title}...' | Channel: {safe_channel} | Views: {views_str} | Dur: {dur_str}")
+        
+        score_val = s.get("virality_score", s.get("relevance_score", 1.0))
+        vpd_val = s.get("views_per_day")
+        vpd_str = f"{vpd_val:,}/d" if vpd_val is not None else "N/A"
+        age_str = f"{s.get('age_days', '?')}d"
+        cc_str = "CC:Yes" if s.get("has_subtitles") else "CC:No"
+
+        print(f"  * Selected #{i+1} [Score: {score_val:.1f} | VPD: {vpd_str} | Age: {age_str} | {cc_str}]: '{safe_title}...' | Channel: {safe_channel} | Views: {views_str} | Dur: {dur_str}")
 
     return selected

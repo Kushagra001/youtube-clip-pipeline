@@ -42,7 +42,7 @@ def download_subtitles(url: str, video_id: str | None = None) -> Path | None:
         cmd = _base_ytdlp_args() + [
             "--skip-download",
             "--write-subs", "--write-auto-subs",
-            "--sub-langs", "en.*",
+            "--sub-langs", "en.*,hi.*,en-IN,hi-Latn,en-US,en-GB",
             "--sub-format", "vtt",
             "--convert-subs", "vtt",
             "-o", out_template,
@@ -105,7 +105,7 @@ def download_video(url: str, video_id: str | None = None, title: str | None = No
         "-f", "bv*[height<=1080]+ba/b[height<=1080]/18/best",
         "--merge-output-format", "mp4",
         "--write-subs", "--write-auto-subs",
-        "--sub-langs", "en.*",
+        "--sub-langs", "en.*,hi.*,en-IN,hi-Latn,en-US,en-GB",
         "--sub-format", "vtt",
         "--convert-subs", "vtt",
         "-o", out_template,
