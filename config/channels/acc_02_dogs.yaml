@@ -59,7 +59,7 @@ branding:
   outro_seconds: 1.8
 auto_upload: true
 youtube:
-  privacy_status: private
+  privacy_status: public
   category_id: '15'
   title_suffix: ' #shorts'
   max_uploads_per_day: 2

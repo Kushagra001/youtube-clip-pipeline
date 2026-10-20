@@ -104,7 +104,7 @@ branding:
 auto_upload: false
 
 youtube:
-  privacy_status: "private"     # private | unlisted | public
+  privacy_status: "public"     # private | unlisted | public
   category_id: "24"             # Entertainment
   title_suffix: " #shorts"
   max_uploads_per_day: 2        # Strict anti-spam rate limit to prevent bot-farm shadowban (1-2/day max)

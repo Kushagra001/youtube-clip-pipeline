@@ -93,6 +93,8 @@ jobs:
           YOUTUBE_REFRESH_TOKEN_ACC_08: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_08 }}
           YOUTUBE_REFRESH_TOKEN_ACC_09: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_09 }}
           YOUTUBE_REFRESH_TOKEN_ACC_10: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_10 }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python main.py --channel "${{ matrix.channel }}"
 

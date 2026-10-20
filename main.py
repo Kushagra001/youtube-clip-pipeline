@@ -24,6 +24,7 @@ from pipeline import (
     clip,
     captions,
     state as state_mod,
+    notifications,
 )
 
 CONFIG_PATH = Path(__file__).resolve().parent / "config" / "sources.yaml"
@@ -231,8 +232,24 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
                 if video_id_uploaded:
                     state_mod.record_upload(st)
                     print(f"     Uploaded: https://youtube.com/watch?v={video_id_uploaded}")
+                    notifications.notify_upload_success(
+                        channel_name=brand_name,
+                        handle=meme_handle,
+                        title=short_title,
+                        video_id=video_id_uploaded,
+                        duration_sec=adjusted_duration,
+                        source_channel=channel_name,
+                        tags=upload_tags,
+                    )
                 else:
                     print(f"     Upload failed or skipped. Clip saved locally: {captioned_path}")
+                    notifications.notify_upload_failure(
+                        channel_name=brand_name,
+                        handle=meme_handle,
+                        title=short_title,
+                        error_msg="YouTube Data API upload returned None or authentication failed.",
+                        url=url,
+                    )
         else:
             print(f"     Saved locally: {captioned_path}")
 
@@ -275,6 +292,16 @@ def run_channel_pipeline(config_path: Path, channel_id: str | None = None) -> No
             process_video(item, cfg, st, channel_id=cid)
         except Exception as e:
             print(f"  ERROR processing {url}: {e}", file=sys.stderr)
+            b_name = cfg.get("branding", {}).get("channel_name", cid or "Default")
+            m_handle = cfg.get("meme_template", {}).get("handle", "@channel")
+            target_title = item.get("title", url) if isinstance(item, dict) else url
+            notifications.notify_upload_failure(
+                channel_name=b_name,
+                handle=m_handle,
+                title=str(target_title),
+                error_msg=str(e),
+                url=url,
+            )
             continue
 
 
