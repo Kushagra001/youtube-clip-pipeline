@@ -34,15 +34,16 @@ def _build_video_filter(
     elif style == "meme_card":
         # Memezar / 9GAG Viral Meme Template:
         # Dark ambient blurred backdrop, framed centered video player, and top meme header card container
-        card_bg = "0x18181B@0.96" if meme_theme == "dark" else "white@0.98"
-        card_border = "0x3F3F46@0.85" if meme_theme == "dark" else "0xD4D4D8@0.9"
+        card_bg = "0x18181B@0.96" if meme_theme == "dark" else "white@1.0"
+        card_border = "0x3F3F46@0.85" if meme_theme == "dark" else "0xE4E4E7@1.0"
+        pad_border_color = "white@0.25" if meme_theme == "dark" else "white@0.6"
 
         base_filter = (
             f"{pts_filter},split=2[bg_raw][fg_raw];"
             f"[bg_raw]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,"
             f"gblur=sigma=50,eq=brightness=-0.38:contrast=1.12[bg];"
             f"[fg_raw]scale=iw*1.03:-2,{color_grade},scale=1040:-2[card];"
-            f"[card]pad=1048:ih+8:4:4:color=white@0.25[framed_card];"
+            f"[card]pad=1048:ih+8:4:4:color={pad_border_color}[framed_card];"
             f"[bg][framed_card]overlay=(W-w)/2:(H-h)/2[v_comp];"
             f"[v_comp]drawbox=x=36:y=170:w=1008:h=270:color={card_bg}:t=fill,"
             f"drawbox=x=36:y=170:w=1008:h=270:color={card_border}:t=2"

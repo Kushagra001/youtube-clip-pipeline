@@ -15,12 +15,12 @@ WrapStyle: 0
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: BurnerHeader,Arial Black,50,&H0000FFFF,&H000000FF,&H00000000,&H90000000,1,0,0,0,100,100,0,0,3,4,0,8,70,70,240,1
 Style: MemeHandleDark,Arial,34,&H00D4D4D8,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,0,0,7,80,80,205,1
-Style: MemeHookDark,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,0,0,7,80,80,255,1
+Style: MemeHookDark,Arial Black,48,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,0,0,7,80,80,250,1
 Style: MemeHandleLight,Arial,34,&H0052525B,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,0,0,7,80,80,205,1
-Style: MemeHookLight,Arial,48,&H00000000,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,0,0,7,80,80,255,1
+Style: MemeHookLight,Arial Black,50,&H0009090B,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,0,0,7,80,80,250,1
 Style: Default,Arial Black,64,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,1,0,0,0,100,100,1,0,1,5,3,2,60,60,390,1
 Style: TakeawayCardDark,Arial Black,32,&H00FFFFFF,&H000000FF,&H00000000,&HD0141418,1,0,0,0,100,100,0,0,3,3,0,2,60,60,240,1
-Style: TakeawayCardLight,Arial Black,32,&H00000000,&H000000FF,&H00000000,&HD0FFFFFF,1,0,0,0,100,100,0,0,3,3,0,2,60,60,240,1
+Style: TakeawayCardLight,Arial Black,32,&H0009090B,&H000000FF,&H00000000,&HE0FFFFFF,1,0,0,0,100,100,0,0,3,3,0,2,60,60,240,1
 Style: OutroBrandCard,Arial Black,36,&H00FFFFFF,&H000000FF,&H00000000,&HF0121215,1,0,0,0,100,100,0,0,3,4,0,2,80,80,330,1
 
 [Events]
@@ -131,7 +131,7 @@ def build_ass_file(
             hook_style = "MemeHookDark" if meme_theme == "dark" else "MemeHookLight"
             wrapped_hook = _wrap_headline(clean_burner, max_chars_per_line=34)
 
-            badge_prefix = r"{\c&H60A5FA&}● {\c}" if show_badge else ""
+            badge_prefix = r"{\c&H00F2A11D&}● {\c}" if show_badge else ""
             lines.append(
                 f"Dialogue: 1,0:00:00.00,{dur_str},{handle_style},,0,0,0,,{badge_prefix}{meme_handle}\n"
             )

@@ -52,7 +52,7 @@ highlight_method: "groq"
 vertical_style: "meme_card"
 
 meme_template:
-  theme: "dark"
+  theme: "light"
   handle: "@grindandbuild"
   badge: true
 

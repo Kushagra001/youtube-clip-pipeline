@@ -87,7 +87,7 @@ highlight_method: "groq"
 vertical_style: "meme_card"
 
 meme_template:
-  theme: "dark"                 # "dark" (sleek dark mode) or "light" (classic white 9GAG meme box)
+  theme: "light"                 # "light" (classic trending white 9GAG/Twitter meme box) or "dark"
   handle: "@viralinsights"       # Channel handle or page name displayed on the card
   badge: true                   # Show verified badge / dot next to handle
 

@@ -18,7 +18,8 @@ discovery:
     - "@LiamOttley"
     - "@AIJason"
     - "@WesRoth"
-    - "@mabor"
+    - "@Fireship"
+    - "@DavidOndrej"
   blacklist_terms:
     - "ufc"
     - "nfl"
@@ -52,7 +53,7 @@ highlight_method: "groq"
 vertical_style: "meme_card"
 
 meme_template:
-  theme: "dark"
+  theme: "light"
   handle: "@ai.tools.dailyyy"
   badge: true
 

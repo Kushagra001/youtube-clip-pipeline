@@ -51,19 +51,35 @@ def search_youtube_videos(query: str, max_results: int = 20) -> list[dict]:
     return videos
 
 
-def get_creator_viral_videos(creator: str, max_results: int = 20) -> list[dict]:
-    """Finds top videos from a creator handle (e.g. '@hubermanlab') or creator name."""
+def get_creator_viral_videos(creator: str, max_results: int = 15, niche_hint: str = "") -> list[dict]:
+    """Finds top videos from a creator handle or channel name, optionally filtered by niche topic."""
     clean_handle = creator.strip()
-    # Search query targeting long-form discussions/episodes for this creator
-    query = f"{clean_handle} podcast interview full episode"
+    query = f"{clean_handle} {niche_hint}".strip() if niche_hint else clean_handle
     return search_youtube_videos(query, max_results=max_results)
 
 
-def expand_niches_with_groq(niches: list[str]) -> list[str]:
-    """Optionally uses free-tier Groq Llama 3.3 to brainstorm specific viral search queries
+def extract_niche_keywords(disc_cfg: dict) -> set[str]:
+    """Extracts distinctive content keywords from channel niche descriptions."""
+    stopwords = {
+        "the", "and", "for", "with", "that", "this", "from", "how", "why", "what",
+        "to", "in", "on", "of", "a", "an", "full", "episode", "podcast", "video",
+        "best", "top", "viral", "interview", "new", "things", "facts", "lessons",
+        "story", "speech", "talk", "guide", "routine"
+    }
+    keywords = set()
+    explicit = disc_cfg.get("niche_keywords", [])
+    for k in explicit:
+        keywords.add(k.lower().strip())
 
-    and top creators for the requested niches.
-    """
+    for niche in disc_cfg.get("niches", []):
+        for w in re.findall(r"[a-zA-Z0-9]+", niche.lower()):
+            if len(w) > 2 and w not in stopwords:
+                keywords.add(w)
+    return keywords
+
+
+def expand_niches_with_groq(niches: list[str]) -> list[str]:
+    """Optionally uses free-tier Groq to brainstorm highly specific, non-random search queries."""
     api_key = os.environ.get("GROQ_API_KEY")
     if not api_key:
         return []
@@ -72,11 +88,11 @@ def expand_niches_with_groq(niches: list[str]) -> list[str]:
         from groq import Groq
         client = Groq(api_key=api_key)
         prompt = (
-            f"Given these content niches: {json.dumps(niches)}\n"
-            "Generate 5 high-converting YouTube search queries that will find viral long-form podcasts, "
-            "interviews, or video essays with high viewership.\n"
-            "Also list 3 top viral YouTube channel names/handles in these niches.\n"
-            "Respond ONLY with a JSON object: {\"queries\": [\"...\"], \"creators\": [\"...\"]}"
+            f"Given these specific YouTube channel niches: {json.dumps(niches)}\n"
+            "Generate 4 highly specific, high-converting YouTube search queries that will find the most viewed, "
+            "highest quality videos specifically on these exact topics. Do NOT generate generic podcast or celebrity interview queries. "
+            "Focus purely on high-retention educational, explainer, or tutorial content in these niches.\n"
+            "Respond ONLY with a JSON object: {\"queries\": [\"...\"]}"
         )
         models_to_try = ["openai/gpt-oss-120b", "openai/gpt-oss-20b", "qwen/qwen3.8-27b"]
         data = None
@@ -85,16 +101,16 @@ def expand_niches_with_groq(niches: list[str]) -> list[str]:
                 response = client.chat.completions.create(
                     model=model_name,
                     messages=[
-                        {"role": "system", "content": "You are a viral YouTube content strategist. Output only valid JSON."},
+                        {"role": "system", "content": "You are a precise YouTube content strategist. Output only valid JSON."},
                         {"role": "user", "content": prompt}
                     ],
-                    temperature=0.5,
-                    max_tokens=600,
+                    temperature=0.3,
+                    max_tokens=400,
                 )
                 raw = response.choices[0].message.content or ""
                 raw = re.sub(r"^```(json)?|```$", "", raw.strip(), flags=re.MULTILINE).strip()
                 data = json.loads(raw)
-                if data:
+                if data and data.get("queries"):
                     break
             except Exception:
                 continue
@@ -105,13 +121,62 @@ def expand_niches_with_groq(niches: list[str]) -> list[str]:
         expanded = []
         if isinstance(data.get("queries"), list):
             expanded.extend(data["queries"])
-        if isinstance(data.get("creators"), list):
-            for c in data["creators"]:
-                expanded.append(f"{c} full episode")
         return expanded
     except Exception as e:
         print(f"  [Discovery] Groq niche expansion skipped: {e}")
         return []
+
+
+def verify_niche_with_groq(candidates: list[dict], niches: list[str]) -> list[dict]:
+    """Semantic Gatekeeper: Uses Groq to verify that candidate videos strictly match the channel niche."""
+    api_key = os.environ.get("GROQ_API_KEY")
+    if not api_key or not candidates:
+        return candidates
+
+    try:
+        from groq import Groq
+        client = Groq(api_key=api_key)
+        items_payload = [
+            {"id": c["video_id"], "title": c["title"], "channel": str(c.get("channel", ""))}
+            for c in candidates[:10]
+        ]
+        prompt = (
+            f"You are a strict YouTube Channel Director. The channel niche is strictly: {json.dumps(niches)}.\n"
+            f"Candidate Videos:\n{json.dumps(items_payload, indent=2)}\n\n"
+            "Evaluate each candidate. Return ONLY a JSON array of video IDs that are genuinely, directly, "
+            "and authentically on-topic for this exact niche. Discard any off-topic, celebrity gossip, or unrelated videos.\n"
+            "Respond ONLY with a JSON array: [\"id1\", \"id2\", ...]"
+        )
+        models_to_try = ["openai/gpt-oss-120b", "openai/gpt-oss-20b", "qwen/qwen3.8-27b"]
+        for model in models_to_try:
+            try:
+                resp = client.chat.completions.create(
+                    model=model,
+                    messages=[
+                        {"role": "system", "content": "You are a strict content filter. Output ONLY a valid JSON array of IDs."},
+                        {"role": "user", "content": prompt}
+                    ],
+                    temperature=0.1,
+                    max_tokens=400,
+                )
+                raw = resp.choices[0].message.content or ""
+                raw = re.sub(r"^```(json)?|```$", "", raw.strip(), flags=re.MULTILINE).strip()
+                json_match = re.search(r"\[.*\]", raw, re.DOTALL)
+                if json_match:
+                    raw = json_match.group(0)
+                accepted_ids = json.loads(raw)
+                if isinstance(accepted_ids, list) and accepted_ids:
+                    id_set = set(accepted_ids)
+                    verified = [c for c in candidates if c["video_id"] in id_set]
+                    if verified:
+                        print(f"  [Discovery] Groq verified {len(verified)}/{len(candidates)} candidates strictly match the niche.")
+                        return verified
+            except Exception:
+                continue
+    except Exception as e:
+        print(f"  [Discovery] Groq niche verification skipped: {e}")
+
+    return candidates
 
 
 def filter_and_rank_candidates(
@@ -121,10 +186,12 @@ def filter_and_rank_candidates(
     min_duration_sec: int = 600,
     max_duration_sec: int = 7200,
     blacklist_terms: list[str] | None = None,
+    niche_keywords: set[str] | None = None,
 ) -> list[dict]:
     """Filters candidate videos for virality criteria, duration boundaries,
-    blacklist safety (anti-DMCA protection), and idempotency.
+    blacklist safety (anti-DMCA protection), idempotency, and STRICT niche keyword relevance.
     """
+    import math
     valid = []
     seen_ids = set()
 
@@ -143,7 +210,6 @@ def filter_and_rank_candidates(
                 continue
 
         duration = cand.get("duration")
-        # Ensure duration fits long-form constraints (default 10m to 120m)
         if duration is not None:
             if duration < min_duration_sec or duration > max_duration_sec:
                 continue
@@ -152,18 +218,36 @@ def filter_and_rank_candidates(
         if min_views > 0 and view_count < min_views:
             continue
 
+        # Strict Niche Relevance Filter: Reject candidates with 0 keyword hits in title/channel
+        relevance_score = 1.0
+        if niche_keywords:
+            t_words = set(re.findall(r"[a-zA-Z0-9]+", cand.get("title", "").lower()))
+            c_words = set(re.findall(r"[a-zA-Z0-9]+", str(cand.get("channel", "")).lower()))
+            title_hits = len(t_words & niche_keywords)
+            chan_hits = len(c_words & niche_keywords)
+
+            # Hard Gate: Discard if zero relevance
+            if title_hits == 0 and chan_hits == 0:
+                continue
+            relevance_score = (title_hits * 3.5) + (chan_hits * 1.5)
+
+        cand["relevance_score"] = relevance_score
         seen_ids.add(v_id)
         valid.append(cand)
 
-    # Sort descending by view count (most viral first)
-    valid.sort(key=lambda x: x.get("view_count", 0), reverse=True)
+    # Sort primarily by Niche Relevance, secondarily by View Count
+    def _rank_key(c: dict) -> float:
+        views = max(c.get("view_count", 0), 1)
+        rel = c.get("relevance_score", 1.0)
+        return (rel * 25.0) + math.log10(views)
+
+    valid.sort(key=_rank_key, reverse=True)
     return valid
 
 
 def discover_and_select_videos(cfg: dict, state: dict) -> list[dict]:
     """Discovers viral creators and long-form videos based on config settings.
-
-    Returns a prioritized list of video candidates ready for clipping.
+    Strictly filters targets to ensure 100% niche fidelity and eliminates random content.
     """
     disc_cfg = cfg.get("discovery", {})
     if not disc_cfg.get("enabled", False):
@@ -172,8 +256,8 @@ def discover_and_select_videos(cfg: dict, state: dict) -> list[dict]:
     niches = disc_cfg.get("niches", [])
     creators = disc_cfg.get("creators", [])
     blacklist_terms = [b.lower().strip() for b in disc_cfg.get("blacklist_terms", []) if b]
-    min_views = disc_cfg.get("min_views", 100_000)
-    min_dur_min = disc_cfg.get("min_duration_minutes", 10)
+    min_views = disc_cfg.get("min_views", 60_000)
+    min_dur_min = disc_cfg.get("min_duration_minutes", 6)
     max_dur_min = disc_cfg.get("max_duration_minutes", 120)
     max_per_run = disc_cfg.get("max_videos_per_run", 2)
     max_per_creator = disc_cfg.get("max_videos_per_creator", 1)
@@ -181,32 +265,36 @@ def discover_and_select_videos(cfg: dict, state: dict) -> list[dict]:
     min_dur_sec = int(min_dur_min * 60)
     max_dur_sec = int(max_dur_min * 60)
 
+    niche_keywords = extract_niche_keywords(disc_cfg)
     all_candidates: list[dict] = []
 
     print("\n=== Running Viral Creator & Content Discovery ===")
+    if niche_keywords:
+        print(f"  [Discovery] Active Niche Filter Keywords: {len(niche_keywords)} terms loaded.")
 
-    # 1. Search specified creators
+    # 1. Search specified niche authority creators
     for creator in creators:
-        print(f"  [Discovery] Checking creator: {creator}")
-        c_videos = get_creator_viral_videos(creator, max_results=15)
+        clean_handle = creator.strip()
+        print(f"  [Discovery] Checking authority creator: {clean_handle}")
+        c_videos = get_creator_viral_videos(clean_handle, max_results=12)
         all_candidates.extend(c_videos)
 
-    # 2. Search specified niches
+    # 2. Search specified clean niche topics directly (no generic podcast append)
     for niche in niches:
-        print(f"  [Discovery] Exploring niche: '{niche}'")
-        n_videos = search_youtube_videos(f"{niche} viral podcast full interview", max_results=20)
+        print(f"  [Discovery] Exploring clean niche query: '{niche}'")
+        n_videos = search_youtube_videos(niche, max_results=15)
         all_candidates.extend(n_videos)
 
-    # 3. Optional Groq expansion if key is available
+    # 3. Optional Groq topic query expansion if key is available
     groq_expanded = expand_niches_with_groq(niches)
-    for q in groq_expanded[:3]:  # sample top 3 generated queries
-        print(f"  [Discovery] Exploring AI-suggested query: '{q}'")
-        g_videos = search_youtube_videos(q, max_results=15)
+    for q in groq_expanded[:3]:
+        print(f"  [Discovery] Exploring AI-targeted niche query: '{q}'")
+        g_videos = search_youtube_videos(q, max_results=12)
         all_candidates.extend(g_videos)
 
     print(f"  [Discovery] Gathered {len(all_candidates)} raw candidate entries across sources.")
 
-    # 4. Filter and rank
+    # 4. Strict filter and rank by niche relevance + virality
     ranked = filter_and_rank_candidates(
         all_candidates,
         state=state,
@@ -214,15 +302,33 @@ def discover_and_select_videos(cfg: dict, state: dict) -> list[dict]:
         min_duration_sec=min_dur_sec,
         max_duration_sec=max_dur_sec,
         blacklist_terms=blacklist_terms,
+        niche_keywords=niche_keywords,
     )
 
-    print(f"  [Discovery] {len(ranked)} candidates passed virality filters (views >= {min_views:,}, duration: {min_dur_min}m-{max_dur_min}m).")
+    print(f"  [Discovery] {len(ranked)} candidates passed strict niche relevance & virality filters (views >= {min_views:,}, duration: {min_dur_min}m-{max_dur_min}m).")
 
-    # 5. Cap per creator and select top videos
+    if not ranked:
+        print("  [Discovery] No candidates passed strict niche filters with min_views. Broadening threshold...")
+        ranked = filter_and_rank_candidates(
+            all_candidates,
+            state=state,
+            min_views=max(10_000, min_views // 3),
+            min_duration_sec=min_dur_sec,
+            max_duration_sec=max_dur_sec,
+            blacklist_terms=blacklist_terms,
+            niche_keywords=niche_keywords,
+        )
+
+    # 5. Groq Semantic Verification (verifies top candidates genuinely belong to niche)
+    verified_candidates = verify_niche_with_groq(ranked[:10], niches=niches)
+    if not verified_candidates:
+        verified_candidates = ranked
+
+    # 6. Cap per creator and select top videos
     selected = []
     creator_counts: dict[str, int] = {}
 
-    for cand in ranked:
+    for cand in verified_candidates:
         channel = cand.get("channel", "Unknown")
         count = creator_counts.get(channel, 0)
         if count >= max_per_creator:
@@ -239,6 +345,7 @@ def discover_and_select_videos(cfg: dict, state: dict) -> list[dict]:
         dur_str = f"{int(s['duration'] // 60)}m" if s.get("duration") else "N/A"
         safe_title = s.get("title", "")[:55].encode("ascii", errors="replace").decode("ascii")
         safe_channel = str(s.get("channel", "Unknown")).encode("ascii", errors="replace").decode("ascii")
-        print(f"  * Selected #{i+1}: '{safe_title}...' | Channel: {safe_channel} | Views: {views_str} | Dur: {dur_str}")
+        rel_str = f"Rel: {s.get('relevance_score', 1.0):.1f}"
+        print(f"  * Selected #{i+1} [{rel_str}]: '{safe_title}...' | Channel: {safe_channel} | Views: {views_str} | Dur: {dur_str}")
 
     return selected
