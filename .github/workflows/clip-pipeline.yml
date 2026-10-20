@@ -2,24 +2,62 @@ name: YouTube Clipping Pipeline
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # every 6 hours — adjust as needed
+    - cron: "0 */6 * * *"   # Runs automatically every 6 hours
   workflow_dispatch:
     inputs:
       channel:
-        description: "Channel to run (e.g. acc_01_cats, all, or empty for default)"
-        required: false
+        description: "Channel to run (or 'all' for parallel run across all 10 channels)"
+        required: true
         default: "all"
+        type: choice
+        options:
+          - all
+          - acc_01_cats
+          - acc_02_dogs
+          - acc_03_fitness
+          - acc_04_motivation
+          - acc_05_finance
+          - acc_06_business
+          - acc_07_food
+          - acc_08_ai_tools
+          - acc_09_grooming
+          - acc_10_mental_health
 
 permissions:
-  contents: write   # needed to commit state/*.json back
+  contents: write
 
 jobs:
   clip:
+    name: "Pipeline: ${{ matrix.channel }}"
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        channel:
+          - acc_01_cats
+          - acc_02_dogs
+          - acc_03_fitness
+          - acc_04_motivation
+          - acc_05_finance
+          - acc_06_business
+          - acc_07_food
+          - acc_08_ai_tools
+          - acc_09_grooming
+          - acc_10_mental_health
+
+    # Triggered automatically on schedule, or manually when 'all' or this specific channel is chosen
+    if: |
+      github.event_name == 'schedule' ||
+      github.event.inputs.channel == 'all' ||
+      github.event.inputs.channel == '' ||
+      github.event.inputs.channel == matrix.channel
+
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -27,18 +65,24 @@ jobs:
           python-version: "3.11"
           cache: "pip"
 
-      - name: Install ffmpeg and fonts
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-liberation fonts-freefont-ttf
+      - name: Install System Dependencies & Genuine Fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-liberation fonts-freefont-ttf fonts-dejavu-core fonts-noto-color-emoji
+          echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
+          sudo apt-get install -y ttf-mscorefonts-installer || true
+          fc-cache -f -v || true
 
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-      - name: Run pipeline
+      - name: Run Autonomous Pipeline for ${{ matrix.channel }}
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
-          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
           YOUTUBE_REFRESH_TOKEN_ACC_01: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_01 }}
           YOUTUBE_REFRESH_TOKEN_ACC_02: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_02 }}
           YOUTUBE_REFRESH_TOKEN_ACC_03: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_03 }}
@@ -50,29 +94,37 @@ jobs:
           YOUTUBE_REFRESH_TOKEN_ACC_09: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_09 }}
           YOUTUBE_REFRESH_TOKEN_ACC_10: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_10 }}
         run: |
-          CHANNEL_ARG="${{ github.event.inputs.channel || 'all' }}"
-          if [ -n "$CHANNEL_ARG" ]; then
-            python main.py --channel "$CHANNEL_ARG"
-          else
-            python main.py
-          fi
+          python main.py --channel "${{ matrix.channel }}"
 
-      - name: Upload clips as workflow artifact
+      - name: Archive Generated Video Artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: clips-${{ github.run_id }}
+          name: clips-${{ matrix.channel }}-${{ github.run_id }}
           path: output/clips/
-          retention-days: 14
+          retention-days: 7
+          if-no-files-found: ignore
 
-      - name: Clean up download cache
+      - name: Clean Temporary Video Cache
         if: always()
         run: rm -rf output/downloads/*
 
-      - name: Commit updated processed-state
+      - name: Commit & Push Channel State with Rebase Retry
         if: always()
         run: |
-          git config user.name "clip-pipeline-bot"
-          git config user.email "actions@github.com"
-          git add state/*.json
-          git diff --cached --quiet || (git pull --rebase && git commit -m "chore: update processed video state [skip ci]" && git push)
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/processed_${{ matrix.channel }}.json || true
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(state): update ${{ matrix.channel }} state [skip ci]"
+            for attempt in 1 2 3 4 5 6 7 8; do
+              echo "Push attempt $attempt..."
+              if git pull --rebase origin main && git push origin main; then
+                echo "State successfully synced for ${{ matrix.channel }}!"
+                break
+              fi
+              sleep $((RANDOM % 8 + 2))
+            done
+          else
+            echo "No state changes to commit for ${{ matrix.channel }}."
+          fi
