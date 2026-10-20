@@ -236,13 +236,20 @@ Tracking document for current codebase status, identified issues, bug fixes, per
 1. **Local Pipeline & Layout Verification**:
    - [x] Aspect ratio: 1080x1920 (9:16 vertical Short).
    - [x] **Meme Template Layout**: Top meme header card (light/dark theme, verified badge, wrapped hook headline), centered framed video player with borders, and clean ambient backdrop.
-   - [x] **Catchy Hooks**: Topic-relevant curiosity headlines (`WHY INTROVERTS ACT DIFFERENTLY 🧠`, `CAN THEY DO THAT WITH DEVICES? 🤔`).
+   - [x] **Catchy Hooks**: Topic-relevant curiosity headlines (`WHY INTROVERTS ACT DIFFERENTLY 🧠`, `RING LIGHTS HUSTLE REVEALED`).
    - [x] **Key Insights**: Coherent, substantive educational synthesis (no dangling numbers/words like `75`).
    - [x] **Kinetic Subtitles**: 2-3 word bursts with Electric Yellow active word highlight and crisp black stroke.
    - [x] **Kinetic Progress Bar**: Verified starts at 0% and tracks across the timeline to 100%.
-   - [x] **Brand Outro Card**: Verified renders in final 1.8s in the lower safe area (`⚡ VIRAL INSIGHTS`).
+   - [x] **Brand Outro Card**: Verified renders in final 1.8s in the lower safe area (`⚡ VIRAL INSIGHTS`, `🤖 AI TOOLS DAILY`).
    - [x] Audio conditioning & loudness: vocal isolation EQ + -14 LUFS normalization verified.
 2. **Windows Path Verification**:
    - [x] Verified `burn_in_captions()` runs without colons/path escaping errors on Windows (`ass=filename='C\:/...'`).
 3. **Idempotency & Quota Verification**:
-   - [x] Verified `state/processed.json` prevents duplicate processing and protects daily upload quotas.
+   - [x] Verified `state/processed_<channel>.json` prevents duplicate processing and protects daily upload quotas.
+   - [x] Verified daily upload limit (2/day) gracefully halts uploads and saves clips locally to protect YouTube anti-spam standing.
+4. **Groq AI Integration & Model Fallback**:
+   - [x] Audited live Groq models for account: verified `openai/gpt-oss-120b`, `openai/gpt-oss-20b`, and `qwen/qwen3.8-27b`.
+   - [x] Implemented multi-model fallback list in `pipeline/highlights.py` and `pipeline/discovery.py`.
+   - [x] Added `min_start_offset = 35.0` to skip podcast intro bumpers, sponsor title cards, and intro graphics.
+   - [x] Enforced candidate window condensation for transcripts > 120 segments / 4000 characters to strictly respect Groq 8,000 TPM limit.
+   - [x] Live end-to-end test on `acc_08_ai_tools` successfully uploaded 2 private Shorts (`https://youtube.com/watch?v=iWJNBMbJm-0`, `https://youtube.com/watch?v=3aOjSxTVNpc`).
