@@ -10,6 +10,11 @@ import urllib.request
 from pathlib import Path
 from dotenv import load_dotenv
 
+if sys.stdout.encoding != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if sys.stderr.encoding != "utf-8":
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 load_dotenv()
 ENV_PATH = Path(__file__).resolve().parent.parent / ".env"
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()

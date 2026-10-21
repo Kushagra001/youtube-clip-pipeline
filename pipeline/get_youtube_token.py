@@ -13,6 +13,11 @@ from pathlib import Path
 import yaml
 from google_auth_oauthlib.flow import InstalledAppFlow
 
+if sys.stdout.encoding != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if sys.stderr.encoding != "utf-8":
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 CLIENT_SECRETS_FILE = "client_secret.json"  # downloaded from Google Cloud Console
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
 CHANNELS_DIR = Path(__file__).resolve().parent.parent / "config" / "channels"
