@@ -13,6 +13,11 @@ import urllib.error
 from html import escape
 
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
 def _get_telegram_creds() -> tuple[str | None, str | None]:
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
     chat_id = os.environ.get("TELEGRAM_CHAT_ID")
