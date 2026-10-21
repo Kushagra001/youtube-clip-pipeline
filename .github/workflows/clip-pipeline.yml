@@ -27,31 +27,33 @@ permissions:
   contents: write
 
 jobs:
+  setup:
+    name: Configure Target Matrix
+    runs-on: ubuntu-latest
+    outputs:
+      channels: ${{ steps.set-matrix.outputs.channels }}
+    steps:
+      - id: set-matrix
+        run: |
+          INPUT_CH="${{ github.event.inputs.channel }}"
+          EVENT="${{ github.event_name }}"
+          if [ "$EVENT" = "schedule" ] || [ -z "$INPUT_CH" ] || [ "$INPUT_CH" = "all" ]; then
+            CHANNELS_JSON='["acc_01_cats","acc_02_dogs","acc_03_fitness","acc_04_motivation","acc_05_finance","acc_06_business","acc_07_food","acc_08_ai_tools","acc_09_grooming","acc_10_mental_health"]'
+          else
+            CHANNELS_JSON="[\"$INPUT_CH\"]"
+          fi
+          echo "Target channels: $CHANNELS_JSON"
+          echo "channels=$CHANNELS_JSON" >> $GITHUB_OUTPUT
+
   clip:
+    needs: setup
     name: "Pipeline: ${{ matrix.channel }}"
     runs-on: ubuntu-latest
     timeout-minutes: 60
     strategy:
       fail-fast: false
       matrix:
-        channel:
-          - acc_01_cats
-          - acc_02_dogs
-          - acc_03_fitness
-          - acc_04_motivation
-          - acc_05_finance
-          - acc_06_business
-          - acc_07_food
-          - acc_08_ai_tools
-          - acc_09_grooming
-          - acc_10_mental_health
-
-    # Triggered automatically on schedule, or manually when 'all' or this specific channel is chosen
-    if: |
-      github.event_name == 'schedule' ||
-      github.event.inputs.channel == 'all' ||
-      github.event.inputs.channel == '' ||
-      github.event.inputs.channel == matrix.channel
+        channel: ${{ fromJson(needs.setup.outputs.channels) }}
 
     steps:
       - name: Checkout Repository
