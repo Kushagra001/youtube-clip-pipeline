@@ -88,8 +88,8 @@ jobs:
           DEBIAN_FRONTEND: noninteractive
         run: |
           sudo -E apt-get update -qq
-          sudo -E apt-get install -y --no-install-recommends ffmpeg fonts-liberation fonts-noto-color-emoji
-          fc-cache -f || true
+          sudo -E apt-get install -y --no-install-recommends ffmpeg fontconfig fonts-dejavu fonts-liberation fonts-noto-core fonts-deva fonts-noto-color-emoji
+          fc-cache -fv || true
           ffmpeg -version | head -n 1
 
       - name: Install Python Dependencies

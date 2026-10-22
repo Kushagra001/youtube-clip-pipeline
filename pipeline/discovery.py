@@ -170,9 +170,9 @@ def extract_niche_keywords(disc_cfg: dict) -> set[str]:
         "stoicism", "success", "mental", "strength", "finance", "investing",
         "side", "hustle", "hustles", "freedom", "stock", "market", "startup",
         "business", "founder", "grooming", "skincare", "haircare", "style",
-        "recipes", "recipe", "meal", "prep", "food", "hacks", "indian", "quick",
+        "recipes", "recipe", "meal", "prep", "food", "hacks", "quick",
         "tools", "automation", "intelligence", "anxiety", "adhd", "wellness",
-        "selfcare", "indians", "india", "budgeting", "home", "training", "life"
+        "selfcare", "budgeting", "home", "training", "life"
     ]
     for tag in disc_cfg.get("scrape_hashtags", []):
         t_clean = tag.lower().lstrip("#")
@@ -288,6 +288,16 @@ def verify_niche_with_groq(candidates: list[dict], niche_desc: str, scrape_hasht
     return candidates
 
 
+def _is_english_title(text: str) -> bool:
+    """Rejects titles containing non-Latin scripts (e.g. Devanagari/Hindi, Arabic, CJK, Cyrillic)."""
+    if not text:
+        return False
+    # Reject non-Latin characters: Devanagari (\u0900-\u097F), Arabic (\u0600-\u06FF), Cyrillic (\u0400-\u04FF), CJK (\u4E00-\u9FFF)
+    if re.search(r"[\u0900-\u097F\u0600-\u06FF\u0400-\u04FF\u4E00-\u9FFF\u3040-\u30FF\uAC00-\uD7AF]", text):
+        return False
+    return True
+
+
 def filter_and_rank_candidates(
     candidates: list[dict],
     state: dict,
@@ -309,6 +319,11 @@ def filter_and_rank_candidates(
         if v_id in seen_ids:
             continue
         if state_mod.is_processed(state, v_id):
+            continue
+
+        title = cand.get("title", "")
+        # Strict Language Filter: Reject foreign language / non-English script videos
+        if not _is_english_title(title):
             continue
 
         # Litigious content safety filter (avoids automated DMCA strikes from TV/studios/sports)

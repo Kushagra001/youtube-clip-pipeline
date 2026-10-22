@@ -318,15 +318,17 @@ to encourage re-watching (APV > 100%).
 4. Generate a "burner_text": A punchy, all-caps headline (<45 characters) that serves as the top editorial banner hook.
 5. Generate a "takeaway": A 1-sentence analytical or educational takeaway (<55 characters) summarizing \
 the transformative insight for the outro analysis card.
+6. STRICT LANGUAGE REQUIREMENT: All output fields ("title", "hook", "burner_text", "takeaway") MUST be written \
+strictly in ENGLISH. Never output Hindi, Devanagari, or foreign language text. Translate into viral English if needed.
 
 Respond with ONLY a JSON array (no prose, no markdown fences). Each item:
 {
   "start": <float, seconds, snapped to first spoken word>,
   "end": <float, seconds, snapped to punchline end>,
-  "title": "<short punchy title, <55 chars>",
-  "hook": "<the first ~8 words spoken, opening caption>",
-  "burner_text": "<ALL-CAPS PUNCHY TOP BANNER HEADLINE, <45 chars>",
-  "takeaway": "<KEY TAKEAWAY: SUMMARY LESSON, <55 chars>"
+  "title": "<short punchy English title, <55 chars>",
+  "hook": "<first ~8 words spoken, opening caption in English>",
+  "burner_text": "<ALL-CAPS PUNCHY TOP BANNER HEADLINE IN ENGLISH, <45 chars>",
+  "takeaway": "<KEY TAKEAWAY: SUMMARY LESSON IN ENGLISH, <55 chars>"
 }
 """
 
