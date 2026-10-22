@@ -61,6 +61,17 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set up Cloudflare WARP (IP Masking)
+        uses: fscarmen/warp-on-actions@v1.4
+        with:
+          stack: dual
+          mode: wireguard
+
+      - name: Verify IP & Network Connection
+        run: |
+          echo "Public IP verification via Cloudflare:"
+          curl -s https://www.cloudflare.com/cdn-cgi/trace | head -n 8 || true
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -123,6 +134,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
+          PROXY_URL: ${{ secrets.PROXY_URL }}
         run: |
           python main.py --channel "${{ matrix.channel }}"
 

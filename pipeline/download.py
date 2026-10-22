@@ -88,23 +88,31 @@ def _is_pot_provider_active() -> bool:
     return False
 
 
-def _base_ytdlp_args() -> list[str]:
+def _base_ytdlp_args(ignore_cookies: bool = False) -> list[str]:
     args = [
         "yt-dlp",
         "--remote-components", "ejs:github",
     ]
-    cookie_path = get_cookies_path()
+
+    # 1. Outbound Proxy Routing (Support dedicated residential/datacenter proxy)
+    proxy_url = os.environ.get("PROXY_URL") or os.environ.get("HTTPS_PROXY") or os.environ.get("HTTP_PROXY")
+    if proxy_url:
+        args.extend(["--proxy", proxy_url])
+
+    # 2. Session Cookies with Client Configuration
+    cookie_path = get_cookies_path() if not ignore_cookies else None
     if cookie_path:
         args.extend(["--cookies", str(cookie_path)])
-        # Use resilient client chain: mweb & tv & visionos avoid aggressive bot blocks
-        args.extend(["--extractor-args", "youtube:player_client=mweb,tv,visionos,android,web,default"])
+        # Put visionos and ios first: they don't require GVS PO tokens and bypass cloud bot blocks
+        args.extend(["--extractor-args", "youtube:player_client=visionos,ios,android,mweb,web"])
     else:
-        args.extend(["--extractor-args", "youtube:player_client=visionos,android,tv,mweb"])
+        args.extend(["--extractor-args", "youtube:player_client=visionos,ios,android,mweb,web"])
 
+    # 3. Proof-of-Origin Token Provider (if running)
     if _is_pot_provider_active():
         args.extend(["--extractor-args", "youtubepot-bgutilhttp:base_url=http://127.0.0.1:4416"])
 
-    # Locate Deno or Node runtime for solving YouTube JS challenges
+    # 4. Locate Deno or Node runtime for solving YouTube JS challenges
     deno_path = shutil.which("deno")
     if not deno_path:
         user_deno = Path.home() / ".deno" / "bin" / ("deno.exe" if os.name == "nt" else "deno")
@@ -119,26 +127,45 @@ def _base_ytdlp_args() -> list[str]:
     return args
 
 
+def _run_ytdlp_resilient(extra_args: list[str]) -> subprocess.CompletedProcess:
+    """Executes yt-dlp with primary configuration, and falls back gracefully if cookie/auth/bot issue occurs."""
+    cmd1 = _base_ytdlp_args(ignore_cookies=False) + extra_args
+    res = subprocess.run(cmd1, capture_output=True, text=True)
+    if res.returncode == 0:
+        return res
+
+    err = (res.stderr or "") + " " + (res.stdout or "")
+    has_cookie = get_cookies_path() is not None
+    # If bot challenge or cookie issue triggered, retry once without session cookies
+    if has_cookie and any(x in err.lower() for x in ["sign in to confirm", "bot", "cookie", "login_info"]):
+        print("  [Download] Primary cookie request encountered bot challenge. Retrying anonymously with clean client chain...")
+        cmd2 = _base_ytdlp_args(ignore_cookies=True) + extra_args
+        res2 = subprocess.run(cmd2, capture_output=True, text=True)
+        if res2.returncode == 0:
+            return res2
+        return res2
+
+    return res
+
+
 def get_video_id(url: str) -> str:
-    result = subprocess.run(
-        _base_ytdlp_args() + ["--print", "%(id)s", "--no-download", url],
-        capture_output=True, text=True,
-    )
+    # Fast regex extraction to avoid network overhead
+    match = re.search(r"(?:v=|\/|youtu\.be\/)([0-9A-Za-z_-]{11})", url)
+    if match:
+        return match.group(1)
+
+    result = _run_ytdlp_resilient(["--print", "%(id)s", "--no-download", url])
     if result.returncode != 0:
-        # Fallback to regex extraction if yt-dlp metadata query fails
-        match = re.search(r"(?:v=|\/|youtu\.be\/)([0-9A-Za-z_-]{11})", url)
-        if match:
-            return match.group(1)
         err = result.stderr.strip() or result.stdout.strip()
         raise RuntimeError(f"Failed to get video ID for {url}: {err[:250]}")
     return result.stdout.strip()
 
 
 def get_video_info(url: str) -> dict:
-    result = subprocess.run(
-        _base_ytdlp_args() + ["-J", "--no-download", url],
-        capture_output=True, text=True, check=True,
-    )
+    result = _run_ytdlp_resilient(["-J", "--no-download", url])
+    if result.returncode != 0:
+        err = result.stderr.strip() or result.stdout.strip()
+        raise RuntimeError(f"Failed to get video info for {url}: {err[:250]}")
     return json.loads(result.stdout)
 
 
@@ -151,7 +178,7 @@ def download_subtitles(url: str, video_id: str | None = None) -> Path | None:
         video_id = get_video_id(url)
     out_template = str(DOWNLOAD_DIR / f"{video_id}.%(ext)s")
 
-    cmd = _base_ytdlp_args() + [
+    cmd = [
         "--skip-download",
         "--write-subs", "--write-auto-subs",
         "--sub-langs", "en.*,hi.*,en-IN,hi-Latn,en-US,en-GB",
@@ -160,7 +187,7 @@ def download_subtitles(url: str, video_id: str | None = None) -> Path | None:
         "-o", out_template,
         url,
     ]
-    res = subprocess.run(cmd, capture_output=True, text=True)
+    res = _run_ytdlp_resilient(cmd)
     if res.returncode != 0:
         err_msg = res.stderr.strip() or res.stdout.strip()
         print(f"  [Download] Subtitle extraction note: {err_msg[:250]}")
@@ -186,7 +213,7 @@ def download_clip_section(
     pad_end = end + 1.5
     section_spec = f"*{pad_start:.2f}-{pad_end:.2f}"
 
-    cmd = _base_ytdlp_args() + [
+    cmd = [
         "-f", "bv*[height<=1080]+ba/b[height<=1080]/18/best",
         "--download-sections", section_spec,
         "--force-keyframes-at-cuts",
@@ -194,7 +221,7 @@ def download_clip_section(
         "-o", str(out_path),
         url,
     ]
-    res = subprocess.run(cmd, capture_output=True, text=True)
+    res = _run_ytdlp_resilient(cmd)
     if res.returncode != 0:
         err_msg = res.stderr.strip() or res.stdout.strip()
         last_error = "\n".join(err_msg.splitlines()[-4:]) if err_msg else "Unknown yt-dlp error"
@@ -214,7 +241,7 @@ def download_video(url: str, video_id: str | None = None, title: str | None = No
         video_id = get_video_id(url)
     out_template = str(DOWNLOAD_DIR / f"{video_id}.%(ext)s")
 
-    cmd = _base_ytdlp_args() + [
+    cmd = [
         "-f", "bv*[height<=1080]+ba/b[height<=1080]/18/best",
         "--merge-output-format", "mp4",
         "--write-subs", "--write-auto-subs",
@@ -224,7 +251,7 @@ def download_video(url: str, video_id: str | None = None, title: str | None = No
         "-o", out_template,
         url,
     ]
-    res = subprocess.run(cmd, capture_output=True, text=True)
+    res = _run_ytdlp_resilient(cmd)
     if res.returncode != 0:
         err_msg = res.stderr.strip() or res.stdout.strip()
         print(f"  [Download Error Output]:\n{err_msg}")

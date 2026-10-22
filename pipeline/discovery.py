@@ -33,6 +33,10 @@ def _get_ydl(search_depth: int = 25) -> yt_dlp.YoutubeDL:
         "logger": _SilentLogger(),
         "playlistend": search_depth,
     }
+    proxy_url = os.environ.get("PROXY_URL") or os.environ.get("HTTPS_PROXY") or os.environ.get("HTTP_PROXY")
+    if proxy_url:
+        opts["proxy"] = proxy_url
+
     try:
         from pipeline.download import get_cookies_path
         cookie_path = get_cookies_path()
