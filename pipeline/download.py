@@ -38,12 +38,29 @@ def get_cookies_path() -> Path | None:
 
 
 def _base_ytdlp_args() -> list[str]:
-    args = ["yt-dlp", "--extractor-args", "youtube:player_client=android,web;player_skip=configs"]
+    args = [
+        "yt-dlp",
+        "--remote-components", "ejs:github",
+    ]
     cookie_path = get_cookies_path()
     if cookie_path:
         args.extend(["--cookies", str(cookie_path)])
-    if shutil.which("node"):
+        args.extend(["--extractor-args", "youtube:player_client=web,default"])
+    else:
+        args.extend(["--extractor-args", "youtube:player_client=visionos,android"])
+
+    # Locate Deno or Node runtime for solving YouTube JS challenges
+    deno_path = shutil.which("deno")
+    if not deno_path:
+        user_deno = Path.home() / ".deno" / "bin" / ("deno.exe" if os.name == "nt" else "deno")
+        if user_deno.exists():
+            deno_path = str(user_deno)
+
+    if deno_path:
+        args.extend(["--js-runtimes", f"deno:{deno_path}"])
+    elif shutil.which("node"):
         args.extend(["--js-runtimes", "node"])
+
     return args
 
 
@@ -125,7 +142,8 @@ def download_clip_section(
     res = subprocess.run(cmd, capture_output=True, text=True)
     if res.returncode != 0:
         err_msg = res.stderr.strip() or res.stdout.strip()
-        raise RuntimeError(f"yt-dlp clip section download failed: {err_msg[:400]}")
+        last_error = "\n".join(err_msg.splitlines()[-4:]) if err_msg else "Unknown yt-dlp error"
+        raise RuntimeError(f"yt-dlp clip section download failed:\n{last_error}")
 
     relative_start = start - pad_start
     relative_end = relative_start + (end - start)
@@ -154,7 +172,8 @@ def download_video(url: str, video_id: str | None = None, title: str | None = No
     res = subprocess.run(cmd, capture_output=True, text=True)
     if res.returncode != 0:
         err_msg = res.stderr.strip() or res.stdout.strip()
-        raise RuntimeError(f"yt-dlp video download failed: {err_msg[:400]}")
+        last_error = "\n".join(err_msg.splitlines()[-4:]) if err_msg else "Unknown yt-dlp error"
+        raise RuntimeError(f"yt-dlp video download failed:\n{last_error}")
 
     video_path = DOWNLOAD_DIR / f"{video_id}.mp4"
     subtitle_candidates = list(DOWNLOAD_DIR.glob(f"{video_id}*.vtt"))

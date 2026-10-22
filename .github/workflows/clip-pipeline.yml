@@ -67,6 +67,11 @@ jobs:
           python-version: "3.11"
           cache: "pip"
 
+      - name: Set up Deno for YouTube Challenge Solving
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
       - name: Install System Dependencies & Genuine Fonts
         run: |
           sudo apt-get update
