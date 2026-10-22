@@ -76,8 +76,6 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg fonts-liberation fonts-freefont-ttf fonts-dejavu-core fonts-noto-color-emoji
-          echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
-          sudo apt-get install -y ttf-mscorefonts-installer || true
           fc-cache -f -v || true
 
       - name: Install Python Dependencies
