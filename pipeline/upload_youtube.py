@@ -51,6 +51,12 @@ def upload_short(
 ) -> str | None:
     """Uploads a vertical Short to YouTube with resumable chunking and quota error protection."""
     from googleapiclient.errors import HttpError
+    from pathlib import Path
+
+    v_file = Path(video_path)
+    if not v_file.exists() or v_file.stat().st_size == 0:
+        print(f"  [YouTube Upload] Error: Video file does not exist or is empty at {video_path}")
+        return None
 
     try:
         youtube = _get_service(token_env_var=token_env_var)
@@ -58,11 +64,15 @@ def upload_short(
         print(f"  [YouTube Upload] Authentication error: {e}")
         return None
 
+    # YouTube rejects video titles containing '<' or '>' characters (HTTP 400 invalidTitle)
+    clean_title = title.replace("<", "").replace(">", "").strip()[:100]
+    clean_desc = description[:4990]
+
     body = {
         "snippet": {
-            "title": title[:100],
-            "description": description,
-            "categoryId": category_id,
+            "title": clean_title,
+            "description": clean_desc,
+            "categoryId": str(category_id),
             "tags": tags or ["#shorts", "shorts", "viral", "podcast", "clips"],
             "defaultLanguage": "en",
             "defaultAudioLanguage": "en",

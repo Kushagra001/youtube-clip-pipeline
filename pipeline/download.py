@@ -92,6 +92,10 @@ def _base_ytdlp_args(ignore_cookies: bool = False) -> list[str]:
     args = [
         "yt-dlp",
         "--remote-components", "ejs:github",
+        "--socket-timeout", "30",
+        "--retries", "3",
+        "--fragment-retries", "3",
+        "--no-check-certificates",
     ]
 
     # 1. Outbound Proxy Routing (Support dedicated residential/datacenter proxy)
@@ -223,13 +227,36 @@ def download_clip_section(
     ]
     res = _run_ytdlp_resilient(cmd)
     if res.returncode != 0:
-        err_msg = res.stderr.strip() or res.stdout.strip()
-        last_error = "\n".join(err_msg.splitlines()[-4:]) if err_msg else "Unknown yt-dlp error"
-        raise RuntimeError(f"yt-dlp clip section download failed:\n{last_error}")
+        # Retry without --force-keyframes-at-cuts for streams where keyframe seeking fails
+        print("  [Download] Targeted cut with keyframes failed, retrying with direct slice...")
+        cmd_no_kf = [
+            "-f", "bv*[height<=1080]+ba/b[height<=1080]/18/best",
+            "--download-sections", section_spec,
+            "--merge-output-format", "mp4",
+            "-o", str(out_path),
+            url,
+        ]
+        res = _run_ytdlp_resilient(cmd_no_kf)
+        if res.returncode != 0:
+            err_msg = res.stderr.strip() or res.stdout.strip()
+            last_error = "\n".join(err_msg.splitlines()[-4:]) if err_msg else "Unknown yt-dlp error"
+            raise RuntimeError(f"yt-dlp clip section download failed:\n{last_error}")
 
     relative_start = start - pad_start
     relative_end = relative_start + (end - start)
     return out_path, relative_start, relative_end
+
+
+def cleanup_intermediate_files(prefix: str) -> None:
+    """Removes intermediate slice files and temporary artifacts for a video."""
+    if not DOWNLOAD_DIR.exists():
+        return
+    for f in DOWNLOAD_DIR.glob(f"{prefix}*"):
+        try:
+            if f.is_file():
+                f.unlink(missing_ok=True)
+        except Exception:
+            pass
 
 
 def download_video(url: str, video_id: str | None = None, title: str | None = None) -> dict:

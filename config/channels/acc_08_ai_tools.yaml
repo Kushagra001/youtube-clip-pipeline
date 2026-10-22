@@ -44,6 +44,7 @@ max_clip_seconds: 38
 max_clips_per_video: 2
 burner_text: true
 progress_bar: true
+progress_bar_color: "#00E5FF"
 fair_use:
   enable_takeaway_outro: true
   audio_conditioning: true

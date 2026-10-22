@@ -10,12 +10,24 @@ from pathlib import Path
 CLIPS_DIR = Path(__file__).resolve().parent.parent / "output" / "clips"
 
 
+def _normalize_color(color_spec: str | None, default: str = "0xFFCC00@0.98") -> str:
+    if not color_spec:
+        return default
+    c = str(color_spec).strip()
+    if c.startswith("#") and len(c) == 7:
+        return f"0x{c[1:].upper()}@0.98"
+    if c.startswith("0x"):
+        return c if "@" in c else f"{c}@0.98"
+    return default
+
+
 def _build_video_filter(
     style: str,
     adjusted_duration: float,
     speed_factor: float = 1.02,
     enable_progress_bar: bool = True,
     meme_theme: str = "dark",
+    progress_bar_color: str | None = None,
 ) -> str:
     # 1. Temporal micro-shift (resets PTS to 0 so timeline & progress bar start at t=0)
     pts_scale = f"{1.0 / speed_factor:.6f}"
@@ -61,10 +73,11 @@ def _build_video_filter(
 
     # 3. Kinetic progress bar with dark track (smoothly animates from 0px to 1080px)
     if enable_progress_bar and adjusted_duration > 0:
+        bar_col = _normalize_color(progress_bar_color, default="0xFFCC00@0.98")
         bar_filter = (
             f",drawbox=x=0:y=1906:w=1080:h=10:color=black@0.5:t=fill,"
             f"drawbox=x=0:y=1906:w='min(1080,1080*t/{adjusted_duration:.2f})':"
-            f"h=10:color=0xFFCC00@0.98:t=fill"
+            f"h=10:color={bar_col}:t=fill"
         )
         return base_filter + bar_filter
 
@@ -82,6 +95,7 @@ def cut_clip(
     enable_loudnorm: bool = True,
     meme_theme: str = "dark",
     enable_audio_conditioning: bool = True,
+    progress_bar_color: str | None = None,
 ) -> Path:
     """Cuts and applies digital footprint alteration + vertical framing to the clip."""
     CLIPS_DIR.mkdir(parents=True, exist_ok=True)
@@ -95,6 +109,7 @@ def cut_clip(
         speed_factor=speed_factor,
         enable_progress_bar=enable_progress_bar,
         meme_theme=meme_theme,
+        progress_bar_color=progress_bar_color,
     )
 
     # Audio pipeline: PTS alignment + tempo micro-shift + anti-Content-ID vocal isolation + YouTube -14 LUFS loudness mastering
@@ -125,32 +140,34 @@ def cut_clip(
         str(out_path),
     ]
 
-    try:
-        subprocess.run(cmd, check=True, capture_output=True)
-    except subprocess.CalledProcessError as e:
-        # If loudnorm fails on peculiar audio streams, retry with basic filters
-        if enable_loudnorm:
-            af_fb_filters = ["asetpts=PTS-STARTPTS", f"atempo={speed_factor:.2f}"]
-            if enable_audio_conditioning:
-                af_fb_filters.append("highpass=f=85")
-            af_fallback = ",".join(af_fb_filters)
-            cmd_fallback = [
-                "ffmpeg", "-y",
-                "-ss", f"{start:.3f}",
-                "-i", str(source_video),
-                "-t", f"{raw_duration:.3f}",
-                "-vf", vf,
-                "-af", af_fallback,
-                "-shortest",
-                "-r", "30",
-                "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
-                "-pix_fmt", "yuv420p",
-                "-movflags", "+faststart",
-                "-c:a", "aac", "-b:a", "160k", "-ar", "44100", "-ac", "2",
-                str(out_path),
-            ]
-            subprocess.run(cmd_fallback, check=True)
-        else:
-            raise e
+    res = subprocess.run(cmd, capture_output=True, text=True)
+    if res.returncode == 0:
+        return out_path
+
+    # If first pass fails (e.g. loudnorm error on short/unusual audio or strict filters), retry with clean fallback
+    err = (res.stderr or "") + " " + (res.stdout or "")
+    print(f"  [FFmpeg] Cut encounter note: {err.splitlines()[-1] if err.splitlines() else 'Unknown'}. Retrying with resilient audio...")
+
+    af_fallback = f"asetpts=PTS-STARTPTS,atempo={speed_factor:.2f}"
+    cmd_fallback = [
+        "ffmpeg", "-y",
+        "-ss", f"{start:.3f}",
+        "-i", str(source_video),
+        "-t", f"{raw_duration:.3f}",
+        "-vf", vf,
+        "-af", af_fallback,
+        "-shortest",
+        "-r", "30",
+        "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+        "-pix_fmt", "yuv420p",
+        "-movflags", "+faststart",
+        "-c:a", "aac", "-b:a", "160k", "-ar", "44100", "-ac", "2",
+        str(out_path),
+    ]
+    res_fb = subprocess.run(cmd_fallback, capture_output=True, text=True)
+    if res_fb.returncode != 0:
+        err_msg = res_fb.stderr.strip() or res_fb.stdout.strip()
+        last_error = "\n".join(err_msg.splitlines()[-8:])
+        raise RuntimeError(f"FFmpeg clip cut failed:\n{last_error}")
 
     return out_path

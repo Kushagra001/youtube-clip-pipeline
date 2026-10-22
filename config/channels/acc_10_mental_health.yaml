@@ -42,10 +42,11 @@ discovery:
   - wellnessjourney
 videos: []
 min_clip_seconds: 24
-max_clip_seconds: 38
+max_clip_seconds: 42
 max_clips_per_video: 2
 burner_text: true
 progress_bar: true
+progress_bar_color: "#14B8A6"
 fair_use:
   enable_takeaway_outro: true
   audio_conditioning: true
@@ -56,7 +57,7 @@ targeted_download: true
 highlight_method: groq
 vertical_style: meme_card
 meme_template:
-  theme: light
+  theme: dark
   handle: '@calmyourmind.youtube'
   badge: true
 branding:

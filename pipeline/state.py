@@ -17,15 +17,39 @@ def load_state(channel_id: str | None = None) -> dict:
     state_file = _get_state_path(channel_id)
     if not state_file.exists():
         return {"processed_video_ids": [], "upload_timestamps": []}
-    with open(state_file, "r", encoding="utf-8") as f:
-        return json.load(f)
+    try:
+        with open(state_file, "r", encoding="utf-8") as f:
+            content = f.read().strip()
+            if not content:
+                return {"processed_video_ids": [], "upload_timestamps": []}
+            return json.loads(content)
+    except (json.JSONDecodeError, OSError) as e:
+        print(f"  [State] Warning: Could not decode {state_file.name} ({e}). Recovering with clean state.")
+        return {"processed_video_ids": [], "upload_timestamps": []}
 
 
 def save_state(state: dict, channel_id: str | None = None) -> None:
     state_file = _get_state_path(channel_id)
     state_file.parent.mkdir(parents=True, exist_ok=True)
-    with open(state_file, "w", encoding="utf-8") as f:
-        json.dump(state, f, indent=2)
+    temp_file = state_file.with_suffix(".tmp")
+    try:
+        with open(temp_file, "w", encoding="utf-8") as f:
+            json.dump(state, f, indent=2)
+            f.flush()
+            os.fsync(f.fileno())
+        temp_file.replace(state_file)
+    except Exception as e:
+        # Fallback to direct write if rename fails (e.g. certain file system locks)
+        try:
+            with open(state_file, "w", encoding="utf-8") as f:
+                json.dump(state, f, indent=2)
+        except Exception as write_err:
+            print(f"  [State] Critical error saving state to {state_file.name}: {write_err}")
+        if temp_file.exists():
+            try:
+                temp_file.unlink(missing_ok=True)
+            except Exception:
+                pass
 
 
 def is_processed(state: dict, video_id: str) -> bool:

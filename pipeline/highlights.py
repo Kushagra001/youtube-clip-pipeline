@@ -85,6 +85,21 @@ def _build_windows(
         window_segments = [s for s in segments if s["start"] >= start and s["end"] <= end]
         text = " ".join(s["text"] for s in window_segments)
         windows.append({"start": start, "end": end, "text": text, "segments": window_segments})
+
+    # Robust fallback: if no pause-based windows were found, use standard sliding windows
+    if not windows and segments:
+        for i in range(0, len(segments), max(1, len(segments) // 10)):
+            start = segments[i]["start"]
+            j = i
+            while j < len(segments) and (segments[j]["end"] - start) < min_seconds:
+                j += 1
+            if j < len(segments):
+                end = segments[j]["end"]
+                dur = end - start
+                if dur <= max_seconds + 3.0:
+                    window_segments = segments[i : j + 1]
+                    text = " ".join(s["text"] for s in window_segments)
+                    windows.append({"start": start, "end": end, "text": text, "segments": window_segments})
     return windows
 
 

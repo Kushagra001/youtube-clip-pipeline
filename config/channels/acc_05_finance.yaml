@@ -43,11 +43,12 @@ discovery:
   - financialfreedom
   - stockmarket
 videos: []
-min_clip_seconds: 24
-max_clip_seconds: 38
+min_clip_seconds: 25
+max_clip_seconds: 45
 max_clips_per_video: 2
 burner_text: true
 progress_bar: true
+progress_bar_color: "#10B981"
 fair_use:
   enable_takeaway_outro: true
   audio_conditioning: true

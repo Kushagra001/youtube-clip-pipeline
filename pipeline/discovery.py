@@ -32,6 +32,13 @@ def _get_ydl(search_depth: int = 25) -> yt_dlp.YoutubeDL:
         "ignoreerrors": True,
         "logger": _SilentLogger(),
         "playlistend": search_depth,
+        "socket_timeout": 25,
+        "retries": 3,
+        "extractor_args": {
+            "youtube": {
+                "player_client": ["ios", "mweb", "web"]
+            }
+        },
     }
     proxy_url = os.environ.get("PROXY_URL") or os.environ.get("HTTPS_PROXY") or os.environ.get("HTTP_PROXY")
     if proxy_url:

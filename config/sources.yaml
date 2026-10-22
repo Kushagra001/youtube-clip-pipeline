@@ -54,6 +54,7 @@ max_clips_per_video: 2
 # Editorial Framing & Burner Text
 burner_text: true               # Persistent top hook headline badge (Reused Content defense)
 progress_bar: true              # Kinetic completion bar (boosts APV & alters pixel timeline)
+progress_bar_color: "#FFCC00"     # Kinetic accent bar color (hex code or 0xRRGGBB@alpha)
 
 # ==============================================================================
 # Fair Use & Virality Growth Engine (2025-2026 YouTube Policy Compliance)

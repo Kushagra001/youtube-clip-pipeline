@@ -19,8 +19,8 @@ Tracking document for current codebase status, identified issues, bug fixes, per
 | **CI/CD Workflow** | 🟢 Hardened | Scheduled 6-hour cron, fonts installed, cache purge, git rebase push |
 | **Fair Use & Policy Engine** | 🟢 Complete | Curated whitelist/blacklist, audio conditioning, transformative takeaway cards |
 | **Growth & Anti-Shadowban** | 🟢 Complete | High-retention window (25-48s), seamless looping, 2 uploads/day anti-spam cap |
-| **Visual Polish & Outro Branding** | 🟢 Complete | High-res 512x512 circular vector logos for 10 channels, FFmpeg alpha fade overlay, kinetic progress tracking, zero missing glyph tofu boxes |
-| **Channel Niche & Brand Identity** | 🟢 Complete | 10 Channel configurations, dedicated logos, state isolation, multi-token upload support |
+| **Visual Polish & Outro Branding** | 🟢 Complete | High-res 512x512 circular vector logos for 10 channels, FFmpeg alpha fade overlay, signature kinetic progress bar colors, zero missing glyph tofu boxes |
+| **Channel Niche & Brand Identity** | 🟢 Hardened | 10 Channel configurations, bespoke accent color palettes, duration tuning, state isolation, multi-token upload support |
 | **Smart Speaker Auto-Framing** | ⚪ Planned (Phase 8) | Face detection, dynamic active speaker tracking / split-screen |
 | **Multi-Platform & Webhooks** | ⚪ Planned (Phase 9) | Discord/Telegram alerts, TikTok & IG Reels packaging |
 | **Retention Analytics Loop** | ⚪ Planned (Phase 10) | Feedback loop from YouTube API analytics into discovery |
@@ -216,6 +216,34 @@ Tracking document for current codebase status, identified issues, bug fixes, per
     3. Updated [main.py](main.py) to automatically resolve `branding.logo_path` (with auto-fallback to `assets/logos/{channel_id}.png`) and pass dynamic outro timing to `burn_in_captions()`.
     4. Configured `logo_path` across all 10 channel configurations in [config/channels/*.yaml](config/channels/).
   - **Target Files**: `scripts/generate_logos.py`, `assets/logos/*.png`, [pipeline/captions.py](pipeline/captions.py), [main.py](main.py), [config/channels/*.yaml](config/channels/).
+
+- [x] **Step 7.6: End-to-End Pipeline Hardening & Error Resilience**
+  - **Issue**: Fragilities existed across subtitle parsing (crashed on `mm:ss` timestamps or missing audio), state management (file corruption risk without atomic writes), clip generation (loudnorm failures crashed clips, intermediate slices accumulated on disk), and YouTube upload payload validation (angle brackets triggered HTTP 400).
+  - **Solution**:
+    1. **VTT Parser Hardening**: Updated `_parse_vtt_timestamp` in [pipeline/transcript.py](pipeline/transcript.py) to support `mm:ss.ttt`, `hh:mm:ss.ttt`, and comma decimals.
+    2. **Seamless Subtitle-to-Whisper Fallback**: In [main.py](main.py), if online captions are empty or music-only, automatically falls back to full video download and Whisper transcription rather than raising `FileNotFoundError`.
+    3. **Atomic State Persistence**: Enhanced [pipeline/state.py](pipeline/state.py) with atomic `.tmp` file replacement and `json.decoder.JSONDecodeError` recovery to eliminate corrupt state file bugs.
+    4. **Per-Clip Error Isolation & Disk Cleanup**: Wrapped clip processing in [main.py](main.py) with per-clip exception handling and added `download.cleanup_intermediate_files()` to purge temporary download slices.
+    5. **FFmpeg & Network Resilience**: Added network timeouts, connection retries, and socket timeouts (`--socket-timeout 30 --retries 3`) to [pipeline/download.py](pipeline/download.py) and [pipeline/discovery.py](pipeline/discovery.py). Added fallback to pure text subtitles if logo overlay fails in [pipeline/captions.py](pipeline/captions.py).
+    6. **Upload Payload Sanitization**: Stripped `<` and `>` characters and enforced strict 100-character limits in [pipeline/upload_youtube.py](pipeline/upload_youtube.py) to eliminate YouTube 400 Bad Request errors.
+  - **Target Files**: [pipeline/transcript.py](pipeline/transcript.py), [pipeline/state.py](pipeline/state.py), [pipeline/clip.py](pipeline/clip.py), [pipeline/captions.py](pipeline/captions.py), [pipeline/download.py](pipeline/download.py), [pipeline/discovery.py](pipeline/discovery.py), [pipeline/upload_youtube.py](pipeline/upload_youtube.py), [main.py](main.py).
+
+- [x] **Step 7.7: Channel Setting Customizations & Signature Progress Bar Palettes**
+  - **Scope**: Implemented bespoke channel customization parameters across all 10 channel configurations in [config/channels/*.yaml](config/channels/):
+    1. **Signature Progress Bar Accent Colors**: Dynamic `progress_bar_color` in [pipeline/clip.py](pipeline/clip.py) mapped to each channel identity:
+       - `acc_01_cats`: Warm Amber (`#F59E0B`)
+       - `acc_02_dogs`: Royal Blue (`#3B82F6`)
+       - `acc_03_fitness`: Neon Acid Lime (`#00FF66`)
+       - `acc_04_motivation`: Roman Imperial Gold (`#EAB308`)
+       - `acc_05_finance`: Emerald Wealth Green (`#10B981`)
+       - `acc_06_business`: Founder Violet Purple (`#8B5CF6`)
+       - `acc_07_food`: Crimson Culinary Flame (`#EF4444`)
+       - `acc_08_ai_tools`: Cyber Cyan (`#00E5FF`)
+       - `acc_09_grooming`: Rose Gold Crimson (`#F43F5E`)
+       - `acc_10_mental_health`: Serene Zen Teal (`#14B8A6`)
+    2. **Attention-Span Duration Tuning**: Tuned fast visual meme niches (Cats, Dogs, Food) to 20-35s for aggressive loop retention (>130% APV), and educational niches (Finance, Business, AI Tools, Motivation) to 25-45s for complete insights.
+    3. **Psychological Theme Alignment**: Set calming Dark theme for mental wellness (`acc_10`) and high-contrast Light themes for fast meme browsing (`acc_01`, `acc_02`, `acc_07`).
+  - **Target Files**: [config/channels/*.yaml](config/channels/), [config/sources.yaml](config/sources.yaml), [pipeline/clip.py](pipeline/clip.py), [main.py](main.py).
 
 ---
 

@@ -10,9 +10,19 @@ from pathlib import Path
 
 
 def _parse_vtt_timestamp(ts: str) -> float:
-    # 00:01:23.456 -> seconds
-    h, m, s = ts.split(":")
-    return int(h) * 3600 + int(m) * 60 + float(s)
+    # Handles 00:01:23.456, 01:23.456, and comma decimals (00:01:23,456)
+    clean_ts = ts.strip().replace(",", ".")
+    parts = clean_ts.split(":")
+    try:
+        if len(parts) == 3:
+            return int(parts[0]) * 3600 + int(parts[1]) * 60 + float(parts[2])
+        elif len(parts) == 2:
+            return int(parts[0]) * 60 + float(parts[1])
+        elif len(parts) == 1:
+            return float(parts[0])
+    except (ValueError, TypeError):
+        return 0.0
+    return 0.0
 
 
 def _group_words_into_segments(words: list[dict], max_words: int = 3) -> list[dict]:
@@ -42,7 +52,7 @@ def parse_vtt(subtitle_path: Path) -> list[dict]:
     text = subtitle_path.read_text(encoding="utf-8", errors="ignore")
     blocks = re.split(r"\n\n+", text)
     ts_re = re.compile(
-        r"(\d{2}:\d{2}:\d{2}\.\d{3})\s*-->\s*(\d{2}:\d{2}:\d{2}\.\d{3})"
+        r"((?:\d{1,2}:)?\d{2}:\d{2}[.,]\d{3})\s*-->\s*((?:\d{1,2}:)?\d{2}:\d{2}[.,]\d{3})"
     )
 
     # 1. High-Precision YouTube Karaoke/Word-Timed VTT Parsing
@@ -63,7 +73,7 @@ def parse_vtt(subtitle_path: Path) -> list[dict]:
                 if "<c>" in line:
                     clean_line = html.unescape(line)
                     clean_line = re.sub(r">>+", " ", clean_line)
-                    parts = re.split(r"<(\d{2}:\d{2}:\d{2}\.\d{3})><c>\s*([^<]+)</c>", clean_line)
+                    parts = re.split(r"<((?:\d{1,2}:)?\d{2}:\d{2}[.,]\d{3})><c>\s*([^<]+)</c>", clean_line)
                     first_w = re.sub(r"<[^>]+>", "", parts[0]).strip()
                     if first_w:
                         for w in first_w.split():
@@ -153,5 +163,5 @@ def get_transcript(video_path: Path | None, subtitle_path: Path | None) -> list[
         if segments:
             return segments
     if not video_path or not video_path.exists():
-        raise FileNotFoundError(f"Cannot transcribe: no subtitle found and video file not available at {video_path}")
+        return []
     return transcribe_with_whisper(video_path)

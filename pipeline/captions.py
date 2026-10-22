@@ -214,8 +214,8 @@ def burn_in_captions(
     outro_start: float = 0.0,
     duration: float = 0.0,
 ) -> Path:
-    # Escape colons and backslashes for cross-platform FFmpeg filter syntax
-    ass_escaped = ass_path.resolve().as_posix().replace(":", "\\:")
+    # Escape colons, backslashes, and single quotes for cross-platform FFmpeg filter syntax
+    ass_escaped = ass_path.resolve().as_posix().replace(":", "\\:").replace("'", "'\\''")
     logo_file = Path(logo_path).resolve() if logo_path else None
     has_logo = bool(logo_file and logo_file.exists() and duration > outro_start > 0)
 
@@ -239,18 +239,28 @@ def burn_in_captions(
             "-shortest",
             str(out_path),
         ]
-    else:
-        cmd = [
-            "ffmpeg", "-y",
-            "-i", str(video_path),
-            "-vf", f"ass=filename='{ass_escaped}'",
-            "-r", "30",
-            "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
-            "-pix_fmt", "yuv420p",
-            "-movflags", "+faststart",
-            "-c:a", "aac", "-b:a", "192k", "-ar", "44100", "-ac", "2",
-            str(out_path),
-        ]
+        res = subprocess.run(cmd, capture_output=True, text=True)
+        if res.returncode == 0:
+            return out_path
 
-    subprocess.run(cmd, check=True)
+        print("  [Captions] Note: Logo overlay failed, falling back to pure subtitle burn...")
+
+    # Standard / fallback subtitle burning
+    cmd_fallback = [
+        "ffmpeg", "-y",
+        "-i", str(video_path),
+        "-vf", f"ass=filename='{ass_escaped}'",
+        "-r", "30",
+        "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+        "-pix_fmt", "yuv420p",
+        "-movflags", "+faststart",
+        "-c:a", "aac", "-b:a", "192k", "-ar", "44100", "-ac", "2",
+        str(out_path),
+    ]
+    res_fb = subprocess.run(cmd_fallback, capture_output=True, text=True)
+    if res_fb.returncode != 0:
+        err_msg = res_fb.stderr.strip() or res_fb.stdout.strip()
+        last_error = "\n".join(err_msg.splitlines()[-8:])
+        raise RuntimeError(f"FFmpeg caption burn-in failed:\n{last_error}")
+
     return out_path
