@@ -75,13 +75,47 @@ def upload_short(
     }
 
     try:
-        media = MediaFileUpload(video_path, chunksize=-1, resumable=True, mimetype="video/mp4")
+        import time
+        # Standardize chunk size to 4MB (multiple of 256KB) for robust resumable streaming
+        media = MediaFileUpload(
+            video_path,
+            chunksize=4 * 1024 * 1024,
+            resumable=True,
+            mimetype="video/mp4",
+        )
         request = youtube.videos().insert(part="snippet,status", body=body, media_body=media)
 
         response = None
+        retry_count = 0
+        max_retries = 5
+
         while response is None:
-            status, response = request.next_chunk()
-        return response.get("id")
+            try:
+                status, response = request.next_chunk()
+                if status:
+                    pct = int(status.progress() * 100)
+                    print(f"  [YouTube Upload] Progress: {pct}%")
+            except HttpError as e:
+                if e.resp.status in [500, 502, 503, 504]:
+                    retry_count += 1
+                    if retry_count > max_retries:
+                        raise e
+                    sleep_time = min(30, 2 ** retry_count)
+                    print(f"  [YouTube Upload] Server status {e.resp.status}. Retrying in {sleep_time}s...")
+                    time.sleep(sleep_time)
+                else:
+                    raise e
+            except (ConnectionError, TimeoutError, OSError) as e:
+                retry_count += 1
+                if retry_count > max_retries:
+                    raise e
+                sleep_time = min(30, 2 ** retry_count)
+                print(f"  [YouTube Upload] Network interruption ({e}). Resuming chunk in {sleep_time}s...")
+                time.sleep(sleep_time)
+
+        if response and "id" in response:
+            return response["id"]
+        return response.get("id") if response else None
     except HttpError as e:
         if "quotaExceeded" in str(e):
             print("  [YouTube Upload] Warning: Daily YouTube Data API upload quota exceeded.")
