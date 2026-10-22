@@ -1,3 +1,5 @@
+import os
+import re
 import shutil
 import subprocess
 import json
@@ -6,8 +8,40 @@ from pathlib import Path
 DOWNLOAD_DIR = Path(__file__).resolve().parent.parent / "output" / "downloads"
 
 
+def get_cookies_path() -> Path | None:
+    """Finds or creates a valid cookies file from environment secrets or workspace files."""
+    # 1. Direct explicit environment path
+    env_path = os.environ.get("YOUTUBE_COOKIES_PATH")
+    if env_path and Path(env_path).exists() and Path(env_path).stat().st_size > 0:
+        return Path(env_path)
+
+    # 2. Local cookies file in root, config/, or output/
+    project_root = Path(__file__).resolve().parent.parent
+    local_candidates = [
+        project_root / "cookies.txt",
+        project_root / "config" / "cookies.txt",
+        DOWNLOAD_DIR.parent / "cookies.txt",
+    ]
+    for c in local_candidates:
+        if c.exists() and c.stat().st_size > 0:
+            return c
+
+    # 3. Raw cookies content supplied via YOUTUBE_COOKIES env var (from GitHub Secrets or .env)
+    raw = os.environ.get("YOUTUBE_COOKIES", "").strip()
+    if raw and ("youtube.com" in raw or "# Netscape" in raw or "\t" in raw):
+        out_cookie_file = DOWNLOAD_DIR.parent / "cookies.txt"
+        out_cookie_file.parent.mkdir(parents=True, exist_ok=True)
+        out_cookie_file.write_text(raw, encoding="utf-8")
+        return out_cookie_file
+
+    return None
+
+
 def _base_ytdlp_args() -> list[str]:
-    args = ["yt-dlp", "--extractor-args", "youtube:player_client=android,web"]
+    args = ["yt-dlp", "--extractor-args", "youtube:player_client=android,web;player_skip=configs"]
+    cookie_path = get_cookies_path()
+    if cookie_path:
+        args.extend(["--cookies", str(cookie_path)])
     if shutil.which("node"):
         args.extend(["--js-runtimes", "node"])
     return args
@@ -16,8 +50,15 @@ def _base_ytdlp_args() -> list[str]:
 def get_video_id(url: str) -> str:
     result = subprocess.run(
         _base_ytdlp_args() + ["--print", "%(id)s", "--no-download", url],
-        capture_output=True, text=True, check=True,
+        capture_output=True, text=True,
     )
+    if result.returncode != 0:
+        # Fallback to regex extraction if yt-dlp metadata query fails
+        match = re.search(r"(?:v=|\/|youtu\.be\/)([0-9A-Za-z_-]{11})", url)
+        if match:
+            return match.group(1)
+        err = result.stderr.strip() or result.stdout.strip()
+        raise RuntimeError(f"Failed to get video ID for {url}: {err[:250]}")
     return result.stdout.strip()
 
 
@@ -38,23 +79,19 @@ def download_subtitles(url: str, video_id: str | None = None) -> Path | None:
         video_id = get_video_id(url)
     out_template = str(DOWNLOAD_DIR / f"{video_id}.%(ext)s")
 
-    try:
-        cmd = _base_ytdlp_args() + [
-            "--skip-download",
-            "--write-subs", "--write-auto-subs",
-            "--sub-langs", "en.*,hi.*,en-IN,hi-Latn,en-US,en-GB",
-            "--sub-format", "vtt",
-            "--convert-subs", "vtt",
-            "-o", out_template,
-            url,
-        ]
-        subprocess.run(
-            cmd,
-            capture_output=True,
-            check=True,
-        )
-    except Exception as e:
-        print(f"  [Download] Subtitle extraction note: {e}")
+    cmd = _base_ytdlp_args() + [
+        "--skip-download",
+        "--write-subs", "--write-auto-subs",
+        "--sub-langs", "en.*,hi.*,en-IN,hi-Latn,en-US,en-GB",
+        "--sub-format", "vtt",
+        "--convert-subs", "vtt",
+        "-o", out_template,
+        url,
+    ]
+    res = subprocess.run(cmd, capture_output=True, text=True)
+    if res.returncode != 0:
+        err_msg = res.stderr.strip() or res.stdout.strip()
+        print(f"  [Download] Subtitle extraction note: {err_msg[:250]}")
 
     candidates = list(DOWNLOAD_DIR.glob(f"{video_id}*.vtt"))
     return candidates[0] if candidates else None
@@ -85,7 +122,10 @@ def download_clip_section(
         "-o", str(out_path),
         url,
     ]
-    subprocess.run(cmd, check=True, capture_output=True)
+    res = subprocess.run(cmd, capture_output=True, text=True)
+    if res.returncode != 0:
+        err_msg = res.stderr.strip() or res.stdout.strip()
+        raise RuntimeError(f"yt-dlp clip section download failed: {err_msg[:400]}")
 
     relative_start = start - pad_start
     relative_end = relative_start + (end - start)
@@ -111,7 +151,10 @@ def download_video(url: str, video_id: str | None = None, title: str | None = No
         "-o", out_template,
         url,
     ]
-    subprocess.run(cmd, check=True)
+    res = subprocess.run(cmd, capture_output=True, text=True)
+    if res.returncode != 0:
+        err_msg = res.stderr.strip() or res.stdout.strip()
+        raise RuntimeError(f"yt-dlp video download failed: {err_msg[:400]}")
 
     video_path = DOWNLOAD_DIR / f"{video_id}.mp4"
     subtitle_candidates = list(DOWNLOAD_DIR.glob(f"{video_id}*.vtt"))
@@ -130,3 +173,4 @@ def download_video(url: str, video_id: str | None = None, title: str | None = No
         "video_path": video_path,
         "subtitle_path": subtitle_path,
     }
+

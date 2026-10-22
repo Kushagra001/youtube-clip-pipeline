@@ -24,7 +24,7 @@ class _SilentLogger:
 
 
 def _get_ydl(search_depth: int = 25) -> yt_dlp.YoutubeDL:
-    return yt_dlp.YoutubeDL({
+    opts = {
         "extract_flat": True,
         "skip_download": True,
         "quiet": True,
@@ -32,7 +32,15 @@ def _get_ydl(search_depth: int = 25) -> yt_dlp.YoutubeDL:
         "ignoreerrors": True,
         "logger": _SilentLogger(),
         "playlistend": search_depth,
-    })
+    }
+    try:
+        from pipeline.download import get_cookies_path
+        cookie_path = get_cookies_path()
+        if cookie_path:
+            opts["cookiefile"] = str(cookie_path)
+    except Exception:
+        pass
+    return yt_dlp.YoutubeDL(opts)
 
 
 def search_youtube_videos(query: str, max_results: int = 20, sort: str = "relevance") -> list[dict]:
@@ -362,6 +370,13 @@ def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12) -> 
         "ignoreerrors": True,
         "logger": _SilentLogger(),
     }
+    try:
+        from pipeline.download import get_cookies_path
+        cookie_path = get_cookies_path()
+        if cookie_path:
+            ydl_opts["cookiefile"] = str(cookie_path)
+    except Exception:
+        pass
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:

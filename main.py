@@ -283,14 +283,19 @@ def run_channel_pipeline(config_path: Path, channel_id: str | None = None) -> No
 
     if not candidate_items:
         print(f"\nNo candidate viral videos to process for {ch_name}. Check channel settings.")
-        return
+        return True
 
     print(f"\n=== Total videos queued for {ch_name}: {len(candidate_items)} ===")
+    success_count = 0
+    error_count = 0
+
     for item in candidate_items:
         url = item["url"] if isinstance(item, dict) else item
         try:
             process_video(item, cfg, st, channel_id=cid)
+            success_count += 1
         except Exception as e:
+            error_count += 1
             print(f"  ERROR processing {url}: {e}", file=sys.stderr)
             b_name = cfg.get("branding", {}).get("channel_name", cid or "Default")
             m_handle = cfg.get("meme_template", {}).get("handle", "@channel")
@@ -303,6 +308,12 @@ def run_channel_pipeline(config_path: Path, channel_id: str | None = None) -> No
                 url=url,
             )
             continue
+
+    if error_count > 0 and success_count == 0:
+        print(f"\n❌ [Channel Failure] All candidate videos ({error_count}/{len(candidate_items)}) failed for {ch_name}!", file=sys.stderr)
+        return False
+
+    return True
 
 
 def main():
@@ -319,7 +330,9 @@ def main():
 
     if not args.channel:
         # Default run with sources.yaml
-        run_channel_pipeline(CONFIG_PATH, channel_id="default")
+        ok = run_channel_pipeline(CONFIG_PATH, channel_id="default")
+        if not ok:
+            sys.exit(1)
         return
 
     if args.channel.lower() == "all":
@@ -328,8 +341,13 @@ def main():
             print("No channel configs found in config/channels/")
             return
         print(f"\n=== Found {len(channel_files)} channels. Running sequentially... ===")
+        all_ok = True
         for ch_file in channel_files:
-            run_channel_pipeline(ch_file, channel_id=ch_file.stem)
+            ch_ok = run_channel_pipeline(ch_file, channel_id=ch_file.stem)
+            if not ch_ok:
+                all_ok = False
+        if not all_ok:
+            sys.exit(1)
         return
 
     # Specific channel lookup
@@ -341,7 +359,9 @@ def main():
             print(f"  - {p.stem}")
         sys.exit(1)
 
-    run_channel_pipeline(matched_config, channel_id=matched_config.stem)
+    ok = run_channel_pipeline(matched_config, channel_id=matched_config.stem)
+    if not ok:
+        sys.exit(1)
 
 
 if __name__ == "__main__":

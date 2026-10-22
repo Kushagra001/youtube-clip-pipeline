@@ -32,6 +32,12 @@ def send_telegram_message(message: str, parse_mode: str = "HTML") -> bool:
     """Sends a message to the configured Telegram chat via Bot API using standard library urllib."""
     token, chat_id = _get_telegram_creds()
     if not token or not chat_id:
+        missing = []
+        if not token:
+            missing.append("TELEGRAM_BOT_TOKEN")
+        if not chat_id:
+            missing.append("TELEGRAM_CHAT_ID")
+        print(f"  [Telegram] Notification skipped: missing environment variables ({', '.join(missing)})")
         return False
 
     api_url = f"https://api.telegram.org/bot{token}/sendMessage"

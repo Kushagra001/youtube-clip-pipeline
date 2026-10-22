@@ -9,3 +9,7 @@ auth_url.txt
 *.pyc
 __pycache__/
 .venv/
+*cookies*.txt
+output/cookies.txt
+cookies/
+*.log
