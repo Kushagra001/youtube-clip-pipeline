@@ -1,4 +1,5 @@
 yt-dlp>=2024.12.0
+yt-dlp-get-pot
 bgutil-ytdlp-pot-provider
 groq>=0.11.0
 faster-whisper>=1.0.3
