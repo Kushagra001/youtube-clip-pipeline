@@ -19,6 +19,21 @@ discovery:
   - nba
   - disney
   - bbc
+  - news
+  - steroid
+  - steroids
+  - drama
+  - gossip
+  - beef
+  - arrested
+  - death
+  - fight
+  - rip
+  - exposed
+  - minecraft
+  - gaming
+  - reaction
+  - prank
   min_views: 100000
   min_duration_minutes: 10
   max_duration_minutes: 120
@@ -32,8 +47,8 @@ discovery:
   - calisthenics
   - fitfam
 videos: []
-min_clip_seconds: 25
-max_clip_seconds: 48
+min_clip_seconds: 24
+max_clip_seconds: 38
 max_clips_per_video: 2
 burner_text: true
 progress_bar: true
@@ -47,7 +62,7 @@ targeted_download: true
 highlight_method: groq
 vertical_style: meme_card
 meme_template:
-  theme: light
+  theme: dark
   handle: '@grindandbuild'
   badge: true
 branding:
@@ -64,3 +79,4 @@ youtube:
   title_suffix: ' #shorts'
   max_uploads_per_day: 2
   token_env_var: YOUTUBE_REFRESH_TOKEN_ACC_03
+  made_for_kids: false

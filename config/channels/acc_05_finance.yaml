@@ -7,24 +7,35 @@ discovery:
   - best side hustles to earn money online in India
   - how to manage money financial freedom India
   creators:
-  - '@PranjalKamra'
-  - '@akshatshrivastava'
-  - '@CARachanaRanade'
-  - '@AssetYogi'
-  - '@warikoo'
   - '@financewithsharan'
+  - '@warikoo'
+  - '@akshatshrivastava'
+  - '@AliAbdaal'
+  - '@GrahamStephan'
+  - '@HumphreyYang'
   blacklist_terms:
   - ufc
   - nfl
   - nba
   - disney
   - bbc
+  - news
+  - crypto scam
+  - rugpull
+  - hack
+  - telegram group
+  - memecoin
+  - pump and dump
+  - get rich quick
+  - casino
+  - drama
+  - exposed
   min_views: 100000
   min_duration_minutes: 10
   max_duration_minutes: 120
   max_videos_per_creator: 1
   max_videos_per_run: 2
-  niche_desc: personal finance, investing, budgeting and side hustles for Indians
+  niche_desc: personal finance, investing, budgeting and side hustles for financial freedom
   scrape_hashtags:
   - personalfinance
   - investing
@@ -32,8 +43,8 @@ discovery:
   - financialfreedom
   - stockmarket
 videos: []
-min_clip_seconds: 25
-max_clip_seconds: 48
+min_clip_seconds: 24
+max_clip_seconds: 38
 max_clips_per_video: 2
 burner_text: true
 progress_bar: true
@@ -64,3 +75,4 @@ youtube:
   title_suffix: ' #shorts'
   max_uploads_per_day: 2
   token_env_var: YOUTUBE_REFRESH_TOKEN_ACC_05
+  made_for_kids: false

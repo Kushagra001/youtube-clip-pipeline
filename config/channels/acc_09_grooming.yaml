@@ -19,6 +19,15 @@ discovery:
   - nba
   - disney
   - bbc
+  - news
+  - drama
+  - gossip
+  - fight
+  - prank
+  - exposed
+  - reaction
+  - minecraft
+  - gaming
   min_views: 60000
   min_duration_minutes: 6
   max_duration_minutes: 60
@@ -32,8 +41,8 @@ discovery:
   - groomingformen
   - menstyle
 videos: []
-min_clip_seconds: 22
-max_clip_seconds: 45
+min_clip_seconds: 24
+max_clip_seconds: 38
 max_clips_per_video: 2
 burner_text: true
 progress_bar: true
@@ -64,3 +73,4 @@ youtube:
   title_suffix: ' #shorts'
   max_uploads_per_day: 2
   token_env_var: YOUTUBE_REFRESH_TOKEN_ACC_09
+  made_for_kids: false

@@ -20,6 +20,20 @@ discovery:
   - disney
   - bbc
   - news
+  - cartoon
+  - animation
+  - nursery
+  - rhymes
+  - kids
+  - toddler
+  - counting
+  - drawing
+  - minecraft
+  - roblox
+  - simulator
+  - coloring
+  - cocomelon
+  - baby
   min_views: 60000
   min_duration_minutes: 5
   max_duration_minutes: 60
@@ -33,8 +47,8 @@ discovery:
   - funnycats
   - kittensofinstagram
 videos: []
-min_clip_seconds: 22
-max_clip_seconds: 45
+min_clip_seconds: 24
+max_clip_seconds: 38
 max_clips_per_video: 2
 burner_text: true
 progress_bar: true

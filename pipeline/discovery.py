@@ -125,6 +125,7 @@ def get_creator_channel_videos(creator: str, max_results: int = 12) -> list[dict
                             "duration": entry.get("duration"),
                             "view_count": entry.get("view_count") or 0,
                             "query_source": f"channel:{clean}",
+                            "is_official_creator": True,
                         })
                         if len(videos) >= max_results:
                             break
@@ -135,8 +136,11 @@ def get_creator_channel_videos(creator: str, max_results: int = 12) -> list[dict
         if videos:
             return videos
 
-    # Fallback to standard creator search
-    return search_youtube_videos(clean, max_results=max_results)
+    # Fallback to standard creator search (tag as official creator)
+    fallback_videos = search_youtube_videos(clean, max_results=max_results)
+    for v in fallback_videos:
+        v["is_official_creator"] = True
+    return fallback_videos
 
 
 def get_creator_viral_videos(creator: str, max_results: int = 15, niche_hint: str = "") -> list[dict]:
@@ -252,9 +256,13 @@ def verify_niche_with_groq(candidates: list[dict], niche_desc: str, scrape_hasht
             f"You are a strict YouTube Channel Director. The channel is strictly targeting:\n"
             f"Niche Description: '{niche_desc}'\nHashtags: {tags_str}\n\n"
             f"Candidate Videos:\n{json.dumps(items_payload, indent=2)}\n\n"
-            "Evaluate each candidate. Return ONLY a JSON array of video IDs that are genuinely, directly, "
-            "and authentically on-topic for this exact niche description. Discard any off-topic, generic celebrity, or unrelated videos.\n"
-            "Respond ONLY with a JSON array: [\"id1\", \"id2\", ...]"
+            "Evaluate each candidate against the niche description. Return ONLY a JSON array of video IDs that are genuinely, directly, "
+            "and authentically on-topic English content for this exact audience.\n"
+            "STRICT DISQUALIFICATION RULES:\n"
+            "1. DISCARD any animated cartoons, kids nursery rhymes, toddlers songs, or toy videos (even if featuring animals/relevant words).\n"
+            "2. DISCARD any foreign-language, Hindi, Hinglish, or non-English videos.\n"
+            "3. DISCARD off-topic gaming streams, celebrity gossip, prank videos, or drama.\n"
+            "Respond ONLY with a JSON array of accepted IDs: [\"id1\", \"id2\", ...]"
         )
         models_to_try = ["openai/gpt-oss-120b", "openai/gpt-oss-20b", "qwen/qwen3.8-27b"]
         for model in models_to_try:
@@ -327,10 +335,17 @@ def filter_and_rank_candidates(
             continue
 
         # Litigious content safety filter (avoids automated DMCA strikes from TV/studios/sports)
+        # Litigious content safety filter and negative keywords (word-boundary safe)
         if blacklist_terms:
             t_lower = cand.get("title", "").lower()
             c_lower = str(cand.get("channel", "")).lower()
-            if any(term in t_lower or term in c_lower for term in blacklist_terms):
+            combined_text = f"{t_lower} {c_lower}"
+            is_blacklisted = False
+            for term in blacklist_terms:
+                if re.search(r"\b" + re.escape(term) + r"\b", combined_text):
+                    is_blacklisted = True
+                    break
+            if is_blacklisted:
                 continue
 
         duration = cand.get("duration")
@@ -342,28 +357,36 @@ def filter_and_rank_candidates(
         if min_views > 0 and view_count < min_views:
             continue
 
-        # Strict Niche Relevance Filter: Reject candidates with 0 keyword hits in title/channel
+        # Strict Niche Relevance Filter: Prioritize verified official creators, gate generic search
         relevance_score = 1.0
+        is_official = cand.get("is_official_creator", False)
         if niche_keywords:
             t_words = set(re.findall(r"[a-zA-Z0-9]+", cand.get("title", "").lower()))
             c_words = set(re.findall(r"[a-zA-Z0-9]+", str(cand.get("channel", "")).lower()))
             title_hits = len(t_words & niche_keywords)
             chan_hits = len(c_words & niche_keywords)
 
-            # Hard Gate: Discard if zero relevance
-            if title_hits == 0 and chan_hits == 0:
-                continue
-            relevance_score = (title_hits * 3.5) + (chan_hits * 1.5)
+            if is_official:
+                # Official creators have guaranteed topical authenticity
+                relevance_score = 10.0 + (title_hits * 3.5) + (chan_hits * 1.5)
+            else:
+                # Hard Gate for general search: Discard if zero relevance hits
+                if title_hits == 0 and chan_hits == 0:
+                    continue
+                relevance_score = (title_hits * 3.5) + (chan_hits * 1.5)
+        elif is_official:
+            relevance_score = 10.0
 
         cand["relevance_score"] = relevance_score
         seen_ids.add(v_id)
         valid.append(cand)
 
-    # Sort primarily by Niche Relevance, secondarily by View Count
+    # Sort primarily by Official Creator Status + Niche Relevance, secondarily by View Count
     def _rank_key(c: dict) -> float:
         views = max(c.get("view_count", 0), 1)
         rel = c.get("relevance_score", 1.0)
-        return (rel * 25.0) + math.log10(views)
+        official_bonus = 60.0 if c.get("is_official_creator") else 0.0
+        return official_bonus + (rel * 25.0) + math.log10(views)
 
     valid.sort(key=_rank_key, reverse=True)
     return valid
@@ -443,11 +466,13 @@ def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12) -> 
                 else:
                     recency_multiplier = 0.75
 
-                # Subtitle Pre-Check Multiplier: prioritizes videos that bypass slow CPU Whisper
-                sub_multiplier = 1.25 if has_subs else 1.0
+                # Subtitle Pre-Check Multiplier: strongly prioritizes videos with verified dialogue
+                sub_multiplier = 1.5 if has_subs else 0.85
+                official_bonus = 60.0 if cand.get("is_official_creator") else 0.0
 
                 rel = cand.get("relevance_score", 1.0)
                 virality_score = (
+                    official_bonus +
                     (rel * 25.0) +
                     (math.log10(max(views_per_day, 1.0)) * 7.0) +
                     (math.log10(max(views, 1.0)) * 2.0)
@@ -519,11 +544,12 @@ def discover_and_select_videos(cfg: dict, state: dict) -> list[dict]:
         ny_videos = search_youtube_videos(niche_desc, max_results=12, sort="this_year")
         all_candidates.extend(ny_videos)
 
-    # 3. Search primary scrape hashtags
-    for tag in scrape_hashtags[:2]:
+    # 3. Search intent-grounded hashtag topics (avoids raw hashtag bot/cartoon spam)
+    for tag in scrape_hashtags[:3]:
         clean_tag = tag.strip().lstrip("#")
-        print(f"  [Discovery] Exploring hashtag search: '#{clean_tag}'")
-        h_videos = search_youtube_videos(f"#{clean_tag}", max_results=12)
+        search_query = f"{clean_tag} {niche_desc}" if niche_desc else f"{clean_tag} tips advice"
+        print(f"  [Discovery] Exploring intent-grounded query: '{search_query}'")
+        h_videos = search_youtube_videos(search_query, max_results=12)
         all_candidates.extend(h_videos)
 
     # 4. Search specified clean niche topics directly

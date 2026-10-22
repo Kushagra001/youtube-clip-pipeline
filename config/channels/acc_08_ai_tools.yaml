@@ -19,20 +19,28 @@ discovery:
   - nba
   - disney
   - bbc
+  - news
+  - crypto
+  - nft
+  - trading bot
+  - memecoin
+  - gambling
+  - scam
+  - drama
+  - minecraft
   min_views: 60000
   min_duration_minutes: 6
   max_duration_minutes: 75
   max_videos_per_creator: 1
   max_videos_per_run: 2
-  niche_desc: AI tools, automation and productivity hacks for non-technical everyday
-    users
+  niche_desc: AI tools, automation and productivity hacks for non-technical everyday users
   scrape_hashtags:
   - aitools
   - artificialintelligence
   - automation
 videos: []
-min_clip_seconds: 25
-max_clip_seconds: 48
+min_clip_seconds: 24
+max_clip_seconds: 38
 max_clips_per_video: 2
 burner_text: true
 progress_bar: true
@@ -46,7 +54,7 @@ targeted_download: true
 highlight_method: groq
 vertical_style: meme_card
 meme_template:
-  theme: light
+  theme: dark
   handle: '@ai.tools.dailyyy'
   badge: true
 branding:
@@ -63,3 +71,4 @@ youtube:
   title_suffix: ' #shorts'
   max_uploads_per_day: 2
   token_env_var: YOUTUBE_REFRESH_TOKEN_ACC_08
+  made_for_kids: false

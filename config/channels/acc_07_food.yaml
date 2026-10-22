@@ -2,23 +2,33 @@ channel_id: acc_07_food
 discovery:
   enabled: true
   niches:
-  - quick and easy recipes for home cooks
-  - genius food hacks kitchen tips and tricks
-  - easy healthy meal prep ideas for the week
-  - delicious quick Indian food recipes street food
+    - quick and easy recipes for home cooks
+    - genius food hacks kitchen tips and tricks
+    - easy healthy meal prep ideas for the week
+    - delicious 15 minute dinner recipes easy cooking
   creators:
-  - '@HebbarsKitchen'
-  - '@YourFoodLab'
-  - '@RanveerBrar'
+  - '@NickDiGiovanni'
   - '@JoshuaWeissman'
   - '@EthanChlebowski'
   - '@BabishCulinaryUniverse'
+  - '@GordonRamsay'
+  - '@BrianLagerstrom'
   blacklist_terms:
   - ufc
   - nfl
   - nba
   - disney
   - bbc
+  - news
+  - mukbang
+  - asmr eating
+  - eating show
+  - gross
+  - 10000 calories
+  - challenge
+  - fast food challenge
+  - prank
+  - drama
   min_views: 100000
   min_duration_minutes: 5
   max_duration_minutes: 45
@@ -30,10 +40,10 @@ discovery:
   - mealprep
   - foodhacks
   - quickrecipes
-  - indianfood
+  - cookinghacks
 videos: []
-min_clip_seconds: 22
-max_clip_seconds: 45
+min_clip_seconds: 24
+max_clip_seconds: 38
 max_clips_per_video: 2
 burner_text: true
 progress_bar: true
@@ -64,3 +74,4 @@ youtube:
   title_suffix: ' #shorts'
   max_uploads_per_day: 2
   token_env_var: YOUTUBE_REFRESH_TOKEN_ACC_07
+  made_for_kids: false
