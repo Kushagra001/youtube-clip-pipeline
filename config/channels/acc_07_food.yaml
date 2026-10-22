@@ -66,6 +66,7 @@ branding:
   handle: '@food_videos_daily'
   tagline: SATISFY YOUR CRAVINGS IN 60 SECONDS 🍳
   icon: 🍳
+  logo_path: assets/logos/acc_07_food.png
   outro_seconds: 1.8
 auto_upload: true
 youtube:

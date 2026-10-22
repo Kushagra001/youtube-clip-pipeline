@@ -65,6 +65,7 @@ branding:
   handle: '@founderr.central'
   tagline: FOUNDER SECRETS & STARTUP PLAYBOOKS 🚀
   icon: 🚀
+  logo_path: assets/logos/acc_06_business.png
   outro_seconds: 1.8
 auto_upload: true
 youtube:

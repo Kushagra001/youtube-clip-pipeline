@@ -65,6 +65,7 @@ branding:
   handle: '@calmyourmind.youtube'
   tagline: RESET YOUR NERVOUS SYSTEM & FIND PEACE 🧘
   icon: 🧘
+  logo_path: assets/logos/acc_10_mental_health.png
   outro_seconds: 1.8
 auto_upload: true
 youtube:

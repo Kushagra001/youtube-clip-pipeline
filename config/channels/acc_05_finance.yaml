@@ -67,6 +67,7 @@ branding:
   handle: '@wealthnexus_hq'
   tagline: SMART MONEY & GENERATIONAL WEALTH 📈
   icon: 📈
+  logo_path: assets/logos/acc_05_finance.png
   outro_seconds: 1.8
 auto_upload: true
 youtube:

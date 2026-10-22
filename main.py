@@ -180,8 +180,34 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
             outro_seconds=outro_seconds,
         )
 
+        # Resolve channel logo if configured or available in assets
+        logo_setting = branding_cfg.get("logo_path")
+        logo_path = None
+        if logo_setting:
+            p = Path(logo_setting)
+            if not p.is_absolute():
+                p = Path(__file__).resolve().parent / p
+            if p.exists():
+                logo_path = p
+
+        if not logo_path:
+            ch_id = cfg.get("channel_id")
+            if ch_id:
+                fallback_logo = Path(__file__).resolve().parent / "assets" / "logos" / f"{ch_id}.png"
+                if fallback_logo.exists():
+                    logo_path = fallback_logo
+
+        outro_start = max(0.0, adjusted_duration - outro_seconds) if enable_brand_outro else 0.0
+
         captioned_path = raw_clip_path.with_name(f"{clip_name}_captioned.mp4")
-        captions.burn_in_captions(raw_clip_path, ass_path, captioned_path)
+        captions.burn_in_captions(
+            raw_clip_path,
+            ass_path,
+            captioned_path,
+            logo_path=logo_path if enable_brand_outro else None,
+            outro_start=outro_start,
+            duration=adjusted_duration,
+        )
 
         if cfg.get("auto_upload", False):
             yt_cfg = cfg.get("youtube", {})

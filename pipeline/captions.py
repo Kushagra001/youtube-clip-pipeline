@@ -190,7 +190,7 @@ def build_ass_file(
         clean_brand_name = re.sub(r"[\U00010000-\U0010ffff\u2600-\u27bf\u2300-\u23ff\ufe0f]", "", brand_name).strip()
         clean_tagline = re.sub(r"[\U00010000-\U0010ffff\u2600-\u27bf\u2300-\u23ff\ufe0f]", "", brand_tagline).strip()
         lines.append(
-            f"Dialogue: 3,{_fmt_ts(outro_start_time)},{dur_str},OutroBrandCard,,0,0,0,,{{\\fad(200,0)}}{{\\fs54\\b1\\c&H0000FFFF&}}{clean_brand_name}\\N\\N{{\\fs26\\b0\\c&H00D4D4D8&}}{clean_tagline}\n"
+            f"Dialogue: 3,{_fmt_ts(outro_start_time)},{dur_str},OutroBrandCard,,0,0,0,,{{\\fad(200,0)}}{{\\fs52\\b1\\c&H0000FFFF&}}{clean_brand_name}\\N{{\\fs26\\b0\\c&H00D4D4D8&}}{clean_tagline}\n"
         )
 
     out_path.write_text("".join(lines), encoding="utf-8")
@@ -206,12 +206,41 @@ def segments_in_range(
     ]
 
 
-def burn_in_captions(video_path: Path, ass_path: Path, out_path: Path) -> Path:
+def burn_in_captions(
+    video_path: Path,
+    ass_path: Path,
+    out_path: Path,
+    logo_path: Path | None = None,
+    outro_start: float = 0.0,
+    duration: float = 0.0,
+) -> Path:
     # Escape colons and backslashes for cross-platform FFmpeg filter syntax
     ass_escaped = ass_path.resolve().as_posix().replace(":", "\\:")
+    logo_file = Path(logo_path).resolve() if logo_path else None
+    has_logo = bool(logo_file and logo_file.exists() and duration > outro_start > 0)
 
-    subprocess.run(
-        [
+    if has_logo:
+        fade_dur = min(0.3, max(0.1, (duration - outro_start) / 4.0))
+        cmd = [
+            "ffmpeg", "-y",
+            "-i", str(video_path),
+            "-loop", "1", "-i", str(logo_file),
+            "-filter_complex",
+            f"[1:v]scale=220:220,fade=t=in:st={outro_start:.2f}:d={fade_dur:.2f}:alpha=1[logo];"
+            f"[0:v][logo]overlay=(W-w)/2:1200:enable='between(t,{outro_start:.2f},{duration:.2f})'[v1];"
+            f"[v1]ass=filename='{ass_escaped}'[vout]",
+            "-map", "[vout]",
+            "-map", "0:a?",
+            "-r", "30",
+            "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+            "-pix_fmt", "yuv420p",
+            "-movflags", "+faststart",
+            "-c:a", "aac", "-b:a", "192k", "-ar", "44100", "-ac", "2",
+            "-shortest",
+            str(out_path),
+        ]
+    else:
+        cmd = [
             "ffmpeg", "-y",
             "-i", str(video_path),
             "-vf", f"ass=filename='{ass_escaped}'",
@@ -221,7 +250,7 @@ def burn_in_captions(video_path: Path, ass_path: Path, out_path: Path) -> Path:
             "-movflags", "+faststart",
             "-c:a", "aac", "-b:a", "192k", "-ar", "44100", "-ac", "2",
             str(out_path),
-        ],
-        check=True,
-    )
+        ]
+
+    subprocess.run(cmd, check=True)
     return out_path

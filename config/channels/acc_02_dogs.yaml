@@ -71,6 +71,7 @@ branding:
   handle: '@goodboys_club'
   tagline: SMART DOG HACKS & WHOLESOME MOMENTS 🐶
   icon: 🐶
+  logo_path: assets/logos/acc_02_dogs.png
   outro_seconds: 1.8
 auto_upload: true
 youtube:

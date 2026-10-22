@@ -67,6 +67,7 @@ branding:
   handle: '@stoic.societyy'
   tagline: MASTER DISCIPLINE. CONQUER YOURSELF 🏛️
   icon: 🏛️
+  logo_path: assets/logos/acc_04_motivation.png
   outro_seconds: 1.8
 auto_upload: true
 youtube:

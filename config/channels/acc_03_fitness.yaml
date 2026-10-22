@@ -71,6 +71,7 @@ branding:
   handle: '@grindandbuild'
   tagline: FORGE YOUR STRONGEST BODY & MIND ⚡
   icon: 💪
+  logo_path: assets/logos/acc_03_fitness.png
   outro_seconds: 1.8
 auto_upload: true
 youtube:

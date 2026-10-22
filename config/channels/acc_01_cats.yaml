@@ -71,6 +71,7 @@ branding:
   handle: '@daily_whiskers'
   tagline: DAILY DOSE OF FELINE SEROTONIN 🐾
   icon: 🐱
+  logo_path: assets/logos/acc_01_cats.png
   outro_seconds: 1.8
 auto_upload: true
 youtube:

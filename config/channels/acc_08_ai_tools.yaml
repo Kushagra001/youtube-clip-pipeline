@@ -63,6 +63,7 @@ branding:
   handle: '@ai.tools.dailyyy'
   tagline: AI TOOLS THAT 10X YOUR PRODUCTIVITY 🤖
   icon: 🤖
+  logo_path: assets/logos/acc_08_ai_tools.png
   outro_seconds: 1.8
 auto_upload: true
 youtube:

@@ -65,6 +65,7 @@ branding:
   handle: '@the.GroomedMan'
   tagline: ELEVATE YOUR LOOK, STYLE & CONFIDENCE 💈
   icon: 💈
+  logo_path: assets/logos/acc_09_grooming.png
   outro_seconds: 1.8
 auto_upload: true
 youtube:
