@@ -64,6 +64,15 @@ def get_cookies_path() -> Path | None:
     return cookie_file
 
 
+def _is_pot_provider_active() -> bool:
+    import socket
+    try:
+        with socket.create_connection(("127.0.0.1", 4416), timeout=0.4):
+            return True
+    except Exception:
+        return False
+
+
 def _base_ytdlp_args() -> list[str]:
     args = [
         "yt-dlp",
@@ -76,6 +85,9 @@ def _base_ytdlp_args() -> list[str]:
         args.extend(["--extractor-args", "youtube:player_client=mweb,tv,visionos,android,web,default"])
     else:
         args.extend(["--extractor-args", "youtube:player_client=visionos,android,tv,mweb"])
+
+    if _is_pot_provider_active():
+        args.extend(["--extractor-args", "youtubepot-bgutilhttp:base_url=http://127.0.0.1:4416"])
 
     # Locate Deno or Node runtime for solving YouTube JS challenges
     deno_path = shutil.which("deno")

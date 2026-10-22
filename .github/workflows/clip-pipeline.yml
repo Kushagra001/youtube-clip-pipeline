@@ -86,6 +86,16 @@ jobs:
           pip install -r requirements.txt
           pip install --upgrade yt-dlp
 
+      - name: Start Proof-of-Origin Token Provider
+        run: |
+          docker run --name bgutil-provider -d -p 4416:4416 brainicism/bgutil-ytdlp-pot-provider || true
+          sleep 4
+          if curl -s http://127.0.0.1:4416/ping >/dev/null 2>&1 || nc -z 127.0.0.1 4416 2>/dev/null; then
+            echo "Proof-of-Origin Token Provider is online on port 4416"
+          else
+            echo "Notice: Proof-of-Origin Token Provider starting in background"
+          fi
+
       - name: Configure YouTube Authentication Cookies
         env:
           YOUTUBE_COOKIES_RAW: ${{ secrets.YOUTUBE_COOKIES }}
