@@ -14,13 +14,13 @@ Tracking document for current codebase status, identified issues, bug fixes, per
 | **Highlight Extraction** | 🟢 Complete | Deterministic heuristic + Groq Llama 3.3 with graceful fallback & token guard |
 | **Editorial Framing & Transform** | 🟢 Complete | 9:16 layout, 1.02x speed shift, 1.03x zoom, color grade, progress bar |
 | **Meme Template Engine (Memezar/9GAG)** | 🟢 Complete | Top meme header card (dark/light), brand badge/handle, framed player |
-| **Captions & Burner Header** | 🟢 Fixed | Synchronized with speed shift; Windows & POSIX path escaping fixed |
+| **Captions & Subtitle Sync** | 🟢 Hardened | Microsecond-accurate word-timing VTT parser, kinetic 2-3 word highlight, HTML entity unescape, speaker tag removal, collision-free cutoff |
 | **YouTube Shorts Upload** | 🟢 Hardened | OAuth upload, quota budget tracking, and fair use attribution |
 | **CI/CD Workflow** | 🟢 Hardened | Scheduled 6-hour cron, fonts installed, cache purge, git rebase push |
 | **Fair Use & Policy Engine** | 🟢 Complete | Curated whitelist/blacklist, audio conditioning, transformative takeaway cards |
 | **Growth & Anti-Shadowban** | 🟢 Complete | High-retention window (25-48s), seamless looping, 2 uploads/day anti-spam cap |
-| **Visual Polish & Outro Branding** | 🟢 Complete | Kinetic yellow highlights, verified 0-100% progress tracking, brand outro card |
-| **Channel Niche & Brand Identity** | 🟢 Complete | 10 Channel configurations, state isolation, multi-token upload support |
+| **Visual Polish & Outro Branding** | 🟢 Complete | High-res 512x512 circular vector logos for 10 channels, FFmpeg alpha fade overlay, kinetic progress tracking, zero missing glyph tofu boxes |
+| **Channel Niche & Brand Identity** | 🟢 Complete | 10 Channel configurations, dedicated logos, state isolation, multi-token upload support |
 | **Smart Speaker Auto-Framing** | ⚪ Planned (Phase 8) | Face detection, dynamic active speaker tracking / split-screen |
 | **Multi-Platform & Webhooks** | ⚪ Planned (Phase 9) | Discord/Telegram alerts, TikTok & IG Reels packaging |
 | **Retention Analytics Loop** | ⚪ Planned (Phase 10) | Feedback loop from YouTube API analytics into discovery |
@@ -156,8 +156,17 @@ Tracking document for current codebase status, identified issues, bug fixes, per
   - **Target Files**: [pipeline/clip.py](pipeline/clip.py).
 
 - [x] **Step 6.5: Channel Branding Outro Card**
-  - **Solution**: Created `OutroBrandCard` in [pipeline/captions.py](pipeline/captions.py) and added `branding` configuration in [config/sources.yaml](config/sources.yaml). Renders a sleek lower-third card with placeholder icon (`⚡`), channel name (`VIRAL INSIGHTS`), and CTA (`FOLLOW FOR DAILY INSIGHTS`) during the final 1.8 seconds.
+  - **Solution**: Created `OutroBrandCard` in [pipeline/captions.py](pipeline/captions.py) and added `branding` configuration in [config/sources.yaml](config/sources.yaml). Renders a sleek lower-third card with channel name and tagline during the final 1.8 seconds.
   - **Target Files**: [config/sources.yaml](config/sources.yaml), [pipeline/captions.py](pipeline/captions.py), [main.py](main.py).
+
+- [x] **Step 6.6: Subtitle Word Timing Sync, Escape Sequence Cleanup & Non-Overlapping Layout**
+  - **Issue**: Subtitles suffered from timing drift over extended clips, displayed raw HTML escape sequences / speaker tags (e.g. `>>`, `&gt;&gt;`), and bottom kinetic captions collided with the takeaway outro banner at the end of the video.
+  - **Solution**:
+    1. Overhauled [pipeline/transcript.py](pipeline/transcript.py) with microsecond-accurate word-level VTT regex parser (`<timestamp><c> word</c>`), decoding HTML entities with `html.unescape()`, stripping speaker markers (`>>`, `&gt;&gt;`), and chunking words into snappier 3-word kinetic segments with accurate start/stop times.
+    2. Enforced strict `caption_cutoff_time = min(outro_start_time, takeaway_start)` in [pipeline/captions.py](pipeline/captions.py) so bottom kinetic subtitles cleanly stop before educational takeaway or brand cards appear.
+    3. Replaced unicode emoji `💡` in takeaway banner with `KEY INSIGHT:` to eliminate missing font glyph tofu boxes on Linux CI runners.
+    4. Added `asetpts=PTS-STARTPTS` and `-shortest` in [pipeline/clip.py](pipeline/clip.py) to guarantee audio and video streams start at `0.000s` and conclude on the exact same millisecond.
+  - **Target Files**: [pipeline/transcript.py](pipeline/transcript.py), [pipeline/captions.py](pipeline/captions.py), [pipeline/clip.py](pipeline/clip.py).
 
 ---
 
@@ -188,6 +197,25 @@ Tracking document for current codebase status, identified issues, bug fixes, per
 - [x] **Step 7.4: Multi-Token OAuth Upload Architecture**
   - **Scope**: Enhanced [pipeline/upload_youtube.py](pipeline/upload_youtube.py) and [pipeline/get_youtube_token.py](pipeline/get_youtube_token.py) to support per-channel refresh tokens (`YOUTUBE_REFRESH_TOKEN_ACC_01` ... `_10`) using a single shared Google Cloud project.
   - **Target Files**: [pipeline/upload_youtube.py](pipeline/upload_youtube.py), [pipeline/get_youtube_token.py](pipeline/get_youtube_token.py), [config/channels/*.yaml](config/channels/*.yaml).
+
+- [x] **Step 7.5: High-Resolution Channel Logo Badges & FFmpeg Outro Overlay Engine**
+  - **Issue**: Previously, `OutroBrandCard` in [pipeline/captions.py](pipeline/captions.py) attempted to render unicode emojis (`{brand_icon}`) in the ASS subtitle stream using `DejaVu Sans`. On Linux GitHub Actions runners and systems without emoji fonts in fontconfig, `libass` could not resolve emoji glyphs and defaulted to rendering a hollow rectangular placeholder box (`[]`).
+  - **Solution**:
+    1. Generated 10 bespoke high-resolution (512x512) circular vector-style PNG logo avatars with transparent backgrounds in `assets/logos/` via `scripts/generate_logos.py`:
+       - `acc_01_cats.png` (*Daily Whiskers* - amber feline crest)
+       - `acc_02_dogs.png` (*Good Boys Club* - royal blue paw badge)
+       - `acc_03_fitness.png` (*Grind & Build* - neon yellow lightning bolt)
+       - `acc_04_motivation.png` (*Stoic Society* - classic Roman pillar)
+       - `acc_05_finance.png` (*Wealth Nexus* - emerald upward growth chart)
+       - `acc_06_business.png` (*Founder Central* - purple launch rocket)
+       - `acc_07_food.png` (*Food Videos Daily* - crimson culinary flame)
+       - `acc_08_ai_tools.png` (*AI Tools Daily* - cyber cyan neural chip)
+       - `acc_09_grooming.png` (*The Groomed Man* - rose gold gentleman crest)
+       - `acc_10_mental_health.png` (*Calm Your Mind* - serene teal lotus)
+    2. Overhauled `burn_in_captions()` in [pipeline/captions.py](pipeline/captions.py) with an FFmpeg `-filter_complex` overlay graph (`[1:v]scale=220:220,fade=t=in:st={outro_start}:d={fade_dur}:alpha=1[logo];[0:v][logo]overlay=(W-w)/2:1200:enable='between(t,{outro_start},{duration})'[v1];[v1]ass=filename='{ass_escaped}'[vout]`), maintaining graceful fallback to text ASS rendering if no logo is configured.
+    3. Updated [main.py](main.py) to automatically resolve `branding.logo_path` (with auto-fallback to `assets/logos/{channel_id}.png`) and pass dynamic outro timing to `burn_in_captions()`.
+    4. Configured `logo_path` across all 10 channel configurations in [config/channels/*.yaml](config/channels/).
+  - **Target Files**: `scripts/generate_logos.py`, `assets/logos/*.png`, [pipeline/captions.py](pipeline/captions.py), [main.py](main.py), [config/channels/*.yaml](config/channels/).
 
 ---
 
@@ -239,8 +267,10 @@ Tracking document for current codebase status, identified issues, bug fixes, per
    - [x] **Catchy Hooks**: Topic-relevant curiosity headlines (`WHY INTROVERTS ACT DIFFERENTLY 🧠`, `RING LIGHTS HUSTLE REVEALED`).
    - [x] **Key Insights**: Coherent, substantive educational synthesis (no dangling numbers/words like `75`).
    - [x] **Kinetic Subtitles**: 2-3 word bursts with Electric Yellow active word highlight and crisp black stroke.
+   - [x] **Subtitle Microsecond Sync & Entity Decoding**: Extracted word-level timestamps from YouTube VTT, decoded HTML entities via `html.unescape()`, and cleanly stripped speaker tags (`>>`, `&gt;&gt;`).
+   - [x] **Subtitle & Outro Collision Prevention**: Subtitles enforced to cutoff before `min(outro_start, takeaway_start)` with zero text overlapping.
    - [x] **Kinetic Progress Bar**: Verified starts at 0% and tracks across the timeline to 100%.
-   - [x] **Brand Outro Card**: Verified renders in final 1.8s in the lower safe area (`⚡ VIRAL INSIGHTS`, `🤖 AI TOOLS DAILY`).
+   - [x] **Brand Outro Card & Logo Overlay**: Verified renders in final 1.8s in the lower safe area with high-res 512x512 circular vector badge overlay (`fade=t=in:st={outro_start}:d=0.25:alpha=1`) and zero placeholder glyph box artifacts.
    - [x] Audio conditioning & loudness: vocal isolation EQ + -14 LUFS normalization verified.
 2. **Windows Path Verification**:
    - [x] Verified `burn_in_captions()` runs without colons/path escaping errors on Windows (`ass=filename='C\:/...'`).
