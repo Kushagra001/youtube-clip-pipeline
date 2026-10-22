@@ -64,10 +64,16 @@ def get_cookies_path() -> Path | None:
     return cookie_file
 
 
+_POT_LOGGED = False
+
 def _is_pot_provider_active() -> bool:
+    global _POT_LOGGED
     import socket
     try:
         with socket.create_connection(("127.0.0.1", 4416), timeout=0.4):
+            if not _POT_LOGGED:
+                print("[Auth] Proof-of-Origin Token Provider detected online at 127.0.0.1:4416")
+                _POT_LOGGED = True
             return True
     except Exception:
         return False
