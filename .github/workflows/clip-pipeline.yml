@@ -73,10 +73,12 @@ jobs:
           deno-version: v2.x
 
       - name: Install System Dependencies & Genuine Fonts
+        env:
+          DEBIAN_FRONTEND: noninteractive
         run: |
-          sudo apt-get update
-          sudo apt-get install -y ffmpeg fonts-liberation fonts-freefont-ttf fonts-dejavu-core fonts-noto-color-emoji
-          fc-cache -f -v || true
+          sudo -E apt-get update -qq
+          sudo -E apt-get install -y --no-install-recommends fonts-liberation fonts-noto-color-emoji
+          fc-cache -f || true
 
       - name: Install Python Dependencies
         run: |
