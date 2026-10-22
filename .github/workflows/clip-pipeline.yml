@@ -88,13 +88,10 @@ jobs:
 
       - name: Start Proof-of-Origin Token Provider
         run: |
-          docker run --name bgutil-provider -d -p 4416:4416 brainicism/bgutil-ytdlp-pot-provider || true
+          docker run --name bgutil-provider -d --network host --restart always brainicism/bgutil-ytdlp-pot-provider || true
           sleep 4
-          if curl -s http://127.0.0.1:4416/ping >/dev/null 2>&1 || nc -z 127.0.0.1 4416 2>/dev/null; then
-            echo "Proof-of-Origin Token Provider is online on port 4416"
-          else
-            echo "Notice: Proof-of-Origin Token Provider starting in background"
-          fi
+          docker ps
+          curl -s http://127.0.0.1:4416/ping || echo "Warning: ping returned non-zero"
 
       - name: Configure YouTube Authentication Cookies
         env:
@@ -128,6 +125,11 @@ jobs:
           YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
         run: |
           python main.py --channel "${{ matrix.channel }}"
+
+      - name: Proof-of-Origin Provider Logs
+        if: always()
+        run: |
+          docker logs bgutil-provider || true
 
       - name: Archive Generated Video Artifacts
         if: always()

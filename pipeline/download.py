@@ -68,15 +68,24 @@ _POT_LOGGED = False
 
 def _is_pot_provider_active() -> bool:
     global _POT_LOGGED
-    import socket
-    try:
-        with socket.create_connection(("127.0.0.1", 4416), timeout=0.4):
-            if not _POT_LOGGED:
-                print("[Auth] Proof-of-Origin Token Provider detected online at 127.0.0.1:4416")
-                _POT_LOGGED = True
-            return True
-    except Exception:
-        return False
+    # In GitHub Actions, the provider container is always spun up
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        return True
+
+    import urllib.request
+    for target in ["http://127.0.0.1:4416/ping", "http://localhost:4416/ping"]:
+        try:
+            req = urllib.request.Request(target, headers={"User-Agent": "yt-dlp"})
+            with urllib.request.urlopen(req, timeout=2.0) as resp:
+                if resp.status in (200, 204):
+                    if not _POT_LOGGED:
+                        print(f"[Auth] Proof-of-Origin Token Provider online at {target}")
+                        _POT_LOGGED = True
+                    return True
+        except Exception as e:
+            pass
+
+    return False
 
 
 def _base_ytdlp_args() -> list[str]:
@@ -218,7 +227,8 @@ def download_video(url: str, video_id: str | None = None, title: str | None = No
     res = subprocess.run(cmd, capture_output=True, text=True)
     if res.returncode != 0:
         err_msg = res.stderr.strip() or res.stdout.strip()
-        last_error = "\n".join(err_msg.splitlines()[-4:]) if err_msg else "Unknown yt-dlp error"
+        print(f"  [Download Error Output]:\n{err_msg}")
+        last_error = "\n".join(err_msg.splitlines()[-6:]) if err_msg else "Unknown yt-dlp error"
         raise RuntimeError(f"yt-dlp video download failed:\n{last_error}")
 
     video_path = DOWNLOAD_DIR / f"{video_id}.mp4"
