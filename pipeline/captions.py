@@ -61,7 +61,11 @@ def _format_kinetic_cue(words: list[str]) -> str:
     lead focus word in electric yellow (&H0000FFFF&), remainder in crisp white."""
     if not words:
         return ""
-    clean = [w.strip().upper() for w in words if w.strip()]
+    import html
+    clean = [
+        html.unescape(w).strip().upper().replace("{", "(").replace("}", ")").replace("\\", "/")
+        for w in words if w.strip()
+    ]
     if not clean:
         return ""
     if len(clean) == 1:
@@ -118,14 +122,20 @@ def build_ass_file(
     outro_seconds: float = 1.8,
 ) -> Path:
     """Builds the complete ASS subtitle track with synchronization, kinetic captions, takeaway outro, and brand card."""
+    import re
     lines = [ASS_HEADER]
     safe_duration = clip_duration or 60.0
     dur_str = _fmt_ts(safe_duration)
     outro_start_time = max(0.0, safe_duration - outro_seconds) if enable_brand_outro else safe_duration
 
+    has_takeaway = bool(takeaway_text and safe_duration >= 6.0)
+    takeaway_start = max(0.0, safe_duration - 3.8) if has_takeaway else safe_duration
+    # Subtitles MUST stop before takeaway card or brand outro appears to prevent overlapping
+    caption_cutoff_time = min(outro_start_time, takeaway_start)
+
     # 1. Top Header (Meme Card vs. Burner Header)
     if burner_text:
-        clean_burner = burner_text.strip().upper()
+        clean_burner = burner_text.strip().upper().replace("{", "(").replace("}", ")")
         if template_style == "meme_card":
             handle_style = "MemeHandleDark" if meme_theme == "dark" else "MemeHandleLight"
             hook_style = "MemeHookDark" if meme_theme == "dark" else "MemeHookLight"
@@ -143,7 +153,7 @@ def build_ass_file(
                 f"Dialogue: 1,0:00:00.00,{dur_str},BurnerHeader,,0,0,0,,{clean_burner}\n"
             )
 
-    # 2. Fast-paced kinetic subtitles with active yellow word-highlight
+    # 2. Fast-paced kinetic subtitles with active yellow word-highlight (cleanly bounded before outro)
     for seg in clip_segments:
         sub_chunks = _chunk_segment(seg, max_words=3)
         for chunk in sub_chunks:
@@ -152,9 +162,9 @@ def build_ass_file(
 
             # Scale timestamps by speed_factor to preserve perfect speech synchronization
             start = raw_start / speed_factor
-            end = min(raw_end / speed_factor, outro_start_time)
+            end = min(raw_end / speed_factor, caption_cutoff_time)
 
-            if start >= outro_start_time:
+            if start >= caption_cutoff_time or end <= start:
                 continue
 
             text = chunk["text"].replace("\n", " ").strip()
@@ -164,21 +174,23 @@ def build_ass_file(
                 f"Dialogue: 0,{_fmt_ts(start)},{_fmt_ts(end)},Default,,0,0,0,,{text}\n"
             )
 
-    # 3. Transformative Educational Takeaway Outro Banner (final ~3.5s until outro card)
-    if takeaway_text and safe_duration >= 6.0:
-        takeaway_start = max(0.0, safe_duration - 3.8)
+    # 3. Transformative Educational Takeaway Outro Banner (stops before final brand outro card)
+    if has_takeaway:
         takeaway_end_str = _fmt_ts(outro_start_time if enable_brand_outro else safe_duration)
-        clean_takeaway = takeaway_text.strip().upper()
+        clean_takeaway = re.sub(r"[\U00010000-\U0010ffff\u2600-\u27bf\u2300-\u23ff\ufe0f]", "", takeaway_text)
+        clean_takeaway = clean_takeaway.strip().upper().replace("{", "(").replace("}", ")")
         takeaway_style = "TakeawayCardDark" if meme_theme == "dark" else "TakeawayCardLight"
         wrapped_takeaway = _wrap_headline(clean_takeaway, max_chars_per_line=38)
         lines.append(
-            f"Dialogue: 2,{_fmt_ts(takeaway_start)},{takeaway_end_str},{takeaway_style},,0,0,0,,{{\\c&H00D7FF&}}💡 {{\\c}}{wrapped_takeaway}\n"
+            f"Dialogue: 2,{_fmt_ts(takeaway_start)},{takeaway_end_str},{takeaway_style},,0,0,0,,{{\\c&H0000FFFF&}}KEY INSIGHT: {{\\c}}{wrapped_takeaway}\n"
         )
 
-    # 4. Center Brand Outro Card (final ~1.8 seconds)
+    # 4. Center Brand Outro Card (final ~1.8 seconds, pure clean typography with no missing emoji glyphs)
     if enable_brand_outro and safe_duration >= 5.0:
+        clean_brand_name = re.sub(r"[\U00010000-\U0010ffff\u2600-\u27bf\u2300-\u23ff\ufe0f]", "", brand_name).strip()
+        clean_tagline = re.sub(r"[\U00010000-\U0010ffff\u2600-\u27bf\u2300-\u23ff\ufe0f]", "", brand_tagline).strip()
         lines.append(
-            f"Dialogue: 3,{_fmt_ts(outro_start_time)},{dur_str},OutroBrandCard,,0,0,0,,{{\\fad(200,0)}}{{\\fs66\\c&H00D7FF&}}{brand_icon}{{\\c&HFFFFFF&}}\\N\\N{{\\fs42\\b1}}{brand_name}\\N{{\\fs24\\b0\\c&H00D4D4D8&}}{brand_tagline}\n"
+            f"Dialogue: 3,{_fmt_ts(outro_start_time)},{dur_str},OutroBrandCard,,0,0,0,,{{\\fad(200,0)}}{{\\fs54\\b1\\c&H0000FFFF&}}{clean_brand_name}\\N\\N{{\\fs26\\b0\\c&H00D4D4D8&}}{clean_tagline}\n"
         )
 
     out_path.write_text("".join(lines), encoding="utf-8")

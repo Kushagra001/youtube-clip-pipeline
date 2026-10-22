@@ -97,8 +97,8 @@ def cut_clip(
         meme_theme=meme_theme,
     )
 
-    # Audio pipeline: tempo micro-shift + anti-Content-ID vocal isolation + YouTube -14 LUFS loudness mastering
-    af_filters = [f"atempo={speed_factor:.2f}"]
+    # Audio pipeline: PTS alignment + tempo micro-shift + anti-Content-ID vocal isolation + YouTube -14 LUFS loudness mastering
+    af_filters = ["asetpts=PTS-STARTPTS", f"atempo={speed_factor:.2f}"]
     if enable_audio_conditioning:
         af_filters.extend([
             "highpass=f=85",
@@ -116,6 +116,7 @@ def cut_clip(
         "-t", f"{raw_duration:.3f}",
         "-vf", vf,
         "-af", af,
+        "-shortest",
         "-r", "30",
         "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
         "-pix_fmt", "yuv420p",
@@ -129,7 +130,7 @@ def cut_clip(
     except subprocess.CalledProcessError as e:
         # If loudnorm fails on peculiar audio streams, retry with basic filters
         if enable_loudnorm:
-            af_fb_filters = [f"atempo={speed_factor:.2f}"]
+            af_fb_filters = ["asetpts=PTS-STARTPTS", f"atempo={speed_factor:.2f}"]
             if enable_audio_conditioning:
                 af_fb_filters.append("highpass=f=85")
             af_fallback = ",".join(af_fb_filters)
@@ -140,6 +141,7 @@ def cut_clip(
                 "-t", f"{raw_duration:.3f}",
                 "-vf", vf,
                 "-af", af_fallback,
+                "-shortest",
                 "-r", "30",
                 "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
                 "-pix_fmt", "yuv420p",
