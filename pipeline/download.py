@@ -103,10 +103,10 @@ def _base_ytdlp_args(ignore_cookies: bool = False) -> list[str]:
     cookie_path = get_cookies_path() if not ignore_cookies else None
     if cookie_path:
         args.extend(["--cookies", str(cookie_path)])
-        # Put visionos and ios first: they don't require GVS PO tokens and bypass cloud bot blocks
-        args.extend(["--extractor-args", "youtube:player_client=visionos,ios,android,mweb,web"])
+        # Put visionos and ios first: they don't require GVS PO tokens, use clean HLS, and bypass cloud bot blocks
+        args.extend(["--extractor-args", "youtube:player_client=visionos,ios,mweb"])
     else:
-        args.extend(["--extractor-args", "youtube:player_client=visionos,ios,android,mweb,web"])
+        args.extend(["--extractor-args", "youtube:player_client=visionos,ios,mweb"])
 
     # 3. Proof-of-Origin Token Provider (if running)
     if _is_pot_provider_active():
