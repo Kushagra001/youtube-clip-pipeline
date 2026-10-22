@@ -11,6 +11,11 @@ from pathlib import Path
 from base64 import b64encode
 from dotenv import load_dotenv
 
+if sys.stdout.encoding != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if sys.stderr.encoding != "utf-8":
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 load_dotenv()
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 COOKIES_DEST = PROJECT_ROOT / "output" / "cookies.txt"
