@@ -203,6 +203,7 @@ def burn_in_captions(video_path: Path, ass_path: Path, out_path: Path) -> Path:
             "ffmpeg", "-y",
             "-i", str(video_path),
             "-vf", f"ass=filename='{ass_escaped}'",
+            "-r", "30",
             "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
             "-pix_fmt", "yuv420p",
             "-movflags", "+faststart",
