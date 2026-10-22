@@ -118,7 +118,9 @@ def cut_clip(
         "-af", af,
         "-r", "30",
         "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
-        "-c:a", "aac", "-b:a", "160k",
+        "-pix_fmt", "yuv420p",
+        "-movflags", "+faststart",
+        "-c:a", "aac", "-b:a", "160k", "-ar", "44100", "-ac", "2",
         str(out_path),
     ]
 
@@ -140,7 +142,9 @@ def cut_clip(
                 "-af", af_fallback,
                 "-r", "30",
                 "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
-                "-c:a", "aac", "-b:a", "160k",
+                "-pix_fmt", "yuv420p",
+                "-movflags", "+faststart",
+                "-c:a", "aac", "-b:a", "160k", "-ar", "44100", "-ac", "2",
                 str(out_path),
             ]
             subprocess.run(cmd_fallback, check=True)

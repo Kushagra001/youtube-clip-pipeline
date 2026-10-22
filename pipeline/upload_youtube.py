@@ -47,6 +47,7 @@ def upload_short(
     category_id: str = "24",
     tags: list[str] | None = None,
     token_env_var: str | None = None,
+    made_for_kids: bool = False,
 ) -> str | None:
     """Uploads a vertical Short to YouTube with resumable chunking and quota error protection."""
     from googleapiclient.errors import HttpError
@@ -63,8 +64,14 @@ def upload_short(
             "description": description,
             "categoryId": category_id,
             "tags": tags or ["#shorts", "shorts", "viral", "podcast", "clips"],
+            "defaultLanguage": "en",
+            "defaultAudioLanguage": "en",
         },
-        "status": {"privacyStatus": privacy_status},
+        "status": {
+            "privacyStatus": privacy_status,
+            "selfDeclaredMadeForKids": made_for_kids,
+            "embeddable": True,
+        },
     }
 
     try:
