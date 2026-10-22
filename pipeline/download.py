@@ -8,33 +8,60 @@ from pathlib import Path
 DOWNLOAD_DIR = Path(__file__).resolve().parent.parent / "output" / "downloads"
 
 
+_COOKIE_LOGGED = False
+
 def get_cookies_path() -> Path | None:
     """Finds or creates a valid cookies file from environment secrets or workspace files."""
+    global _COOKIE_LOGGED
+    cookie_file = None
+
     # 1. Direct explicit environment path
     env_path = os.environ.get("YOUTUBE_COOKIES_PATH")
     if env_path and Path(env_path).exists() and Path(env_path).stat().st_size > 0:
-        return Path(env_path)
+        cookie_file = Path(env_path)
 
     # 2. Local cookies file in root, config/, or output/
-    project_root = Path(__file__).resolve().parent.parent
-    local_candidates = [
-        project_root / "cookies.txt",
-        project_root / "config" / "cookies.txt",
-        DOWNLOAD_DIR.parent / "cookies.txt",
-    ]
-    for c in local_candidates:
-        if c.exists() and c.stat().st_size > 0:
-            return c
+    if not cookie_file:
+        project_root = Path(__file__).resolve().parent.parent
+        local_candidates = [
+            project_root / "cookies.txt",
+            DOWNLOAD_DIR.parent / "cookies.txt",
+            project_root / "config" / "cookies.txt",
+        ]
+        for c in local_candidates:
+            if c.exists() and c.stat().st_size > 0:
+                cookie_file = c
+                break
 
     # 3. Raw cookies content supplied via YOUTUBE_COOKIES env var (from GitHub Secrets or .env)
-    raw = os.environ.get("YOUTUBE_COOKIES", "").strip()
-    if raw and ("youtube.com" in raw or "# Netscape" in raw or "\t" in raw):
-        out_cookie_file = DOWNLOAD_DIR.parent / "cookies.txt"
-        out_cookie_file.parent.mkdir(parents=True, exist_ok=True)
-        out_cookie_file.write_text(raw, encoding="utf-8")
-        return out_cookie_file
+    if not cookie_file:
+        raw = os.environ.get("YOUTUBE_COOKIES", "").strip()
+        if raw:
+            # Check if base64 encoded
+            import base64
+            decoded_text = None
+            try:
+                decoded_bytes = base64.b64decode(raw, validate=True)
+                candidate = decoded_bytes.decode("utf-8", errors="ignore")
+                if "youtube.com" in candidate or "# Netscape" in candidate:
+                    decoded_text = candidate
+            except Exception:
+                pass
 
-    return None
+            if not decoded_text and ("youtube.com" in raw or "# Netscape" in raw or "\t" in raw):
+                decoded_text = raw
+
+            if decoded_text:
+                out_cookie_file = DOWNLOAD_DIR.parent / "cookies.txt"
+                out_cookie_file.parent.mkdir(parents=True, exist_ok=True)
+                out_cookie_file.write_text(decoded_text, encoding="utf-8")
+                cookie_file = out_cookie_file
+
+    if cookie_file and not _COOKIE_LOGGED:
+        print(f"[Auth] YouTube cookies active from {cookie_file.name} ({cookie_file.stat().st_size} bytes)")
+        _COOKIE_LOGGED = True
+
+    return cookie_file
 
 
 def _base_ytdlp_args() -> list[str]:
@@ -45,9 +72,10 @@ def _base_ytdlp_args() -> list[str]:
     cookie_path = get_cookies_path()
     if cookie_path:
         args.extend(["--cookies", str(cookie_path)])
-        args.extend(["--extractor-args", "youtube:player_client=web,default"])
+        # Use resilient client chain: mweb & tv & visionos avoid aggressive bot blocks
+        args.extend(["--extractor-args", "youtube:player_client=mweb,tv,visionos,android,web,default"])
     else:
-        args.extend(["--extractor-args", "youtube:player_client=visionos,android"])
+        args.extend(["--extractor-args", "youtube:player_client=visionos,android,tv,mweb"])
 
     # Locate Deno or Node runtime for solving YouTube JS challenges
     deno_path = shutil.which("deno")

@@ -84,6 +84,18 @@ jobs:
           pip install -r requirements.txt
           pip install --upgrade yt-dlp
 
+      - name: Configure YouTube Authentication Cookies
+        env:
+          YOUTUBE_COOKIES_RAW: ${{ secrets.YOUTUBE_COOKIES }}
+        run: |
+          mkdir -p output
+          if [ -n "$YOUTUBE_COOKIES_RAW" ]; then
+            printf "%s\n" "$YOUTUBE_COOKIES_RAW" > output/cookies.txt
+            echo "Installed YouTube session cookies ($(wc -l < output/cookies.txt) lines, $(wc -c < output/cookies.txt) bytes)"
+          else
+            echo "Notice: YOUTUBE_COOKIES secret not set or empty"
+          fi
+
       - name: Run Autonomous Pipeline for ${{ matrix.channel }}
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
