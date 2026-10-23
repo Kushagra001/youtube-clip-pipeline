@@ -6,7 +6,9 @@
     "TNdNVXYwK7A",
     "8e3RC1L5V_Y",
     "BraPxEPtTSg",
-    "ShZKdJF95P8"
+    "ShZKdJF95P8",
+    "Hll90rHfdhM",
+    "TOdmVMepGkA"
   ],
   "upload_timestamps": [
     1792775452.6644533,
@@ -35,7 +37,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1792789875.238243,
+        "status": "public"
       }
     },
     {
@@ -57,11 +60,23 @@
       "scheduled_at": null,
       "uploaded_at": 1792775534.1515608,
       "stats": {
-        "views": 0,
+        "views": 4,
         "likes": 0,
-        "comments": 0,
-        "last_synced": 0
+        "comments": 1,
+        "last_synced": 1792789875.238243,
+        "status": "public"
       }
     }
-  ]
+  ],
+  "analytics_summary": {
+    "channel_id": "acc_10_mental_health",
+    "last_sync": 1792789875.238243,
+    "total_shorts": 2,
+    "public_shorts": 1,
+    "total_views": 4,
+    "median_views": 4,
+    "creator_weights": {
+      "@HealthyGamerGG": 1.0
+    }
+  }
 }
