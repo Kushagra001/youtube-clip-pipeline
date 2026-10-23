@@ -7,10 +7,64 @@
     "vSZy6cW_fUU",
     "hg434FLRhvg",
     "f2ee9ynLRa8",
-    "GDVlp3L-i-A"
+    "GDVlp3L-i-A",
+    "o0XIOR2FQEM",
+    "KiP4jwiTazI"
   ],
   "upload_timestamps": [
-    1792704106.8813553,
-    1792704173.7886689
+    1792790705.2965965,
+    1792790719.7493448
+  ],
+  "uploaded_shorts": [
+    {
+      "video_id": "rvEdTTXmido",
+      "source_video_id": "o0XIOR2FQEM",
+      "title": "Adoptable Dog's Hilarious Home Tour #shorts",
+      "creator": "The Pet Collective",
+      "topic": "funny and cute dog videos for dog lovers",
+      "tags": [
+        "dogsofinstagram",
+        "dogvideos",
+        "puppylove",
+        "dogtraining",
+        "goodboy",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792790705.296602,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "n6qwChX9ZYc",
+      "source_video_id": "o0XIOR2FQEM",
+      "title": "Morning Chaos: Dog's Unexpected Reaction #shorts",
+      "creator": "The Pet Collective",
+      "topic": "funny and cute dog videos for dog lovers",
+      "tags": [
+        "dogsofinstagram",
+        "dogvideos",
+        "puppylove",
+        "dogtraining",
+        "goodboy",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792790719.749351,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    }
   ]
 }
