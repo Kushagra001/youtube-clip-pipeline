@@ -7,10 +7,64 @@
     "uaLNfijnp-8",
     "138y93ywE_g",
     "xRxVpjeHmeA",
-    "5bxp78i96S8"
+    "5bxp78i96S8",
+    "21flGkcZO3A",
+    "yslXlV2BP_Y"
   ],
   "upload_timestamps": [
-    1792687871.6765158,
-    1792688192.4257863
+    1792789986.705295,
+    1792790006.5705404
+  ],
+  "uploaded_shorts": [
+    {
+      "video_id": "dIncrfqqLvU",
+      "source_video_id": "21flGkcZO3A",
+      "title": "Stop Chasing Views, Start Chasing Buyers #shorts",
+      "creator": "@AlexHormozi",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792789986.705301,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "Gbh_8VwvDto",
+      "source_video_id": "21flGkcZO3A",
+      "title": "My Top 6 Videos Made $0 #shorts",
+      "creator": "@AlexHormozi",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792790006.5705469,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    }
   ]
 }
