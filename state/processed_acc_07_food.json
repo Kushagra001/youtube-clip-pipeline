@@ -7,10 +7,64 @@
     "gmk-g6cC9Sg",
     "EW5l8gvmVUA",
     "K1CJOhPM_4Q",
-    "t_12D_xiNcM"
+    "t_12D_xiNcM",
+    "ffsQzZUSO2c",
+    "tbcj6il1xsM"
   ],
   "upload_timestamps": [
-    1792687914.5894995,
-    1792688020.7586193
+    1792789840.5213933,
+    1792789888.4919324
+  ],
+  "uploaded_shorts": [
+    {
+      "video_id": "xAARKlZbzbE",
+      "source_video_id": "ffsQzZUSO2c",
+      "title": "The ONE Grocery List Hack #shorts",
+      "creator": "The Carolina Lifestyle",
+      "topic": "quick and easy recipes, meal prep ideas and food hacks for home cooks",
+      "tags": [
+        "easyrecipes",
+        "mealprep",
+        "foodhacks",
+        "quickrecipes",
+        "cookinghacks",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792789840.521399,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "yIRxlUdFj3g",
+      "source_video_id": "ffsQzZUSO2c",
+      "title": "Shop Early, Beat the Crowd #shorts",
+      "creator": "The Carolina Lifestyle",
+      "topic": "quick and easy recipes, meal prep ideas and food hacks for home cooks",
+      "tags": [
+        "easyrecipes",
+        "mealprep",
+        "foodhacks",
+        "quickrecipes",
+        "cookinghacks",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792789888.4919384,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    }
   ]
 }
