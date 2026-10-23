@@ -82,10 +82,16 @@ targeted_download: true         # Download subtitles first, then only 30-55s cli
 highlight_method: "groq"
 
 # Vertical framing layout:
-# "meme_card" = 9GAG / Memezar viral meme template (header card with handle + hook, framed video)
-# "blur_pad"  = framed editorial video card with custom border & darkened blurred backdrop
-# "crop"      = center-crop to 1080x1920 with micro-zoom & color grade
+# "meme_card"    = 9GAG / Memezar viral meme template (header card with handle + hook, framed video)
+# "split_screen" = Stacked 2-speaker layout for podcasts (Host on top, Guest on bottom, accent divider)
+# "auto"         = Dynamically selects split_screen for 2-speaker podcast conversations, meme_card otherwise
+# "blur_pad"     = Framed editorial video card with custom border & darkened blurred backdrop
+# "crop"         = Direct 9:16 vertical crop with smart speaker face centering & micro-zoom
 vertical_style: "meme_card"
+
+# Smart Speaker Auto-Framing (Face-Guided Centering & 2-Speaker Split-Screen)
+# Uses fast offline OpenCV face detection to center active speakers rather than dead center
+smart_speaker_framing: true
 
 meme_template:
   theme: "light"                 # "light" (classic trending white 9GAG/Twitter meme box) or "dark"
@@ -101,11 +107,20 @@ branding:
   icon: "⚡"                             # Placeholder icon/badge
   outro_seconds: 1.8                     # Outro duration in final seconds
 
+# Multi-Platform Packaging (exports TikTok, Instagram Reels, and YouTube Shorts bundles)
+multiplatform_export: true
+
 # Auto-upload to YouTube Shorts
 auto_upload: false
 
 youtube:
-  privacy_status: "public"     # private | unlisted | public
+  privacy_status: "public"     # public | scheduled | private | unlisted
   category_id: "24"             # Entertainment
   title_suffix: " #shorts"
   max_uploads_per_day: 2        # Strict anti-spam rate limit to prevent bot-farm shadowban (1-2/day max)
+  # Automated Peak-Hour Publishing Schedule (used when privacy_status: "scheduled" or enabled: true)
+  publish_schedule:
+    enabled: false              # Set to true to automatically schedule releases during peak watch hours
+    optimal_hours_utc: [12, 17, 21]  # Peak global engagement windows (12:00, 17:00, 21:00 UTC)
+    min_lead_time_minutes: 45   # Minimum processing buffer before release
+    stagger_hours: 4.0          # Staggers multiple clips uploaded in the same run to avoid cannibalization

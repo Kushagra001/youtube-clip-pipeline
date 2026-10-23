@@ -134,6 +134,7 @@ jobs:
           YOUTUBE_REFRESH_TOKEN_ACC_10: ${{ secrets.YOUTUBE_REFRESH_TOKEN_ACC_10 }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
           PROXY_URL: ${{ secrets.PROXY_URL }}
         run: |
@@ -149,7 +150,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: clips-${{ matrix.channel }}-${{ github.run_id }}
-          path: output/clips/
+          path: |
+            output/clips/
+            output/exports/
           retention-days: 7
           if-no-files-found: ignore
 

@@ -66,6 +66,7 @@ branding:
   icon: 🤖
   logo_path: assets/logos/acc_08_ai_tools.png
   outro_seconds: 1.8
+multiplatform_export: true
 auto_upload: true
 youtube:
   privacy_status: public
@@ -74,3 +75,9 @@ youtube:
   max_uploads_per_day: 2
   token_env_var: YOUTUBE_REFRESH_TOKEN_ACC_08
   made_for_kids: false
+  publish_schedule:
+    enabled: false
+    optimal_hours_utc: [12, 17, 21]
+    min_lead_time_minutes: 45
+    stagger_hours: 4.0
+

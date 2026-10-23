@@ -25,6 +25,8 @@ from pipeline import (
     captions,
     state as state_mod,
     notifications,
+    scheduler,
+    export_platforms,
 )
 
 CONFIG_PATH = Path(__file__).resolve().parent / "config" / "sources.yaml"
@@ -166,18 +168,36 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
                     url, video_id, pick["start"], pick["end"], out_name=f"{video_id}_raw_{i+1}"
                 )
 
+            # Detect speaker framing for intelligent centering and split-screen
+            framing_info = None
+            if cfg.get("smart_speaker_framing", True):
+                try:
+                    from pipeline import framing
+                    framing_info = framing.detect_speaker_framing(source_cut_file, start_sec=cut_start, end_sec=cut_end)
+                    if framing_info and framing_info.get("has_faces"):
+                        print(f"     [Framing] Speaker auto-framing active: dominant_x={framing_info['dominant_x_ratio']}, two_speakers={framing_info['has_two_speakers']}")
+                except Exception as fe:
+                    print(f"     [Framing] Speaker auto-framing fallback to center ({fe})")
+
+            resolved_style = vertical_style
+            if vertical_style == "auto":
+                resolved_style = "split_screen" if (framing_info or {}).get("has_two_speakers") else "meme_card"
+                print(f"     [Framing] Dynamic layout selected: '{resolved_style}'")
+
             raw_clip_path = clip.cut_clip(
                 source_cut_file,
                 cut_start,
                 cut_end,
                 clip_name,
-                vertical_style=vertical_style,
+                vertical_style=resolved_style,
                 speed_factor=speed_factor,
                 enable_progress_bar=enable_progress_bar,
                 enable_loudnorm=enable_loudnorm,
                 meme_theme=meme_theme,
                 enable_audio_conditioning=enable_audio_cond,
                 progress_bar_color=progress_bar_color,
+                enable_smart_framing=cfg.get("smart_speaker_framing", True),
+                framing_info=framing_info,
             )
 
             clip_segments = captions.segments_in_range(tx, pick["start"], pick["end"])
@@ -189,7 +209,7 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
                 burner_text=pick.get("burner_text") if enable_burner else None,
                 clip_duration=adjusted_duration,
                 speed_factor=speed_factor,
-                template_style=vertical_style,
+                template_style=resolved_style,
                 meme_theme=meme_theme,
                 meme_handle=meme_handle,
                 show_badge=show_badge,
@@ -230,6 +250,23 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
                 duration=adjusted_duration,
             )
 
+            # Multi-Platform Packaging (TikTok, Instagram Reels, YouTube Shorts)
+            if cfg.get("multiplatform_export", True):
+                try:
+                    export_platforms.export_multiplatform_bundle(
+                        captioned_video_path=captioned_path,
+                        channel_id=channel_id or "default",
+                        video_id=video_id,
+                        clip_index=i,
+                        pick=pick,
+                        cfg=cfg,
+                        duration_sec=adjusted_duration,
+                        source_url=url,
+                        source_channel=item.get("channel") if isinstance(item, dict) else None,
+                    )
+                except Exception as exp_err:
+                    print(f"     [Export Error] Multi-platform packaging notice: {exp_err}")
+
             if cfg.get("auto_upload", False):
                 yt_cfg = cfg.get("youtube", {})
                 max_daily = yt_cfg.get("max_uploads_per_day", 2)
@@ -266,19 +303,47 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
                         f"Original Source: {url} (Segment ~{timestamp_str})\n\n"
                         f"{hashtags_str}"
                     )
+
+                    configured_privacy = yt_cfg.get("privacy_status", "private").lower()
+                    schedule_cfg = yt_cfg.get("publish_schedule", {})
+                    schedule_enabled = (configured_privacy == "scheduled") or schedule_cfg.get("enabled", False)
+
+                    publish_at_iso = None
+                    sched_display = None
+                    if schedule_enabled:
+                        publish_at_iso, sched_display, _ = scheduler.get_scheduled_publish_time(
+                            clip_index=i,
+                            optimal_hours_utc=schedule_cfg.get("optimal_hours_utc"),
+                            min_lead_minutes=schedule_cfg.get("min_lead_time_minutes", 45),
+                            stagger_hours=schedule_cfg.get("stagger_hours", 4.0),
+                        )
+                        print(f"     [Scheduler] Peak engagement scheduled release: {sched_display}")
+
                     upload_tags = clean_tags + ["shorts", "viral"]
                     video_id_uploaded = upload_youtube.upload_short(
                         str(captioned_path),
                         title=short_title,
                         description=description,
-                        privacy_status=yt_cfg.get("privacy_status", "private"),
+                        privacy_status=configured_privacy,
                         category_id=yt_cfg.get("category_id", "24"),
                         tags=upload_tags,
                         token_env_var=yt_cfg.get("token_env_var"),
                         made_for_kids=yt_cfg.get("made_for_kids", False),
+                        publish_at=publish_at_iso,
                     )
                     if video_id_uploaded:
                         state_mod.record_upload(st)
+                        state_mod.record_uploaded_short(
+                            st,
+                            video_id=video_id_uploaded,
+                            source_video_id=video_id,
+                            title=short_title,
+                            creator=channel_name,
+                            topic=cfg.get("discovery", {}).get("niche_desc", ""),
+                            tags=upload_tags,
+                            privacy_status="scheduled" if publish_at_iso else configured_privacy,
+                            scheduled_at=sched_display if publish_at_iso else None,
+                        )
                         print(f"     Uploaded: https://youtube.com/watch?v={video_id_uploaded}")
                         notifications.notify_upload_success(
                             channel_name=brand_name,
@@ -288,6 +353,8 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
                             duration_sec=adjusted_duration,
                             source_channel=channel_name,
                             tags=upload_tags,
+                            privacy_status="scheduled" if publish_at_iso else configured_privacy,
+                            scheduled_at=sched_display if publish_at_iso else None,
                         )
                     else:
                         print(f"     Upload failed or skipped. Clip saved locally: {captioned_path}")
@@ -323,6 +390,15 @@ def run_channel_pipeline(config_path: Path, channel_id: str | None = None) -> No
     print(f" 🚀 Running Pipeline for Channel: {ch_name} (ID: {cid or 'default'})")
     print(f" Config: {config_path.name}")
     print(f"=================================================================")
+
+    # 0. Sync channel retention analytics to update algorithmic self-tuning discovery weights
+    try:
+        from pipeline import analytics
+        if st.get("uploaded_shorts"):
+            print(f"  [Analytics] Checking retention performance for {len(st['uploaded_shorts'])} previously uploaded Shorts...")
+            analytics.sync_channel_analytics(cid, st)
+    except Exception as a_err:
+        print(f"  [Analytics] Analytics sync note: {a_err}")
 
     # 1. Autonomous discovery of viral creators and videos
     discovered_videos = discovery.discover_and_select_videos(cfg, st)
@@ -382,7 +458,41 @@ def main():
         default="",
         help="Channel profile to run (e.g. acc_01, acc_02_dogs, 'all', or omit for default config)",
     )
+    parser.add_argument(
+        "--analytics",
+        action="store_true",
+        help="Display performance analytics dashboard for channel(s)",
+    )
+    parser.add_argument(
+        "--force-sync",
+        action="store_true",
+        help="Force fresh stats extraction from YouTube for analytics",
+    )
     args = parser.parse_args()
+
+    # Analytics Dashboard Display Mode
+    if args.analytics:
+        from pipeline import analytics
+        if not args.channel or args.channel.lower() == "all":
+            channel_files = sorted(CHANNELS_DIR.glob("*.yaml")) if CHANNELS_DIR.exists() else []
+            found_any = False
+            for ch_file in channel_files:
+                c_id = ch_file.stem
+                st = state_mod.load_state(c_id)
+                if st.get("uploaded_shorts"):
+                    analytics.sync_channel_analytics(c_id, st, force=args.force_sync)
+                    print(analytics.render_analytics_dashboard(c_id, st))
+                    found_any = True
+            if not found_any:
+                print("No uploaded Shorts recorded across channels yet. State will populate upon successful uploads.")
+            return
+        else:
+            matched = find_channel_config(args.channel)
+            c_id = matched.stem if matched else args.channel
+            st = state_mod.load_state(c_id)
+            analytics.sync_channel_analytics(c_id, st, force=args.force_sync)
+            print(analytics.render_analytics_dashboard(c_id, st))
+            return
 
     if not args.channel:
         # Default run with sources.yaml

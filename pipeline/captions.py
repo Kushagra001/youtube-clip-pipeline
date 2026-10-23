@@ -18,6 +18,11 @@ Style: MemeHandleDark,DejaVu Sans,34,&H00D4D4D8,&H000000FF,&H00000000,&H00000000
 Style: MemeHookDark,DejaVu Sans,48,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,0,0,7,80,80,250,1
 Style: MemeHandleLight,DejaVu Sans,34,&H0052525B,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,0,0,7,80,80,205,1
 Style: MemeHookLight,DejaVu Sans,50,&H0009090B,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,0,0,7,80,80,250,1
+Style: SplitScreenHandleDark,DejaVu Sans,30,&H00D4D4D8,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,0,0,7,80,80,135,1
+Style: SplitScreenHookDark,DejaVu Sans,42,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,0,0,7,80,80,175,1
+Style: SplitScreenHandleLight,DejaVu Sans,30,&H0052525B,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,0,0,7,80,80,135,1
+Style: SplitScreenHookLight,DejaVu Sans,42,&H0009090B,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,0,0,7,80,80,175,1
+Style: SplitScreenDefault,DejaVu Sans,52,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,1,0,0,0,100,100,1,0,1,5,3,2,60,60,230,1
 Style: Default,DejaVu Sans,64,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,1,0,0,0,100,100,1,0,1,5,3,2,60,60,390,1
 Style: TakeawayCardDark,DejaVu Sans,32,&H00FFFFFF,&H000000FF,&H00000000,&HD0141418,1,0,0,0,100,100,0,0,3,3,0,2,60,60,240,1
 Style: TakeawayCardLight,DejaVu Sans,32,&H0009090B,&H000000FF,&H00000000,&HE0FFFFFF,1,0,0,0,100,100,0,0,3,3,0,2,60,60,240,1
@@ -133,10 +138,22 @@ def build_ass_file(
     # Subtitles MUST stop before takeaway card or brand outro appears to prevent overlapping
     caption_cutoff_time = min(outro_start_time, takeaway_start)
 
-    # 1. Top Header (Meme Card vs. Burner Header)
+    # 1. Top Header (Meme Card / Split Screen vs. Burner Header)
     if burner_text:
         clean_burner = burner_text.strip().upper().replace("{", "(").replace("}", ")")
-        if template_style == "meme_card":
+        if template_style == "split_screen":
+            handle_style = "SplitScreenHandleDark" if meme_theme == "dark" else "SplitScreenHandleLight"
+            hook_style = "SplitScreenHookDark" if meme_theme == "dark" else "SplitScreenHookLight"
+            wrapped_hook = _wrap_headline(clean_burner, max_chars_per_line=34)
+
+            badge_prefix = r"{\c&H00F2A11D&}● {\c}" if show_badge else ""
+            lines.append(
+                f"Dialogue: 1,0:00:00.00,{dur_str},{handle_style},,0,0,0,,{badge_prefix}{meme_handle}\n"
+            )
+            lines.append(
+                f"Dialogue: 1,0:00:00.00,{dur_str},{hook_style},,0,0,0,,{wrapped_hook}\n"
+            )
+        elif template_style == "meme_card":
             handle_style = "MemeHandleDark" if meme_theme == "dark" else "MemeHandleLight"
             hook_style = "MemeHookDark" if meme_theme == "dark" else "MemeHookLight"
             wrapped_hook = _wrap_headline(clean_burner, max_chars_per_line=34)
@@ -154,6 +171,7 @@ def build_ass_file(
             )
 
     # 2. Fast-paced kinetic subtitles with active yellow word-highlight (cleanly bounded before outro)
+    sub_style = "SplitScreenDefault" if template_style == "split_screen" else "Default"
     for seg in clip_segments:
         sub_chunks = _chunk_segment(seg, max_words=3)
         for chunk in sub_chunks:
@@ -171,7 +189,7 @@ def build_ass_file(
             if not text:
                 continue
             lines.append(
-                f"Dialogue: 0,{_fmt_ts(start)},{_fmt_ts(end)},Default,,0,0,0,,{text}\n"
+                f"Dialogue: 0,{_fmt_ts(start)},{_fmt_ts(end)},{sub_style},,0,0,0,,{text}\n"
             )
 
     # 3. Transformative Educational Takeaway Outro Banner (stops before final brand outro card)

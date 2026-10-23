@@ -399,10 +399,10 @@ def filter_and_rank_candidates(
     return valid
 
 
-def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12) -> list[dict]:
-    """Viral Velocity & Subtitle Pre-Checker:
+def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12, state: dict | None = None) -> list[dict]:
+    """Viral Velocity & Subtitle Pre-Checker with Algorithmic Retention Feedback:
     Enriches top candidate videos with exact upload date, views-per-day velocity (VPH),
-    and pre-existing subtitle availability to accelerate pipeline processing by 5-10x.
+    dialogue availability, and historical channel performance feedback weights.
     """
     if not candidates:
         return candidates
@@ -477,13 +477,26 @@ def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12) -> 
                 sub_multiplier = 1.5 if has_subs else 0.85
                 official_bonus = 60.0 if cand.get("is_official_creator") else 0.0
 
+                # Algorithmic Retention Feedback Multiplier: dynamically boosts proven creators
+                analytics_mult = 1.0
+                cand_channel = cand.get("channel", "")
+                if state:
+                    try:
+                        from pipeline import analytics
+                        analytics_mult, reason = analytics.get_creator_tuning_multiplier(cand_channel, state)
+                        if analytics_mult != 1.0:
+                            cand["analytics_tuned"] = reason
+                    except Exception:
+                        analytics_mult = 1.0
+
                 rel = cand.get("relevance_score", 1.0)
                 virality_score = (
-                    official_bonus +
+                    (official_bonus +
                     (rel * 25.0) +
                     (math.log10(max(views_per_day, 1.0)) * 7.0) +
-                    (math.log10(max(views, 1.0)) * 2.0)
-                ) * recency_multiplier * sub_multiplier
+                    (math.log10(max(views, 1.0)) * 2.0))
+                    * recency_multiplier * sub_multiplier * analytics_mult
+                )
 
                 cand["age_days"] = age_days
                 cand["views_per_day"] = int(views_per_day)
@@ -599,10 +612,10 @@ def discover_and_select_videos(cfg: dict, state: dict) -> list[dict]:
             niche_keywords=niche_keywords,
         )
 
-    # 7. Velocity & Subtitle Pre-Enrichment on top candidates
+    # 7. Velocity, Subtitles & Algorithmic Retention Feedback on top candidates
     if ranked:
-        print(f"  [Discovery] Calculating viral velocity (VPH) and pre-checking subtitles on top {min(10, len(ranked))} candidates...")
-        ranked = enrich_candidates_virality(ranked, max_enrich=10)
+        print(f"  [Discovery] Calculating viral velocity (VPH) and applying retention feedback tuning on top {min(10, len(ranked))} candidates...")
+        ranked = enrich_candidates_virality(ranked, max_enrich=10, state=state)
 
     # 8. Groq Semantic Verification (verifies top candidates genuinely belong to niche)
     verified_candidates = verify_niche_with_groq(ranked[:10], niche_desc=niche_desc, scrape_hashtags=scrape_hashtags)
@@ -636,7 +649,8 @@ def discover_and_select_videos(cfg: dict, state: dict) -> list[dict]:
         vpd_str = f"{vpd_val:,}/d" if vpd_val is not None else "N/A"
         age_str = f"{s.get('age_days', '?')}d"
         cc_str = "CC:Yes" if s.get("has_subtitles") else "CC:No"
+        tuned_label = f" | {s['analytics_tuned']}" if s.get("analytics_tuned") else ""
 
-        print(f"  * Selected #{i+1} [Score: {score_val:.1f} | VPD: {vpd_str} | Age: {age_str} | {cc_str}]: '{safe_title}...' | Channel: {safe_channel} | Views: {views_str} | Dur: {dur_str}")
+        print(f"  * Selected #{i+1} [Score: {score_val:.1f} | VPD: {vpd_str} | Age: {age_str} | {cc_str}{tuned_label}]: '{safe_title}...' | Channel: {safe_channel} | Views: {views_str} | Dur: {dur_str}")
 
     return selected

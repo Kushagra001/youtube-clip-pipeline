@@ -1,3 +1,4 @@
+import os
 import time
 import json
 from pathlib import Path
@@ -75,3 +76,42 @@ def record_upload(state: dict) -> None:
     """Records an upload timestamp to track YouTube Data API quota usage."""
     timestamps = state.setdefault("upload_timestamps", [])
     timestamps.append(time.time())
+
+
+def record_uploaded_short(
+    state: dict,
+    video_id: str,
+    source_video_id: str,
+    title: str,
+    creator: str,
+    topic: str | None = None,
+    tags: list[str] | None = None,
+    privacy_status: str = "public",
+    scheduled_at: str | None = None,
+) -> dict:
+    """Records full metadata for an uploaded YouTube Short to enable analytics and retention tracking."""
+    shorts = state.setdefault("uploaded_shorts", [])
+    for s in shorts:
+        if s.get("video_id") == video_id:
+            return s
+
+    entry = {
+        "video_id": video_id,
+        "source_video_id": source_video_id,
+        "title": title,
+        "creator": creator,
+        "topic": topic or "",
+        "tags": tags or [],
+        "privacy_status": privacy_status,
+        "scheduled_at": scheduled_at,
+        "uploaded_at": time.time(),
+        "stats": {
+            "views": 0,
+            "likes": 0,
+            "comments": 0,
+            "last_synced": 0,
+        },
+    }
+    shorts.append(entry)
+    return entry
+

@@ -48,8 +48,9 @@ def upload_short(
     tags: list[str] | None = None,
     token_env_var: str | None = None,
     made_for_kids: bool = False,
+    publish_at: str | None = None,
 ) -> str | None:
-    """Uploads a vertical Short to YouTube with resumable chunking and quota error protection."""
+    """Uploads a vertical Short to YouTube with resumable chunking, quota error protection, and scheduled release support."""
     from googleapiclient.errors import HttpError
     from pathlib import Path
 
@@ -68,6 +69,17 @@ def upload_short(
     clean_title = title.replace("<", "").replace(">", "").strip()[:100]
     clean_desc = description[:4990]
 
+    # Per YouTube API specification: publishAt requires privacyStatus to be "private"
+    effective_privacy = "private" if publish_at else privacy_status
+    status_dict = {
+        "privacyStatus": effective_privacy,
+        "selfDeclaredMadeForKids": made_for_kids,
+        "embeddable": True,
+    }
+    if publish_at:
+        status_dict["publishAt"] = publish_at
+        print(f"  [YouTube Upload] Scheduled release configured: {publish_at} (status: private until release)")
+
     body = {
         "snippet": {
             "title": clean_title,
@@ -77,11 +89,7 @@ def upload_short(
             "defaultLanguage": "en",
             "defaultAudioLanguage": "en",
         },
-        "status": {
-            "privacyStatus": privacy_status,
-            "selfDeclaredMadeForKids": made_for_kids,
-            "embeddable": True,
-        },
+        "status": status_dict,
     }
 
     try:

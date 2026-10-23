@@ -10,5 +10,52 @@
   "upload_timestamps": [
     1792687920.1653044,
     1792687990.5873902
-  ]
+  ],
+  "uploaded_shorts": [
+    {
+      "video_id": "iWJNBMbJm-0",
+      "source_video_id": "666OF8M-cJQ",
+      "title": "Free AI Tools You Must Know #shorts",
+      "creator": "@MattWolfe",
+      "topic": "AI Tools",
+      "tags": [],
+      "privacy_status": "private",
+      "scheduled_at": null,
+      "uploaded_at": 1792769163.7785614,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 1792769163.7789433,
+        "status": "pending_or_private"
+      }
+    },
+    {
+      "video_id": "3aOjSxTVNpc",
+      "source_video_id": "666OF8M-cJQ",
+      "title": "Top Automation Hacks 2026 #shorts",
+      "creator": "@MattWolfe",
+      "topic": "AI Tools",
+      "tags": [],
+      "privacy_status": "private",
+      "scheduled_at": null,
+      "uploaded_at": 1792769163.7785614,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 1792769163.7789433,
+        "status": "pending_or_private"
+      }
+    }
+  ],
+  "analytics_summary": {
+    "channel_id": "acc_08_ai_tools",
+    "last_sync": 1792769606.0543332,
+    "total_shorts": 2,
+    "public_shorts": 0,
+    "total_views": 0,
+    "median_views": 100.0,
+    "creator_weights": {}
+  }
 }
