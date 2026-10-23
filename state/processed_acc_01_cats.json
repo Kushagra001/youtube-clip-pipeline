@@ -6,10 +6,64 @@
     "KXw6McD48L4",
     "rwN3IIKZL2w",
     "f2ee9ynLRa8",
-    "v-sOc0j-wQs"
+    "v-sOc0j-wQs",
+    "zFYXpXeL_-c",
+    "bFj0zyvQG3Y"
   ],
   "upload_timestamps": [
-    1792687920.6670141,
-    1792687957.8528535
+    1792775289.7830744,
+    1792775301.526981
+  ],
+  "uploaded_shorts": [
+    {
+      "video_id": "wLKSFpw6Jb0",
+      "source_video_id": "zFYXpXeL_-c",
+      "title": "My Bass Electrocutes Me! #shorts",
+      "creator": "@HalfAsleepChris",
+      "topic": "cute and funny cat videos for cat lovers",
+      "tags": [
+        "catsofinstagram",
+        "cutecats",
+        "catreels",
+        "funnycats",
+        "kittensofinstagram",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792775289.7830803,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "eLWuSP-4d7c",
+      "source_video_id": "zFYXpXeL_-c",
+      "title": "Henry's First Theme Song! #shorts",
+      "creator": "@HalfAsleepChris",
+      "topic": "cute and funny cat videos for cat lovers",
+      "tags": [
+        "catsofinstagram",
+        "cutecats",
+        "catreels",
+        "funnycats",
+        "kittensofinstagram",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792775301.526988,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    }
   ]
 }
