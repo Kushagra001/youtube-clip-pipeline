@@ -10,10 +10,64 @@
     "MVLhT9RwJSY",
     "BWNOdHB8TKA",
     "QME9W1RdkGU",
-    "wRBi0DT9dvY"
+    "wRBi0DT9dvY",
+    "y7pwGVQEiKc",
+    "mrKKW3riVIA"
   ],
   "upload_timestamps": [
-    1792687873.2223933,
-    1792688014.1441002
+    1792789919.0381386,
+    1792789942.71424
+  ],
+  "uploaded_shorts": [
+    {
+      "video_id": "B0r9b-wRUOI",
+      "source_video_id": "y7pwGVQEiKc",
+      "title": "Grandparents' LIC Mistake Exposed #shorts",
+      "creator": "Akshat Shrivastava",
+      "topic": "personal finance, investing, budgeting and side hustles for financial freedom",
+      "tags": [
+        "personalfinance",
+        "investing",
+        "sidehustle",
+        "financialfreedom",
+        "stockmarket",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792789919.038144,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "3bxlQjINobc",
+      "source_video_id": "y7pwGVQEiKc",
+      "title": "9% Return Needed After Taxes & Inflation #shorts",
+      "creator": "Akshat Shrivastava",
+      "topic": "personal finance, investing, budgeting and side hustles for financial freedom",
+      "tags": [
+        "personalfinance",
+        "investing",
+        "sidehustle",
+        "financialfreedom",
+        "stockmarket",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792789942.714247,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    }
   ]
 }
