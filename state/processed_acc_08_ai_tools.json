@@ -6,11 +6,11 @@
     "WfSiryTVDiY",
     "8Jw5Wa_8K0Y",
     "STH929HARLo",
-    "MDy_b9F7oUc"
+    "MDy_b9F7oUc",
+    "WTF5qphyy8w"
   ],
   "upload_timestamps": [
-    1792687920.1653044,
-    1792687990.5873902
+    1792789911.3963056
   ],
   "uploaded_shorts": [
     {
@@ -27,7 +27,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792773652.0582926,
+        "last_synced": 1792789764.877082,
         "status": "pending_or_private"
       }
     },
@@ -45,14 +45,37 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792773652.0582926,
+        "last_synced": 1792789764.877082,
         "status": "pending_or_private"
+      }
+    },
+    {
+      "video_id": "zmAG33bNzsg",
+      "source_video_id": "WTF5qphyy8w",
+      "title": "Why ChatGPT Hallucinates (And How to Fix It) #shorts",
+      "creator": "Matt Wolfe",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792789911.3963134,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1792773652.0582926,
+    "last_sync": 1792789764.877082,
     "total_shorts": 2,
     "public_shorts": 0,
     "total_views": 0,
