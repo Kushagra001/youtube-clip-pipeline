@@ -4,10 +4,64 @@
     "ph2r4_5Vy74",
     "beyP41amFTg",
     "TNdNVXYwK7A",
-    "8e3RC1L5V_Y"
+    "8e3RC1L5V_Y",
+    "BraPxEPtTSg",
+    "ShZKdJF95P8"
   ],
   "upload_timestamps": [
-    1792687987.0652132,
-    1792688097.9404519
+    1792775452.6644533,
+    1792775534.1515553
+  ],
+  "uploaded_shorts": [
+    {
+      "video_id": "4GgN8c8fcwQ",
+      "source_video_id": "BraPxEPtTSg",
+      "title": "Stop Skipping Teeth? Depression Myths Busted #shorts",
+      "creator": "@HealthyGamerGG",
+      "topic": "mental health tips, anxiety management, ADHD productivity and emotional wellness",
+      "tags": [
+        "mentalhealth",
+        "anxietytips",
+        "adhdtips",
+        "selfcare",
+        "wellnessjourney",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792775452.6644583,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "pShC87OgdY0",
+      "source_video_id": "BraPxEPtTSg",
+      "title": "Stool Transplants: The Surprising Mood Booster #shorts",
+      "creator": "@HealthyGamerGG",
+      "topic": "mental health tips, anxiety management, ADHD productivity and emotional wellness",
+      "tags": [
+        "mentalhealth",
+        "anxietytips",
+        "adhdtips",
+        "selfcare",
+        "wellnessjourney",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792775534.1515608,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    }
   ]
 }
