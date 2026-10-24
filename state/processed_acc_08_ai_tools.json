@@ -27,7 +27,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792789764.877082,
+        "last_synced": 1792813497.4744508,
         "status": "pending_or_private"
       }
     },
@@ -45,7 +45,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792789764.877082,
+        "last_synced": 1792813497.4744508,
         "status": "pending_or_private"
       }
     },
@@ -66,20 +66,23 @@
       "scheduled_at": null,
       "uploaded_at": 1792789911.3963134,
       "stats": {
-        "views": 0,
-        "likes": 0,
+        "views": 483,
+        "likes": 3,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1792813497.4744508,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1792789764.877082,
-    "total_shorts": 2,
-    "public_shorts": 0,
-    "total_views": 0,
-    "median_views": 100.0,
-    "creator_weights": {}
+    "last_sync": 1792813497.4744508,
+    "total_shorts": 3,
+    "public_shorts": 1,
+    "total_views": 483,
+    "median_views": 483,
+    "creator_weights": {
+      "Matt Wolfe": 1.0
+    }
   }
 }
