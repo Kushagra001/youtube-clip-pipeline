@@ -42,7 +42,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792856090.8032358,
+        "last_synced": 1792873576.765214,
         "status": "public"
       }
     },
@@ -68,14 +68,14 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792856090.8032358,
+        "last_synced": 1792873576.765214,
         "status": "pending_or_private"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1792856090.8032358,
+    "last_sync": 1792873576.765214,
     "total_shorts": 2,
     "public_shorts": 1,
     "total_views": 1,
