@@ -9,7 +9,9 @@
     "U1zCyaQc91g",
     "q7rCeOa_m58",
     "UL6SUWl43XE",
-    "hRZ5MM6gmlE"
+    "hRZ5MM6gmlE",
+    "Q2XfkJ4aI7E",
+    "yx_j_7KedFY"
   ],
   "upload_timestamps": [
     1792813687.846978,
@@ -35,10 +37,11 @@
       "scheduled_at": null,
       "uploaded_at": 1792813687.8469863,
       "stats": {
-        "views": 0,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1792837848.621212,
+        "status": "public"
       }
     },
     {
@@ -63,8 +66,20 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1792837848.621212,
+        "status": "public"
       }
     }
-  ]
+  ],
+  "analytics_summary": {
+    "channel_id": "acc_03_fitness",
+    "last_sync": 1792837848.621212,
+    "total_shorts": 2,
+    "public_shorts": 1,
+    "total_views": 2,
+    "median_views": 2,
+    "creator_weights": {
+      "@ChrisHeria": 1.0
+    }
+  }
 }
