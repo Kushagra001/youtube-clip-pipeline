@@ -45,7 +45,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792856084.8067248,
+        "last_synced": 1792873582.8262026,
         "status": "pending_or_private"
       }
     },
@@ -71,14 +71,14 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792856084.8067248,
+        "last_synced": 1792873582.8262026,
         "status": "pending_or_private"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_05_finance",
-    "last_sync": 1792856084.8067248,
+    "last_sync": 1792873582.8262026,
     "total_shorts": 2,
     "public_shorts": 0,
     "total_views": 0,
