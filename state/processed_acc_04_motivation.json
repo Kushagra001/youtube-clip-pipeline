@@ -6,10 +6,64 @@
     "5opCN8cNkoM",
     "2oXIpLyQMXY",
     "0AgDmguLlqE",
-    "AxI39FCnuec"
+    "AxI39FCnuec",
+    "vSLVvN0ywoY",
+    "vmFXe0gYnZE"
   ],
   "upload_timestamps": [
-    1792754298.0465698,
-    1792754383.298443
+    1792856298.6902308,
+    1792856394.7427952
+  ],
+  "uploaded_shorts": [
+    {
+      "video_id": "GgRH1kJsYhY",
+      "source_video_id": "vSLVvN0ywoY",
+      "title": "Let Your Interests Choose You #shorts",
+      "creator": "@JordanBPeterson",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792856298.6902354,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "FqdI8dt0eok",
+      "source_video_id": "vSLVvN0ywoY",
+      "title": "Tyrants Refuse to Learn #shorts",
+      "creator": "@JordanBPeterson",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792856394.7428007,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    }
   ]
 }
