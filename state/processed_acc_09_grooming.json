@@ -9,10 +9,13 @@
     "PMOLW84FcpA",
     "jGtotVM0mO8",
     "QxBjJYJ2zqc",
-    "_FNR8YsDV5Q"
+    "_FNR8YsDV5Q",
+    "V_Ba6BqJ7m4",
+    "VPNslQfnxNU"
   ],
   "upload_timestamps": [
-    1792813582.898801
+    1792813582.898801,
+    1792837910.5626073
   ],
   "uploaded_shorts": [
     {
@@ -34,11 +37,48 @@
       "scheduled_at": null,
       "uploaded_at": 1792813582.8988059,
       "stats": {
+        "views": 1,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 1792837834.8722708,
+        "status": "public"
+      }
+    },
+    {
+      "video_id": "w3tNcpnDBFQ",
+      "source_video_id": "V_Ba6BqJ7m4",
+      "title": "Why Your Body Can't Burn Fat #shorts",
+      "creator": "Teachingmensfashion",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792837910.562613,
+      "stats": {
         "views": 0,
         "likes": 0,
         "comments": 0,
         "last_synced": 0
       }
     }
-  ]
+  ],
+  "analytics_summary": {
+    "channel_id": "acc_09_grooming",
+    "last_sync": 1792837834.8722708,
+    "total_shorts": 1,
+    "public_shorts": 1,
+    "total_views": 1,
+    "median_views": 1,
+    "creator_weights": {
+      "Teachingmensfashion": 1.0
+    }
+  }
 }
