@@ -14,11 +14,13 @@
     "mv5qSZY_jPU",
     "fCa_lAxHvhM",
     "LzQ8KHlEOMo",
-    "31KA5OvWKf8"
+    "31KA5OvWKf8",
+    "a5YXBwc7fAg",
+    "ekiZB-naDcE"
   ],
   "upload_timestamps": [
-    1792775289.7830744,
-    1792775301.526981
+    1792873663.4499116,
+    1792873680.366071
   ],
   "uploaded_shorts": [
     {
@@ -43,7 +45,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792856116.5836236,
+        "last_synced": 1792873583.234119,
         "status": "pending_or_private"
       }
     },
@@ -69,14 +71,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792856116.5836236,
+        "last_synced": 1792873583.234119,
         "status": "pending_or_private"
+      }
+    },
+    {
+      "video_id": "4xmqKONGwYQ",
+      "source_video_id": "a5YXBwc7fAg",
+      "title": "Henry's Midnight Lego Destruction #shorts",
+      "creator": "@HalfAsleepChris",
+      "topic": "cute and funny cat videos for cat lovers",
+      "tags": [
+        "catsofinstagram",
+        "cutecats",
+        "catreels",
+        "funnycats",
+        "kittensofinstagram",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792873663.4499183,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "Kclzrc40XDM",
+      "source_video_id": "a5YXBwc7fAg",
+      "title": "The Cat Food Heist Confession #shorts",
+      "creator": "@HalfAsleepChris",
+      "topic": "cute and funny cat videos for cat lovers",
+      "tags": [
+        "catsofinstagram",
+        "cutecats",
+        "catreels",
+        "funnycats",
+        "kittensofinstagram",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792873680.3660777,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_01_cats",
-    "last_sync": 1792856116.5836236,
+    "last_sync": 1792873583.234119,
     "total_shorts": 2,
     "public_shorts": 0,
     "total_views": 0,
