@@ -7,10 +7,12 @@
     "8Jw5Wa_8K0Y",
     "STH929HARLo",
     "MDy_b9F7oUc",
-    "WTF5qphyy8w"
+    "WTF5qphyy8w",
+    "rKo9iLGjUbs"
   ],
   "upload_timestamps": [
-    1792789911.3963056
+    1792789911.3963056,
+    1792838001.3809805
   ],
   "uploaded_shorts": [
     {
@@ -27,7 +29,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792813497.4744508,
+        "last_synced": 1792837826.926183,
         "status": "pending_or_private"
       }
     },
@@ -45,7 +47,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792813497.4744508,
+        "last_synced": 1792837826.926183,
         "status": "pending_or_private"
       }
     },
@@ -66,21 +68,44 @@
       "scheduled_at": null,
       "uploaded_at": 1792789911.3963134,
       "stats": {
-        "views": 483,
-        "likes": 3,
+        "views": 602,
+        "likes": 5,
         "comments": 0,
-        "last_synced": 1792813497.4744508,
+        "last_synced": 1792837826.926183,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "RC2agLZp5RE",
+      "source_video_id": "rKo9iLGjUbs",
+      "title": "The SaaS Killer: One Tab for Everything #shorts",
+      "creator": "Matt Wolfe",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792838001.3809872,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1792813497.4744508,
+    "last_sync": 1792837826.926183,
     "total_shorts": 3,
     "public_shorts": 1,
-    "total_views": 483,
-    "median_views": 483,
+    "total_views": 602,
+    "median_views": 602,
     "creator_weights": {
       "Matt Wolfe": 1.0
     }
