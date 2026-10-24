@@ -8,7 +8,9 @@
     "0AgDmguLlqE",
     "AxI39FCnuec",
     "vSLVvN0ywoY",
-    "vmFXe0gYnZE"
+    "vmFXe0gYnZE",
+    "Qj6_pvGvSFs",
+    "LeHfpam45zw"
   ],
   "upload_timestamps": [
     1792856298.6902308,
@@ -37,7 +39,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1792873582.4741626,
+        "status": "public"
       }
     },
     {
@@ -62,8 +65,18 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1792873582.4741626,
+        "status": "public"
       }
     }
-  ]
+  ],
+  "analytics_summary": {
+    "channel_id": "acc_04_motivation",
+    "last_sync": 1792873582.4741626,
+    "total_shorts": 2,
+    "public_shorts": 0,
+    "total_views": 0,
+    "median_views": 100.0,
+    "creator_weights": {}
+  }
 }
