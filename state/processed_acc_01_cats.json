@@ -20,11 +20,13 @@
     "BOYbD1GA4aY",
     "sLi16yjPVnA",
     "c5NfVEL_yBc",
-    "p8dqnW6R700"
+    "p8dqnW6R700",
+    "5WJhNmpc1Ng",
+    "8HlzcEBqr4M"
   ],
   "upload_timestamps": [
-    1792873663.4499116,
-    1792873680.366071
+    1792960428.4034035,
+    1792960487.8238544
   ],
   "uploaded_shorts": [
     {
@@ -49,7 +51,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792943066.9665656,
+        "last_synced": 1792960339.69368,
         "status": "pending_or_private"
       }
     },
@@ -75,7 +77,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792943066.9665656,
+        "last_synced": 1792960339.69368,
         "status": "pending_or_private"
       }
     },
@@ -101,7 +103,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792943066.9665656,
+        "last_synced": 1792960339.69368,
         "status": "pending_or_private"
       }
     },
@@ -127,14 +129,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792943066.9665656,
+        "last_synced": 1792960339.69368,
         "status": "pending_or_private"
+      }
+    },
+    {
+      "video_id": "a64CuL4nHkU",
+      "source_video_id": "5WJhNmpc1Ng",
+      "title": "pretty amazed by her. The second question, why is  #shorts",
+      "creator": "@KittenLady",
+      "topic": "cute and funny cat videos for cat lovers",
+      "tags": [
+        "catsofinstagram",
+        "cutecats",
+        "catreels",
+        "funnycats",
+        "kittensofinstagram",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792960428.4034107,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "qeE_e07aBOs",
+      "source_video_id": "8HlzcEBqr4M",
+      "title": "and Whisker. There's stuff coming in the very near #shorts",
+      "creator": "@JacksonGalaxy",
+      "topic": "cute and funny cat videos for cat lovers",
+      "tags": [
+        "catsofinstagram",
+        "cutecats",
+        "catreels",
+        "funnycats",
+        "kittensofinstagram",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792960487.823863,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_01_cats",
-    "last_sync": 1792943066.9665656,
+    "last_sync": 1792960339.69368,
     "total_shorts": 4,
     "public_shorts": 0,
     "total_views": 0,
