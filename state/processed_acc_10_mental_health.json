@@ -14,11 +14,13 @@
     "eYSOabR3YP0",
     "kbx9iMmJWn0",
     "GlaSnROMqRY",
-    "6KjH6Svur0o"
+    "6KjH6Svur0o",
+    "OojWAavwEyg",
+    "aVDsRkwiUUQ"
   ],
   "upload_timestamps": [
-    1792873821.707336,
-    1792873878.001097
+    1792960438.7232983,
+    1792960506.3784726
   ],
   "uploaded_shorts": [
     {
@@ -43,7 +45,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792925835.777823,
+        "last_synced": 1792960337.688355,
         "status": "public"
       }
     },
@@ -66,10 +68,10 @@
       "scheduled_at": null,
       "uploaded_at": 1792775534.1515608,
       "stats": {
-        "views": 7,
+        "views": 8,
         "likes": 0,
         "comments": 1,
-        "last_synced": 1792925835.777823,
+        "last_synced": 1792960337.688355,
         "status": "public"
       }
     },
@@ -95,7 +97,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792925835.777823,
+        "last_synced": 1792960337.688355,
         "status": "pending_or_private"
       }
     },
@@ -121,18 +123,68 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792925835.777823,
+        "last_synced": 1792960337.688355,
         "status": "pending_or_private"
+      }
+    },
+    {
+      "video_id": "0RrndzC3HOk",
+      "source_video_id": "OojWAavwEyg",
+      "title": "Like you can improve your child's grades just by h #shorts",
+      "creator": "@MelRobbins",
+      "topic": "mental health tips, anxiety management, ADHD productivity and emotional wellness",
+      "tags": [
+        "mentalhealth",
+        "anxietytips",
+        "adhdtips",
+        "selfcare",
+        "wellnessjourney",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792960438.7233055,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "JupCM03dYQA",
+      "source_video_id": "OojWAavwEyg",
+      "title": "types of activities, particularly ones that are ki #shorts",
+      "creator": "@MelRobbins",
+      "topic": "mental health tips, anxiety management, ADHD productivity and emotional wellness",
+      "tags": [
+        "mentalhealth",
+        "anxietytips",
+        "adhdtips",
+        "selfcare",
+        "wellnessjourney",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792960506.3784802,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_10_mental_health",
-    "last_sync": 1792925835.777823,
+    "last_sync": 1792960337.688355,
     "total_shorts": 4,
     "public_shorts": 2,
-    "total_views": 8,
-    "median_views": 4.0,
+    "total_views": 9,
+    "median_views": 4.5,
     "creator_weights": {
       "@HealthyGamerGG": 1.0
     }
