@@ -15,11 +15,13 @@
     "onNFv2PLtAw",
     "ofTiKY3hYdE",
     "2cCw6QHJVGE",
-    "XgI_p8bKg78"
+    "XgI_p8bKg78",
+    "4DcDuhmijIc",
+    "f5JF5w5qbZo"
   ],
   "upload_timestamps": [
-    1792813687.846978,
-    1792813762.3583708
+    1792925934.4708958,
+    1792925992.5635362
   ],
   "uploaded_shorts": [
     {
@@ -44,7 +46,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792899781.4215555,
+        "last_synced": 1792925833.6135337,
         "status": "public"
       }
     },
@@ -67,21 +69,71 @@
       "scheduled_at": null,
       "uploaded_at": 1792813762.3583784,
       "stats": {
-        "views": 2,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792899781.4215555,
+        "last_synced": 1792925833.6135337,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "dLZ8w69tTn0",
+      "source_video_id": "4DcDuhmijIc",
+      "title": "could go wrong there, right, Scott? Okay, more pla #shorts",
+      "creator": "@RenaissancePeriodization",
+      "topic": "fitness motivation, home workouts, gym training and healthy lifestyle",
+      "tags": [
+        "homeworkout",
+        "fitnessmotivation",
+        "gymlife",
+        "calisthenics",
+        "fitfam",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792925934.4709024,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "q6hIcE1Y0v4",
+      "source_video_id": "4DcDuhmijIc",
+      "title": "he's grabbing the loops on the plates. Brilliant.  #shorts",
+      "creator": "@RenaissancePeriodization",
+      "topic": "fitness motivation, home workouts, gym training and healthy lifestyle",
+      "tags": [
+        "homeworkout",
+        "fitnessmotivation",
+        "gymlife",
+        "calisthenics",
+        "fitfam",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792925992.5635424,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_03_fitness",
-    "last_sync": 1792899781.4215555,
+    "last_sync": 1792925833.6135337,
     "total_shorts": 2,
     "public_shorts": 2,
-    "total_views": 6,
-    "median_views": 3.0,
+    "total_views": 7,
+    "median_views": 3.5,
     "creator_weights": {
       "@ChrisHeria": 1.0
     }
