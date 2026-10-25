@@ -8,11 +8,13 @@
     "STH929HARLo",
     "MDy_b9F7oUc",
     "WTF5qphyy8w",
-    "rKo9iLGjUbs"
+    "rKo9iLGjUbs",
+    "YaK6cnET2IE",
+    "SMGg7iisHmc"
   ],
   "upload_timestamps": [
-    1792789911.3963056,
-    1792838001.3809805
+    1792926027.2632017,
+    1792926098.1280496
   ],
   "uploaded_shorts": [
     {
@@ -29,7 +31,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792899951.889798,
+        "last_synced": 1792925860.5509403,
         "status": "pending_or_private"
       }
     },
@@ -47,7 +49,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792899951.889798,
+        "last_synced": 1792925860.5509403,
         "status": "pending_or_private"
       }
     },
@@ -68,10 +70,10 @@
       "scheduled_at": null,
       "uploaded_at": 1792789911.3963134,
       "stats": {
-        "views": 1012,
+        "views": 1070,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1792899951.889798,
+        "last_synced": 1792925860.5509403,
         "status": "public"
       }
     },
@@ -93,20 +95,66 @@
       "uploaded_at": 1792838001.3809872,
       "stats": {
         "views": 332,
-        "likes": 3,
+        "likes": 2,
         "comments": 0,
-        "last_synced": 1792899951.889798,
+        "last_synced": 1792925860.5509403,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "4TjeWytS0Pw",
+      "source_video_id": "YaK6cnET2IE",
+      "title": "of people. So, synthetic data, right? Previously,  #shorts",
+      "creator": "@DavidOndrej",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792926027.2632098,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "2yKwS_KVJIc",
+      "source_video_id": "YaK6cnET2IE",
+      "title": "break it down into nine parts and then run targete #shorts",
+      "creator": "@DavidOndrej",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792926098.1280603,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1792899951.889798,
+    "last_sync": 1792925860.5509403,
     "total_shorts": 4,
     "public_shorts": 2,
-    "total_views": 1344,
-    "median_views": 672.0,
+    "total_views": 1402,
+    "median_views": 701.0,
     "creator_weights": {
       "Matt Wolfe": 1.0
     }
