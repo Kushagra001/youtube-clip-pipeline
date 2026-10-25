@@ -12,7 +12,9 @@
     "AyP4wujnb0g",
     "CuIA5pkzHJU",
     "eYSOabR3YP0",
-    "kbx9iMmJWn0"
+    "kbx9iMmJWn0",
+    "GlaSnROMqRY",
+    "6KjH6Svur0o"
   ],
   "upload_timestamps": [
     1792873821.707336,
@@ -41,7 +43,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792899794.8564224,
+        "last_synced": 1792925835.777823,
         "status": "public"
       }
     },
@@ -67,7 +69,7 @@
         "views": 7,
         "likes": 0,
         "comments": 1,
-        "last_synced": 1792899794.8564224,
+        "last_synced": 1792925835.777823,
         "status": "public"
       }
     },
@@ -93,7 +95,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792899794.8564224,
+        "last_synced": 1792925835.777823,
         "status": "pending_or_private"
       }
     },
@@ -119,14 +121,14 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792899794.8564224,
+        "last_synced": 1792925835.777823,
         "status": "pending_or_private"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_10_mental_health",
-    "last_sync": 1792899794.8564224,
+    "last_sync": 1792925835.777823,
     "total_shorts": 4,
     "public_shorts": 2,
     "total_views": 8,
