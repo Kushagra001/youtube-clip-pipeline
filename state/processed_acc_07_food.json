@@ -15,11 +15,13 @@
     "SVYqXLPzPZU",
     "PxQ-j3X7UeQ",
     "7c1FO8FT__U",
-    "jbwNUWJRECs"
+    "jbwNUWJRECs",
+    "l4x1wqaWSWY",
+    "6An7iH4BwJo"
   ],
   "upload_timestamps": [
-    1792789840.5213933,
-    1792789888.4919324
+    1792899915.1758683,
+    1792900013.204075
   ],
   "uploaded_shorts": [
     {
@@ -44,7 +46,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792873594.720474,
+        "last_synced": 1792899779.3819642,
         "status": "pending_or_private"
       }
     },
@@ -70,14 +72,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792873594.720474,
+        "last_synced": 1792899779.3819642,
         "status": "pending_or_private"
+      }
+    },
+    {
+      "video_id": "pb_RfPOiWos",
+      "source_video_id": "l4x1wqaWSWY",
+      "title": "Spice\u2011Packed Sweet Potato Skins #shorts",
+      "creator": "Will Tennyson",
+      "topic": "quick and easy recipes, meal prep ideas and food hacks for home cooks",
+      "tags": [
+        "easyrecipes",
+        "mealprep",
+        "foodhacks",
+        "quickrecipes",
+        "cookinghacks",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792899915.175874,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "LSi0x6aNTY8",
+      "source_video_id": "l4x1wqaWSWY",
+      "title": "Quick Tuna Pasta Salad Recipe #shorts",
+      "creator": "Will Tennyson",
+      "topic": "quick and easy recipes, meal prep ideas and food hacks for home cooks",
+      "tags": [
+        "easyrecipes",
+        "mealprep",
+        "foodhacks",
+        "quickrecipes",
+        "cookinghacks",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792900013.2040823,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1792873594.720474,
+    "last_sync": 1792899779.3819642,
     "total_shorts": 2,
     "public_shorts": 0,
     "total_views": 0,
