@@ -13,11 +13,13 @@
     "V_Ba6BqJ7m4",
     "VPNslQfnxNU",
     "hVQ-W3wvyq4",
-    "C_rV7U458Y4"
+    "C_rV7U458Y4",
+    "6oIT62WxJho",
+    "ZYl60cjSacM"
   ],
   "upload_timestamps": [
-    1792813582.898801,
-    1792837910.5626073
+    1792837910.5626073,
+    1792900029.2966492
   ],
   "uploaded_shorts": [
     {
@@ -39,10 +41,10 @@
       "scheduled_at": null,
       "uploaded_at": 1792813582.8988059,
       "stats": {
-        "views": 1,
+        "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792873576.765214,
+        "last_synced": 1792899781.341061,
         "status": "public"
       }
     },
@@ -68,18 +70,43 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792873576.765214,
+        "last_synced": 1792899781.341061,
         "status": "pending_or_private"
+      }
+    },
+    {
+      "video_id": "VhZ8RH46wsE",
+      "source_video_id": "ZYl60cjSacM",
+      "title": "Nighttime Face Wash: Why It Matters #shorts",
+      "creator": "BeYourBest",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792900029.2966561,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1792873576.765214,
+    "last_sync": 1792899781.341061,
     "total_shorts": 2,
     "public_shorts": 1,
-    "total_views": 1,
-    "median_views": 1,
+    "total_views": 4,
+    "median_views": 4,
     "creator_weights": {
       "Teachingmensfashion": 1.0
     }
