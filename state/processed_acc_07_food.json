@@ -21,7 +21,9 @@
     "1fGScw5eX0M",
     "Fye5U5VtgzM",
     "7kYAD8-yKPw",
-    "KqTAVprbJmg"
+    "KqTAVprbJmg",
+    "YxzXd2J0dO8",
+    "4mGVkTCx2ls"
   ],
   "upload_timestamps": [
     1792899915.1758683,
@@ -50,7 +52,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792943084.4378936,
+        "last_synced": 1792960333.2314186,
         "status": "pending_or_private"
       }
     },
@@ -76,7 +78,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792943084.4378936,
+        "last_synced": 1792960333.2314186,
         "status": "pending_or_private"
       }
     },
@@ -102,7 +104,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792943084.4378936,
+        "last_synced": 1792960333.2314186,
         "status": "public"
       }
     },
@@ -128,14 +130,14 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792943084.4378936,
+        "last_synced": 1792960333.2314186,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1792943084.4378936,
+    "last_sync": 1792960333.2314186,
     "total_shorts": 4,
     "public_shorts": 1,
     "total_views": 2,
