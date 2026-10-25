@@ -163,14 +163,27 @@ def cut_clip(
         framing_info=framing_info,
     )
 
-    # Audio pipeline: PTS alignment + tempo micro-shift + anti-Content-ID vocal isolation + YouTube -14 LUFS loudness mastering
-    af_filters = ["asetpts=PTS-STARTPTS", f"atempo={speed_factor:.2f}"]
+    # Audio pipeline: PTS alignment + pitch/tempo micro-shift + stereo music suppression + vocal mastering
+    af_filters = ["asetpts=PTS-STARTPTS"]
     if enable_audio_conditioning:
+        # 1. Pitch shift (1.032x) and tempo re-alignment:
+        # Altering harmonic pitch shatters Content ID discrete Fourier peak matching while keeping speech natural
+        pitch_shift = 1.032
+        effective_tempo = speed_factor / pitch_shift
         af_filters.extend([
-            "highpass=f=85",
-            "lowpass=f=11500",
-            "equalizer=f=3000:t=q:w=1.2:g=2.2",
+            f"asetrate=48000*{pitch_shift:.4f}",
+            "aresample=48000",
+            f"atempo={effective_tempo:.4f}",
+            # 2. Side-channel attenuation: suppresses stereo background music while preserving mono center dialogue
+            "stereotools=slev=0.25",
+            # 3. Frequency conditioning: cuts sub-bass kicks and commercial mastering sheen
+            "highpass=f=95",
+            "lowpass=f=11000",
+            "equalizer=f=2800:t=q:w=1.2:g=2.5",
         ])
+    else:
+        af_filters.append(f"atempo={speed_factor:.2f}")
+
     if enable_loudnorm:
         af_filters.append("loudnorm=I=-14:LRA=11:TP=-1.5")
     af = ",".join(af_filters)
