@@ -17,11 +17,13 @@
     "DIHlzjk_i6I",
     "Ob05Vq3NU8Y",
     "gwP-43byenE",
-    "aSQumF87XGw"
+    "aSQumF87XGw",
+    "hQiJ5Y17y-k",
+    "t8yeIMoZihw"
   ],
   "upload_timestamps": [
-    1792790705.2965965,
-    1792790719.7493448
+    1792943201.058422,
+    1792943288.1865802
   ],
   "uploaded_shorts": [
     {
@@ -46,7 +48,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792873563.0245743,
+        "last_synced": 1792943074.8144476,
         "status": "pending_or_private"
       }
     },
@@ -72,14 +74,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792873563.0245743,
+        "last_synced": 1792943074.8144476,
         "status": "pending_or_private"
+      }
+    },
+    {
+      "video_id": "hEjoNnagm50",
+      "source_video_id": "hQiJ5Y17y-k",
+      "title": "Yes. Good. Okay. Now, we're going to leash him up #shorts",
+      "creator": "Tom Davis Dog Training ",
+      "topic": "funny and cute dog videos for dog lovers",
+      "tags": [
+        "dogsofinstagram",
+        "dogvideos",
+        "puppylove",
+        "dogtraining",
+        "goodboy",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792943201.05843,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "7YknZ_fRzuM",
+      "source_video_id": "hQiJ5Y17y-k",
+      "title": "name behavior. Leroy, heel. Good heel. Duration ma #shorts",
+      "creator": "Tom Davis Dog Training ",
+      "topic": "funny and cute dog videos for dog lovers",
+      "tags": [
+        "dogsofinstagram",
+        "dogvideos",
+        "puppylove",
+        "dogtraining",
+        "goodboy",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792943288.1865878,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_02_dogs",
-    "last_sync": 1792873563.0245743,
+    "last_sync": 1792943074.8144476,
     "total_shorts": 2,
     "public_shorts": 0,
     "total_views": 0,
