@@ -12,11 +12,13 @@
     "Qj6_pvGvSFs",
     "LeHfpam45zw",
     "uHJUcw3FMck",
-    "45Nn1ejo_ko"
+    "45Nn1ejo_ko",
+    "lxDNHLgWInU",
+    "WTXy8EZEjVs"
   ],
   "upload_timestamps": [
-    1792856298.6902308,
-    1792856394.7427952
+    1792960491.0950384,
+    1792960568.2561
   ],
   "uploaded_shorts": [
     {
@@ -41,7 +43,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792925858.4322495,
+        "last_synced": 1792960347.774603,
         "status": "public"
       }
     },
@@ -67,14 +69,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792925858.4322495,
+        "last_synced": 1792960347.774603,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "NqDJHCg6ZCY",
+      "source_video_id": "lxDNHLgWInU",
+      "title": "has changed since then. The internet and social me #shorts",
+      "creator": "@ChrisWillx",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792960491.0950453,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "SfuUHUaZQWk",
+      "source_video_id": "lxDNHLgWInU",
+      "title": "official Yeah. So, where does this leave us? Since #shorts",
+      "creator": "@ChrisWillx",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792960568.2561069,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_04_motivation",
-    "last_sync": 1792925858.4322495,
+    "last_sync": 1792960347.774603,
     "total_shorts": 2,
     "public_shorts": 0,
     "total_views": 0,
