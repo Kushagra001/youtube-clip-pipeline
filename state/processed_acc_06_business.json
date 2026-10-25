@@ -12,11 +12,13 @@
     "yslXlV2BP_Y",
     "5rOIS7GHD5Y",
     "Pfr6qwPZlhE",
-    "OHu1FY1R-x0"
+    "OHu1FY1R-x0",
+    "n9xKblqyQ28",
+    "mRlSb0O5QNU"
   ],
   "upload_timestamps": [
-    1792789986.705295,
-    1792790006.5705404
+    1792899908.6437669,
+    1792899982.5205417
   ],
   "uploaded_shorts": [
     {
@@ -41,7 +43,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792873571.263736,
+        "last_synced": 1792899774.1420317,
         "status": "pending_or_private"
       }
     },
@@ -67,14 +69,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792873571.263736,
+        "last_synced": 1792899774.1420317,
         "status": "pending_or_private"
+      }
+    },
+    {
+      "video_id": "hSYOkgRVUKM",
+      "source_video_id": "n9xKblqyQ28",
+      "title": "Why 'Prompt Engineering' Is Actually Research #shorts",
+      "creator": "@ycombinator",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792899908.6437736,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "bK6Zb7z0rUk",
+      "source_video_id": "n9xKblqyQ28",
+      "title": "The Hidden Cost of Cloud AI Agents #shorts",
+      "creator": "@ycombinator",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792899982.5205483,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1792873571.263736,
+    "last_sync": 1792899774.1420317,
     "total_shorts": 2,
     "public_shorts": 0,
     "total_views": 0,
