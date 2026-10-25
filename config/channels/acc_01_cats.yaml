@@ -34,7 +34,16 @@ discovery:
   - coloring
   - cocomelon
   - baby
-  min_views: 60000
+  - relaxing
+  - sleep
+  - soothing
+  - piano
+  - lullaby
+  - meditation
+  - ambient
+  - lofi
+  - music
+  min_views: 35000
   min_duration_minutes: 5
   max_duration_minutes: 60
   max_videos_per_creator: 1
@@ -49,7 +58,7 @@ discovery:
 videos: []
 min_clip_seconds: 20
 max_clip_seconds: 35
-max_clips_per_video: 2
+max_clips_per_video: 1
 burner_text: true
 progress_bar: true
 progress_bar_color: "#F59E0B"

@@ -49,7 +49,7 @@ jobs:
     needs: setup
     name: "Pipeline: ${{ matrix.channel }}"
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 35
     strategy:
       fail-fast: false
       matrix:
@@ -62,15 +62,19 @@ jobs:
           fetch-depth: 0
 
       - name: Set up Cloudflare WARP (IP Masking)
+        timeout-minutes: 3
+        continue-on-error: true
         uses: fscarmen/warp-on-actions@v1.4
         with:
           stack: dual
           mode: wireguard
 
       - name: Verify IP & Network Connection
+        timeout-minutes: 1
+        continue-on-error: true
         run: |
           echo "Public IP verification via Cloudflare:"
-          curl -s https://www.cloudflare.com/cdn-cgi/trace | head -n 8 || true
+          curl -s --max-time 10 https://www.cloudflare.com/cdn-cgi/trace | head -n 8 || true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -118,7 +122,9 @@ jobs:
           fi
 
       - name: Run Autonomous Pipeline for ${{ matrix.channel }}
+        timeout-minutes: 25
         env:
+          PYTHONUNBUFFERED: "1"
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}

@@ -246,14 +246,18 @@ def burn_in_captions(
             "-filter_complex",
             f"[1:v]scale=220:220,fade=t=in:st={outro_start:.2f}:d={fade_dur:.2f}:alpha=1[logo];"
             f"[0:v][logo]overlay=(W-w)/2:1200:enable='between(t,{outro_start:.2f},{duration:.2f})'[v1];"
-            f"[v1]ass=filename='{ass_escaped}'[vout]",
+            f"[v1]ass=filename='{ass_escaped}',setsar=1[vout]",
             "-map", "[vout]",
             "-map", "0:a?",
             "-r", "30",
             "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+            "-profile:v", "high", "-level", "4.1",
+            "-bf", "2", "-g", "30", "-flags", "+cgop",
             "-pix_fmt", "yuv420p",
+            "-avoid_negative_ts", "make_zero",
+            "-use_editlist", "0",
             "-movflags", "+faststart",
-            "-c:a", "aac", "-b:a", "192k", "-ar", "44100", "-ac", "2",
+            "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2",
             "-shortest",
             str(out_path),
         ]
@@ -267,12 +271,16 @@ def burn_in_captions(
     cmd_fallback = [
         "ffmpeg", "-y",
         "-i", str(video_path),
-        "-vf", f"ass=filename='{ass_escaped}'",
+        "-vf", f"ass=filename='{ass_escaped}',setsar=1",
         "-r", "30",
         "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+        "-profile:v", "high", "-level", "4.1",
+        "-bf", "2", "-g", "30", "-flags", "+cgop",
         "-pix_fmt", "yuv420p",
+        "-avoid_negative_ts", "make_zero",
+        "-use_editlist", "0",
         "-movflags", "+faststart",
-        "-c:a", "aac", "-b:a", "192k", "-ar", "44100", "-ac", "2",
+        "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2",
         str(out_path),
     ]
     res_fb = subprocess.run(cmd_fallback, capture_output=True, text=True)

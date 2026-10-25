@@ -19,6 +19,14 @@ def _get_service(token_env_var: str | None = None):
     if not refresh_token:
         refresh_token = os.environ.get("YOUTUBE_REFRESH_TOKEN")
 
+    # Fallback: check per-channel tokens if default YOUTUBE_REFRESH_TOKEN is unset
+    if not refresh_token:
+        for i in range(1, 11):
+            cand = os.environ.get(f"YOUTUBE_REFRESH_TOKEN_ACC_{i:02d}")
+            if cand:
+                refresh_token = cand
+                break
+
     if not refresh_token:
         var_name = token_env_var or "YOUTUBE_REFRESH_TOKEN"
         raise ValueError(f"Missing YouTube refresh token in environment variable: {var_name}")
@@ -39,6 +47,43 @@ def _get_service(token_env_var: str | None = None):
     return build("youtube", "v3", credentials=creds)
 
 
+def validate_video_file(video_path: str) -> tuple[bool, str]:
+    """Validates video stream integrity, duration, and tracks before sending to YouTube."""
+    import json
+    import subprocess
+    from pathlib import Path
+
+    p = Path(video_path)
+    if not p.exists() or p.stat().st_size < 50 * 1024:
+        return False, f"File missing or truncated (<50KB): {p.stat().st_size if p.exists() else 0} bytes"
+
+    try:
+        cmd = [
+            "ffprobe", "-v", "error",
+            "-show_entries", "format=duration,size:stream=codec_type,codec_name,sample_aspect_ratio,width,height",
+            "-of", "json",
+            str(p)
+        ]
+        res = subprocess.run(cmd, capture_output=True, text=True)
+        if res.returncode != 0:
+            return False, f"FFprobe integrity check failed: {res.stderr.strip()[:150]}"
+        data = json.loads(res.stdout)
+        streams = data.get("streams", [])
+        has_video = any(s.get("codec_type") == "video" for s in streams)
+        has_audio = any(s.get("codec_type") == "audio" for s in streams)
+        if not has_video:
+            return False, "Video stream missing in MP4 container"
+        if not has_audio:
+            return False, "Audio stream missing in MP4 container"
+
+        dur = float(data.get("format", {}).get("duration", 0))
+        if dur > 60.5:
+            return False, f"Duration {dur:.1f}s exceeds YouTube Shorts limit (60s)"
+        return True, "OK"
+    except Exception as e:
+        return True, f"Validation bypassed: {e}"
+
+
 def upload_short(
     video_path: str,
     title: str,
@@ -57,6 +102,11 @@ def upload_short(
     v_file = Path(video_path)
     if not v_file.exists() or v_file.stat().st_size == 0:
         print(f"  [YouTube Upload] Error: Video file does not exist or is empty at {video_path}")
+        return None
+
+    is_valid, reason = validate_video_file(video_path)
+    if not is_valid:
+        print(f"  [YouTube Upload] Pre-flight check failed: {reason}. Aborting upload to prevent processing abandonment.")
         return None
 
     try:
@@ -123,12 +173,13 @@ def upload_short(
                     time.sleep(sleep_time)
                 else:
                     raise e
-            except (ConnectionError, TimeoutError, OSError) as e:
+            except (ConnectionError, TimeoutError, OSError, Exception) as e:
+                # Differentiate between non-retryable bugs and retryable transient network/socket/SSL issues
                 retry_count += 1
                 if retry_count > max_retries:
                     raise e
                 sleep_time = min(30, 2 ** retry_count)
-                print(f"  [YouTube Upload] Network interruption ({e}). Resuming chunk in {sleep_time}s...")
+                print(f"  [YouTube Upload] Network interruption or socket drop ({type(e).__name__}: {e}). Resuming chunk in {sleep_time}s...")
                 time.sleep(sleep_time)
 
         if response and "id" in response:

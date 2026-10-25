@@ -70,6 +70,15 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
     full_video_path = None
     tx = []
 
+    def _is_usable_transcript(segments: list[dict], min_words: int = 15) -> bool:
+        if not segments or len(segments) < 2:
+            return False
+        clean_words = [
+            w for s in segments for w in s.get("text", "").split()
+            if not (w.startswith("[") and w.endswith("]"))
+        ]
+        return len(clean_words) >= min_words
+
     if targeted:
         print("  Extracting subtitles (targeted mode)...")
         try:
@@ -81,15 +90,24 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
         except Exception as sub_err:
             print(f"  [Transcript] Online subtitle check note: {sub_err}")
 
-        if not tx:
-            print("  No online captions available; downloading source video for Whisper transcription...")
+        if not _is_usable_transcript(tx):
+            vid_dur = item.get("duration") if isinstance(item, dict) else None
+            if vid_dur and vid_dur > 720:
+                print(f"  [Transcript] Online captions missing/unusable and video is {int(vid_dur // 60)}m long. Skipping full download to prevent runner timeout.")
+                state_mod.mark_processed(st, video_id)
+                state_mod.save_state(st, channel_id=channel_id)
+                return
+
+            print("  Online captions insufficient or music-only; downloading source video for Whisper transcription...")
             try:
                 info = download.download_video(url, video_id=video_id, title=title)
                 full_video_path = info["video_path"]
-                tx = transcript_mod.get_transcript(full_video_path, info["subtitle_path"])
+                tx = transcript_mod.get_transcript(full_video_path, info.get("subtitle_path"))
                 print(f"  Transcript: {len(tx)} segments (via Whisper)")
             except Exception as dl_err:
                 print(f"  [Transcript] Source video download/transcription failed: {dl_err}")
+                state_mod.mark_processed(st, video_id)
+                state_mod.save_state(st, channel_id=channel_id)
                 return
     else:
         info = download.download_video(url, video_id=video_id, title=title)
@@ -97,10 +115,15 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
         tx = transcript_mod.get_transcript(full_video_path, info["subtitle_path"])
         print(f"  Transcript: {len(tx)} segments")
 
-    if not tx:
-        print(f"  No dialogue or transcript could be extracted for video {video_id}. Marking processed.")
+    if not _is_usable_transcript(tx):
+        print(f"  No dialogue or speech could be extracted for video {video_id}. Marking processed.")
         state_mod.mark_processed(st, video_id)
         state_mod.save_state(st, channel_id=channel_id)
+        if full_video_path and full_video_path.exists():
+            try:
+                full_video_path.unlink(missing_ok=True)
+            except Exception:
+                pass
         return
 
     # Select highlights (strictly tuned for YouTube Shorts < 60s)
@@ -373,8 +396,13 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
             print(f"     [Clip Error] Error processing Clip {i+1} ({pick.get('title')}): {clip_err}", file=sys.stderr)
             continue
 
-    # Clean up intermediate slice files to conserve runner disk space
+    # Clean up intermediate slice files and full video to conserve runner disk space
     download.cleanup_intermediate_files(f"{video_id}_raw")
+    if full_video_path and full_video_path.exists():
+        try:
+            full_video_path.unlink(missing_ok=True)
+        except Exception:
+            pass
 
     state_mod.mark_processed(st, video_id)
     state_mod.save_state(st, channel_id=channel_id)

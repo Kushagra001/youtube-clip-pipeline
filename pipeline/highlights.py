@@ -315,10 +315,8 @@ def find_highlights_heuristic(
 # ---------------------------------------------------------------------------
 
 GROQ_MODELS = [
-    "openai/gpt-oss-120b",
-    "openai/gpt-oss-20b",
-    "qwen/qwen3.8-27b",
     "llama-3.3-70b-versatile",
+    "llama-3.1-8b-instant",
 ]
 
 SYSTEM_PROMPT = """You select the most compelling short-form clip moments from a \
@@ -462,6 +460,12 @@ def find_highlights(
     method: str = "heuristic",
     source_title: str | None = None,
 ) -> list[dict]:
+    if not segments or len(segments) < 2:
+        return []
+    total_span = (segments[-1].get("end", 0) - segments[0].get("start", 0))
+    if total_span < min_seconds:
+        return []
+
     if method == "groq":
         api_key = os.environ.get("GROQ_API_KEY")
         if not api_key:

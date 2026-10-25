@@ -122,11 +122,12 @@ def parse_vtt(subtitle_path: Path) -> list[dict]:
     return segments
 
 
-def transcribe_with_whisper(video_path: Path, model_size: str = "small") -> list[dict]:
+def transcribe_with_whisper(video_path: Path, model_size: str = "base") -> list[dict]:
+    print(f"  [Whisper] Transcribing {video_path.name} with model '{model_size}' on CPU...")
     try:
         from faster_whisper import WhisperModel
         model = WhisperModel(model_size, device="cpu", compute_type="int8")
-        segments, _ = model.transcribe(str(video_path), vad_filter=True, word_timestamps=True)
+        segments, _ = model.transcribe(str(video_path), beam_size=1, vad_filter=True, word_timestamps=True)
         raw_words = []
         for seg in segments:
             for w in getattr(seg, "words", []):
@@ -139,10 +140,11 @@ def transcribe_with_whisper(video_path: Path, model_size: str = "small") -> list
             {"start": seg.start, "end": seg.end, "text": seg.text.strip()}
             for seg in segments
         ]
-    except Exception:
+    except Exception as e:
+        print(f"  [Whisper] faster-whisper note ({e}), falling back to standard whisper...")
         import whisper
         model = whisper.load_model(model_size)
-        result = model.transcribe(str(video_path), word_timestamps=True)
+        result = model.transcribe(str(video_path), fp16=False, word_timestamps=True)
         raw_words = []
         for seg in result.get("segments", []):
             for w in seg.get("words", []):
@@ -161,7 +163,12 @@ def get_transcript(video_path: Path | None, subtitle_path: Path | None) -> list[
     if subtitle_path and subtitle_path.exists():
         segments = parse_vtt(subtitle_path)
         if segments:
-            return segments
+            clean_words = [
+                w for s in segments for w in s.get("text", "").split()
+                if not (w.startswith("[") and w.endswith("]"))
+            ]
+            if len(clean_words) >= 15:
+                return segments
     if not video_path or not video_path.exists():
         return []
-    return transcribe_with_whisper(video_path)
+    return transcribe_with_whisper(video_path, model_size="base")

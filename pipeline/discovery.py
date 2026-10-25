@@ -220,7 +220,7 @@ def expand_niches_with_groq(niche_desc: str, scrape_hashtags: list[str], niches:
             "Do NOT suggest generic podcasts, gossip, or celebrity interviews. Keep queries strictly focused on this niche.\n"
             "Respond ONLY with a JSON object: {\"queries\": [\"...\"]}"
         )
-        models_to_try = ["openai/gpt-oss-120b", "openai/gpt-oss-20b", "qwen/qwen3.8-27b"]
+        models_to_try = ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"]
         for model_name in models_to_try:
             try:
                 response = client.chat.completions.create(
@@ -271,7 +271,7 @@ def verify_niche_with_groq(candidates: list[dict], niche_desc: str, scrape_hasht
             "3. DISCARD off-topic gaming streams, celebrity gossip, prank videos, or drama.\n"
             "Respond ONLY with a JSON array of accepted IDs: [\"id1\", \"id2\", ...]"
         )
-        models_to_try = ["openai/gpt-oss-120b", "openai/gpt-oss-20b", "qwen/qwen3.8-27b"]
+        models_to_try = ["llama-3.3-70b-versatile", "llama-3.1-8b-instant"]
         for model in models_to_try:
             try:
                 resp = client.chat.completions.create(

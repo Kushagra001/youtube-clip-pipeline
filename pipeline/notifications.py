@@ -52,16 +52,23 @@ def send_telegram_message(message: str, parse_mode: str = "HTML") -> bool:
         headers={"Content-Type": "application/json"},
     )
 
-    try:
-        with urllib.request.urlopen(req, timeout=10) as response:
-            return response.status == 200
-    except urllib.error.HTTPError as e:
-        error_body = e.read().decode("utf-8", errors="ignore")
-        print(f"  [Telegram] HTTP Error {e.code}: {error_body}")
-        return False
-    except Exception as e:
-        print(f"  [Telegram] Notification failed: {e}")
-        return False
+    import time
+    for attempt in range(2):
+        try:
+            with urllib.request.urlopen(req, timeout=10) as response:
+                return response.status == 200
+        except urllib.error.HTTPError as e:
+            error_body = e.read().decode("utf-8", errors="ignore")
+            if e.code == 429 and attempt == 0:
+                print("  [Telegram] Rate limit encountered (HTTP 429). Retrying in 2s...")
+                time.sleep(2.0)
+                continue
+            print(f"  [Telegram] HTTP Error {e.code}: {error_body}")
+            return False
+        except Exception as e:
+            print(f"  [Telegram] Notification failed: {e}")
+            return False
+    return False
 
 
 def send_discord_message(payload: dict) -> bool:

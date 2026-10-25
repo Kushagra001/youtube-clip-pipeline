@@ -112,9 +112,9 @@ def _build_video_filter(
             f"drawbox=x=0:y=1906:w='min(1080,1080*t/{adjusted_duration:.2f})':"
             f"h=10:color={bar_col}:t=fill"
         )
-        return base_filter + bar_filter
+        return base_filter + bar_filter + ",setsar=1"
 
-    return base_filter
+    return base_filter + ",setsar=1"
 
 
 def cut_clip(
@@ -175,6 +175,8 @@ def cut_clip(
         af_filters.append("loudnorm=I=-14:LRA=11:TP=-1.5")
     af = ",".join(af_filters)
 
+    # YouTube Recommended Encoding Specs:
+    # High profile, level 4.1, closed GOP, 2 consecutive B-frames, 48kHz audio, NO edit lists (elst), faststart moov atom
     cmd = [
         "ffmpeg", "-y",
         "-ss", f"{start:.3f}",
@@ -185,9 +187,13 @@ def cut_clip(
         "-shortest",
         "-r", "30",
         "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+        "-profile:v", "high", "-level", "4.1",
+        "-bf", "2", "-g", "30", "-flags", "+cgop",
         "-pix_fmt", "yuv420p",
+        "-avoid_negative_ts", "make_zero",
+        "-use_editlist", "0",
         "-movflags", "+faststart",
-        "-c:a", "aac", "-b:a", "160k", "-ar", "44100", "-ac", "2",
+        "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2",
         str(out_path),
     ]
 
@@ -210,15 +216,46 @@ def cut_clip(
         "-shortest",
         "-r", "30",
         "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+        "-profile:v", "high", "-level", "4.1",
+        "-bf", "2", "-g", "30", "-flags", "+cgop",
         "-pix_fmt", "yuv420p",
+        "-avoid_negative_ts", "make_zero",
+        "-use_editlist", "0",
         "-movflags", "+faststart",
-        "-c:a", "aac", "-b:a", "160k", "-ar", "44100", "-ac", "2",
+        "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2",
         str(out_path),
     ]
     res_fb = subprocess.run(cmd_fallback, capture_output=True, text=True)
     if res_fb.returncode != 0:
         err_msg = res_fb.stderr.strip() or res_fb.stdout.strip()
-        last_error = "\n".join(err_msg.splitlines()[-8:])
+        print(f"  [FFmpeg] Audio filter retry note: {err_msg.splitlines()[-1] if err_msg.splitlines() else 'Unknown'}. Retrying with synthesized audio...")
+        cmd_silent = [
+            "ffmpeg", "-y",
+            "-ss", f"{start:.3f}",
+            "-i", str(source_video),
+            "-f", "lavfi", "-i", "anullsrc=channel_layout=stereo:sample_rate=48000",
+            "-t", f"{raw_duration:.3f}",
+            "-vf", vf,
+            "-map", "0:v:0",
+            "-map", "1:a:0",
+            "-shortest",
+            "-r", "30",
+            "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+            "-profile:v", "high", "-level", "4.1",
+            "-bf", "2", "-g", "30", "-flags", "+cgop",
+            "-pix_fmt", "yuv420p",
+            "-avoid_negative_ts", "make_zero",
+            "-use_editlist", "0",
+            "-movflags", "+faststart",
+            "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2",
+            str(out_path),
+        ]
+        res_silent = subprocess.run(cmd_silent, capture_output=True, text=True)
+        if res_silent.returncode == 0:
+            return out_path
+
+        silent_err = res_silent.stderr.strip() or res_silent.stdout.strip()
+        last_error = "\n".join(silent_err.splitlines()[-8:])
         raise RuntimeError(f"FFmpeg clip cut failed:\n{last_error}")
 
     return out_path
