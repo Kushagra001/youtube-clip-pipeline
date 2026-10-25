@@ -19,7 +19,9 @@
     "gwP-43byenE",
     "aSQumF87XGw",
     "hQiJ5Y17y-k",
-    "t8yeIMoZihw"
+    "t8yeIMoZihw",
+    "_5sWvxpiHBI",
+    "BEDMQSyrG3k"
   ],
   "upload_timestamps": [
     1792943201.058422,
@@ -48,7 +50,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792943074.8144476,
+        "last_synced": 1792960358.0310152,
         "status": "pending_or_private"
       }
     },
@@ -74,7 +76,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792943074.8144476,
+        "last_synced": 1792960358.0310152,
         "status": "pending_or_private"
       }
     },
@@ -100,7 +102,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1792960358.0310152,
+        "status": "public"
       }
     },
     {
@@ -125,14 +128,15 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1792960358.0310152,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_02_dogs",
-    "last_sync": 1792943074.8144476,
-    "total_shorts": 2,
+    "last_sync": 1792960358.0310152,
+    "total_shorts": 4,
     "public_shorts": 0,
     "total_views": 0,
     "median_views": 100.0,
