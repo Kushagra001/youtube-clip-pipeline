@@ -41,7 +41,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792873581.4989538,
+        "last_synced": 1792899794.8564224,
         "status": "public"
       }
     },
@@ -64,10 +64,10 @@
       "scheduled_at": null,
       "uploaded_at": 1792775534.1515608,
       "stats": {
-        "views": 6,
+        "views": 7,
         "likes": 0,
         "comments": 1,
-        "last_synced": 1792873581.4989538,
+        "last_synced": 1792899794.8564224,
         "status": "public"
       }
     },
@@ -93,7 +93,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1792899794.8564224,
+        "status": "pending_or_private"
       }
     },
     {
@@ -118,17 +119,18 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1792899794.8564224,
+        "status": "pending_or_private"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_10_mental_health",
-    "last_sync": 1792873581.4989538,
-    "total_shorts": 2,
+    "last_sync": 1792899794.8564224,
+    "total_shorts": 4,
     "public_shorts": 2,
-    "total_views": 7,
-    "median_views": 3.5,
+    "total_views": 8,
+    "median_views": 4.0,
     "creator_weights": {
       "@HealthyGamerGG": 1.0
     }
