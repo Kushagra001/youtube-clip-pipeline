@@ -20,11 +20,13 @@
     "GlaSnROMqRY",
     "SCi464zfAUM",
     "IkhmdTqSvJw",
-    "rY0wnfFHYbs"
+    "rY0wnfFHYbs",
+    "2dfMUtHlQik",
+    "Pydut1BMlBw"
   ],
   "upload_timestamps": [
-    1792899908.6437669,
-    1792899982.5205417
+    1792986503.0740824,
+    1792986592.6014123
   ],
   "uploaded_shorts": [
     {
@@ -49,7 +51,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792960348.8733885,
+        "last_synced": 1792986376.947993,
         "status": "pending_or_private"
       }
     },
@@ -75,7 +77,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792960348.8733885,
+        "last_synced": 1792986376.947993,
         "status": "pending_or_private"
       }
     },
@@ -101,7 +103,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792960348.8733885,
+        "last_synced": 1792986376.947993,
         "status": "public"
       }
     },
@@ -127,14 +129,64 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792960348.8733885,
+        "last_synced": 1792986376.947993,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "UjNpH_iSw5E",
+      "source_video_id": "2dfMUtHlQik",
+      "title": "weird and even a bit dangerous sometimes. And like #shorts",
+      "creator": "Starter Story",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792986503.0740924,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "8F6e0ndejdc",
+      "source_video_id": "2dfMUtHlQik",
+      "title": "messages and we'll have someone reply an actual pe #shorts",
+      "creator": "Starter Story",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792986592.6014235,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1792960348.8733885,
+    "last_sync": 1792986376.947993,
     "total_shorts": 4,
     "public_shorts": 2,
     "total_views": 6,
