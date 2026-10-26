@@ -21,7 +21,9 @@
     "3qu4armW57Y",
     "xknOnFiOuTw",
     "fv-nPhml8u8",
-    "VrxHeLDjY5M"
+    "VrxHeLDjY5M",
+    "7_w_36P0Qq0",
+    "Kc5C9Ch2SBU"
   ],
   "upload_timestamps": [
     1792986688.631949,
@@ -50,7 +52,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793017783.1804545,
+        "last_synced": 1793054293.4445927,
         "status": "public"
       }
     },
@@ -76,7 +78,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793017783.1804545,
+        "last_synced": 1793054293.4445927,
         "status": "pending_or_private"
       }
     },
@@ -99,10 +101,10 @@
       "scheduled_at": null,
       "uploaded_at": 1792900029.2966561,
       "stats": {
-        "views": 3,
+        "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793017783.1804545,
+        "last_synced": 1793054293.4445927,
         "status": "public"
       }
     },
@@ -128,7 +130,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793017783.1804545,
+        "last_synced": 1793054293.4445927,
         "status": "public"
       }
     },
@@ -151,24 +153,25 @@
       "scheduled_at": null,
       "uploaded_at": 1792986766.9153514,
       "stats": {
-        "views": 0,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793017783.1804545,
+        "last_synced": 1793054293.4445927,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1793017783.1804545,
+    "last_sync": 1793054293.4445927,
     "total_shorts": 5,
-    "public_shorts": 2,
-    "total_views": 9,
-    "median_views": 4.5,
+    "public_shorts": 3,
+    "total_views": 13,
+    "median_views": 5,
     "creator_weights": {
-      "Teachingmensfashion": 1.35,
-      "BeYourBest": 1.0
+      "Teachingmensfashion": 1.0,
+      "BeYourBest": 1.0,
+      "The Formal Edit": 1.0
     }
   }
 }
