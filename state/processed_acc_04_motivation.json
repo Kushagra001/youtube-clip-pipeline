@@ -16,7 +16,9 @@
     "lxDNHLgWInU",
     "WTXy8EZEjVs",
     "pgEtflUOAtY",
-    "WsdcF7EEvhM"
+    "WsdcF7EEvhM",
+    "SJcZHAGLbdE",
+    "8RPI7ENgzL8"
   ],
   "upload_timestamps": [
     1792960491.0950384,
@@ -42,10 +44,10 @@
       "scheduled_at": null,
       "uploaded_at": 1792856298.6902354,
       "stats": {
-        "views": 937,
-        "likes": 13,
+        "views": 1028,
+        "likes": 15,
         "comments": 0,
-        "last_synced": 1792986384.0357373,
+        "last_synced": 1793017726.7342744,
         "status": "public"
       }
     },
@@ -68,10 +70,10 @@
       "scheduled_at": null,
       "uploaded_at": 1792856394.7428007,
       "stats": {
-        "views": 727,
+        "views": 785,
         "likes": 5,
         "comments": 0,
-        "last_synced": 1792986384.0357373,
+        "last_synced": 1793017726.7342744,
         "status": "public"
       }
     },
@@ -94,10 +96,10 @@
       "scheduled_at": null,
       "uploaded_at": 1792960491.0950453,
       "stats": {
-        "views": 64,
-        "likes": 0,
+        "views": 71,
+        "likes": 1,
         "comments": 0,
-        "last_synced": 1792986384.0357373,
+        "last_synced": 1793017726.7342744,
         "status": "public"
       }
     },
@@ -120,21 +122,21 @@
       "scheduled_at": null,
       "uploaded_at": 1792960568.2561069,
       "stats": {
-        "views": 2,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792986384.0357373,
+        "last_synced": 1793017726.7342744,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_04_motivation",
-    "last_sync": 1792986384.0357373,
+    "last_sync": 1793017726.7342744,
     "total_shorts": 4,
     "public_shorts": 4,
-    "total_views": 1730,
-    "median_views": 395.5,
+    "total_views": 1887,
+    "median_views": 428.0,
     "creator_weights": {
       "@JordanBPeterson": 1.35,
       "@ChrisWillx": 0.65
