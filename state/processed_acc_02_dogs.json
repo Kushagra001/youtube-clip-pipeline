@@ -21,7 +21,9 @@
     "hQiJ5Y17y-k",
     "t8yeIMoZihw",
     "_5sWvxpiHBI",
-    "BEDMQSyrG3k"
+    "BEDMQSyrG3k",
+    "C4qD-tnTbc8",
+    "rOqWJurD_Ok"
   ],
   "upload_timestamps": [
     1792943201.058422,
@@ -50,7 +52,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792960358.0310152,
+        "last_synced": 1792986362.5906732,
         "status": "pending_or_private"
       }
     },
@@ -76,7 +78,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792960358.0310152,
+        "last_synced": 1792986362.5906732,
         "status": "pending_or_private"
       }
     },
@@ -102,7 +104,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792960358.0310152,
+        "last_synced": 1792986362.5906732,
         "status": "public"
       }
     },
@@ -125,21 +127,23 @@
       "scheduled_at": null,
       "uploaded_at": 1792943288.1865878,
       "stats": {
-        "views": 0,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792960358.0310152,
+        "last_synced": 1792986362.5906732,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_02_dogs",
-    "last_sync": 1792960358.0310152,
+    "last_sync": 1792986362.5906732,
     "total_shorts": 4,
-    "public_shorts": 0,
-    "total_views": 0,
-    "median_views": 100.0,
-    "creator_weights": {}
+    "public_shorts": 1,
+    "total_views": 3,
+    "median_views": 3,
+    "creator_weights": {
+      "Tom Davis Dog Training ": 1.0
+    }
   }
 }
