@@ -24,7 +24,9 @@
     "5WJhNmpc1Ng",
     "8HlzcEBqr4M",
     "jcg0eepv8p0",
-    "aclIqxWrNOo"
+    "aclIqxWrNOo",
+    "KEUXfQ0MiyE",
+    "kTdTjmexmMc"
   ],
   "upload_timestamps": [
     1792960428.4034035,
@@ -53,7 +55,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792986376.8587627,
+        "last_synced": 1793017703.8950763,
         "status": "pending_or_private"
       }
     },
@@ -79,7 +81,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792986376.8587627,
+        "last_synced": 1793017703.8950763,
         "status": "pending_or_private"
       }
     },
@@ -105,7 +107,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792986376.8587627,
+        "last_synced": 1793017703.8950763,
         "status": "pending_or_private"
       }
     },
@@ -131,7 +133,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792986376.8587627,
+        "last_synced": 1793017703.8950763,
         "status": "pending_or_private"
       }
     },
@@ -157,7 +159,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792986376.8587627,
+        "last_synced": 1793017703.8950763,
         "status": "public"
       }
     },
@@ -183,14 +185,14 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792986376.8587627,
+        "last_synced": 1793017703.8950763,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_01_cats",
-    "last_sync": 1792986376.8587627,
+    "last_sync": 1793017703.8950763,
     "total_shorts": 6,
     "public_shorts": 0,
     "total_views": 0,
