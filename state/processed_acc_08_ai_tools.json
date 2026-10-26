@@ -16,12 +16,11 @@
     "eBszYxzE2dk",
     "eK7Sn0_zHQw",
     "umGZrkyTRtw",
-    "ehcBwqyUGjo"
+    "ehcBwqyUGjo",
+    "NL0yDYXAQ0E",
+    "yke4fLQUsh4"
   ],
-  "upload_timestamps": [
-    1792926027.2632017,
-    1792926098.1280496
-  ],
+  "upload_timestamps": [],
   "uploaded_shorts": [
     {
       "video_id": "iWJNBMbJm-0",
@@ -37,7 +36,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792986367.373669,
+        "last_synced": 1793017702.0717645,
         "status": "pending_or_private"
       }
     },
@@ -55,7 +54,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792986367.373669,
+        "last_synced": 1793017702.0717645,
         "status": "pending_or_private"
       }
     },
@@ -76,10 +75,10 @@
       "scheduled_at": null,
       "uploaded_at": 1792789911.3963134,
       "stats": {
-        "views": 1186,
+        "views": 1187,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1792986367.373669,
+        "last_synced": 1793017702.0717645,
         "status": "public"
       }
     },
@@ -100,10 +99,10 @@
       "scheduled_at": null,
       "uploaded_at": 1792838001.3809872,
       "stats": {
-        "views": 367,
+        "views": 369,
         "likes": 3,
         "comments": 0,
-        "last_synced": 1792986367.373669,
+        "last_synced": 1793017702.0717645,
         "status": "public"
       }
     },
@@ -127,7 +126,7 @@
         "views": 117,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792986367.373669,
+        "last_synced": 1793017702.0717645,
         "status": "public"
       }
     },
@@ -151,18 +150,18 @@
         "views": 377,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1792986367.373669,
+        "last_synced": 1793017702.0717645,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1792986367.373669,
+    "last_sync": 1793017702.0717645,
     "total_shorts": 6,
     "public_shorts": 4,
-    "total_views": 2047,
-    "median_views": 372.0,
+    "total_views": 2050,
+    "median_views": 373.0,
     "creator_weights": {
       "Matt Wolfe": 1.35,
       "@DavidOndrej": 1.0
