@@ -23,11 +23,13 @@
     "7kYAD8-yKPw",
     "KqTAVprbJmg",
     "YxzXd2J0dO8",
-    "4mGVkTCx2ls"
+    "4mGVkTCx2ls",
+    "a8UQBlGlOqE",
+    "4TyPUB6o-t8"
   ],
   "upload_timestamps": [
-    1792899915.1758683,
-    1792900013.204075
+    1792986587.5959513,
+    1792986689.800617
   ],
   "uploaded_shorts": [
     {
@@ -52,7 +54,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792960333.2314186,
+        "last_synced": 1792986362.0610623,
         "status": "pending_or_private"
       }
     },
@@ -78,7 +80,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792960333.2314186,
+        "last_synced": 1792986362.0610623,
         "status": "pending_or_private"
       }
     },
@@ -104,7 +106,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792960333.2314186,
+        "last_synced": 1792986362.0610623,
         "status": "public"
       }
     },
@@ -127,21 +129,71 @@
       "scheduled_at": null,
       "uploaded_at": 1792900013.2040823,
       "stats": {
-        "views": 2,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792960333.2314186,
+        "last_synced": 1792986362.0610623,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "2sECJQ6nv3g",
+      "source_video_id": "4TyPUB6o-t8",
+      "title": "Okay, okay, okay. Okay. There's only one way to te #shorts",
+      "creator": "@JoshuaWeissman",
+      "topic": "quick and easy recipes, meal prep ideas and food hacks for home cooks",
+      "tags": [
+        "easyrecipes",
+        "mealprep",
+        "foodhacks",
+        "quickrecipes",
+        "cookinghacks",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792986587.5959597,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "oJTnuUVvb08",
+      "source_video_id": "4TyPUB6o-t8",
+      "title": "So it's thick enough to retain the heat, but it's #shorts",
+      "creator": "@JoshuaWeissman",
+      "topic": "quick and easy recipes, meal prep ideas and food hacks for home cooks",
+      "tags": [
+        "easyrecipes",
+        "mealprep",
+        "foodhacks",
+        "quickrecipes",
+        "cookinghacks",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792986689.800627,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1792960333.2314186,
+    "last_sync": 1792986362.0610623,
     "total_shorts": 4,
     "public_shorts": 1,
-    "total_views": 2,
-    "median_views": 2,
+    "total_views": 3,
+    "median_views": 3,
     "creator_weights": {
       "Will Tennyson": 1.0
     }
