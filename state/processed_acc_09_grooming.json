@@ -19,7 +19,9 @@
     "j5p3Y1uUvmg",
     "xBHNxkKPFDE",
     "3qu4armW57Y",
-    "xknOnFiOuTw"
+    "xknOnFiOuTw",
+    "fv-nPhml8u8",
+    "VrxHeLDjY5M"
   ],
   "upload_timestamps": [
     1792986688.631949,
@@ -48,7 +50,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792986361.487569,
+        "last_synced": 1793017783.1804545,
         "status": "public"
       }
     },
@@ -74,7 +76,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792986361.487569,
+        "last_synced": 1793017783.1804545,
         "status": "pending_or_private"
       }
     },
@@ -100,7 +102,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792986361.487569,
+        "last_synced": 1793017783.1804545,
         "status": "public"
       }
     },
@@ -126,7 +128,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1793017783.1804545,
+        "status": "public"
       }
     },
     {
@@ -151,14 +154,15 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1793017783.1804545,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1792986361.487569,
-    "total_shorts": 3,
+    "last_sync": 1793017783.1804545,
+    "total_shorts": 5,
     "public_shorts": 2,
     "total_views": 9,
     "median_views": 4.5,
