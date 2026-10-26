@@ -17,11 +17,13 @@
     "6oIT62WxJho",
     "ZYl60cjSacM",
     "j5p3Y1uUvmg",
-    "xBHNxkKPFDE"
+    "xBHNxkKPFDE",
+    "3qu4armW57Y",
+    "xknOnFiOuTw"
   ],
   "upload_timestamps": [
-    1792837910.5626073,
-    1792900029.2966492
+    1792986688.631949,
+    1792986766.9153435
   ],
   "uploaded_shorts": [
     {
@@ -46,7 +48,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792943111.7705896,
+        "last_synced": 1792986361.487569,
         "status": "public"
       }
     },
@@ -72,7 +74,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792943111.7705896,
+        "last_synced": 1792986361.487569,
         "status": "pending_or_private"
       }
     },
@@ -95,21 +97,71 @@
       "scheduled_at": null,
       "uploaded_at": 1792900029.2966561,
       "stats": {
-        "views": 2,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792943111.7705896,
+        "last_synced": 1792986361.487569,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "VB4hopTYA1w",
+      "source_video_id": "xknOnFiOuTw",
+      "title": "are in a dry area, you have to cut the #shorts",
+      "creator": "The Formal Edit",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792986688.6319566,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "JvYTUXgcBJI",
+      "source_video_id": "xknOnFiOuTw",
+      "title": "different from that of a facial What you are looki #shorts",
+      "creator": "The Formal Edit",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1792986766.9153514,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1792943111.7705896,
+    "last_sync": 1792986361.487569,
     "total_shorts": 3,
     "public_shorts": 2,
-    "total_views": 8,
-    "median_views": 4.0,
+    "total_views": 9,
+    "median_views": 4.5,
     "creator_weights": {
       "Teachingmensfashion": 1.35,
       "BeYourBest": 1.0
