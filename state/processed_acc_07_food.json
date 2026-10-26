@@ -25,7 +25,9 @@
     "YxzXd2J0dO8",
     "4mGVkTCx2ls",
     "a8UQBlGlOqE",
-    "4TyPUB6o-t8"
+    "4TyPUB6o-t8",
+    "XE5dlYS8CFI",
+    "HkDSTzzogLk"
   ],
   "upload_timestamps": [
     1792986587.5959513,
@@ -54,7 +56,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792986362.0610623,
+        "last_synced": 1793053544.7859838,
         "status": "pending_or_private"
       }
     },
@@ -80,7 +82,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792986362.0610623,
+        "last_synced": 1793053544.7859838,
         "status": "pending_or_private"
       }
     },
@@ -103,10 +105,10 @@
       "scheduled_at": null,
       "uploaded_at": 1792899915.175874,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792986362.0610623,
+        "last_synced": 1793053544.7859838,
         "status": "public"
       }
     },
@@ -129,10 +131,10 @@
       "scheduled_at": null,
       "uploaded_at": 1792900013.2040823,
       "stats": {
-        "views": 3,
+        "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1792986362.0610623,
+        "last_synced": 1793053544.7859838,
         "status": "public"
       }
     },
@@ -158,7 +160,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1793053544.7859838,
+        "status": "public"
       }
     },
     {
@@ -180,22 +183,24 @@
       "scheduled_at": null,
       "uploaded_at": 1792986689.800627,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1793053544.7859838,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1792986362.0610623,
-    "total_shorts": 4,
-    "public_shorts": 1,
-    "total_views": 3,
-    "median_views": 3,
+    "last_sync": 1793053544.7859838,
+    "total_shorts": 6,
+    "public_shorts": 3,
+    "total_views": 7,
+    "median_views": 1,
     "creator_weights": {
-      "Will Tennyson": 1.0
+      "Will Tennyson": 1.8,
+      "@JoshuaWeissman": 1.0
     }
   }
 }
