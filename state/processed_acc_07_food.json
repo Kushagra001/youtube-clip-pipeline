@@ -27,7 +27,9 @@
     "a8UQBlGlOqE",
     "4TyPUB6o-t8",
     "XE5dlYS8CFI",
-    "HkDSTzzogLk"
+    "HkDSTzzogLk",
+    "jrtRgxRQ8y4",
+    "HGWICoR6n2s"
   ],
   "upload_timestamps": [
     1792986587.5959513,
@@ -56,7 +58,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793053544.7859838,
+        "last_synced": 1793074184.0070574,
         "status": "pending_or_private"
       }
     },
@@ -82,7 +84,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793053544.7859838,
+        "last_synced": 1793074184.0070574,
         "status": "pending_or_private"
       }
     },
@@ -108,7 +110,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793053544.7859838,
+        "last_synced": 1793074184.0070574,
         "status": "public"
       }
     },
@@ -131,10 +133,10 @@
       "scheduled_at": null,
       "uploaded_at": 1792900013.2040823,
       "stats": {
-        "views": 5,
+        "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793053544.7859838,
+        "last_synced": 1793074184.0070574,
         "status": "public"
       }
     },
@@ -160,7 +162,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793053544.7859838,
+        "last_synced": 1793074184.0070574,
         "status": "public"
       }
     },
@@ -186,17 +188,17 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793053544.7859838,
+        "last_synced": 1793074184.0070574,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1793053544.7859838,
+    "last_sync": 1793074184.0070574,
     "total_shorts": 6,
     "public_shorts": 3,
-    "total_views": 7,
+    "total_views": 8,
     "median_views": 1,
     "creator_weights": {
       "Will Tennyson": 1.8,
