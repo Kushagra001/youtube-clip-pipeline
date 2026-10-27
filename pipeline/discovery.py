@@ -61,6 +61,9 @@ def search_youtube_videos(query: str, max_results: int = 20, sort: str = "releva
     if sort == "views":
         encoded = urllib.parse.quote_plus(query)
         search_target = f"https://www.youtube.com/results?search_query={encoded}&sp=CAMSAhAB"
+    elif sort == "this_month":
+        encoded = urllib.parse.quote_plus(query)
+        search_target = f"https://www.youtube.com/results?search_query={encoded}&sp=EgQIBBAB"
     elif sort == "this_year":
         encoded = urllib.parse.quote_plus(query)
         search_target = f"https://www.youtube.com/results?search_query={encoded}&sp=EgQIBRAB"
@@ -459,19 +462,20 @@ def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12, sta
 
                 views_per_day = views / max(age_days, 1)
 
-                # Recency Velocity Multipliers: Breakout videos get substantial priority
-                if age_days <= 14:
-                    recency_multiplier = 1.6
-                elif age_days <= 45:
-                    recency_multiplier = 1.4
-                elif age_days <= 90:
-                    recency_multiplier = 1.25
+                # Recency Outlier Velocity Multipliers: Breakout videos published recently get highest priority
+                # Heavily penalizes stale videos (>180d) to avoid duplicate content flags on YouTube
+                if age_days <= 7:
+                    recency_multiplier = 2.4   # Breakout viral hit in last week
+                elif age_days <= 21:
+                    recency_multiplier = 1.9   # Fresh viral hit in last 3 weeks
+                elif age_days <= 60:
+                    recency_multiplier = 1.4   # Recent (last 2 months)
+                elif age_days <= 180:
+                    recency_multiplier = 0.95  # Moderate age
                 elif age_days <= 365:
-                    recency_multiplier = 1.1
-                elif age_days <= 730:
-                    recency_multiplier = 0.95
+                    recency_multiplier = 0.60  # Older content, likely already clipped
                 else:
-                    recency_multiplier = 0.75
+                    recency_multiplier = 0.35  # Stale content (>1 year old)
 
                 # Subtitle Pre-Check Multiplier: strongly prioritizes videos with verified dialogue
                 sub_multiplier = 1.5 if has_subs else 0.85
@@ -493,8 +497,8 @@ def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12, sta
                 virality_score = (
                     (official_bonus +
                     (rel * 25.0) +
-                    (math.log10(max(views_per_day, 1.0)) * 7.0) +
-                    (math.log10(max(views, 1.0)) * 2.0))
+                    (math.log10(max(views_per_day, 1.0)) * 12.0) +
+                    (math.log10(max(views, 1.0)) * 1.5))
                     * recency_multiplier * sub_multiplier * analytics_mult
                 )
 
@@ -560,9 +564,9 @@ def discover_and_select_videos(cfg: dict, state: dict) -> list[dict]:
         nd_videos = search_youtube_videos(niche_desc, max_results=15)
         all_candidates.extend(nd_videos)
 
-        print(f"  [Discovery] Exploring recent trending hits from this year: '{niche_desc}'")
-        ny_videos = search_youtube_videos(niche_desc, max_results=12, sort="this_year")
-        all_candidates.extend(ny_videos)
+        print(f"  [Discovery] Exploring fresh trending hits from this month: '{niche_desc}'")
+        nm_videos = search_youtube_videos(niche_desc, max_results=12, sort="this_month")
+        all_candidates.extend(nm_videos)
 
     # 3. Search intent-grounded hashtag topics (avoids raw hashtag bot/cartoon spam)
     for tag in scrape_hashtags[:3]:

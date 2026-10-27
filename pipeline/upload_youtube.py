@@ -77,8 +77,10 @@ def validate_video_file(video_path: str) -> tuple[bool, str]:
             return False, "Audio stream missing in MP4 container"
 
         dur = float(data.get("format", {}).get("duration", 0))
-        if dur > 60.5:
-            return False, f"Duration {dur:.1f}s exceeds YouTube Shorts limit (60s)"
+        if dur > 58.0:
+            return False, f"Duration {dur:.1f}s exceeds safe Shorts ceiling (58.0s)"
+        if dur < 8.0:
+            return False, f"Duration {dur:.1f}s too short (<8.0s)"
         return True, "OK"
     except Exception as e:
         return True, f"Validation bypassed: {e}"
@@ -117,6 +119,9 @@ def upload_short(
 
     # YouTube rejects video titles containing '<' or '>' characters (HTTP 400 invalidTitle)
     clean_title = title.replace("<", "").replace(">", "").strip()[:100]
+    import re
+    clean_title = re.sub(r"\.\.\.\s*(#shorts)", r" \1", clean_title, flags=re.IGNORECASE)
+    clean_title = re.sub(r"[,;:\-]\s*(#shorts)", r" \1", clean_title, flags=re.IGNORECASE)
     clean_desc = description[:4990]
 
     # Per YouTube API specification: publishAt requires privacyStatus to be "private"

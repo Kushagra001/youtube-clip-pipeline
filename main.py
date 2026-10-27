@@ -299,7 +299,15 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
                     print(f"     Saved locally: {captioned_path}")
                 else:
                     from pipeline import upload_youtube
-                    short_title = pick["title"][:50]
+                    raw_title = (pick.get("title") or "").strip()
+                    clean_t = re.sub(r"\.\.\.+$", "", raw_title).strip()
+                    clean_t = re.sub(r"[,;:\-]\s*$", "", clean_t).strip()
+                    if clean_t.isupper() and len(clean_t) > 10:
+                        clean_t = clean_t.title()
+                    if len(clean_t) > 52:
+                        clean_t = clean_t[:52].rsplit(" ", 1)[0].strip()
+                    clean_t = re.sub(r"[,;:\-]\s*$", "", clean_t).strip()
+                    short_title = clean_t if clean_t else "Essential Insight You Need to Know 🧠"
                     if "#shorts" not in short_title.lower():
                         short_title += " #shorts"
 

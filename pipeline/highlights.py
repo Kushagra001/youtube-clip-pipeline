@@ -271,11 +271,120 @@ def _generate_meaningful_takeaway(
     return "KEY INSIGHT: AWARENESS IS THE FIRST STEP TO CHANGE"
 
 
+def _pick_deterministic_template(templates: list[str], text: str) -> str:
+    """Consistently picks a title template so different clips get different high-converting titles."""
+    idx = sum(ord(c) for c in text[:25]) % len(templates)
+    return templates[idx]
+
+
+def _generate_viral_title(
+    window_text: str,
+    burner_text: str | None = None,
+    source_title: str | None = None,
+) -> str:
+    """Generates a high-CTR, curiosity-driven YouTube Shorts title (<52 chars).
+    Eliminates truncated sentence fragments or word soup.
+    """
+    clean_burner = ""
+    if burner_text:
+        b_no_emoji = re.sub(r"[\U00010000-\U0010ffff\u2600-\u27bf\u2300-\u23ff\ufe0f]", "", burner_text).strip()
+        clean_burner = b_no_emoji.title()
+
+    combo = f"{source_title or ''} {clean_burner} {window_text}".lower()
+
+    if any(k in combo for k in ("chatgpt", "openai", "claude", "prompt", "ai tool", "automation")):
+        return _pick_deterministic_template([
+            "The AI Tool Nobody Talks About 🤖",
+            "Why ChatGPT Does This (Fixed) 🤖",
+            "The 1 AI Automation You Need Today ⚡",
+            "Stop Using ChatGPT Like This ⚠️",
+        ], window_text)
+
+    if any(k in combo for k in ("recipe", "cook", "chef", "delicious", "food", "kitchen", "meal prep")):
+        return _pick_deterministic_template([
+            "The 60-Second Recipe Hack That Changes Everything 🍳",
+            "Never Cook It Like This (Huge Mistake) ⚠️",
+            "The Secret Restaurant Cooking Hack 👨‍🍳",
+            "The Best 5-Minute Meal Hack 🍳",
+        ], window_text)
+
+    if any(k in combo for k in ("dog", "puppy", "bark", "leash", "canine")):
+        return _pick_deterministic_template([
+            "Why Dogs Actually Do This (Revealed) 🐶",
+            "The 1 Dog Training Secret That Works 🐾",
+            "Never Do This to Your Dog ⚠️",
+            "The Secret Sign Your Dog Truly Loves You 🐶",
+        ], window_text)
+
+    if any(k in combo for k in ("cat", "kitten", "purr", "feline", "meow")):
+        return _pick_deterministic_template([
+            "Why Cats Actually Do This Every Day 🐱",
+            "The Secret Way to Calm Your Cat 🐾",
+            "Never Ignore This Cat Behavior ⚠️",
+            "What Your Cat Is Secretly Trying to Tell You 🐱",
+        ], window_text)
+
+    if any(k in combo for k in ("workout", "muscle", "hypertrophy", "lifting", "gym", "exercise")):
+        return _pick_deterministic_template([
+            "Stop Making This Workout Mistake ⚠️",
+            "The 1 Exercise That Builds Real Muscle 💪",
+            "Why Your Workouts Aren't Working (Fixed) 🏋️",
+            "The Secret to Faster Muscle Recovery ⚡",
+        ], window_text)
+
+    if any(k in combo for k in ("money", "billion", "wealth", "invest", "finance", "rich")):
+        return _pick_deterministic_template([
+            "The Brutal Truth About How Money Works 💰",
+            "Why Most People Stay Broke (Explained) 📉",
+            "The 1 Money Rule The Wealthy Follow 💎",
+            "How Real Wealth Is Actually Built 💰",
+        ], window_text)
+
+    if any(k in combo for k in ("founder", "startup", "business", "scale", "revenue", "sales")):
+        return _pick_deterministic_template([
+            "The 1 Business Rule Every Founder Must Know 📈",
+            "Why 90% of Startups Fail (The Truth) ⚠️",
+            "How Top Performers Scale 10x Faster 🚀",
+            "The Harsh Reality of Starting a Business 💼",
+        ], window_text)
+
+    if any(k in combo for k in ("anxiety", "adhd", "burnout", "nervous system", "panic", "mental")):
+        return _pick_deterministic_template([
+            "How to Reset Your Nervous System in 60s 🧠",
+            "The Psychology Secret Nobody Teaches You 🧘",
+            "Why Your Brain Gets So Overwhelmed 🧠",
+            "The Simple Habit That Eliminates Anxiety 🌿",
+        ], window_text)
+
+    if any(k in combo for k in ("skin", "haircut", "grooming", "cologne", "beard", "style")):
+        return _pick_deterministic_template([
+            "This 1 Habit Instantly Upgrades Your Look 💈",
+            "Most Men Get This Completely Wrong ⚠️",
+            "The Grooming Secret That Changes Everything ✨",
+            "How to Instantly Look 10x Sharper 👔",
+        ], window_text)
+
+    if any(k in combo for k in ("discipline", "habit", "mindset", "motivation", "success")):
+        return _pick_deterministic_template([
+            "The Harsh Truth About Self-Discipline ⚡",
+            "This 1 Mindset Shift Changes Everything 📈",
+            "Why Motivation Never Works Long-Term 🧠",
+            "The Daily Rule That Builds Unstoppable Focus 🎯",
+        ], window_text)
+
+    if clean_burner and len(clean_burner) >= 12:
+        emoji_match = re.search(r"[\U00010000-\U0010ffff\u2600-\u27bf\u2300-\u23ff\ufe0f]", burner_text or "")
+        emoji_suffix = f" {emoji_match.group(0)}" if emoji_match else ""
+        return f"{clean_burner[:45]}{emoji_suffix}"
+
+    return "This Changes How You Think Forever 🧠"
+
+
 def find_highlights_heuristic(
     segments: list[dict],
     max_clips: int = 3,
-    min_seconds: int = 25,
-    max_seconds: int = 55,
+    min_seconds: int = 20,
+    max_seconds: int = 42,
     source_title: str | None = None,
 ) -> list[dict]:
     windows = _build_windows(segments, min_seconds, max_seconds)
@@ -284,10 +393,19 @@ def find_highlights_heuristic(
     top = _non_overlapping_top(windows, max_clips)
 
     results = []
+    filler_tokens = {"okay", "so", "well", "um", "uh", "like", "you", "know", "mean", "yeah", "right", "actually", "basically"}
+
     for w in top:
-        # Snap start strictly to first segment start to eliminate dead air
-        first_seg = w["segments"][0] if w.get("segments") else None
-        exact_start = first_seg["start"] if first_seg else w["start"]
+        # Snap start strictly to first substantive segment (skip opening dead filler words)
+        exact_start = w["start"]
+        if w.get("segments"):
+            first_seg = w["segments"][0]
+            exact_start = first_seg["start"]
+            # If opening segment is short (<1.8s) and mostly filler words, advance to next segment
+            words_in_first = [w_tok.lower().strip(",.?!") for w_tok in first_seg.get("text", "").split()]
+            if words_in_first and len(words_in_first) <= 4 and all(w_tok in filler_tokens for w_tok in words_in_first):
+                if len(w["segments"]) > 1:
+                    exact_start = w["segments"][1]["start"]
 
         clean_w_text = _clean_text(w["text"])
         words = clean_w_text.split()
@@ -295,9 +413,7 @@ def find_highlights_heuristic(
 
         burner_headline = _generate_catchy_hook(w["text"], source_title=source_title)
         takeaway_str = _generate_meaningful_takeaway(w["text"], source_title=source_title)
-
-        title_words = " ".join(words[:10])
-        clip_title = (title_words[:50] + "...") if len(title_words) > 50 else title_words
+        clip_title = _generate_viral_title(w["text"], burner_text=burner_headline, source_title=source_title)
 
         results.append({
             "start": exact_start,
@@ -455,8 +571,8 @@ def find_highlights_groq(
 def find_highlights(
     segments: list[dict],
     max_clips: int = 3,
-    min_seconds: int = 25,
-    max_seconds: int = 55,
+    min_seconds: int = 20,
+    max_seconds: int = 42,
     method: str = "heuristic",
     source_title: str | None = None,
 ) -> list[dict]:
