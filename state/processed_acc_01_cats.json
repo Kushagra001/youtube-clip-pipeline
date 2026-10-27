@@ -30,11 +30,12 @@
     "LiNF8TxozG8",
     "XLGNNThRF6k",
     "NVLDqaSJN4o",
-    "o47dCAM4Ygw"
+    "o47dCAM4Ygw",
+    "_EuvMVhb9Dk",
+    "UKK92dPHfNM"
   ],
   "upload_timestamps": [
-    1792960428.4034035,
-    1792960487.8238544
+    1793101774.0767875
   ],
   "uploaded_shorts": [
     {
@@ -59,7 +60,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793074159.626487,
+        "last_synced": 1793101652.8927534,
         "status": "pending_or_private"
       }
     },
@@ -85,7 +86,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793074159.626487,
+        "last_synced": 1793101652.8927534,
         "status": "pending_or_private"
       }
     },
@@ -111,7 +112,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793074159.626487,
+        "last_synced": 1793101652.8927534,
         "status": "pending_or_private"
       }
     },
@@ -137,7 +138,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793074159.626487,
+        "last_synced": 1793101652.8927534,
         "status": "pending_or_private"
       }
     },
@@ -163,7 +164,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793074159.626487,
+        "last_synced": 1793101652.8927534,
         "status": "public"
       }
     },
@@ -189,14 +190,39 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793074159.626487,
+        "last_synced": 1793101652.8927534,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "lNOPXZvhYLI",
+      "source_video_id": "UKK92dPHfNM",
+      "title": "What?! Surprise!! Me here 2 help! Ca n't you read? #shorts",
+      "creator": "@AaronsAnimals",
+      "topic": "cute and funny cat videos for cat lovers",
+      "tags": [
+        "catsofinstagram",
+        "cutecats",
+        "catreels",
+        "funnycats",
+        "kittensofinstagram",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1793101774.0767968,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_01_cats",
-    "last_sync": 1793074159.626487,
+    "last_sync": 1793101652.8927534,
     "total_shorts": 6,
     "public_shorts": 0,
     "total_views": 0,
