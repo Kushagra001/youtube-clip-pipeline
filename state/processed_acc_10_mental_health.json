@@ -18,12 +18,11 @@
     "OojWAavwEyg",
     "aVDsRkwiUUQ",
     "78BsFkDrAr8",
-    "ZIjBj63W8KU"
+    "ZIjBj63W8KU",
+    "x-9Nr7GigbE",
+    "362Dmp_HU0Y"
   ],
-  "upload_timestamps": [
-    1792960438.7232983,
-    1792960506.3784726
-  ],
+  "upload_timestamps": [],
   "uploaded_shorts": [
     {
       "video_id": "4GgN8c8fcwQ",
@@ -47,7 +46,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793017833.9019065,
+        "last_synced": 1793074170.5197473,
         "status": "public"
       }
     },
@@ -70,11 +69,11 @@
       "scheduled_at": null,
       "uploaded_at": 1792775534.1515608,
       "stats": {
-        "views": 8,
+        "views": 10,
         "likes": 0,
         "comments": 1,
-        "last_synced": 1793017833.9019065,
-        "status": "pending_or_private"
+        "last_synced": 1793074170.5197473,
+        "status": "public"
       }
     },
     {
@@ -99,7 +98,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793017833.9019065,
+        "last_synced": 1793074170.5197473,
         "status": "pending_or_private"
       }
     },
@@ -125,7 +124,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793017833.9019065,
+        "last_synced": 1793074170.5197473,
         "status": "pending_or_private"
       }
     },
@@ -148,10 +147,10 @@
       "scheduled_at": null,
       "uploaded_at": 1792960438.7233055,
       "stats": {
-        "views": 0,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793017833.9019065,
+        "last_synced": 1793074170.5197473,
         "status": "public"
       }
     },
@@ -177,20 +176,21 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793017833.9019065,
+        "last_synced": 1793074170.5197473,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_10_mental_health",
-    "last_sync": 1793017833.9019065,
+    "last_sync": 1793074170.5197473,
     "total_shorts": 6,
-    "public_shorts": 1,
-    "total_views": 1,
-    "median_views": 1,
+    "public_shorts": 3,
+    "total_views": 13,
+    "median_views": 2,
     "creator_weights": {
-      "@HealthyGamerGG": 1.0
+      "@HealthyGamerGG": 1.8,
+      "@MelRobbins": 1.0
     }
   }
 }
