@@ -24,7 +24,9 @@
     "FbKXvab-0yQ",
     "OuNKBjuV7A4",
     "SlRzTFx8Qtg",
-    "WrCjAAl9okA"
+    "WrCjAAl9okA",
+    "lskEzJ7ixw0",
+    "GGzT7zVrRTU"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -42,7 +44,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793101613.5231507,
+        "last_synced": 1793123807.2922964,
         "status": "pending_or_private"
       }
     },
@@ -60,7 +62,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793101613.5231507,
+        "last_synced": 1793123807.2922964,
         "status": "pending_or_private"
       }
     },
@@ -84,7 +86,7 @@
         "views": 1191,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1793101613.5231507,
+        "last_synced": 1793123807.2922964,
         "status": "public"
       }
     },
@@ -108,7 +110,7 @@
         "views": 373,
         "likes": 3,
         "comments": 0,
-        "last_synced": 1793101613.5231507,
+        "last_synced": 1793123807.2922964,
         "status": "public"
       }
     },
@@ -132,7 +134,7 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793101613.5231507,
+        "last_synced": 1793123807.2922964,
         "status": "public"
       }
     },
@@ -153,21 +155,21 @@
       "scheduled_at": null,
       "uploaded_at": 1792926098.1280603,
       "stats": {
-        "views": 398,
+        "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1793101613.5231507,
+        "last_synced": 1793123807.2922964,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1793101613.5231507,
+    "last_sync": 1793123807.2922964,
     "total_shorts": 6,
     "public_shorts": 4,
-    "total_views": 2080,
-    "median_views": 385.5,
+    "total_views": 2082,
+    "median_views": 386.5,
     "creator_weights": {
       "Matt Wolfe": 1.35,
       "@DavidOndrej": 1.0
