@@ -24,7 +24,9 @@
     "27PP-xp3SsA",
     "jez2pA6iFLA",
     "hHFEL63eyCo",
-    "NvUAM3otq1A"
+    "NvUAM3otq1A",
+    "DRDu3E-bJj0",
+    "-YRkpHOkDJM"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -50,8 +52,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793124624.1608863,
-        "status": "pending_or_private"
+        "last_synced": 1793138156.6034412,
+        "status": "public"
       }
     },
     {
@@ -76,8 +78,8 @@
         "views": 10,
         "likes": 0,
         "comments": 1,
-        "last_synced": 1793124624.1608863,
-        "status": "pending_or_private"
+        "last_synced": 1793138156.6034412,
+        "status": "public"
       }
     },
     {
@@ -102,7 +104,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793124624.1608863,
+        "last_synced": 1793138156.6034412,
         "status": "pending_or_private"
       }
     },
@@ -128,7 +130,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793124624.1608863,
+        "last_synced": 1793138156.6034412,
         "status": "pending_or_private"
       }
     },
@@ -154,8 +156,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793124624.1608863,
-        "status": "pending_or_private"
+        "last_synced": 1793138156.6034412,
+        "status": "public"
       }
     },
     {
@@ -180,18 +182,21 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793124624.1608863,
-        "status": "pending_or_private"
+        "last_synced": 1793138156.6034412,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_10_mental_health",
-    "last_sync": 1793124624.1608863,
+    "last_sync": 1793138156.6034412,
     "total_shorts": 6,
-    "public_shorts": 0,
-    "total_views": 0,
-    "median_views": 100.0,
-    "creator_weights": {}
+    "public_shorts": 3,
+    "total_views": 13,
+    "median_views": 2,
+    "creator_weights": {
+      "@HealthyGamerGG": 1.8,
+      "@MelRobbins": 1.0
+    }
   }
 }
