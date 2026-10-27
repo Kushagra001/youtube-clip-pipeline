@@ -28,7 +28,9 @@
     "Cgs2AYMsQu8",
     "XHxOA3PvTYQ",
     "Lp85WbbSs8Y",
-    "kTIitWtLybs"
+    "kTIitWtLybs",
+    "eKzS_xzqYNw",
+    "zWU3bTHd0t4"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -54,7 +56,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793053508.3977022,
+        "last_synced": 1793074152.1089356,
         "status": "pending_or_private"
       }
     },
@@ -80,7 +82,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793053508.3977022,
+        "last_synced": 1793074152.1089356,
         "status": "pending_or_private"
       }
     },
@@ -103,11 +105,11 @@
       "scheduled_at": null,
       "uploaded_at": 1792925956.9091277,
       "stats": {
-        "views": 1,
+        "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793053508.3977022,
-        "status": "pending_or_private"
+        "last_synced": 1793074152.1089356,
+        "status": "public"
       }
     },
     {
@@ -132,18 +134,20 @@
         "views": 33,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793053508.3977022,
-        "status": "pending_or_private"
+        "last_synced": 1793074152.1089356,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_05_finance",
-    "last_sync": 1793053508.3977022,
+    "last_sync": 1793074152.1089356,
     "total_shorts": 4,
-    "public_shorts": 0,
-    "total_views": 0,
-    "median_views": 100.0,
-    "creator_weights": {}
+    "public_shorts": 2,
+    "total_views": 38,
+    "median_views": 19.0,
+    "creator_weights": {
+      "@GrahamStephan": 1.0
+    }
   }
 }
