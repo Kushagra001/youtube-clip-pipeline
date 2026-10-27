@@ -26,7 +26,9 @@
     "8UsI4JIZz8w",
     "ZS4PDa-Q3yA",
     "BSfHwiR7I24",
-    "GsSU7pJdZN4"
+    "GsSU7pJdZN4",
+    "2qlz2NIJaks",
+    "CKPyF45wQ6Y"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -52,7 +54,7 @@
         "views": 1065,
         "likes": 14,
         "comments": 0,
-        "last_synced": 1793123802.4709122,
+        "last_synced": 1793138178.5125809,
         "status": "public"
       }
     },
@@ -78,7 +80,7 @@
         "views": 822,
         "likes": 5,
         "comments": 0,
-        "last_synced": 1793123802.4709122,
+        "last_synced": 1793138178.5125809,
         "status": "public"
       }
     },
@@ -104,7 +106,7 @@
         "views": 81,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793123802.4709122,
+        "last_synced": 1793138178.5125809,
         "status": "public"
       }
     },
@@ -127,20 +129,20 @@
       "scheduled_at": null,
       "uploaded_at": 1792960568.2561069,
       "stats": {
-        "views": 52,
+        "views": 51,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793123802.4709122,
+        "last_synced": 1793138178.5125809,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_04_motivation",
-    "last_sync": 1793123802.4709122,
+    "last_sync": 1793138178.5125809,
     "total_shorts": 4,
     "public_shorts": 4,
-    "total_views": 2020,
+    "total_views": 2019,
     "median_views": 451.5,
     "creator_weights": {
       "@JordanBPeterson": 1.35,
