@@ -388,14 +388,16 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
                             scheduled_at=sched_display if publish_at_iso else None,
                         )
                     else:
-                        print(f"     Upload failed or skipped. Clip saved locally: {captioned_path}")
+                        upload_err = upload_youtube.get_last_upload_error()
+                        print(f"     ❌ Upload failed: {upload_err}", file=sys.stderr)
                         notifications.notify_upload_failure(
                             channel_name=brand_name,
                             handle=meme_handle,
                             title=short_title,
-                            error_msg="YouTube Data API upload returned None or authentication failed.",
+                            error_msg=upload_err,
                             url=url,
                         )
+                        continue
             else:
                 print(f"     Saved locally: {captioned_path}")
 
@@ -414,6 +416,10 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
 
     state_mod.mark_processed(st, video_id)
     state_mod.save_state(st, channel_id=channel_id)
+
+    if auto_upload and clips_succeeded == 0:
+        last_err = upload_youtube.get_last_upload_error()
+        raise RuntimeError(f"Failed to upload clips to YouTube: {last_err}")
 
 
 def run_channel_pipeline(config_path: Path, channel_id: str | None = None) -> None:

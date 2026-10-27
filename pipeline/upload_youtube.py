@@ -86,6 +86,15 @@ def validate_video_file(video_path: str) -> tuple[bool, str]:
         return True, f"Validation bypassed: {e}"
 
 
+_LAST_UPLOAD_ERROR = None
+
+
+def get_last_upload_error() -> str:
+    """Returns the exact reason why the last YouTube upload failed."""
+    global _LAST_UPLOAD_ERROR
+    return _LAST_UPLOAD_ERROR or "YouTube Data API upload returned None or authentication failed."
+
+
 def upload_short(
     video_path: str,
     title: str,
@@ -98,23 +107,32 @@ def upload_short(
     publish_at: str | None = None,
 ) -> str | None:
     """Uploads a vertical Short to YouTube with resumable chunking, quota error protection, and scheduled release support."""
+    global _LAST_UPLOAD_ERROR
+    _LAST_UPLOAD_ERROR = None
     from googleapiclient.errors import HttpError
     from pathlib import Path
 
     v_file = Path(video_path)
     if not v_file.exists() or v_file.stat().st_size == 0:
-        print(f"  [YouTube Upload] Error: Video file does not exist or is empty at {video_path}")
+        _LAST_UPLOAD_ERROR = f"Video file does not exist or is empty at {video_path}"
+        print(f"  [YouTube Upload] Error: {_LAST_UPLOAD_ERROR}")
         return None
 
     is_valid, reason = validate_video_file(video_path)
     if not is_valid:
-        print(f"  [YouTube Upload] Pre-flight check failed: {reason}. Aborting upload to prevent processing abandonment.")
+        _LAST_UPLOAD_ERROR = f"Pre-flight check failed: {reason}"
+        print(f"  [YouTube Upload] {_LAST_UPLOAD_ERROR}. Aborting upload to prevent processing abandonment.")
         return None
 
     try:
         youtube = _get_service(token_env_var=token_env_var)
     except Exception as e:
-        print(f"  [YouTube Upload] Authentication error: {e}")
+        err_msg = str(e)
+        if "invalid_grant" in err_msg:
+            _LAST_UPLOAD_ERROR = "OAuth token expired or revoked (invalid_grant). In Google Cloud Console, switch Publishing status from 'Testing' to 'In Production' and regenerate token."
+        else:
+            _LAST_UPLOAD_ERROR = f"Authentication setup error: {e}"
+        print(f"  [YouTube Upload] {_LAST_UPLOAD_ERROR}")
         return None
 
     # YouTube rejects video titles containing '<' or '>' characters (HTTP 400 invalidTitle)
@@ -178,7 +196,7 @@ def upload_short(
                     time.sleep(sleep_time)
                 else:
                     raise e
-            except (ConnectionError, TimeoutError, OSError, Exception) as e:
+            except (ConnectionError, TimeoutError, OSError) as e:
                 # Differentiate between non-retryable bugs and retryable transient network/socket/SSL issues
                 retry_count += 1
                 if retry_count > max_retries:
@@ -191,11 +209,20 @@ def upload_short(
             return response["id"]
         return response.get("id") if response else None
     except HttpError as e:
-        if "quotaExceeded" in str(e):
-            print("  [YouTube Upload] Warning: Daily YouTube Data API upload quota exceeded.")
+        err_text = str(e)
+        if "quotaExceeded" in err_text:
+            _LAST_UPLOAD_ERROR = "YouTube Data API 10,000 daily quota exceeded for this Google Cloud project."
+        elif "uploadLimitExceeded" in err_text:
+            _LAST_UPLOAD_ERROR = "Channel daily upload limit exceeded (unverified phone quota or 24h reset cooldown)."
         else:
-            print(f"  [YouTube Upload] HTTP error during upload: {e}")
+            _LAST_UPLOAD_ERROR = f"YouTube API HTTP {e.resp.status}: {err_text[:180]}"
+        print(f"  [YouTube Upload] Error: {_LAST_UPLOAD_ERROR}")
         return None
     except Exception as e:
-        print(f"  [YouTube Upload] Unexpected upload error: {e}")
+        err_text = str(e)
+        if "invalid_grant" in err_text:
+            _LAST_UPLOAD_ERROR = "OAuth token expired or revoked (invalid_grant). In Google Cloud Console, switch Publishing status from 'Testing' to 'In Production' and regenerate token."
+        else:
+            _LAST_UPLOAD_ERROR = f"Upload error ({type(e).__name__}): {err_text[:180]}"
+        print(f"  [YouTube Upload] Error: {_LAST_UPLOAD_ERROR}")
         return None
