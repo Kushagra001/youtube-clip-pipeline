@@ -22,7 +22,9 @@
     "x-9Nr7GigbE",
     "362Dmp_HU0Y",
     "27PP-xp3SsA",
-    "jez2pA6iFLA"
+    "jez2pA6iFLA",
+    "hHFEL63eyCo",
+    "NvUAM3otq1A"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -48,8 +50,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793101625.9464035,
-        "status": "public"
+        "last_synced": 1793124624.1608863,
+        "status": "pending_or_private"
       }
     },
     {
@@ -74,8 +76,8 @@
         "views": 10,
         "likes": 0,
         "comments": 1,
-        "last_synced": 1793101625.9464035,
-        "status": "public"
+        "last_synced": 1793124624.1608863,
+        "status": "pending_or_private"
       }
     },
     {
@@ -100,7 +102,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793101625.9464035,
+        "last_synced": 1793124624.1608863,
         "status": "pending_or_private"
       }
     },
@@ -126,7 +128,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793101625.9464035,
+        "last_synced": 1793124624.1608863,
         "status": "pending_or_private"
       }
     },
@@ -152,8 +154,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793101625.9464035,
-        "status": "public"
+        "last_synced": 1793124624.1608863,
+        "status": "pending_or_private"
       }
     },
     {
@@ -178,21 +180,18 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793101625.9464035,
-        "status": "public"
+        "last_synced": 1793124624.1608863,
+        "status": "pending_or_private"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_10_mental_health",
-    "last_sync": 1793101625.9464035,
+    "last_sync": 1793124624.1608863,
     "total_shorts": 6,
-    "public_shorts": 3,
-    "total_views": 13,
-    "median_views": 2,
-    "creator_weights": {
-      "@HealthyGamerGG": 1.8,
-      "@MelRobbins": 1.0
-    }
+    "public_shorts": 0,
+    "total_views": 0,
+    "median_views": 100.0,
+    "creator_weights": {}
   }
 }
