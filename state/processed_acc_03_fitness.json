@@ -25,7 +25,9 @@
     "Q743HRn2_jM",
     "FEoogWnZ04A",
     "z0K-2kjPRCM",
-    "UheajlsZ72E"
+    "UheajlsZ72E",
+    "qpRGnTTcLpo",
+    "nOQpD8aDJeI"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -51,7 +53,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793074145.1085374,
+        "last_synced": 1793101620.476825,
         "status": "public"
       }
     },
@@ -77,7 +79,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793074145.1085374,
+        "last_synced": 1793101620.476825,
         "status": "public"
       }
     },
@@ -103,7 +105,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793074145.1085374,
+        "last_synced": 1793101620.476825,
         "status": "public"
       }
     },
@@ -129,14 +131,14 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793074145.1085374,
+        "last_synced": 1793101620.476825,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_03_fitness",
-    "last_sync": 1793074145.1085374,
+    "last_sync": 1793101620.476825,
     "total_shorts": 4,
     "public_shorts": 3,
     "total_views": 9,
