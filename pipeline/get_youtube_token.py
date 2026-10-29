@@ -24,6 +24,28 @@ CHANNELS_DIR = Path(__file__).resolve().parent.parent / "config" / "channels"
 ENV_PATH = Path(__file__).resolve().parent.parent / ".env"
 
 
+def _resolve_project_for_channel(channel_query: str) -> tuple[str, str, str]:
+    """Resolves (secrets_file, client_id_env_var, client_secret_env_var) based on channel name/number.
+    - acc_01 .. acc_03 -> Project 1
+    - acc_04 .. acc_06 -> Project 2
+    - acc_07 .. acc_10 -> Project 3
+    """
+    ch = channel_query.lower()
+    
+    # Check Project 2
+    if any(k in ch for k in ["acc_04", "acc_05", "acc_06", "acc_4", "acc_5", "acc_6", "motivation", "finance", "business"]):
+        sec_file = "client_secret_p2.json" if Path("client_secret_p2.json").exists() else "client_secret.json"
+        return sec_file, "YOUTUBE_CLIENT_ID_P2", "YOUTUBE_CLIENT_SECRET_P2"
+        
+    # Check Project 3
+    if any(k in ch for k in ["acc_07", "acc_08", "acc_09", "acc_10", "acc_7", "acc_8", "acc_9", "food", "ai_tools", "grooming", "mental_health"]):
+        sec_file = "client_secret_p3.json" if Path("client_secret_p3.json").exists() else "client_secret.json"
+        return sec_file, "YOUTUBE_CLIENT_ID_P3", "YOUTUBE_CLIENT_SECRET_P3"
+        
+    # Default: Project 1 (acc_01, acc_02, acc_03)
+    return "client_secret.json", "YOUTUBE_CLIENT_ID", "YOUTUBE_CLIENT_SECRET"
+
+
 def _resolve_token_var(channel_query: str) -> str:
     if not channel_query:
         return "YOUTUBE_REFRESH_TOKEN"
@@ -42,7 +64,7 @@ def _resolve_token_var(channel_query: str) -> str:
     return f"YOUTUBE_REFRESH_TOKEN_{suffix}"
 
 
-def _save_to_env(client_id: str, client_secret: str, token_var: str, refresh_token: str):
+def _save_to_env(client_id: str, client_secret: str, cid_var: str, sec_var: str, token_var: str, refresh_token: str):
     env_content = ""
     if ENV_PATH.exists():
         with open(ENV_PATH, "r", encoding="utf-8") as f:
@@ -50,8 +72,8 @@ def _save_to_env(client_id: str, client_secret: str, token_var: str, refresh_tok
 
     lines = env_content.splitlines()
     updates = {
-        "YOUTUBE_CLIENT_ID": client_id,
-        "YOUTUBE_CLIENT_SECRET": client_secret,
+        cid_var: client_id,
+        sec_var: client_secret,
         token_var: refresh_token,
     }
 
@@ -95,25 +117,35 @@ class UrlSaver:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate YouTube OAuth refresh token.")
-    parser.add_argument("--channel", type=str, default="", help="Channel ID or name (e.g. acc_01, acc_02_dogs)")
+    parser.add_argument("--channel", type=str, default="", help="Channel ID or name (e.g. acc_01, acc_04_motivation)")
+    parser.add_argument("--secrets", type=str, default="", help="Path to client secret JSON file (optional override)")
     args = parser.parse_args()
 
-    flow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRETS_FILE, SCOPES)
+    default_secrets_file, cid_var, sec_var = _resolve_project_for_channel(args.channel)
+    secrets_file = args.secrets if args.secrets else default_secrets_file
+
+    if not Path(secrets_file).exists():
+        print(f"❌ Error: Secrets file '{secrets_file}' not found.")
+        sys.exit(1)
+
+    print(f"🔑 Using OAuth Secrets File: {secrets_file} (Targeting: {cid_var})")
+
+    flow = InstalledAppFlow.from_client_secrets_file(secrets_file, SCOPES)
     creds = flow.run_local_server(port=0, authorization_prompt_message=UrlSaver())
 
     token_var = _resolve_token_var(args.channel)
-    _save_to_env(creds.client_id, creds.client_secret, token_var, creds.refresh_token)
+    _save_to_env(creds.client_id, creds.client_secret, cid_var, sec_var, token_var, creds.refresh_token)
 
     print("\n=======================================================")
     print(" ✅ YouTube OAuth Authentication Successful!")
     print("=======================================================")
-    print(f"Client ID:      {creds.client_id}")
-    print(f"Client Secret:  {creds.client_secret}")
-    print(f"Refresh Token:  {creds.refresh_token}")
     print(f"Target Env Var: {token_var}")
+    print(f"Client ID Var:  {cid_var} = {creds.client_id}")
+    print(f"Client Secret:  {sec_var} = {creds.client_secret[:8]}...")
+    print(f"Refresh Token:  {creds.refresh_token}")
     print(f"\nSaved automatically to: {ENV_PATH.name}")
     print("\nFor GitHub Actions, add these to GitHub Repo Secrets:")
-    print(f"YOUTUBE_CLIENT_ID={creds.client_id}")
-    print(f"YOUTUBE_CLIENT_SECRET={creds.client_secret}")
+    print(f"{cid_var}={creds.client_id}")
+    print(f"{sec_var}={creds.client_secret}")
     print(f"{token_var}={creds.refresh_token}")
     print("=======================================================\n")

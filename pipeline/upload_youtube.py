@@ -12,7 +12,38 @@ from googleapiclient.http import MediaFileUpload
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
 
 
-def _get_service(token_env_var: str | None = None):
+def _resolve_credentials_for_channel(token_env_var: str | None = None, channel_config: dict | None = None) -> tuple[str | None, str | None]:
+    """Resolves (client_id, client_secret) dynamically across Project 1, 2, and 3:
+    - P1: acc_01 .. acc_03 (YOUTUBE_CLIENT_ID / YOUTUBE_CLIENT_SECRET)
+    - P2: acc_04 .. acc_06 (YOUTUBE_CLIENT_ID_P2 / YOUTUBE_CLIENT_SECRET_P2)
+    - P3: acc_07 .. acc_10 (YOUTUBE_CLIENT_ID_P3 / YOUTUBE_CLIENT_SECRET_P3)
+    """
+    ch_id = ""
+    if channel_config:
+        ch_id = channel_config.get("channel_id") or channel_config.get("channel_name", "")
+    ch_ref = f"{ch_id} {token_env_var or ''}".lower()
+
+    # Check Project 2
+    if any(k in ch_ref for k in ["acc_04", "acc_05", "acc_06", "acc_4", "acc_5", "acc_6", "motivation", "finance", "business"]):
+        cid = os.environ.get("YOUTUBE_CLIENT_ID_P2")
+        sec = os.environ.get("YOUTUBE_CLIENT_SECRET_P2")
+        if cid and sec:
+            return cid, sec
+
+    # Check Project 3
+    if any(k in ch_ref for k in ["acc_07", "acc_08", "acc_09", "acc_10", "acc_7", "acc_8", "acc_9", "food", "ai_tools", "grooming", "mental_health"]):
+        cid = os.environ.get("YOUTUBE_CLIENT_ID_P3")
+        sec = os.environ.get("YOUTUBE_CLIENT_SECRET_P3")
+        if cid and sec:
+            return cid, sec
+
+    # Default: Project 1 (or fallback)
+    cid = os.environ.get("YOUTUBE_CLIENT_ID_P1") or os.environ.get("YOUTUBE_CLIENT_ID")
+    sec = os.environ.get("YOUTUBE_CLIENT_SECRET_P1") or os.environ.get("YOUTUBE_CLIENT_SECRET")
+    return cid, sec
+
+
+def _get_service(token_env_var: str | None = None, channel_config: dict | None = None):
     refresh_token = None
     if token_env_var:
         refresh_token = os.environ.get(token_env_var)
@@ -31,10 +62,9 @@ def _get_service(token_env_var: str | None = None):
         var_name = token_env_var or "YOUTUBE_REFRESH_TOKEN"
         raise ValueError(f"Missing YouTube refresh token in environment variable: {var_name}")
 
-    client_id = os.environ.get("YOUTUBE_CLIENT_ID")
-    client_secret = os.environ.get("YOUTUBE_CLIENT_SECRET")
+    client_id, client_secret = _resolve_credentials_for_channel(token_env_var, channel_config)
     if not client_id or not client_secret:
-        raise ValueError("Missing YOUTUBE_CLIENT_ID or YOUTUBE_CLIENT_SECRET in environment")
+        raise ValueError("Missing YouTube OAuth client credentials in environment (check YOUTUBE_CLIENT_ID / P2 / P3)")
 
     creds = Credentials(
         token=None,
@@ -125,7 +155,7 @@ def upload_short(
         return None
 
     try:
-        youtube = _get_service(token_env_var=token_env_var)
+        youtube = _get_service(token_env_var=token_env_var, channel_config=channel_config)
     except Exception as e:
         err_msg = str(e)
         if "invalid_grant" in err_msg:
