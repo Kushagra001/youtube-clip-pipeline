@@ -43,7 +43,9 @@
     "RffdDZjReSc",
     "K5yXFYVtDGY",
     "mmisfMGTi7s",
-    "GPgW3MWmQwM"
+    "GPgW3MWmQwM",
+    "tP_x_ctVz3Y",
+    "l-Fn--DJPP4"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -69,7 +71,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793276996.5518591,
+        "last_synced": 1793313179.9810998,
         "status": "pending_or_private"
       }
     },
@@ -95,7 +97,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793276996.5518591,
+        "last_synced": 1793313179.9810998,
         "status": "pending_or_private"
       }
     },
@@ -121,8 +123,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793276996.5518591,
-        "status": "public"
+        "last_synced": 1793313179.9810998,
+        "status": "pending_or_private"
       }
     },
     {
@@ -147,8 +149,8 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793276996.5518591,
-        "status": "public"
+        "last_synced": 1793313179.9810998,
+        "status": "pending_or_private"
       }
     },
     {
@@ -173,8 +175,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793276996.5518591,
-        "status": "public"
+        "last_synced": 1793313179.9810998,
+        "status": "pending_or_private"
       }
     },
     {
@@ -199,21 +201,18 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793276996.5518591,
-        "status": "public"
+        "last_synced": 1793313179.9810998,
+        "status": "pending_or_private"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1793276996.5518591,
+    "last_sync": 1793313179.9810998,
     "total_shorts": 6,
-    "public_shorts": 3,
-    "total_views": 9,
-    "median_views": 2,
-    "creator_weights": {
-      "Will Tennyson": 1.35,
-      "@JoshuaWeissman": 1.0
-    }
+    "public_shorts": 0,
+    "total_views": 0,
+    "median_views": 100.0,
+    "creator_weights": {}
   }
 }
