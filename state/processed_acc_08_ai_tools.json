@@ -35,7 +35,9 @@
     "SxuQs9GGYbk",
     "Sy1Fjf-H-Qg",
     "qxOklTU2if4",
-    "IXDYEF22CG8"
+    "IXDYEF22CG8",
+    "T2v2pf_uypE",
+    "A-JBaNvv3Tk"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -53,7 +55,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793313193.4742744,
+        "last_synced": 1793335878.331127,
         "status": "pending_or_private"
       }
     },
@@ -71,7 +73,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793313193.4742744,
+        "last_synced": 1793335878.331127,
         "status": "pending_or_private"
       }
     },
@@ -92,10 +94,10 @@
       "scheduled_at": null,
       "uploaded_at": 1792789911.3963134,
       "stats": {
-        "views": 1191,
+        "views": 1192,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1793313193.4742744,
+        "last_synced": 1793335878.331127,
         "status": "public"
       }
     },
@@ -119,7 +121,7 @@
         "views": 373,
         "likes": 3,
         "comments": 0,
-        "last_synced": 1793313193.4742744,
+        "last_synced": 1793335878.331127,
         "status": "public"
       }
     },
@@ -143,7 +145,7 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793313193.4742744,
+        "last_synced": 1793335878.331127,
         "status": "public"
       }
     },
@@ -167,17 +169,17 @@
         "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1793313193.4742744,
+        "last_synced": 1793335878.331127,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1793313193.4742744,
+    "last_sync": 1793335878.331127,
     "total_shorts": 6,
     "public_shorts": 4,
-    "total_views": 2082,
+    "total_views": 2083,
     "median_views": 386.5,
     "creator_weights": {
       "Matt Wolfe": 1.35,
