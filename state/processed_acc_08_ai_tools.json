@@ -53,7 +53,9 @@
     "AtjFk9f44HE",
     "WhA2iNfzytY",
     "aPSbZbOzB4s",
-    "tqKGaqaQkNk"
+    "tqKGaqaQkNk",
+    "9tOu4r-FiQI",
+    "p7SRuKWZMvQ"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -71,7 +73,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793595437.8058841,
+        "last_synced": 1793631667.0788462,
         "status": "pending_or_private"
       }
     },
@@ -89,7 +91,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793595437.8058841,
+        "last_synced": 1793631667.0788462,
         "status": "pending_or_private"
       }
     },
@@ -113,7 +115,7 @@
         "views": 1193,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1793595437.8058841,
+        "last_synced": 1793631667.0788462,
         "status": "public"
       }
     },
@@ -134,10 +136,10 @@
       "scheduled_at": null,
       "uploaded_at": 1792838001.3809872,
       "stats": {
-        "views": 373,
+        "views": 375,
         "likes": 3,
         "comments": 0,
-        "last_synced": 1793595437.8058841,
+        "last_synced": 1793631667.0788462,
         "status": "public"
       }
     },
@@ -161,7 +163,7 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793595437.8058841,
+        "last_synced": 1793631667.0788462,
         "status": "public"
       }
     },
@@ -185,18 +187,18 @@
         "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1793595437.8058841,
+        "last_synced": 1793631667.0788462,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1793595437.8058841,
+    "last_sync": 1793631667.0788462,
     "total_shorts": 6,
     "public_shorts": 4,
-    "total_views": 2084,
-    "median_views": 386.5,
+    "total_views": 2086,
+    "median_views": 387.5,
     "creator_weights": {
       "Matt Wolfe": 1.35,
       "@DavidOndrej": 1.0
