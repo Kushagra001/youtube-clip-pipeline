@@ -59,7 +59,8 @@
     "w-XPlC3a2oI",
     "RSaIOCHbuYw",
     "FpIN6tYC5XM",
-    "ykNeXAdojbA"
+    "ykNeXAdojbA",
+    "jy-l4h3OSQ8"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -85,7 +86,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793631675.283088,
+        "last_synced": 1793713684.971184,
         "status": "pending_or_private"
       }
     },
@@ -111,7 +112,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793631675.283088,
+        "last_synced": 1793713684.971184,
         "status": "pending_or_private"
       }
     },
@@ -137,8 +138,8 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793631675.283088,
-        "status": "public"
+        "last_synced": 1793713684.971184,
+        "status": "pending_or_private"
       }
     },
     {
@@ -163,8 +164,8 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793631675.283088,
-        "status": "public"
+        "last_synced": 1793713684.971184,
+        "status": "pending_or_private"
       }
     },
     {
@@ -189,8 +190,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793631675.283088,
-        "status": "public"
+        "last_synced": 1793713684.971184,
+        "status": "pending_or_private"
       }
     },
     {
@@ -215,21 +216,18 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793631675.283088,
+        "last_synced": 1793713684.971184,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1793631675.283088,
+    "last_sync": 1793713684.971184,
     "total_shorts": 6,
-    "public_shorts": 3,
-    "total_views": 8,
-    "median_views": 3,
-    "creator_weights": {
-      "@ycombinator": 1.0,
-      "Starter Story": 1.0
-    }
+    "public_shorts": 0,
+    "total_views": 0,
+    "median_views": 100.0,
+    "creator_weights": {}
   }
 }
