@@ -55,7 +55,9 @@
     "aPSbZbOzB4s",
     "tqKGaqaQkNk",
     "9tOu4r-FiQI",
-    "p7SRuKWZMvQ"
+    "p7SRuKWZMvQ",
+    "J5EbL1UaqG8",
+    "loujaeBy8p0"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -73,7 +75,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793631667.0788462,
+        "last_synced": 1793666562.7970014,
         "status": "pending_or_private"
       }
     },
@@ -91,7 +93,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793631667.0788462,
+        "last_synced": 1793666562.7970014,
         "status": "pending_or_private"
       }
     },
@@ -115,8 +117,8 @@
         "views": 1193,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1793631667.0788462,
-        "status": "public"
+        "last_synced": 1793666562.7970014,
+        "status": "pending_or_private"
       }
     },
     {
@@ -139,8 +141,8 @@
         "views": 375,
         "likes": 3,
         "comments": 0,
-        "last_synced": 1793631667.0788462,
-        "status": "public"
+        "last_synced": 1793666562.7970014,
+        "status": "pending_or_private"
       }
     },
     {
@@ -163,8 +165,8 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793631667.0788462,
-        "status": "public"
+        "last_synced": 1793666562.7970014,
+        "status": "pending_or_private"
       }
     },
     {
@@ -187,21 +189,18 @@
         "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1793631667.0788462,
-        "status": "public"
+        "last_synced": 1793666562.7970014,
+        "status": "pending_or_private"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1793631667.0788462,
+    "last_sync": 1793666562.7970014,
     "total_shorts": 6,
-    "public_shorts": 4,
-    "total_views": 2086,
-    "median_views": 387.5,
-    "creator_weights": {
-      "Matt Wolfe": 1.35,
-      "@DavidOndrej": 1.0
-    }
+    "public_shorts": 0,
+    "total_views": 0,
+    "median_views": 100.0,
+    "creator_weights": {}
   }
 }
