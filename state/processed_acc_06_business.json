@@ -67,7 +67,8 @@
     "ZEMbKzy7FD8",
     "-y4swMaeJeI",
     "dhbcVxYhWaQ",
-    "P24WbUcIwSk"
+    "P24WbUcIwSk",
+    "TX1Ij51esI0"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -93,7 +94,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793834505.639503,
+        "last_synced": 1793888213.2270477,
         "status": "pending_or_private"
       }
     },
@@ -119,7 +120,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793834505.639503,
+        "last_synced": 1793888213.2270477,
         "status": "pending_or_private"
       }
     },
@@ -145,8 +146,8 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793834505.639503,
-        "status": "public"
+        "last_synced": 1793888213.2270477,
+        "status": "pending_or_private"
       }
     },
     {
@@ -171,8 +172,8 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793834505.639503,
-        "status": "public"
+        "last_synced": 1793888213.2270477,
+        "status": "pending_or_private"
       }
     },
     {
@@ -197,8 +198,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793834505.639503,
-        "status": "public"
+        "last_synced": 1793888213.2270477,
+        "status": "pending_or_private"
       }
     },
     {
@@ -223,21 +224,18 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1793834505.639503,
-        "status": "public"
+        "last_synced": 1793888213.2270477,
+        "status": "pending_or_private"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1793834505.639503,
+    "last_sync": 1793888213.2270477,
     "total_shorts": 6,
-    "public_shorts": 3,
-    "total_views": 8,
-    "median_views": 3,
-    "creator_weights": {
-      "@ycombinator": 1.0,
-      "Starter Story": 1.0
-    }
+    "public_shorts": 0,
+    "total_views": 0,
+    "median_views": 100.0,
+    "creator_weights": {}
   }
 }
