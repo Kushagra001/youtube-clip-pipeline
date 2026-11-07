@@ -79,7 +79,9 @@
     "KSOxkhWs2Ic",
     "Yq0QkCxoTHM",
     "iw9SZgyahqg",
-    "2lt4P_xGFL8"
+    "2lt4P_xGFL8",
+    "jC4v5AS4RIM",
+    "7zPQV1BSH_k"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -97,7 +99,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794005423.3950393,
+        "last_synced": 1794027921.3159046,
         "status": "pending_or_private"
       }
     },
@@ -115,7 +117,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794005423.3950393,
+        "last_synced": 1794027921.3159046,
         "status": "pending_or_private"
       }
     },
@@ -139,7 +141,7 @@
         "views": 1193,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1794005423.3950393,
+        "last_synced": 1794027921.3159046,
         "status": "public"
       }
     },
@@ -161,9 +163,9 @@
       "uploaded_at": 1792838001.3809872,
       "stats": {
         "views": 376,
-        "likes": 3,
+        "likes": 2,
         "comments": 0,
-        "last_synced": 1794005423.3950393,
+        "last_synced": 1794027921.3159046,
         "status": "public"
       }
     },
@@ -187,7 +189,7 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794005423.3950393,
+        "last_synced": 1794027921.3159046,
         "status": "public"
       }
     },
@@ -211,14 +213,14 @@
         "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794005423.3950393,
+        "last_synced": 1794027921.3159046,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1794005423.3950393,
+    "last_sync": 1794027921.3159046,
     "total_shorts": 6,
     "public_shorts": 4,
     "total_views": 2087,
