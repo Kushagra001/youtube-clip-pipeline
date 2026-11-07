@@ -361,6 +361,7 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
                         token_env_var=yt_cfg.get("token_env_var"),
                         made_for_kids=yt_cfg.get("made_for_kids", False),
                         publish_at=publish_at_iso,
+                        channel_config=cfg,
                     )
                     if video_id_uploaded:
                         state_mod.record_upload(st)

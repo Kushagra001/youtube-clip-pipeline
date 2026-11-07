@@ -135,6 +135,7 @@ def upload_short(
     token_env_var: str | None = None,
     made_for_kids: bool = False,
     publish_at: str | None = None,
+    channel_config: dict | None = None,
 ) -> str | None:
     """Uploads a vertical Short to YouTube with resumable chunking, quota error protection, and scheduled release support."""
     global _LAST_UPLOAD_ERROR
