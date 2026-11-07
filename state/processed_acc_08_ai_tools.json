@@ -81,7 +81,9 @@
     "iw9SZgyahqg",
     "2lt4P_xGFL8",
     "jC4v5AS4RIM",
-    "7zPQV1BSH_k"
+    "7zPQV1BSH_k",
+    "Dkdgut6i2xY",
+    "zkXonmqIBFg"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -99,7 +101,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794027921.3159046,
+        "last_synced": 1794055180.7503378,
         "status": "pending_or_private"
       }
     },
@@ -117,7 +119,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794027921.3159046,
+        "last_synced": 1794055180.7503378,
         "status": "pending_or_private"
       }
     },
@@ -141,7 +143,7 @@
         "views": 1193,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1794027921.3159046,
+        "last_synced": 1794055180.7503378,
         "status": "public"
       }
     },
@@ -162,10 +164,10 @@
       "scheduled_at": null,
       "uploaded_at": 1792838001.3809872,
       "stats": {
-        "views": 376,
+        "views": 377,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794027921.3159046,
+        "last_synced": 1794055180.7503378,
         "status": "public"
       }
     },
@@ -189,7 +191,7 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794027921.3159046,
+        "last_synced": 1794055180.7503378,
         "status": "public"
       }
     },
@@ -213,18 +215,18 @@
         "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794027921.3159046,
+        "last_synced": 1794055180.7503378,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1794027921.3159046,
+    "last_sync": 1794055180.7503378,
     "total_shorts": 6,
     "public_shorts": 4,
-    "total_views": 2087,
-    "median_views": 388.0,
+    "total_views": 2088,
+    "median_views": 388.5,
     "creator_weights": {
       "Matt Wolfe": 1.35,
       "@DavidOndrej": 1.0
