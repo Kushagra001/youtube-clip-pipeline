@@ -85,7 +85,9 @@
     "_ljyxVuUjaU",
     "gprCfBbjKnQ",
     "oJLIsxzU5yQ",
-    "wE8s993ZV-8"
+    "wE8s993ZV-8",
+    "oSLdVewDigE",
+    "YtIOuJoRxG4"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -111,7 +113,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794027916.678577,
+        "last_synced": 1794055179.6754239,
         "status": "pending_or_private"
       }
     },
@@ -137,7 +139,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794027916.678577,
+        "last_synced": 1794055179.6754239,
         "status": "pending_or_private"
       }
     },
@@ -163,7 +165,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794027916.678577,
+        "last_synced": 1794055179.6754239,
         "status": "pending_or_private"
       }
     },
@@ -189,7 +191,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794027916.678577,
+        "last_synced": 1794055179.6754239,
         "status": "pending_or_private"
       }
     },
@@ -215,8 +217,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794027916.678577,
-        "status": "pending_or_private"
+        "last_synced": 1794055179.6754239,
+        "status": "public"
       }
     },
     {
@@ -241,8 +243,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794027916.678577,
-        "status": "pending_or_private"
+        "last_synced": 1794055179.6754239,
+        "status": "public"
       }
     },
     {
@@ -267,14 +269,14 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794027916.678577,
-        "status": "pending_or_private"
+        "last_synced": 1794055179.6754239,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_01_cats",
-    "last_sync": 1794027916.678577,
+    "last_sync": 1794055179.6754239,
     "total_shorts": 7,
     "public_shorts": 0,
     "total_views": 0,
