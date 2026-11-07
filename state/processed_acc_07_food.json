@@ -93,7 +93,9 @@
     "R4wzETQk8xs",
     "qoHnwOHLiMk",
     "ZOhcENWpock",
-    "VsyM8UbF4D0"
+    "VsyM8UbF4D0",
+    "8h9GlC-5sbk",
+    "jL4qjOM5d9I"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -119,7 +121,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794027918.3110225,
+        "last_synced": 1794055168.3407824,
         "status": "pending_or_private"
       }
     },
@@ -145,7 +147,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794027918.3110225,
+        "last_synced": 1794055168.3407824,
         "status": "pending_or_private"
       }
     },
@@ -171,7 +173,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794027918.3110225,
+        "last_synced": 1794055168.3407824,
         "status": "public"
       }
     },
@@ -197,7 +199,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794027918.3110225,
+        "last_synced": 1794055168.3407824,
         "status": "public"
       }
     },
@@ -223,7 +225,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794027918.3110225,
+        "last_synced": 1794055168.3407824,
         "status": "public"
       }
     },
@@ -249,14 +251,14 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794027918.3110225,
+        "last_synced": 1794055168.3407824,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1794027918.3110225,
+    "last_sync": 1794055168.3407824,
     "total_shorts": 6,
     "public_shorts": 3,
     "total_views": 10,
