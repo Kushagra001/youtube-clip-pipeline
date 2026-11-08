@@ -3,6 +3,7 @@ discovery -> download -> transcript -> highlights -> clip -> caption -> (optiona
 for viral videos discovered or listed in config/sources.yaml.
 """
 import sys
+import re
 import yaml
 from pathlib import Path
 from dotenv import load_dotenv
@@ -27,6 +28,7 @@ from pipeline import (
     notifications,
     scheduler,
     export_platforms,
+    upload_youtube,
 )
 
 CONFIG_PATH = Path(__file__).resolve().parent / "config" / "sources.yaml"
@@ -67,6 +69,7 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
         return
 
     targeted = cfg.get("targeted_download", True)
+    auto_upload = cfg.get("auto_upload", False)
     full_video_path = None
     tx = []
 
@@ -92,8 +95,8 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
 
         if not _is_usable_transcript(tx):
             vid_dur = item.get("duration") if isinstance(item, dict) else None
-            if vid_dur and vid_dur > 720:
-                print(f"  [Transcript] Online captions missing/unusable and video is {int(vid_dur // 60)}m long. Skipping full download to prevent runner timeout.")
+            if vid_dur and vid_dur > 360:
+                print(f"  [Transcript] Online captions missing/unusable and video is {int(vid_dur // 60)}m long (>6m). Skipping full download to prevent runner timeout.")
                 state_mod.mark_processed(st, video_id)
                 state_mod.save_state(st, channel_id=channel_id)
                 return
@@ -102,6 +105,14 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
             try:
                 info = download.download_video(url, video_id=video_id, title=title)
                 full_video_path = info["video_path"]
+                actual_dur = info.get("duration")
+                if actual_dur and actual_dur > 360:
+                    print(f"  [Transcript] Video duration is {int(actual_dur // 60)}m (>6m). Skipping CPU Whisper transcription to prevent runner timeout.")
+                    state_mod.mark_processed(st, video_id)
+                    state_mod.save_state(st, channel_id=channel_id)
+                    if full_video_path and full_video_path.exists():
+                        full_video_path.unlink(missing_ok=True)
+                    return
                 tx = transcript_mod.get_transcript(full_video_path, info.get("subtitle_path"))
                 print(f"  Transcript: {len(tx)} segments (via Whisper)")
             except Exception as dl_err:
