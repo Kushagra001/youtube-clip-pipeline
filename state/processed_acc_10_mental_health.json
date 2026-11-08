@@ -87,7 +87,9 @@
     "mjv7RZYTu-s",
     "BBMtbnMVv5A",
     "qcryeu8g2fA",
-    "bvZGZuh2n2I"
+    "bvZGZuh2n2I",
+    "uL0eC1E9AHQ",
+    "1BfsW3JKSOI"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -113,7 +115,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794142568.9064734,
+        "last_synced": 1794174583.780933,
         "status": "public"
       }
     },
@@ -139,7 +141,7 @@
         "views": 15,
         "likes": 0,
         "comments": 2,
-        "last_synced": 1794142568.9064734,
+        "last_synced": 1794174583.780933,
         "status": "public"
       }
     },
@@ -165,7 +167,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794142568.9064734,
+        "last_synced": 1794174583.780933,
         "status": "pending_or_private"
       }
     },
@@ -191,7 +193,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794142568.9064734,
+        "last_synced": 1794174583.780933,
         "status": "pending_or_private"
       }
     },
@@ -217,7 +219,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794142568.9064734,
+        "last_synced": 1794174583.780933,
         "status": "public"
       }
     },
@@ -243,14 +245,14 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794142568.9064734,
+        "last_synced": 1794174583.780933,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_10_mental_health",
-    "last_sync": 1794142568.9064734,
+    "last_sync": 1794174583.780933,
     "total_shorts": 6,
     "public_shorts": 3,
     "total_views": 18,
