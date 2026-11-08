@@ -91,9 +91,14 @@
     "pezVcictJ8I",
     "hY7m5jjJ9mM",
     "IYeIc1IoDGI",
-    "AbNQJpl5TvY"
+    "AbNQJpl5TvY",
+    "p6GKKdwufOk",
+    "f627dlOT3dk"
   ],
-  "upload_timestamps": [],
+  "upload_timestamps": [
+    1794142662.5461357,
+    1794142735.5015962
+  ],
   "uploaded_shorts": [
     {
       "video_id": "wLKSFpw6Jb0",
@@ -117,7 +122,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794113987.1290119,
+        "last_synced": 1794142556.0012772,
         "status": "pending_or_private"
       }
     },
@@ -143,7 +148,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794113987.1290119,
+        "last_synced": 1794142556.0012772,
         "status": "pending_or_private"
       }
     },
@@ -169,7 +174,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794113987.1290119,
+        "last_synced": 1794142556.0012772,
         "status": "pending_or_private"
       }
     },
@@ -195,7 +200,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794113987.1290119,
+        "last_synced": 1794142556.0012772,
         "status": "pending_or_private"
       }
     },
@@ -221,8 +226,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794113987.1290119,
-        "status": "public"
+        "last_synced": 1794142556.0012772,
+        "status": "pending_or_private"
       }
     },
     {
@@ -247,8 +252,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794113987.1290119,
-        "status": "public"
+        "last_synced": 1794142556.0012772,
+        "status": "pending_or_private"
       }
     },
     {
@@ -273,14 +278,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794113987.1290119,
-        "status": "public"
+        "last_synced": 1794142556.0012772,
+        "status": "pending_or_private"
+      }
+    },
+    {
+      "video_id": "vNFzv9zdPeI",
+      "source_video_id": "p6GKKdwufOk",
+      "title": "Never Ignore This Cat Behavior \u26a0\ufe0f #shorts",
+      "creator": "Quantastic",
+      "topic": "cute and funny cat videos for cat lovers",
+      "tags": [
+        "catsofinstagram",
+        "cutecats",
+        "catreels",
+        "funnycats",
+        "kittensofinstagram",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794142662.5461447,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "kOEHWILz5J0",
+      "source_video_id": "f627dlOT3dk",
+      "title": "The Ultimate Cat Bribe Strategy #shorts",
+      "creator": "Funny And Cute Cat's Life",
+      "topic": "cute and funny cat videos for cat lovers",
+      "tags": [
+        "catsofinstagram",
+        "cutecats",
+        "catreels",
+        "funnycats",
+        "kittensofinstagram",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794142735.5016057,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_01_cats",
-    "last_sync": 1794113987.1290119,
+    "last_sync": 1794142556.0012772,
     "total_shorts": 7,
     "public_shorts": 0,
     "total_views": 0,
