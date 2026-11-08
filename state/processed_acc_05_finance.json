@@ -92,7 +92,9 @@
     "e6Ny74qZN4A",
     "6wu5C3_0lLc",
     "1dvM89NMK3s",
-    "ZXLATRO3Ifw"
+    "ZXLATRO3Ifw",
+    "EaXBTAQk1Rk",
+    "BKTN4C0m6MY"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -118,7 +120,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794113987.1617296,
+        "last_synced": 1794142568.900986,
         "status": "pending_or_private"
       }
     },
@@ -144,7 +146,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794113987.1617296,
+        "last_synced": 1794142568.900986,
         "status": "pending_or_private"
       }
     },
@@ -170,7 +172,7 @@
         "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794113987.1617296,
+        "last_synced": 1794142568.900986,
         "status": "public"
       }
     },
@@ -196,14 +198,14 @@
         "views": 34,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794113987.1617296,
+        "last_synced": 1794142568.900986,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_05_finance",
-    "last_sync": 1794113987.1617296,
+    "last_sync": 1794142568.900986,
     "total_shorts": 4,
     "public_shorts": 2,
     "total_views": 41,
