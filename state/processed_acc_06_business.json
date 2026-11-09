@@ -82,7 +82,9 @@
     "xUZYy3hCRUM",
     "L9KvV_UOs3A",
     "pwZJcLZc3_Y",
-    "FaUdC3mpPiE"
+    "FaUdC3mpPiE",
+    "IVNK5gkVq2Q",
+    "HZk_JaJQm8Y"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -108,7 +110,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794174559.2156658,
+        "last_synced": 1794238272.4097884,
         "status": "pending_or_private"
       }
     },
@@ -134,7 +136,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794174559.2156658,
+        "last_synced": 1794238272.4097884,
         "status": "pending_or_private"
       }
     },
@@ -160,8 +162,8 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794174559.2156658,
-        "status": "pending_or_private"
+        "last_synced": 1794238272.4097884,
+        "status": "public"
       }
     },
     {
@@ -186,8 +188,8 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794174559.2156658,
-        "status": "pending_or_private"
+        "last_synced": 1794238272.4097884,
+        "status": "public"
       }
     },
     {
@@ -212,8 +214,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794174559.2156658,
-        "status": "pending_or_private"
+        "last_synced": 1794238272.4097884,
+        "status": "public"
       }
     },
     {
@@ -238,18 +240,21 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794174559.2156658,
-        "status": "pending_or_private"
+        "last_synced": 1794238272.4097884,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1794174559.2156658,
+    "last_sync": 1794238272.4097884,
     "total_shorts": 6,
-    "public_shorts": 0,
-    "total_views": 0,
-    "median_views": 100.0,
-    "creator_weights": {}
+    "public_shorts": 3,
+    "total_views": 8,
+    "median_views": 3,
+    "creator_weights": {
+      "@ycombinator": 1.0,
+      "Starter Story": 1.0
+    }
   }
 }
