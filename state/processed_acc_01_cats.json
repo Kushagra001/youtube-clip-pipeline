@@ -95,7 +95,9 @@
     "p6GKKdwufOk",
     "f627dlOT3dk",
     "qVxlGqbbLGo",
-    "kAjQN9f5Kck"
+    "kAjQN9f5Kck",
+    "MGVHSr2NITQ",
+    "Mf_Rs2q6bCg"
   ],
   "upload_timestamps": [
     1794142662.5461357,
@@ -124,7 +126,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794174567.240226,
+        "last_synced": 1794200957.1590676,
         "status": "pending_or_private"
       }
     },
@@ -150,7 +152,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794174567.240226,
+        "last_synced": 1794200957.1590676,
         "status": "pending_or_private"
       }
     },
@@ -176,7 +178,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794174567.240226,
+        "last_synced": 1794200957.1590676,
         "status": "pending_or_private"
       }
     },
@@ -202,7 +204,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794174567.240226,
+        "last_synced": 1794200957.1590676,
         "status": "pending_or_private"
       }
     },
@@ -228,7 +230,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794174567.240226,
+        "last_synced": 1794200957.1590676,
         "status": "public"
       }
     },
@@ -254,7 +256,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794174567.240226,
+        "last_synced": 1794200957.1590676,
         "status": "public"
       }
     },
@@ -280,7 +282,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794174567.240226,
+        "last_synced": 1794200957.1590676,
         "status": "public"
       }
     },
@@ -306,7 +308,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794174567.240226,
+        "last_synced": 1794200957.1590676,
         "status": "public"
       }
     },
@@ -332,14 +334,14 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794174567.240226,
+        "last_synced": 1794200957.1590676,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_01_cats",
-    "last_sync": 1794174567.240226,
+    "last_sync": 1794200957.1590676,
     "total_shorts": 9,
     "public_shorts": 0,
     "total_views": 0,
