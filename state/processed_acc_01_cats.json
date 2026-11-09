@@ -97,11 +97,13 @@
     "qVxlGqbbLGo",
     "kAjQN9f5Kck",
     "MGVHSr2NITQ",
-    "Mf_Rs2q6bCg"
+    "Mf_Rs2q6bCg",
+    "6x_PRNPU4nE",
+    "VS6UOyTb5eU"
   ],
   "upload_timestamps": [
-    1794142662.5461357,
-    1794142735.5015962
+    1794238372.6085165,
+    1794238428.891552
   ],
   "uploaded_shorts": [
     {
@@ -126,7 +128,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794200957.1590676,
+        "last_synced": 1794238264.1955237,
         "status": "pending_or_private"
       }
     },
@@ -152,7 +154,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794200957.1590676,
+        "last_synced": 1794238264.1955237,
         "status": "pending_or_private"
       }
     },
@@ -178,7 +180,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794200957.1590676,
+        "last_synced": 1794238264.1955237,
         "status": "pending_or_private"
       }
     },
@@ -204,7 +206,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794200957.1590676,
+        "last_synced": 1794238264.1955237,
         "status": "pending_or_private"
       }
     },
@@ -230,7 +232,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794200957.1590676,
+        "last_synced": 1794238264.1955237,
         "status": "public"
       }
     },
@@ -256,7 +258,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794200957.1590676,
+        "last_synced": 1794238264.1955237,
         "status": "public"
       }
     },
@@ -282,7 +284,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794200957.1590676,
+        "last_synced": 1794238264.1955237,
         "status": "public"
       }
     },
@@ -308,7 +310,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794200957.1590676,
+        "last_synced": 1794238264.1955237,
         "status": "public"
       }
     },
@@ -331,21 +333,73 @@
       "scheduled_at": null,
       "uploaded_at": 1794142735.5016057,
       "stats": {
+        "views": 1,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 1794238264.1955237,
+        "status": "public"
+      }
+    },
+    {
+      "video_id": "dG_K38pj6XQ",
+      "source_video_id": "6x_PRNPU4nE",
+      "title": "Why Is Bernie Taking a Bath? #shorts",
+      "creator": "Daily Dose Of Internet",
+      "topic": "cute and funny cat videos for cat lovers",
+      "tags": [
+        "catsofinstagram",
+        "cutecats",
+        "catreels",
+        "funnycats",
+        "kittensofinstagram",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794238372.6085293,
+      "stats": {
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794200957.1590676,
-        "status": "public"
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "FRbdB8ET1B0",
+      "source_video_id": "VS6UOyTb5eU",
+      "title": "Simba's Unhinged Zoomies #shorts",
+      "creator": "The Pet Collective",
+      "topic": "cute and funny cat videos for cat lovers",
+      "tags": [
+        "catsofinstagram",
+        "cutecats",
+        "catreels",
+        "funnycats",
+        "kittensofinstagram",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794238428.8915627,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_01_cats",
-    "last_sync": 1794200957.1590676,
+    "last_sync": 1794238264.1955237,
     "total_shorts": 9,
-    "public_shorts": 0,
-    "total_views": 0,
-    "median_views": 100.0,
-    "creator_weights": {}
+    "public_shorts": 1,
+    "total_views": 1,
+    "median_views": 1,
+    "creator_weights": {
+      "Funny And Cute Cat's Life": 1.0
+    }
   }
 }
