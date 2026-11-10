@@ -109,9 +109,14 @@
     "CnlEYRYp6j0",
     "jWGuL8Ngk1s",
     "j7SX8FD9tUA",
-    "ltnonDL_RkA"
+    "ltnonDL_RkA",
+    "3YV0HFlPYMo",
+    "RxISjonCufk"
   ],
-  "upload_timestamps": [],
+  "upload_timestamps": [
+    1794322621.3324704,
+    1794322693.404752
+  ],
   "uploaded_shorts": [
     {
       "video_id": "xAARKlZbzbE",
@@ -268,11 +273,61 @@
         "last_synced": 1794321205.4060435,
         "status": "pending_or_private"
       }
+    },
+    {
+      "video_id": "am3Es_TTlww",
+      "source_video_id": "3YV0HFlPYMo",
+      "title": "Open Bottles With Tongs Like a Pro #shorts",
+      "creator": "Epicurious",
+      "topic": "quick and easy recipes, meal prep ideas and food hacks for home cooks",
+      "tags": [
+        "easyrecipes",
+        "mealprep",
+        "foodhacks",
+        "quickrecipes",
+        "cookinghacks",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794322621.332479,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "9mg2IVuVUu0",
+      "source_video_id": "3YV0HFlPYMo",
+      "title": "The Steam Hack for Perfect Burgers #shorts",
+      "creator": "Epicurious",
+      "topic": "quick and easy recipes, meal prep ideas and food hacks for home cooks",
+      "tags": [
+        "easyrecipes",
+        "mealprep",
+        "foodhacks",
+        "quickrecipes",
+        "cookinghacks",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794322693.404761,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1794321205.4060435,
+    "last_sync": 1794322482.1941476,
     "total_shorts": 6,
     "public_shorts": 0,
     "total_views": 0,
