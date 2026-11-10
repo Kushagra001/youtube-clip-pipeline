@@ -88,7 +88,9 @@
     "pC5l5j2u9SQ",
     "wNnU2BJILPA",
     "TZO3_2Krsqk",
-    "vMjGW6cJ7Ms"
+    "vMjGW6cJ7Ms",
+    "l36gir6AXFY",
+    "m1WVgQ7Xkqw"
   ],
   "upload_timestamps": [
     1794318089.2156572,
@@ -117,7 +119,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317981.783967,
+        "last_synced": 1794320899.0011065,
         "status": "pending_or_private"
       }
     },
@@ -143,7 +145,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317981.783967,
+        "last_synced": 1794320899.0011065,
         "status": "pending_or_private"
       }
     },
@@ -169,8 +171,8 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317981.783967,
-        "status": "public"
+        "last_synced": 1794320899.0011065,
+        "status": "pending_or_private"
       }
     },
     {
@@ -195,8 +197,8 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317981.783967,
-        "status": "public"
+        "last_synced": 1794320899.0011065,
+        "status": "pending_or_private"
       }
     },
     {
@@ -221,8 +223,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317981.783967,
-        "status": "public"
+        "last_synced": 1794320899.0011065,
+        "status": "pending_or_private"
       }
     },
     {
@@ -247,8 +249,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317981.783967,
-        "status": "public"
+        "last_synced": 1794320899.0011065,
+        "status": "pending_or_private"
       }
     },
     {
@@ -273,7 +275,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794320899.0011065,
+        "status": "pending_or_private"
       }
     },
     {
@@ -298,20 +301,18 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794320899.0011065,
+        "status": "pending_or_private"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1794317981.783967,
-    "total_shorts": 6,
-    "public_shorts": 3,
-    "total_views": 8,
-    "median_views": 3,
-    "creator_weights": {
-      "@ycombinator": 1.0,
-      "Starter Story": 1.0
-    }
+    "last_sync": 1794320899.0011065,
+    "total_shorts": 8,
+    "public_shorts": 0,
+    "total_views": 0,
+    "median_views": 100.0,
+    "creator_weights": {}
   }
 }
