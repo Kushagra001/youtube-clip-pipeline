@@ -86,9 +86,14 @@
     "IVNK5gkVq2Q",
     "HZk_JaJQm8Y",
     "pC5l5j2u9SQ",
-    "wNnU2BJILPA"
+    "wNnU2BJILPA",
+    "TZO3_2Krsqk",
+    "vMjGW6cJ7Ms"
   ],
-  "upload_timestamps": [],
+  "upload_timestamps": [
+    1794318089.2156572,
+    1794318156.3605971
+  ],
   "uploaded_shorts": [
     {
       "video_id": "dIncrfqqLvU",
@@ -112,7 +117,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794273478.5586224,
+        "last_synced": 1794317981.783967,
         "status": "pending_or_private"
       }
     },
@@ -138,7 +143,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794273478.5586224,
+        "last_synced": 1794317981.783967,
         "status": "pending_or_private"
       }
     },
@@ -164,7 +169,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794273478.5586224,
+        "last_synced": 1794317981.783967,
         "status": "public"
       }
     },
@@ -190,7 +195,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794273478.5586224,
+        "last_synced": 1794317981.783967,
         "status": "public"
       }
     },
@@ -216,7 +221,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794273478.5586224,
+        "last_synced": 1794317981.783967,
         "status": "public"
       }
     },
@@ -242,14 +247,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794273478.5586224,
+        "last_synced": 1794317981.783967,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "SuNKfsLVKDc",
+      "source_video_id": "TZO3_2Krsqk",
+      "title": "The $0 Marketing Secret: Spotting Hidden Demand #shorts",
+      "creator": "Simon Squibb and Real Simon Squibb",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794318089.2156653,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "ls8cirlufQ4",
+      "source_video_id": "TZO3_2Krsqk",
+      "title": "Sales Is Just Storytelling, Not Begging #shorts",
+      "creator": "Simon Squibb and Real Simon Squibb",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794318156.360609,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1794273478.5586224,
+    "last_sync": 1794317981.783967,
     "total_shorts": 6,
     "public_shorts": 3,
     "total_views": 8,
