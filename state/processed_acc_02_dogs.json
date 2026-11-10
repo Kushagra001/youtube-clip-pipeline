@@ -91,9 +91,14 @@
     "YQqFDunz9Vg",
     "otru4pcu2wE",
     "_MpKIzjqOhE",
-    "639JtzNATs8"
+    "639JtzNATs8",
+    "2V0VVSXbTPw",
+    "IZzeLnaygME"
   ],
-  "upload_timestamps": [],
+  "upload_timestamps": [
+    1794322642.5057359,
+    1794322784.770923
+  ],
   "uploaded_shorts": [
     {
       "video_id": "rvEdTTXmido",
@@ -198,11 +203,61 @@
         "last_synced": 1794320905.8753965,
         "status": "public"
       }
+    },
+    {
+      "video_id": "W4rGsNFxEUs",
+      "source_video_id": "2V0VVSXbTPw",
+      "title": "Puppy\u2019s Epic Treadmill Fail! #shorts",
+      "creator": "Funny Pet's Life",
+      "topic": "funny and cute dog videos for dog lovers",
+      "tags": [
+        "dogsofinstagram",
+        "dogvideos",
+        "puppylove",
+        "dogtraining",
+        "goodboy",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794322642.5057428,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "07oSFTSJj5w",
+      "source_video_id": "IZzeLnaygME",
+      "title": "Dog's British Accent Melts Hearts #shorts",
+      "creator": "Daily Dose Of Internet and Daily Dose of Pets",
+      "topic": "funny and cute dog videos for dog lovers",
+      "tags": [
+        "dogsofinstagram",
+        "dogvideos",
+        "puppylove",
+        "dogtraining",
+        "goodboy",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794322784.7709312,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_02_dogs",
-    "last_sync": 1794321288.2770424,
+    "last_sync": 1794322494.2748885,
     "total_shorts": 4,
     "public_shorts": 1,
     "total_views": 2,
