@@ -107,19 +107,14 @@ jobs:
       - name: Stagger Network Setup
         run: sleep $((RANDOM % 10 + 1))
 
-      - name: Set up Cloudflare WARP (IP Masking)
-        timeout-minutes: 3
-        continue-on-error: true
-        uses: fscarmen/warp-on-actions@v1.4
-        with:
-          stack: v4
-          mode: wireguard
-
       - name: Verify IP & Network Connection
         timeout-minutes: 1
         continue-on-error: true
         run: |
-          echo "Public IP verification via Cloudflare:"
+          echo "Direct runner public IP:"
+          curl -s --max-time 10 https://api.ipify.org || true
+          echo ""
+          echo "Cloudflare network trace:"
           curl -s --max-time 10 https://www.cloudflare.com/cdn-cgi/trace | head -n 8 || true
 
       - name: Configure YouTube Authentication Cookies

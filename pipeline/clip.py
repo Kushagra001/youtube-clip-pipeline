@@ -4,10 +4,41 @@ transformation (framing, spatial micro-zoom, temporal micro-shift, color grading
 animated progress bar, and YouTube -14 LUFS audio normalization) formatted strictly
 as a 9:16 vertical Short (< 60s).
 """
+import json
 import subprocess
 from pathlib import Path
 
 CLIPS_DIR = Path(__file__).resolve().parent.parent / "output" / "clips"
+
+
+def _has_video_stream(file_path: Path) -> bool:
+    """Verifies via ffprobe that file_path exists, is non-empty, and has a valid video stream."""
+    if not file_path.exists() or file_path.stat().st_size < 1024:
+        return False
+    try:
+        res = subprocess.run(
+            [
+                "ffprobe", "-v", "error",
+                "-select_streams", "v:0",
+                "-show_entries", "stream=codec_type,width,height",
+                "-of", "json",
+                str(file_path),
+            ],
+            capture_output=True,
+            text=True,
+            timeout=15,
+        )
+        if res.returncode != 0:
+            return False
+        data = json.loads(res.stdout or "{}")
+        return any(
+            s.get("codec_type") == "video"
+            and int(s.get("width") or 0) > 0
+            and int(s.get("height") or 0) > 0
+            for s in data.get("streams", [])
+        )
+    except Exception:
+        return False
 
 
 def _normalize_color(color_spec: str | None, default: str = "0xFFCC00@0.98") -> str:
@@ -135,6 +166,11 @@ def cut_clip(
     """Cuts and applies digital footprint alteration + smart vertical framing to the clip."""
     CLIPS_DIR.mkdir(parents=True, exist_ok=True)
     out_path = CLIPS_DIR / f"{out_name}.mp4"
+    out_path.unlink(missing_ok=True)
+
+    if not _has_video_stream(source_video):
+        raise RuntimeError(f"Source video has no valid video stream (audio-only or corrupted): {source_video}")
+
     raw_duration = max(1.0, end - start)
     adjusted_duration = raw_duration / speed_factor
 
@@ -195,6 +231,8 @@ def cut_clip(
         "-ss", f"{start:.3f}",
         "-i", str(source_video),
         "-t", f"{raw_duration:.3f}",
+        "-map", "0:v:0",
+        "-map", "0:a?",
         "-vf", vf,
         "-af", af,
         "-shortest",
@@ -211,8 +249,9 @@ def cut_clip(
     ]
 
     res = subprocess.run(cmd, capture_output=True, text=True)
-    if res.returncode == 0:
+    if res.returncode == 0 and _has_video_stream(out_path):
         return out_path
+    out_path.unlink(missing_ok=True)
 
     # If first pass fails (e.g. loudnorm error on short/unusual audio or strict filters), retry with clean fallback
     err = (res.stderr or "") + " " + (res.stdout or "")
@@ -224,6 +263,8 @@ def cut_clip(
         "-ss", f"{start:.3f}",
         "-i", str(source_video),
         "-t", f"{raw_duration:.3f}",
+        "-map", "0:v:0",
+        "-map", "0:a?",
         "-vf", vf,
         "-af", af_fallback,
         "-shortest",
@@ -239,36 +280,38 @@ def cut_clip(
         str(out_path),
     ]
     res_fb = subprocess.run(cmd_fallback, capture_output=True, text=True)
-    if res_fb.returncode != 0:
-        err_msg = res_fb.stderr.strip() or res_fb.stdout.strip()
-        print(f"  [FFmpeg] Audio filter retry note: {err_msg.splitlines()[-1] if err_msg.splitlines() else 'Unknown'}. Retrying with synthesized audio...")
-        cmd_silent = [
-            "ffmpeg", "-y",
-            "-ss", f"{start:.3f}",
-            "-i", str(source_video),
-            "-f", "lavfi", "-i", "anullsrc=channel_layout=stereo:sample_rate=48000",
-            "-t", f"{raw_duration:.3f}",
-            "-vf", vf,
-            "-map", "0:v:0",
-            "-map", "1:a:0",
-            "-shortest",
-            "-r", "30",
-            "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
-            "-profile:v", "high", "-level", "4.1",
-            "-bf", "2", "-g", "30", "-flags", "+cgop",
-            "-pix_fmt", "yuv420p",
-            "-avoid_negative_ts", "make_zero",
-            "-use_editlist", "0",
-            "-movflags", "+faststart",
-            "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2",
-            str(out_path),
-        ]
-        res_silent = subprocess.run(cmd_silent, capture_output=True, text=True)
-        if res_silent.returncode == 0:
-            return out_path
+    if res_fb.returncode == 0 and _has_video_stream(out_path):
+        return out_path
 
-        silent_err = res_silent.stderr.strip() or res_silent.stdout.strip()
-        last_error = "\n".join(silent_err.splitlines()[-8:])
-        raise RuntimeError(f"FFmpeg clip cut failed:\n{last_error}")
+    out_path.unlink(missing_ok=True)
+    err_msg = res_fb.stderr.strip() or res_fb.stdout.strip()
+    print(f"  [FFmpeg] Audio filter retry note: {err_msg.splitlines()[-1] if err_msg.splitlines() else 'Unknown'}. Retrying with synthesized audio...")
+    cmd_silent = [
+        "ffmpeg", "-y",
+        "-ss", f"{start:.3f}",
+        "-i", str(source_video),
+        "-f", "lavfi", "-i", "anullsrc=channel_layout=stereo:sample_rate=48000",
+        "-t", f"{raw_duration:.3f}",
+        "-vf", vf,
+        "-map", "0:v:0",
+        "-map", "1:a:0",
+        "-shortest",
+        "-r", "30",
+        "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
+        "-profile:v", "high", "-level", "4.1",
+        "-bf", "2", "-g", "30", "-flags", "+cgop",
+        "-pix_fmt", "yuv420p",
+        "-avoid_negative_ts", "make_zero",
+        "-use_editlist", "0",
+        "-movflags", "+faststart",
+        "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2",
+        str(out_path),
+    ]
+    res_silent = subprocess.run(cmd_silent, capture_output=True, text=True)
+    if res_silent.returncode == 0 and _has_video_stream(out_path):
+        return out_path
 
-    return out_path
+    out_path.unlink(missing_ok=True)
+    silent_err = res_silent.stderr.strip() or res_silent.stdout.strip()
+    last_error = "\n".join(silent_err.splitlines()[-8:]) if silent_err else "Rendered clip missing valid video stream"
+    raise RuntimeError(f"FFmpeg clip cut failed:\n{last_error}")

@@ -2,8 +2,39 @@
 full transcript that overlaps the clip's time range) and burns it in.
 Supports viral meme templates (Memezar / 9GAG style) and standard framing.
 """
+import json
 import subprocess
 from pathlib import Path
+
+
+def _has_video_stream(file_path: Path) -> bool:
+    """Verifies via ffprobe that file_path exists, is non-empty, and has a valid video stream."""
+    if not file_path.exists() or file_path.stat().st_size < 1024:
+        return False
+    try:
+        res = subprocess.run(
+            [
+                "ffprobe", "-v", "error",
+                "-select_streams", "v:0",
+                "-show_entries", "stream=codec_type,width,height",
+                "-of", "json",
+                str(file_path),
+            ],
+            capture_output=True,
+            text=True,
+            timeout=15,
+        )
+        if res.returncode != 0:
+            return False
+        data = json.loads(res.stdout or "{}")
+        return any(
+            s.get("codec_type") == "video"
+            and int(s.get("width") or 0) > 0
+            and int(s.get("height") or 0) > 0
+            for s in data.get("streams", [])
+        )
+    except Exception:
+        return False
 
 ASS_HEADER = """[Script Info]
 ScriptType: v4.00+
@@ -232,6 +263,11 @@ def burn_in_captions(
     outro_start: float = 0.0,
     duration: float = 0.0,
 ) -> Path:
+    if not _has_video_stream(video_path):
+        raise RuntimeError(f"Cannot burn captions: input video missing video stream: {video_path}")
+
+    out_path.unlink(missing_ok=True)
+
     # Escape colons, backslashes, and single quotes for cross-platform FFmpeg filter syntax
     ass_escaped = ass_path.resolve().as_posix().replace(":", "\\:").replace("'", "'\\''")
     logo_file = Path(logo_path).resolve() if logo_path else None
@@ -262,15 +298,20 @@ def burn_in_captions(
             str(out_path),
         ]
         res = subprocess.run(cmd, capture_output=True, text=True)
-        if res.returncode == 0:
+        if res.returncode == 0 and _has_video_stream(out_path):
             return out_path
 
-        print("  [Captions] Note: Logo overlay failed, falling back to pure subtitle burn...")
+        out_path.unlink(missing_ok=True)
+        err_lines = (res.stderr or res.stdout or "").strip().splitlines()
+        reason = err_lines[-1] if err_lines else f"exit code {res.returncode}"
+        print(f"  [Captions] Note: Logo overlay failed ({reason}), falling back to pure subtitle burn...")
 
     # Standard / fallback subtitle burning
     cmd_fallback = [
         "ffmpeg", "-y",
         "-i", str(video_path),
+        "-map", "0:v:0",
+        "-map", "0:a?",
         "-vf", f"ass=filename='{ass_escaped}',setsar=1",
         "-r", "30",
         "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
@@ -285,8 +326,13 @@ def burn_in_captions(
     ]
     res_fb = subprocess.run(cmd_fallback, capture_output=True, text=True)
     if res_fb.returncode != 0:
+        out_path.unlink(missing_ok=True)
         err_msg = res_fb.stderr.strip() or res_fb.stdout.strip()
         last_error = "\n".join(err_msg.splitlines()[-8:])
         raise RuntimeError(f"FFmpeg caption burn-in failed:\n{last_error}")
+
+    if not _has_video_stream(out_path):
+        out_path.unlink(missing_ok=True)
+        raise RuntimeError(f"FFmpeg caption burn-in output missing valid video stream: {out_path}")
 
     return out_path

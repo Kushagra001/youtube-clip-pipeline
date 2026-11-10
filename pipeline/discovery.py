@@ -432,6 +432,8 @@ def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12, sta
         "quiet": True,
         "no_warnings": True,
         "ignoreerrors": True,
+        "socket_timeout": 20,
+        "retries": 2,
         "logger": _SilentLogger(),
     }
     try:

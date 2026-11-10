@@ -95,7 +95,11 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
 
         if not _is_usable_transcript(tx):
             vid_dur = item.get("duration") if isinstance(item, dict) else None
+            expect_subs = bool(item.get("has_subtitles")) if isinstance(item, dict) else False
             if vid_dur and vid_dur > 360:
+                if expect_subs:
+                    print(f"  [Transcript] Online captions expected (CC:Yes) for {int(vid_dur // 60)}m video, but subtitle extraction returned unusable text. Leaving unprocessed for retry.")
+                    raise RuntimeError("Subtitle extraction failed despite CC:Yes metadata (likely transient rate limit)")
                 print(f"  [Transcript] Online captions missing/unusable and video is {int(vid_dur // 60)}m long (>6m). Skipping full download to prevent runner timeout.")
                 state_mod.mark_processed(st, video_id)
                 state_mod.save_state(st, channel_id=channel_id)
@@ -103,7 +107,7 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
 
             print("  Online captions insufficient or music-only; downloading source video for Whisper transcription...")
             try:
-                info = download.download_video(url, video_id=video_id, title=title)
+                info = download.download_video(url, video_id=video_id, title=title, fetch_subs=False)
                 full_video_path = info["video_path"]
                 actual_dur = info.get("duration")
                 if actual_dur and actual_dur > 360:
@@ -117,9 +121,9 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
                 print(f"  Transcript: {len(tx)} segments (via Whisper)")
             except Exception as dl_err:
                 print(f"  [Transcript] Source video download/transcription failed: {dl_err}")
-                state_mod.mark_processed(st, video_id)
-                state_mod.save_state(st, channel_id=channel_id)
-                return
+                if full_video_path and full_video_path.exists():
+                    full_video_path.unlink(missing_ok=True)
+                raise RuntimeError(f"Source video download/transcription failed: {dl_err}")
     else:
         info = download.download_video(url, video_id=video_id, title=title)
         full_video_path = info["video_path"]
@@ -172,6 +176,7 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
     outro_seconds = branding_cfg.get("outro_seconds", 1.8)
 
     clips_succeeded = 0
+    last_clip_error: str | None = None
 
     # Cut clips, apply framing & digital footprint shift, and burn in captions
     for i, pick in enumerate(picks):
@@ -401,6 +406,7 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
                         )
                     else:
                         upload_err = upload_youtube.get_last_upload_error()
+                        last_clip_error = upload_err
                         print(f"     ❌ Upload failed: {upload_err}", file=sys.stderr)
                         notifications.notify_upload_failure(
                             channel_name=brand_name,
@@ -415,6 +421,7 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
 
             clips_succeeded += 1
         except Exception as clip_err:
+            last_clip_error = str(clip_err)
             print(f"     [Clip Error] Error processing Clip {i+1} ({pick.get('title')}): {clip_err}", file=sys.stderr)
             continue
 
@@ -426,12 +433,12 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
         except Exception:
             pass
 
+    if clips_succeeded == 0:
+        detail = last_clip_error or "All clip generation/upload attempts failed"
+        raise RuntimeError(f"Failed to produce/upload clips: {detail}")
+
     state_mod.mark_processed(st, video_id)
     state_mod.save_state(st, channel_id=channel_id)
-
-    if auto_upload and clips_succeeded == 0:
-        last_err = upload_youtube.get_last_upload_error()
-        raise RuntimeError(f"Failed to upload clips to YouTube: {last_err}")
 
 
 def run_channel_pipeline(config_path: Path, channel_id: str | None = None) -> None:
