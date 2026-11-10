@@ -90,7 +90,8 @@
     "e2FQKfcAu6I",
     "dgRSfhoHE4g",
     "yl46bgQ7c7E",
-    "PafvhTSC4yE"
+    "PafvhTSC4yE",
+    "u300Afl-nNg"
   ],
   "upload_timestamps": [
     1794322831.1659663,
@@ -119,8 +120,8 @@
         "views": 1065,
         "likes": 14,
         "comments": 0,
-        "last_synced": 1794321046.4874513,
-        "status": "pending_or_private"
+        "last_synced": 1794324225.072838,
+        "status": "public"
       }
     },
     {
@@ -145,8 +146,8 @@
         "views": 823,
         "likes": 5,
         "comments": 0,
-        "last_synced": 1794321046.4874513,
-        "status": "pending_or_private"
+        "last_synced": 1794324225.072838,
+        "status": "public"
       }
     },
     {
@@ -171,8 +172,8 @@
         "views": 81,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794321046.4874513,
-        "status": "pending_or_private"
+        "last_synced": 1794324225.072838,
+        "status": "public"
       }
     },
     {
@@ -197,8 +198,8 @@
         "views": 51,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794321046.4874513,
-        "status": "pending_or_private"
+        "last_synced": 1794324225.072838,
+        "status": "public"
       }
     },
     {
@@ -223,7 +224,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794324225.072838,
+        "status": "public"
       }
     },
     {
@@ -248,17 +250,21 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794324225.072838,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_04_motivation",
-    "last_sync": 1794322730.733085,
-    "total_shorts": 4,
-    "public_shorts": 0,
-    "total_views": 0,
-    "median_views": 100.0,
-    "creator_weights": {}
+    "last_sync": 1794324225.072838,
+    "total_shorts": 6,
+    "public_shorts": 4,
+    "total_views": 2020,
+    "median_views": 452.0,
+    "creator_weights": {
+      "@JordanBPeterson": 1.35,
+      "@ChrisWillx": 0.65
+    }
   }
 }
