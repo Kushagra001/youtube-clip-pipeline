@@ -104,9 +104,14 @@
     "0qibH9W5_Yg",
     "bC64z_bG0ko",
     "PtSLamEHWjc",
-    "5wIGQLYqPKg"
+    "5wIGQLYqPKg",
+    "8Ij7A1VCB7I",
+    "IfpAjsytwy0"
   ],
-  "upload_timestamps": [],
+  "upload_timestamps": [
+    1794325438.2456775,
+    1794325576.0416746
+  ],
   "uploaded_shorts": [
     {
       "video_id": "B0r9b-wRUOI",
@@ -211,11 +216,61 @@
         "last_synced": 1794324362.670393,
         "status": "pending_or_private"
       }
+    },
+    {
+      "video_id": "eb08TObqhPY",
+      "source_video_id": "8Ij7A1VCB7I",
+      "title": "Why You Should Ignore Panic Selling #shorts",
+      "creator": "Mark Tilbury",
+      "topic": "personal finance, investing, budgeting and side hustles for financial freedom",
+      "tags": [
+        "personalfinance",
+        "investing",
+        "sidehustle",
+        "financialfreedom",
+        "stockmarket",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794325438.2456844,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "4z4vhw1OyEY",
+      "source_video_id": "IfpAjsytwy0",
+      "title": "Millionaires Split Bills to the Penny #shorts",
+      "creator": "Vincent Chan",
+      "topic": "personal finance, investing, budgeting and side hustles for financial freedom",
+      "tags": [
+        "personalfinance",
+        "investing",
+        "sidehustle",
+        "financialfreedom",
+        "stockmarket",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794325576.0416842,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_05_finance",
-    "last_sync": 1794324362.670393,
+    "last_sync": 1794325304.6029835,
     "total_shorts": 4,
     "public_shorts": 0,
     "total_views": 0,
