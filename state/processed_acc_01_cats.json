@@ -109,7 +109,9 @@
     "5n4KzeXDkac",
     "gb8Um8IWYMg",
     "JfoNW06DLZk",
-    "Mpr6PnpSXBE"
+    "Mpr6PnpSXBE",
+    "AfKVdUrGelo",
+    "y0sF5xhGreA"
   ],
   "upload_timestamps": [
     1794325410.682862,
@@ -424,7 +426,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794326180.3015356,
+        "last_synced": 1794328977.9857268,
         "status": "public"
       }
     },
@@ -450,14 +452,14 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794326180.3015356,
+        "last_synced": 1794328977.9857268,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_01_cats",
-    "last_sync": 1794327726.6854472,
+    "last_sync": 1794328977.9857268,
     "total_shorts": 13,
     "public_shorts": 1,
     "total_views": 1,
