@@ -99,7 +99,9 @@
     "eSYkB-IfR-g",
     "vE7LYFZgFpg",
     "Oy9HQsQVDis",
-    "g0B55mfL7uI"
+    "g0B55mfL7uI",
+    "PCGZR84EEVs",
+    "eiPap_a2Vio"
   ],
   "upload_timestamps": [
     1794322642.5057359,
@@ -128,7 +130,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794327715.5714452,
+        "last_synced": 1794331592.5617242,
         "status": "pending_or_private"
       }
     },
@@ -154,7 +156,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794327715.5714452,
+        "last_synced": 1794331592.5617242,
         "status": "pending_or_private"
       }
     },
@@ -180,7 +182,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794327715.5714452,
+        "last_synced": 1794331592.5617242,
         "status": "public"
       }
     },
@@ -206,7 +208,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794327715.5714452,
+        "last_synced": 1794331592.5617242,
         "status": "public"
       }
     },
@@ -232,7 +234,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794327715.5714452,
+        "last_synced": 1794331592.5617242,
         "status": "public"
       }
     },
@@ -258,14 +260,14 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794327715.5714452,
+        "last_synced": 1794331592.5617242,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_02_dogs",
-    "last_sync": 1794330308.4638827,
+    "last_sync": 1794331592.5617242,
     "total_shorts": 6,
     "public_shorts": 2,
     "total_views": 4,
