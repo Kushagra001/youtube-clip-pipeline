@@ -93,7 +93,9 @@
     "_MpKIzjqOhE",
     "639JtzNATs8",
     "2V0VVSXbTPw",
-    "IZzeLnaygME"
+    "IZzeLnaygME",
+    "pezVcictJ8I",
+    "2oy7xVLKMsk"
   ],
   "upload_timestamps": [
     1794322642.5057359,
@@ -122,7 +124,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324506.433735,
+        "last_synced": 1794327715.5714452,
         "status": "pending_or_private"
       }
     },
@@ -148,7 +150,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324506.433735,
+        "last_synced": 1794327715.5714452,
         "status": "pending_or_private"
       }
     },
@@ -174,8 +176,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324506.433735,
-        "status": "pending_or_private"
+        "last_synced": 1794327715.5714452,
+        "status": "public"
       }
     },
     {
@@ -200,8 +202,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324506.433735,
-        "status": "pending_or_private"
+        "last_synced": 1794327715.5714452,
+        "status": "public"
       }
     },
     {
@@ -226,8 +228,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324506.433735,
-        "status": "pending_or_private"
+        "last_synced": 1794327715.5714452,
+        "status": "public"
       }
     },
     {
@@ -252,18 +254,20 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324506.433735,
-        "status": "pending_or_private"
+        "last_synced": 1794327715.5714452,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_02_dogs",
-    "last_sync": 1794326182.90395,
+    "last_sync": 1794327715.5714452,
     "total_shorts": 6,
-    "public_shorts": 0,
-    "total_views": 0,
-    "median_views": 100.0,
-    "creator_weights": {}
+    "public_shorts": 2,
+    "total_views": 4,
+    "median_views": 2.0,
+    "creator_weights": {
+      "Tom Davis Dog Training ": 1.0
+    }
   }
 }
