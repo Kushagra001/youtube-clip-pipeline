@@ -13,5 +13,7 @@ __pycache__/
 .venv/
 *cookies*.txt
 output/cookies.txt
+output/run_summary_*.json
+status_reports/
 cookies/
 *.log

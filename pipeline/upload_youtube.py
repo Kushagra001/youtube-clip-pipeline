@@ -12,8 +12,11 @@ from googleapiclient.http import MediaFileUpload
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
 
 
-def _resolve_credentials_for_channel(token_env_var: str | None = None, channel_config: dict | None = None) -> tuple[str | None, str | None]:
-    """Resolves (client_id, client_secret) dynamically across Project 1, 2, and 3:
+def _resolve_credentials_with_project(
+    token_env_var: str | None = None,
+    channel_config: dict | None = None,
+) -> tuple[str | None, str | None, str]:
+    """Resolves (client_id, client_secret, project_label) dynamically across Project 1, 2, and 3:
     - P1: acc_01 .. acc_03 (YOUTUBE_CLIENT_ID / YOUTUBE_CLIENT_SECRET)
     - P2: acc_04 .. acc_06 (YOUTUBE_CLIENT_ID_P2 / YOUTUBE_CLIENT_SECRET_P2)
     - P3: acc_07 .. acc_10 (YOUTUBE_CLIENT_ID_P3 / YOUTUBE_CLIENT_SECRET_P3)
@@ -25,26 +28,34 @@ def _resolve_credentials_for_channel(token_env_var: str | None = None, channel_c
 
     # Check Project 2
     if any(k in ch_ref for k in ["acc_04", "acc_05", "acc_06", "acc_4", "acc_5", "acc_6", "motivation", "finance", "business"]):
-        cid = os.environ.get("YOUTUBE_CLIENT_ID_P2")
-        sec = os.environ.get("YOUTUBE_CLIENT_SECRET_P2")
+        cid = (os.environ.get("YOUTUBE_CLIENT_ID_P2") or "").strip() or None
+        sec = (os.environ.get("YOUTUBE_CLIENT_SECRET_P2") or "").strip() or None
         if cid and sec:
-            return cid, sec
+            return cid, sec, "P2"
 
     # Check Project 3
     if any(k in ch_ref for k in ["acc_07", "acc_08", "acc_09", "acc_10", "acc_7", "acc_8", "acc_9", "food", "ai_tools", "grooming", "mental_health"]):
-        cid = os.environ.get("YOUTUBE_CLIENT_ID_P3")
-        sec = os.environ.get("YOUTUBE_CLIENT_SECRET_P3")
+        cid = (os.environ.get("YOUTUBE_CLIENT_ID_P3") or "").strip() or None
+        sec = (os.environ.get("YOUTUBE_CLIENT_SECRET_P3") or "").strip() or None
         if cid and sec:
-            return cid, sec
+            return cid, sec, "P3"
 
     # Default: Project 1 (or fallback)
-    cid = os.environ.get("YOUTUBE_CLIENT_ID_P1") or os.environ.get("YOUTUBE_CLIENT_ID")
-    sec = os.environ.get("YOUTUBE_CLIENT_SECRET_P1") or os.environ.get("YOUTUBE_CLIENT_SECRET")
+    cid = (os.environ.get("YOUTUBE_CLIENT_ID_P1") or os.environ.get("YOUTUBE_CLIENT_ID") or "").strip() or None
+    sec = (os.environ.get("YOUTUBE_CLIENT_SECRET_P1") or os.environ.get("YOUTUBE_CLIENT_SECRET") or "").strip() or None
+    return cid, sec, "P1"
+
+
+def _resolve_credentials_for_channel(token_env_var: str | None = None, channel_config: dict | None = None) -> tuple[str | None, str | None]:
+    """Resolves (client_id, client_secret) dynamically across Project 1, 2, and 3."""
+    cid, sec, _ = _resolve_credentials_with_project(token_env_var, channel_config)
     return cid, sec
 
 
-def _get_service(token_env_var: str | None = None, channel_config: dict | None = None):
+def _resolve_refresh_token(token_env_var: str | None = None) -> tuple[str | None, str]:
+    """Resolves (refresh_token, source_env_var) cleanly without fallback collision when token_env_var is explicit."""
     refresh_token = None
+    source_var = token_env_var or "YOUTUBE_REFRESH_TOKEN"
     if token_env_var:
         refresh_token = os.environ.get(token_env_var)
     if not refresh_token and not token_env_var:
@@ -53,21 +64,120 @@ def _get_service(token_env_var: str | None = None, channel_config: dict | None =
     # Fallback: check per-channel tokens only when no explicit channel token_env_var was requested
     if not refresh_token and not token_env_var:
         for i in range(1, 11):
-            cand = os.environ.get(f"YOUTUBE_REFRESH_TOKEN_ACC_{i:02d}")
+            var_name = f"YOUTUBE_REFRESH_TOKEN_ACC_{i:02d}"
+            cand = os.environ.get(var_name)
             if cand and cand.strip():
                 refresh_token = cand
+                source_var = var_name
                 break
 
     if refresh_token:
-        refresh_token = refresh_token.strip()
+        refresh_token = refresh_token.strip() or None
+    return refresh_token, source_var
+
+
+def _sanitize_auth_text(text: str, secrets_to_scrub: tuple[str | None, ...]) -> str:
+    """Strips secret values from exception diagnostics before printing or webhook alerts."""
+    out = str(text or "")
+    for secret in secrets_to_scrub:
+        if secret and len(secret) >= 6:
+            out = out.replace(secret, "[REDACTED]")
+    return out
+
+
+def _get_auth_request(timeout: int = 15):
+    """Returns a bounded Google Auth Request transport."""
+    try:
+        from google.auth.transport.requests import Request as RequestsAuthRequest
+
+        default_timeout = timeout
+
+        class _BoundedAuthRequest(RequestsAuthRequest):
+            def __call__(self, url, method="GET", body=None, headers=None, timeout=None, **kwargs):
+                effective_timeout = default_timeout if timeout is None else timeout
+                return super().__call__(url, method=method, body=body, headers=headers, timeout=effective_timeout, **kwargs)
+
+        return _BoundedAuthRequest()
+    except Exception:
+        import httplib2
+        import google_auth_httplib2
+
+        return google_auth_httplib2.Request(httplib2.Http(timeout=timeout))
+
+
+def preflight_credentials(
+    token_env_var: str | None = None,
+    channel_config: dict | None = None,
+) -> tuple[bool, str, str]:
+    """Fast, zero-quota OAuth credential check using token refresh before heavy media downloads.
+
+    Returns (ok, status_code, message) where status_code is one of:
+      - 'ok': Refresh token exchanged cleanly for a short-lived access token
+      - 'missing_config': Required refresh token or OAuth client credentials env var missing
+      - 'auth_error': OAuth rejected credentials (e.g. invalid_grant, invalid_client)
+      - 'transient_error': Network/timeout issue contacting oauth2.googleapis.com
+    """
+    refresh_token, source_var = _resolve_refresh_token(token_env_var)
+    client_id, client_secret, project_label = _resolve_credentials_with_project(token_env_var, channel_config)
 
     if not refresh_token:
-        var_name = token_env_var or "YOUTUBE_REFRESH_TOKEN"
+        return False, "missing_config", f"Missing YouTube refresh token in environment variable: {source_var}"
+
+    if not client_id or not client_secret:
+        return False, "missing_config", f"Missing YouTube OAuth client credentials ({project_label}) in environment"
+
+    creds = Credentials(
+        token=None,
+        refresh_token=refresh_token,
+        client_id=client_id,
+        client_secret=client_secret,
+        token_uri="https://oauth2.googleapis.com/token",
+        scopes=SCOPES,
+    )
+
+    try:
+        from google.auth.exceptions import RefreshError, TransportError
+    except Exception:
+        RefreshError = Exception
+        TransportError = OSError
+
+    try:
+        creds.refresh(_get_auth_request(timeout=15))
+        return True, "ok", f"OAuth verified ({project_label}, {source_var})"
+    except RefreshError as e:
+        safe_err = _sanitize_auth_text(str(e), (refresh_token, client_id, client_secret))
+        low = safe_err.lower()
+        if "invalid_grant" in low:
+            return (
+                False,
+                "auth_error",
+                f"OAuth token expired or revoked ({project_label}/{source_var}: invalid_grant). "
+                "Switch OAuth Consent Screen to 'In Production' and regenerate token.",
+            )
+        if "invalid_client" in low or "unauthorized_client" in low or "deleted_client" in low:
+            return (
+                False,
+                "auth_error",
+                f"OAuth client credentials mismatch or revoked ({project_label}/{source_var}: {safe_err[:140]})",
+            )
+        return False, "auth_error", f"OAuth refresh rejected ({project_label}/{source_var}): {safe_err[:180]}"
+    except (TransportError, ConnectionError, TimeoutError, OSError) as e:
+        safe_err = _sanitize_auth_text(str(e), (refresh_token, client_id, client_secret))
+        return False, "transient_error", f"Transient network error during OAuth preflight ({project_label}): {safe_err[:140]}"
+    except Exception as e:
+        safe_err = _sanitize_auth_text(str(e), (refresh_token, client_id, client_secret))
+        low = safe_err.lower()
+        if any(k in low for k in ("invalid_grant", "invalid_client", "unauthorized_client", "invalid_request")):
+            return False, "auth_error", f"OAuth error ({project_label}/{source_var}): {safe_err[:180]}"
+        return False, "transient_error", f"Unexpected preflight warning ({project_label}): {safe_err[:140]}"
+
+
+def _get_service(token_env_var: str | None = None, channel_config: dict | None = None):
+    refresh_token, var_name = _resolve_refresh_token(token_env_var)
+    if not refresh_token:
         raise ValueError(f"Missing YouTube refresh token in environment variable: {var_name}")
 
     client_id, client_secret = _resolve_credentials_for_channel(token_env_var, channel_config)
-    client_id = client_id.strip() if client_id else None
-    client_secret = client_secret.strip() if client_secret else None
     if not client_id or not client_secret:
         raise ValueError("Missing YouTube OAuth client credentials in environment (check YOUTUBE_CLIENT_ID / P2 / P3)")
 

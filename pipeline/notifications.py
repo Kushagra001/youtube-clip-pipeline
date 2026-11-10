@@ -12,9 +12,12 @@ import urllib.error
 from html import escape
 
 
-from dotenv import load_dotenv
+try:
+    from dotenv import load_dotenv
 
-load_dotenv()
+    load_dotenv()
+except ImportError:
+    pass
 
 
 def _get_telegram_creds() -> tuple[str | None, str | None]:
@@ -229,4 +232,51 @@ def notify_upload_failure(
     discord_sent = send_discord_message(discord_payload)
 
     return tg_sent or discord_sent
+
+
+def notify_workflow_failure_summary(
+    failed_channels: list[dict],
+    total_channels: int,
+    passed_channels: int,
+    run_url: str | None = None,
+) -> bool:
+    """Sends a single consolidated Telegram + Discord summary when one or more matrix channels fail."""
+    fail_count = len(failed_channels)
+    lines_tg = []
+    lines_dc = []
+
+    for ch in failed_channels[:10]:
+        cid = ch.get("channel_id", "unknown")
+        err = (ch.get("error_summary") or ch.get("oauth_status") or "Unknown job failure").strip()
+        warp = (ch.get("warp_path") or "").strip()
+        extra = f" [{warp}]" if warp else ""
+        lines_tg.append(f"• <b>{escape(cid)}</b>{escape(extra)}: <code>{escape(err[:140])}</code>")
+        lines_dc.append(f"**{cid}**{extra}: `{err[:140]}`")
+
+    run_link_tg = f'\n\n🔗 <a href="{escape(run_url)}">Inspect Workflow Run Logs</a>' if run_url else ""
+    summary_body_tg = "\n".join(lines_tg) if lines_tg else "• See workflow run logs for failure details."
+    tg_message = (
+        f"🚨 <b>Pipeline Failure Summary ({fail_count} failed / {passed_channels} passed out of {total_channels})</b>\n\n"
+        f"{summary_body_tg}"
+        f"{run_link_tg}"
+    )[:3900]
+    tg_sent = send_telegram_message(tg_message)
+
+    desc_dc = "\n".join(lines_dc) if lines_dc else "See workflow run logs for failure details."
+    embed: dict = {
+        "title": f"🚨 Pipeline Failure Summary ({fail_count}/{total_channels} Failed)",
+        "description": desc_dc[:3800],
+        "color": 0xEF4444,
+        "fields": [
+            {"name": "✅ Passed", "value": f"{passed_channels}/{total_channels}", "inline": True},
+            {"name": "❌ Failed", "value": f"{fail_count}/{total_channels}", "inline": True},
+        ],
+        "footer": {"text": "YouTube Shorts Autonomous Pipeline • Consolidated Alert"},
+    }
+    if run_url:
+        embed["url"] = run_url
+
+    discord_sent = send_discord_message({"embeds": [embed]})
+    return tg_sent or discord_sent
+
 

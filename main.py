@@ -2,6 +2,8 @@
 discovery -> download -> transcript -> highlights -> clip -> caption -> (optionally) upload,
 for viral videos discovered or listed in config/sources.yaml.
 """
+import json
+import os
 import sys
 import re
 import yaml
@@ -50,7 +52,21 @@ def find_channel_config(channel_query: str) -> Path | None:
     return None
 
 
-def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None = None) -> None:
+def _emit_ci_error(title: str, message: str) -> None:
+    """Emits a clean single-line GitHub Actions error annotation when running in CI."""
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        safe_title = re.sub(r"[\r\n]+", " ", str(title)).strip()[:100]
+        safe_msg = re.sub(r"[\r\n]+", " ", str(message)).strip()[:300]
+        print(f"::error title={safe_title}::{safe_msg}", flush=True)
+
+
+def process_video(
+    item: dict | str,
+    cfg: dict,
+    st: dict,
+    channel_id: str | None = None,
+    metrics: dict | None = None,
+) -> None:
     if isinstance(item, str):
         url = item
         video_id = download.get_video_id(url)
@@ -338,6 +354,8 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
                 if not state_mod.can_upload(st, max_uploads_per_day=max_daily):
                     print(f"     [YouTube Upload] Daily upload limit ({max_daily}) reached. Skipping upload to protect API quota & anti-spam status.")
                     print(f"     Saved locally: {captioned_path}")
+                    if metrics is not None:
+                        metrics["upload_skipped_quota"] = metrics.get("upload_skipped_quota", 0) + 1
                 else:
                     from pipeline import upload_youtube
                     raw_title = (pick.get("title") or "").strip()
@@ -418,6 +436,9 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
                             scheduled_at=sched_display if publish_at_iso else None,
                         )
                         print(f"     Uploaded: https://youtube.com/watch?v={video_id_uploaded}")
+                        if metrics is not None:
+                            metrics["clips_uploaded"] = metrics.get("clips_uploaded", 0) + 1
+                            metrics.setdefault("uploaded_urls", []).append(f"https://youtube.com/shorts/{video_id_uploaded}")
                         notifications.notify_upload_success(
                             channel_name=brand_name,
                             handle=meme_handle,
@@ -445,6 +466,8 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
                 print(f"     Saved locally: {captioned_path}")
 
             clips_succeeded += 1
+            if metrics is not None:
+                metrics["clips_rendered"] = metrics.get("clips_rendered", 0) + 1
         except Exception as clip_err:
             last_clip_error = str(clip_err)
             print(f"     [Clip Error] Error processing Clip {i+1} ({pick.get('title')}): {clip_err}", file=sys.stderr)
@@ -466,72 +489,158 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
     state_mod.save_state(st, channel_id=channel_id)
 
 
-def run_channel_pipeline(config_path: Path, channel_id: str | None = None) -> None:
+def _write_run_summary(summary: dict) -> None:
+    """Persists sanitized non-secret per-channel metrics for CI step summaries and alerts."""
+    try:
+        cid = summary.get("channel_id") or "default"
+        safe_cid = "".join(c if c.isalnum() or c in ("-", "_") else "_" for c in str(cid))
+        out_path = Path(__file__).resolve().parent / "output" / f"run_summary_{safe_cid}.json"
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        out_path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    except Exception as e:
+        print(f"  [Summary] Note: could not write run_summary json ({e})")
+
+
+def run_channel_pipeline(config_path: Path, channel_id: str | None = None) -> bool:
     cfg = load_config(config_path)
     cid = channel_id or cfg.get("channel_id")
     st = state_mod.load_state(cid)
 
     ch_name = cfg.get("branding", {}).get("channel_name", cid or "Default")
+    m_handle = cfg.get("meme_template", {}).get("handle") or cfg.get("branding", {}).get("handle", "@channel")
     print(f"\n=================================================================")
     print(f" 🚀 Running Pipeline for Channel: {ch_name} (ID: {cid or 'default'})")
     print(f" Config: {config_path.name}")
     print(f"=================================================================")
 
-    # 0. Sync channel retention analytics to update algorithmic self-tuning discovery weights
+    run_summary: dict = {
+        "channel_id": cid or "default",
+        "channel_name": ch_name,
+        "handle": m_handle,
+        "status": "failed",
+        "oauth_status": "skipped (auto_upload=false)",
+        "selected_videos": [],
+        "clips_rendered": 0,
+        "clips_uploaded": 0,
+        "upload_skipped_quota": 0,
+        "uploaded_urls": [],
+        "errors": [],
+        "error_summary": "",
+    }
+
     try:
-        from pipeline import analytics
-        if st.get("uploaded_shorts"):
-            print(f"  [Analytics] Checking retention performance for {len(st['uploaded_shorts'])} previously uploaded Shorts...")
-            analytics.sync_channel_analytics(cid, st)
-    except Exception as a_err:
-        print(f"  [Analytics] Analytics sync note: {a_err}")
-
-    # 1. Autonomous discovery of viral creators and videos
-    discovered_videos = discovery.discover_and_select_videos(cfg, st)
-
-    # 2. Any explicit manual video entries from config
-    manual_entries = cfg.get("videos", []) or []
-    candidate_items = list(discovered_videos)
-
-    for entry in manual_entries:
-        if isinstance(entry, dict) and entry.get("url") and "REPLACE_ME" not in entry["url"]:
-            candidate_items.append(entry)
-        elif isinstance(entry, str) and "REPLACE_ME" not in entry:
-            candidate_items.append({"url": entry})
-
-    if not candidate_items:
-        print(f"\nNo candidate viral videos to process for {ch_name}. Check channel settings.")
-        return True
-
-    print(f"\n=== Total videos queued for {ch_name}: {len(candidate_items)} ===")
-    success_count = 0
-    error_count = 0
-
-    for item in candidate_items:
-        url = item["url"] if isinstance(item, dict) else item
-        try:
-            process_video(item, cfg, st, channel_id=cid)
-            success_count += 1
-        except Exception as e:
-            error_count += 1
-            print(f"  ERROR processing {url}: {e}", file=sys.stderr)
-            b_name = cfg.get("branding", {}).get("channel_name", cid or "Default")
-            m_handle = cfg.get("meme_template", {}).get("handle", "@channel")
-            target_title = item.get("title", url) if isinstance(item, dict) else url
-            notifications.notify_upload_failure(
-                channel_name=b_name,
-                handle=m_handle,
-                title=str(target_title),
-                error_msg=str(e),
-                url=url,
+        # 0a. Fast, 0-quota OAuth credential pre-flight before heavy downloads/Whisper
+        yt_cfg = cfg.get("youtube", {})
+        if cfg.get("auto_upload", False):
+            max_daily = yt_cfg.get("max_uploads_per_day", 2)
+            quota_ok = state_mod.can_upload(st, max_uploads_per_day=max_daily)
+            ok_auth, auth_code, auth_msg = upload_youtube.preflight_credentials(
+                token_env_var=yt_cfg.get("token_env_var"),
+                channel_config=cfg,
             )
-            continue
+            quota_note = "" if quota_ok else f" [daily limit {max_daily}/{max_daily} reached]"
+            if ok_auth:
+                run_summary["oauth_status"] = f"{auth_msg}{quota_note}"
+                print(f"  [Auth Preflight] ✅ {auth_msg}{quota_note}")
+            elif auth_code == "transient_error":
+                run_summary["oauth_status"] = f"Warning ({auth_msg}){quota_note}"
+                print(f"  [Auth Preflight] Warning (non-fatal): {auth_msg}")
+            else:
+                run_summary["oauth_status"] = f"FAILED ({auth_code}): {auth_msg}"
+                run_summary["error_summary"] = auth_msg
+                run_summary["errors"].append(auth_msg)
+                print(f"  [Auth Preflight] ❌ {auth_msg}", file=sys.stderr)
+                _emit_ci_error(f"OAuth Preflight Failed: {cid or ch_name}", auth_msg)
+                notifications.notify_upload_failure(
+                    channel_name=ch_name,
+                    handle=m_handle,
+                    title="OAuth Pre-Flight Check",
+                    error_msg=auth_msg,
+                )
+                return False
 
-    if error_count > 0 and success_count == 0:
-        print(f"\n❌ [Channel Failure] All candidate videos ({error_count}/{len(candidate_items)}) failed for {ch_name}!", file=sys.stderr)
-        return False
+        # 0b. Sync channel retention analytics to update algorithmic self-tuning discovery weights
+        try:
+            from pipeline import analytics
+            if st.get("uploaded_shorts"):
+                print(f"  [Analytics] Checking retention performance for {len(st['uploaded_shorts'])} previously uploaded Shorts...")
+                analytics.sync_channel_analytics(cid, st)
+        except Exception as a_err:
+            print(f"  [Analytics] Analytics sync note: {a_err}")
 
-    return True
+        # 1. Autonomous discovery of viral creators and videos
+        discovered_videos = discovery.discover_and_select_videos(cfg, st)
+
+        # 2. Any explicit manual video entries from config
+        manual_entries = cfg.get("videos", []) or []
+        candidate_items = list(discovered_videos)
+
+        for entry in manual_entries:
+            if isinstance(entry, dict) and entry.get("url") and "REPLACE_ME" not in entry["url"]:
+                candidate_items.append(entry)
+            elif isinstance(entry, str) and "REPLACE_ME" not in entry:
+                candidate_items.append({"url": entry})
+
+        for item in candidate_items[:5]:
+            if isinstance(item, dict):
+                run_summary["selected_videos"].append({
+                    "video_id": item.get("video_id", ""),
+                    "title": str(item.get("title", ""))[:70],
+                    "score": item.get("virality_score"),
+                    "has_subtitles": item.get("has_subtitles"),
+                })
+            else:
+                run_summary["selected_videos"].append({"video_id": str(item)[:60], "title": str(item)[:70]})
+
+        if not candidate_items:
+            print(f"\nNo candidate viral videos to process for {ch_name}. Check channel settings.")
+            run_summary["status"] = "passed"
+            return True
+
+        print(f"\n=== Total videos queued for {ch_name}: {len(candidate_items)} ===")
+        success_count = 0
+        error_count = 0
+
+        for item in candidate_items:
+            url = item["url"] if isinstance(item, dict) else item
+            vid_label = item.get("video_id", url) if isinstance(item, dict) else str(url)
+            try:
+                process_video(item, cfg, st, channel_id=cid, metrics=run_summary)
+                success_count += 1
+            except Exception as e:
+                error_count += 1
+                err_short = str(e).splitlines()[0][:180]
+                run_summary["errors"].append(f"{vid_label}: {err_short}")
+                print(f"  ERROR processing {url}: {e}", file=sys.stderr)
+                target_title = item.get("title", url) if isinstance(item, dict) else url
+                notifications.notify_upload_failure(
+                    channel_name=ch_name,
+                    handle=m_handle,
+                    title=str(target_title),
+                    error_msg=str(e),
+                    url=url,
+                )
+                continue
+
+        if error_count > 0 and success_count == 0:
+            run_summary["status"] = "failed"
+            run_summary["error_summary"] = run_summary["errors"][0] if run_summary["errors"] else f"All {error_count} candidate videos failed"
+            print(f"\n❌ [Channel Failure] All candidate videos ({error_count}/{len(candidate_items)}) failed for {ch_name}!", file=sys.stderr)
+            _emit_ci_error(f"Channel Failed: {cid or ch_name}", run_summary["error_summary"])
+            return False
+
+        run_summary["status"] = "passed"
+        if run_summary["errors"]:
+            run_summary["error_summary"] = f"Partial ({success_count}/{len(candidate_items)} succeeded): {run_summary['errors'][0]}"
+        return True
+    except Exception as uncaught:
+        run_summary["status"] = "failed"
+        run_summary["error_summary"] = f"{type(uncaught).__name__}: {str(uncaught)[:200]}"
+        run_summary["errors"].append(run_summary["error_summary"])
+        _emit_ci_error(f"Channel Crashed: {cid or ch_name}", run_summary["error_summary"])
+        raise
+    finally:
+        _write_run_summary(run_summary)
 
 
 def main():

@@ -133,6 +133,17 @@ jobs:
             return 1
           }
 
+          record_warp_env() {
+            local path_label ip_val
+            path_label=$(printf '%s' "$1" | tr -d '\r\n')
+            ip_val=$(printf '%s' "${2:-unknown}" | tr -d '\r\n')
+            [ -n "$ip_val" ] || ip_val="unknown"
+            if [ -n "${GITHUB_ENV:-}" ]; then
+              printf 'WARP_EGRESS_PATH=%s\n' "$path_label" >> "$GITHUB_ENV"
+              printf 'WARP_EGRESS_IP=%s\n' "$ip_val" >> "$GITHUB_ENV"
+            fi
+          }
+
           check_yt_player() {
             local probe_dir="/tmp/yt_probe_$$"
             rm -rf "$probe_dir"
@@ -247,6 +258,7 @@ jobs:
             WORKING_EP=$(sudo wg show warp endpoints 2>/dev/null | awk '{print $2; exit}' || true)
             if check_yt_player; then
               echo "Cloudflare WARP tunnel + YouTube player verified healthy!"
+              record_warp_env "WARP IPv4 (initial)" "$INIT_IP"
               exit 0
             fi
             add_bad_ip "$INIT_IP"
@@ -296,6 +308,7 @@ jobs:
                 if check_yt_player; then
                   echo "$NEW_TRACE" | head -n 8
                   echo "Cloudflare WARP recovered via alternate WireGuard endpoint ($ep, ip=$NEW_IP)!"
+                  record_warp_env "Stage A WireGuard ($ep)" "$NEW_IP"
                   exit 0
                 fi
                 echo "Endpoint $ep -> ip=$NEW_IP (YouTube probe failed)"
@@ -333,6 +346,7 @@ jobs:
                 if check_yt_player; then
                   echo "$PREF_TRACE" | head -n 8
                   echo "Cloudflare WARP recovered via unique WARP IPv6 egress ($PREF_V6)!"
+                  record_warp_env "Stage B WARP IPv6" "$PREF_V6"
                   exit 0
                 fi
                 echo "WARP IPv6 ($PREF_V6) YouTube probe failed; restoring default /etc/gai.conf..."
@@ -377,6 +391,7 @@ jobs:
                 elif check_yt_player; then
                   echo "$MASQUE_TRACE" | head -n 8
                   echo "Cloudflare WARP recovered via official warp-cli (MASQUE, ip=$MASQUE_IP)!"
+                  record_warp_env "Stage C warp-cli MASQUE" "$MASQUE_IP"
                   exit 0
                 else
                   echo "warp-cli MASQUE -> ip=$MASQUE_IP (YouTube probe failed)"
@@ -391,6 +406,7 @@ jobs:
                     M_V6_IP=$(echo "$M_PREF" | sed -n 's/^ip=//p' | head -n 1)
                     echo "$M_PREF" | head -n 8
                     echo "Cloudflare WARP recovered via official warp-cli (MASQUE IPv6, ip=$M_V6_IP)!"
+                    record_warp_env "Stage C warp-cli MASQUE IPv6" "$M_V6_IP"
                     exit 0
                   fi
                   restore_default_gai
@@ -414,6 +430,7 @@ jobs:
                 if check_yt_player; then
                   echo "$WGCLI_TRACE" | head -n 8
                   echo "Cloudflare WARP recovered via official warp-cli (WireGuard, ip=$WGCLI_IP)!"
+                  record_warp_env "Stage C warp-cli WireGuard" "$WGCLI_IP"
                   exit 0
                 fi
                 echo "warp-cli WireGuard -> ip=$WGCLI_IP (YouTube probe failed)"
@@ -432,13 +449,18 @@ jobs:
           fi
           FINAL_V4=$(check_warp_trace || true)
           if [ -n "$FINAL_V4" ]; then
+            FINAL_IP=$(echo "$FINAL_V4" | sed -n 's/^ip=//p' | head -n 1)
             echo "::warning::YouTube player check still failing across WARP IPv4/IPv6 paths; keeping WARP interface active rather than falling back to raw Azure."
             echo "$FINAL_V4" | head -n 8
+            record_warp_env "WARP IPv4 (probe failed, kept)" "$FINAL_IP"
           else
             echo "::warning::Cloudflare WARP tunnel unhealthy or unresponsive after fallbacks; tearing down warp interface cleanly."
             teardown_wireguard_warp
             echo "Fallback direct egress trace:"
-            curl -s --max-time 8 https://www.cloudflare.com/cdn-cgi/trace | head -n 8 || true
+            DIRECT_TRACE=$(curl -s --max-time 8 https://www.cloudflare.com/cdn-cgi/trace || true)
+            DIRECT_IP=$(echo "$DIRECT_TRACE" | sed -n 's/^ip=//p' | head -n 1)
+            echo "$DIRECT_TRACE" | head -n 8 || true
+            record_warp_env "Direct Azure (WARP down)" "$DIRECT_IP"
           fi
 
       - name: Configure YouTube Authentication Cookies
@@ -502,6 +524,24 @@ jobs:
         if: always()
         run: rm -rf output/downloads/*
 
+      - name: Publish Job Summary & Status
+        if: always()
+        run: |
+          if [ -f scripts/write_job_summary.py ]; then
+            python3 scripts/write_job_summary.py --channel "${{ matrix.channel }}" --job-status "${{ job.status }}"
+          else
+            echo "::error::Job failed during Checkout before pipeline scripts were available (status=${{ job.status }})."
+          fi
+
+      - name: Upload Job Status Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: status-${{ matrix.channel }}-${{ github.run_id }}
+          path: output/run_summary_${{ matrix.channel }}.json
+          retention-days: 3
+          if-no-files-found: ignore
+
       - name: Commit & Push Channel State with Rebase Retry
         if: always()
         run: |
@@ -523,3 +563,39 @@ jobs:
           else
             echo "No state changes to commit for ${{ matrix.channel }}."
           fi
+
+  notify_failure:
+    name: Consolidated Failure Summary
+    needs: [setup, clip]
+    if: always() && (needs.setup.result == 'failure' || needs.clip.result == 'failure')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Download Channel Status Reports
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: status-*-${{ github.run_id }}
+          path: status_reports
+          merge-multiple: true
+
+      - name: Publish Consolidated Summary & Alerts
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          EXPECTED_CHANNELS_JSON: ${{ needs.setup.outputs.channels }}
+        run: |
+          python scripts/send_failure_summary.py \
+            --reports-dir status_reports \
+            --setup-result "${{ needs.setup.result }}" \
+            --clip-result "${{ needs.clip.result }}" \
+            --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

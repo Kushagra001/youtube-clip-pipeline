@@ -371,5 +371,11 @@ Tracking document for current codebase status, identified issues, bug fixes, per
    - [x] **Discovery Feedback Loop**: Verified that candidate virality scores dynamically scale based on historical creator retention.
    - [x] **Interactive CLI Dashboard**: Verified `python main.py --analytics --channel <id>` displays comprehensive ASCII performance reports across channels.
 
+---
+
+## 🛠️ Active Bug-Fix & Regression Ledger
+
+For all CI reliability, WARP proxy/IPv6 recovery, `yt-dlp` auth/429 handling, state-poisoning protection invariants ("Do Not Undo"), and live CI run metrics, see **[BUGFIX_LOG.md](BUGFIX_LOG.md)**.
+
 
 
