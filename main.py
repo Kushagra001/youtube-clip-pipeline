@@ -96,10 +96,12 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
         if not _is_usable_transcript(tx):
             vid_dur = item.get("duration") if isinstance(item, dict) else None
             expect_subs = bool(item.get("has_subtitles")) if isinstance(item, dict) else False
+            metadata_known = item.get("metadata_fetched", True) if isinstance(item, dict) else True
             if vid_dur and vid_dur > 360:
-                if expect_subs:
-                    print(f"  [Transcript] Online captions expected (CC:Yes) for {int(vid_dur // 60)}m video, but subtitle extraction returned unusable text. Leaving unprocessed for retry.")
-                    raise RuntimeError("Subtitle extraction failed despite CC:Yes metadata (likely transient rate limit)")
+                if expect_subs or not metadata_known:
+                    reason = "CC:Yes metadata" if expect_subs else "unverified metadata (discovery extraction blocked)"
+                    print(f"  [Transcript] Online captions missing/unusable for {int(vid_dur // 60)}m video ({reason}). Leaving unprocessed for retry.")
+                    raise RuntimeError(f"Subtitle extraction failed despite {reason}")
                 print(f"  [Transcript] Online captions missing/unusable and video is {int(vid_dur // 60)}m long (>6m). Skipping full download to prevent runner timeout.")
                 state_mod.mark_processed(st, video_id)
                 state_mod.save_state(st, channel_id=channel_id)

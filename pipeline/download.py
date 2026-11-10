@@ -229,15 +229,16 @@ def _run_ytdlp_resilient(
     extra_args: list[str],
     player_clients: str = "visionos,ios,mweb",
     timeout: int = 180,
+    ignore_cookies: bool = False,
 ) -> subprocess.CompletedProcess:
     """Executes yt-dlp with retries for HTTP 429 rate limits and cookie/bot/SABR fallback."""
-    cmd1 = _base_ytdlp_args(ignore_cookies=False, player_clients=player_clients) + extra_args
+    cmd1 = _base_ytdlp_args(ignore_cookies=ignore_cookies, player_clients=player_clients) + extra_args
     res = _run_proc_clean(cmd1, timeout=timeout)
     if res.returncode == 0:
         return res
 
     err_low = ((res.stderr or "") + "\n" + (res.stdout or "")).lower()
-    has_cookie = get_cookies_path() is not None
+    has_cookie = (not ignore_cookies) and (get_cookies_path() is not None)
 
     # Handle HTTP 429 rate limiting with backoff and anonymous fallback
     if "429" in err_low or "too many requests" in err_low:
@@ -367,15 +368,22 @@ def download_subtitles(url: str, video_id: str | None = None) -> Path | None:
             pass
 
     out_template = str(DOWNLOAD_DIR / f"{video_id}.%(ext)s")
-    attempts = [
-        ("en-orig", "visionos,ios,mweb"),
-        ("en", "visionos,ios,mweb"),
-        ("en-US,en-GB,en-CA,en-AU", "visionos,ios,mweb"),
-        ("en.*", "android_vr,tv,mweb,web"),
+    has_cookie = get_cookies_path() is not None
+    attempts: list[tuple[str, str, bool]] = [
+        ("en-orig", "visionos,ios,mweb", False),
     ]
+    if has_cookie:
+        attempts.append(("en-orig", "visionos,android_vr,ios", True))
+    attempts.append(("en", "visionos,ios,mweb", False))
+    if has_cookie:
+        attempts.append(("en", "visionos,android_vr,ios", True))
+    attempts.extend([
+        ("en-US,en-GB,en-CA,en-AU", "visionos,ios,mweb", False),
+        ("en.*", "android_vr,tv,mweb,web", True),
+    ])
 
     last_err_tail = ""
-    for idx, (sub_langs, clients) in enumerate(attempts):
+    for idx, (sub_langs, clients, force_anon) in enumerate(attempts):
         if idx > 0:
             time.sleep(1.5)
         cmd = [
@@ -390,17 +398,27 @@ def download_subtitles(url: str, video_id: str | None = None) -> Path | None:
             "-o", out_template,
             url,
         ]
-        res = _run_ytdlp_resilient(cmd, player_clients=clients, timeout=60)
+        res = _run_ytdlp_resilient(cmd, player_clients=clients, timeout=60, ignore_cookies=force_anon)
 
         # Even if a warning or secondary track caused non-zero exit, check if a valid .vtt was written
         picked = _pick_best_vtt(video_id)
         if picked:
             return picked
 
-        if res.returncode != 0:
-            err_msg = (res.stderr or res.stdout or "").strip()
-            if err_msg:
-                last_err_tail = " | ".join(err_msg.splitlines()[-3:])
+        raw_msg = (res.stderr or res.stdout or "").strip()
+        if raw_msg:
+            diag_lines = [
+                ln.strip() for ln in raw_msg.splitlines()
+                if ln.strip()
+                and not any(noise in ln for noise in (
+                    "Support for Python version",
+                    "Error reaching GET http://127.0.0.1:4416/ping",
+                    "Some ios client https formats have been skipped",
+                    "Only images are available for download",
+                ))
+            ]
+            if diag_lines:
+                last_err_tail = " | ".join(diag_lines[-3:])
 
     if last_err_tail:
         print(f"  [Download] Subtitle extraction note: {last_err_tail[:400]}")

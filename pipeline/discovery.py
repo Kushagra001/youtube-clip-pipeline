@@ -429,98 +429,146 @@ def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12, sta
     ydl_opts = {
         "extract_flat": False,
         "skip_download": True,
+        "ignore_no_formats_error": True,
+        "remote_components": ["ejs:github"],
         "quiet": True,
         "no_warnings": True,
         "ignoreerrors": True,
         "socket_timeout": 20,
         "retries": 2,
         "logger": _SilentLogger(),
+        "extractor_args": {
+            "youtube": {
+                "player_client": ["visionos", "ios", "mweb", "web"],
+            }
+        },
     }
+    proxy_url = os.environ.get("PROXY_URL") or os.environ.get("HTTPS_PROXY") or os.environ.get("HTTP_PROXY")
+    if proxy_url:
+        ydl_opts["proxy"] = proxy_url
+
+    has_cookie = False
     try:
         from pipeline.download import get_cookies_path
         cookie_path = get_cookies_path()
         if cookie_path:
             ydl_opts["cookiefile"] = str(cookie_path)
+            has_cookie = True
     except Exception:
         pass
 
+    info_by_vid: dict[str, dict | None] = {}
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             for cand in to_enrich:
                 v_id = cand["video_id"]
                 url = cand.get("url") or f"https://www.youtube.com/watch?v={v_id}"
-                views = cand.get("view_count") or 0
-                upload_date_str = None
-                has_subs = False
-
+                info = None
                 try:
                     info = ydl.extract_info(url, download=False)
-                    if info:
-                        views = info.get("view_count") or views
-                        cand["view_count"] = views
-                        cand["duration"] = info.get("duration") or cand.get("duration")
-                        upload_date_str = info.get("upload_date")
-                        subs = info.get("subtitles") or {}
-                        auto_subs = info.get("automatic_captions") or {}
-                        has_subs = bool(subs or auto_subs)
                 except Exception:
-                    pass
+                    info = None
+                info_by_vid[v_id] = info
 
-                age_days = 365
-                if upload_date_str:
-                    try:
-                        dt = datetime.datetime.strptime(upload_date_str, "%Y%m%d")
-                        age_days = max((today - dt).days, 1)
-                    except Exception:
-                        age_days = 365
+        if has_cookie:
+            missing_cands = [c for c in to_enrich if not info_by_vid.get(c["video_id"])]
+            if missing_cands:
+                anon_opts = dict(ydl_opts)
+                anon_opts.pop("cookiefile", None)
+                anon_opts["extractor_args"] = {
+                    "youtube": {
+                        "player_client": ["visionos", "android_vr", "ios", "mweb"],
+                    }
+                }
+                with yt_dlp.YoutubeDL(anon_opts) as ydl_anon:
+                    for cand in missing_cands:
+                        v_id = cand["video_id"]
+                        url = cand.get("url") or f"https://www.youtube.com/watch?v={v_id}"
+                        try:
+                            info_anon = ydl_anon.extract_info(url, download=False)
+                            if info_anon:
+                                info_by_vid[v_id] = info_anon
+                        except Exception:
+                            pass
 
-                views_per_day = views / max(age_days, 1)
+        missing_count = 0
+        for cand in to_enrich:
+            v_id = cand["video_id"]
+            views = cand.get("view_count") or 0
+            upload_date_str = None
+            has_subs = False
+            info = info_by_vid.get(v_id)
+            if info:
+                views = info.get("view_count") or views
+                cand["view_count"] = views
+                cand["duration"] = info.get("duration") or cand.get("duration")
+                upload_date_str = info.get("upload_date")
+                subs = info.get("subtitles") or {}
+                auto_subs = info.get("automatic_captions") or {}
+                has_subs = bool(subs or auto_subs)
+                cand["metadata_fetched"] = True
+            else:
+                cand["metadata_fetched"] = False
+                missing_count += 1
 
-                # Recency Outlier Velocity Multipliers: Breakout videos published recently get highest priority
-                # Heavily penalizes stale videos (>180d) to avoid duplicate content flags on YouTube
-                if age_days <= 7:
-                    recency_multiplier = 2.4   # Breakout viral hit in last week
-                elif age_days <= 21:
-                    recency_multiplier = 1.9   # Fresh viral hit in last 3 weeks
-                elif age_days <= 60:
-                    recency_multiplier = 1.4   # Recent (last 2 months)
-                elif age_days <= 180:
-                    recency_multiplier = 0.95  # Moderate age
-                elif age_days <= 365:
-                    recency_multiplier = 0.60  # Older content, likely already clipped
-                else:
-                    recency_multiplier = 0.35  # Stale content (>1 year old)
+            age_days = 365
+            if upload_date_str:
+                try:
+                    dt = datetime.datetime.strptime(upload_date_str, "%Y%m%d")
+                    age_days = max((today - dt).days, 1)
+                except Exception:
+                    age_days = 365
 
-                # Subtitle Pre-Check Multiplier: strongly prioritizes videos with verified dialogue
-                sub_multiplier = 1.5 if has_subs else 0.85
-                official_bonus = 60.0 if cand.get("is_official_creator") else 0.0
+            views_per_day = views / max(age_days, 1)
 
-                # Algorithmic Retention Feedback Multiplier: dynamically boosts proven creators
-                analytics_mult = 1.0
-                cand_channel = cand.get("channel", "")
-                if state:
-                    try:
-                        from pipeline import analytics
-                        analytics_mult, reason = analytics.get_creator_tuning_multiplier(cand_channel, state)
-                        if analytics_mult != 1.0:
-                            cand["analytics_tuned"] = reason
-                    except Exception:
-                        analytics_mult = 1.0
+            # Recency Outlier Velocity Multipliers: Breakout videos published recently get highest priority
+            # Heavily penalizes stale videos (>180d) to avoid duplicate content flags on YouTube
+            if age_days <= 7:
+                recency_multiplier = 2.4   # Breakout viral hit in last week
+            elif age_days <= 21:
+                recency_multiplier = 1.9   # Fresh viral hit in last 3 weeks
+            elif age_days <= 60:
+                recency_multiplier = 1.4   # Recent (last 2 months)
+            elif age_days <= 180:
+                recency_multiplier = 0.95  # Moderate age
+            elif age_days <= 365:
+                recency_multiplier = 0.60  # Older content, likely already clipped
+            else:
+                recency_multiplier = 0.35  # Stale content (>1 year old)
 
-                rel = cand.get("relevance_score", 1.0)
-                virality_score = (
-                    (official_bonus +
-                    (rel * 25.0) +
-                    (math.log10(max(views_per_day, 1.0)) * 12.0) +
-                    (math.log10(max(views, 1.0)) * 1.5))
-                    * recency_multiplier * sub_multiplier * analytics_mult
-                )
+            # Subtitle Pre-Check Multiplier: strongly prioritizes videos with verified dialogue
+            sub_multiplier = 1.5 if has_subs else 0.85
+            official_bonus = 60.0 if cand.get("is_official_creator") else 0.0
 
-                cand["age_days"] = age_days
-                cand["views_per_day"] = int(views_per_day)
-                cand["has_subtitles"] = has_subs
-                cand["virality_score"] = virality_score
-                enriched.append(cand)
+            # Algorithmic Retention Feedback Multiplier: dynamically boosts proven creators
+            analytics_mult = 1.0
+            cand_channel = cand.get("channel", "")
+            if state:
+                try:
+                    from pipeline import analytics
+                    analytics_mult, reason = analytics.get_creator_tuning_multiplier(cand_channel, state)
+                    if analytics_mult != 1.0:
+                        cand["analytics_tuned"] = reason
+                except Exception:
+                    analytics_mult = 1.0
+
+            rel = cand.get("relevance_score", 1.0)
+            virality_score = (
+                (official_bonus +
+                (rel * 25.0) +
+                (math.log10(max(views_per_day, 1.0)) * 12.0) +
+                (math.log10(max(views, 1.0)) * 1.5))
+                * recency_multiplier * sub_multiplier * analytics_mult
+            )
+
+            cand["age_days"] = age_days
+            cand["views_per_day"] = int(views_per_day)
+            cand["has_subtitles"] = has_subs
+            cand["virality_score"] = virality_score
+            enriched.append(cand)
+
+        if missing_count:
+            print(f"  [Discovery] Warning: per-video metadata unavailable for {missing_count}/{len(to_enrich)} candidates (IP/PO-token check suspected).")
 
     except Exception as e:
         print(f"  [Discovery] Candidate enrichment note: {e}")
