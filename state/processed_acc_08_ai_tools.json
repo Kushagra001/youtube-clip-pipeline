@@ -93,7 +93,9 @@
     "40uWy11tq9U",
     "7Q4VM67jwYc",
     "JtdUgJGI_Oo",
-    "yHk7Vavmc7Q"
+    "yHk7Vavmc7Q",
+    "r2vYObllqJU",
+    "huariiK4_us"
   ],
   "upload_timestamps": [
     1794318180.2579556,
@@ -114,7 +116,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794318046.127812,
+        "last_synced": 1794320933.490648,
         "status": "pending_or_private"
       }
     },
@@ -132,7 +134,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794318046.127812,
+        "last_synced": 1794320933.490648,
         "status": "pending_or_private"
       }
     },
@@ -156,8 +158,8 @@
         "views": 1193,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1794318046.127812,
-        "status": "public"
+        "last_synced": 1794320933.490648,
+        "status": "pending_or_private"
       }
     },
     {
@@ -180,8 +182,8 @@
         "views": 378,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794318046.127812,
-        "status": "public"
+        "last_synced": 1794320933.490648,
+        "status": "pending_or_private"
       }
     },
     {
@@ -204,8 +206,8 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794318046.127812,
-        "status": "public"
+        "last_synced": 1794320933.490648,
+        "status": "pending_or_private"
       }
     },
     {
@@ -228,8 +230,8 @@
         "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794318046.127812,
-        "status": "public"
+        "last_synced": 1794320933.490648,
+        "status": "pending_or_private"
       }
     },
     {
@@ -252,7 +254,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794320933.490648,
+        "status": "pending_or_private"
       }
     },
     {
@@ -275,20 +278,18 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794320933.490648,
+        "status": "pending_or_private"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1794318046.127812,
-    "total_shorts": 6,
-    "public_shorts": 4,
-    "total_views": 2089,
-    "median_views": 389.0,
-    "creator_weights": {
-      "Matt Wolfe": 1.35,
-      "@DavidOndrej": 1.0
-    }
+    "last_sync": 1794320933.490648,
+    "total_shorts": 8,
+    "public_shorts": 0,
+    "total_views": 0,
+    "median_views": 100.0,
+    "creator_weights": {}
   }
 }
