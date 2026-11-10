@@ -101,7 +101,9 @@
     "HjWZ-kKJXgc",
     "-MRNjTr6xrE",
     "RuXmYDGcoa8",
-    "UNA_1DXsLmg"
+    "UNA_1DXsLmg",
+    "gOkCJ57IvNg",
+    "dcKwz_C8pkg"
   ],
   "upload_timestamps": [
     1794317979.9906397,
@@ -130,8 +132,8 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324485.0816684,
-        "status": "pending_or_private"
+        "last_synced": 1794327779.3711512,
+        "status": "public"
       }
     },
     {
@@ -156,8 +158,8 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324485.0816684,
-        "status": "pending_or_private"
+        "last_synced": 1794327779.3711512,
+        "status": "public"
       }
     },
     {
@@ -182,8 +184,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324485.0816684,
-        "status": "pending_or_private"
+        "last_synced": 1794327779.3711512,
+        "status": "public"
       }
     },
     {
@@ -208,8 +210,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324485.0816684,
-        "status": "pending_or_private"
+        "last_synced": 1794327779.3711512,
+        "status": "public"
       }
     },
     {
@@ -234,8 +236,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324485.0816684,
-        "status": "pending_or_private"
+        "last_synced": 1794327779.3711512,
+        "status": "public"
       }
     },
     {
@@ -257,21 +259,25 @@
       "scheduled_at": null,
       "uploaded_at": 1794318025.9484189,
       "stats": {
-        "views": 0,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324485.0816684,
-        "status": "pending_or_private"
+        "last_synced": 1794327779.3711512,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_03_fitness",
-    "last_sync": 1794326180.9479234,
+    "last_sync": 1794327779.3711512,
     "total_shorts": 6,
-    "public_shorts": 0,
-    "total_views": 0,
-    "median_views": 100.0,
-    "creator_weights": {}
+    "public_shorts": 4,
+    "total_views": 11,
+    "median_views": 2.5,
+    "creator_weights": {
+      "@ChrisHeria": 1.35,
+      "@RenaissancePeriodization": 1.0,
+      "Calisthenicmovement": 1.0
+    }
   }
 }
