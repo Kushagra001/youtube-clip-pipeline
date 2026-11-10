@@ -109,7 +109,9 @@
     "CnlEYRYp6j0",
     "jWGuL8Ngk1s",
     "j7SX8FD9tUA",
-    "ltnonDL_RkA"
+    "ltnonDL_RkA",
+    "VegTVfu8pbE",
+    "vyt7Yg4dwBc"
   ],
   "upload_timestamps": [],
   "uploaded_shorts": [
@@ -135,7 +137,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317901.8390899,
+        "last_synced": 1794321205.4060435,
         "status": "pending_or_private"
       }
     },
@@ -161,7 +163,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317901.8390899,
+        "last_synced": 1794321205.4060435,
         "status": "pending_or_private"
       }
     },
@@ -187,8 +189,8 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317901.8390899,
-        "status": "public"
+        "last_synced": 1794321205.4060435,
+        "status": "pending_or_private"
       }
     },
     {
@@ -213,8 +215,8 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317901.8390899,
-        "status": "public"
+        "last_synced": 1794321205.4060435,
+        "status": "pending_or_private"
       }
     },
     {
@@ -239,8 +241,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317901.8390899,
-        "status": "public"
+        "last_synced": 1794321205.4060435,
+        "status": "pending_or_private"
       }
     },
     {
@@ -265,21 +267,18 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317901.8390899,
-        "status": "public"
+        "last_synced": 1794321205.4060435,
+        "status": "pending_or_private"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1794317901.8390899,
+    "last_sync": 1794321205.4060435,
     "total_shorts": 6,
-    "public_shorts": 3,
-    "total_views": 10,
-    "median_views": 3,
-    "creator_weights": {
-      "Will Tennyson": 1.35,
-      "@JoshuaWeissman": 1.0
-    }
+    "public_shorts": 0,
+    "total_views": 0,
+    "median_views": 100.0,
+    "creator_weights": {}
   }
 }
