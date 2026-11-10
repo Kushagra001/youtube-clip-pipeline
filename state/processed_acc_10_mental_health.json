@@ -105,7 +105,9 @@
     "x6fJdde1NOM",
     "gAOmud-IoxQ",
     "DJat2GMfVeU",
-    "U3wf2x2vCLk"
+    "U3wf2x2vCLk",
+    "7T1GftQSVPg",
+    "Etp15bmMSCc"
   ],
   "upload_timestamps": [
     1794322862.3925474,
@@ -134,7 +136,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794331637.4262004,
+        "last_synced": 1794351546.8138657,
         "status": "public"
       }
     },
@@ -160,7 +162,7 @@
         "views": 15,
         "likes": 0,
         "comments": 2,
-        "last_synced": 1794331637.4262004,
+        "last_synced": 1794351546.8138657,
         "status": "public"
       }
     },
@@ -186,7 +188,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794331637.4262004,
+        "last_synced": 1794351546.8138657,
         "status": "pending_or_private"
       }
     },
@@ -212,7 +214,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794331637.4262004,
+        "last_synced": 1794351546.8138657,
         "status": "pending_or_private"
       }
     },
@@ -238,7 +240,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794331637.4262004,
+        "last_synced": 1794351546.8138657,
         "status": "public"
       }
     },
@@ -264,7 +266,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794331637.4262004,
+        "last_synced": 1794351546.8138657,
         "status": "public"
       }
     },
@@ -287,10 +289,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794322862.392556,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794331637.4262004,
+        "last_synced": 1794351546.8138657,
         "status": "public"
       }
     },
@@ -316,21 +318,22 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794331637.4262004,
+        "last_synced": 1794351546.8138657,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_10_mental_health",
-    "last_sync": 1794331637.4262004,
+    "last_sync": 1794351546.8138657,
     "total_shorts": 8,
-    "public_shorts": 3,
-    "total_views": 18,
-    "median_views": 2,
+    "public_shorts": 4,
+    "total_views": 19,
+    "median_views": 1.5,
     "creator_weights": {
       "@HealthyGamerGG": 1.8,
-      "@MelRobbins": 1.0
+      "@MelRobbins": 1.35,
+      "ADHD Chatter Podcast": 1.0
     }
   }
 }
