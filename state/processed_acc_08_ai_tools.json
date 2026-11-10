@@ -91,9 +91,14 @@
     "ep4psgAFOqc",
     "JWdvTUZoN0s",
     "40uWy11tq9U",
-    "7Q4VM67jwYc"
+    "7Q4VM67jwYc",
+    "JtdUgJGI_Oo",
+    "yHk7Vavmc7Q"
   ],
-  "upload_timestamps": [],
+  "upload_timestamps": [
+    1794318180.2579556,
+    1794318254.7428286
+  ],
   "uploaded_shorts": [
     {
       "video_id": "iWJNBMbJm-0",
@@ -109,7 +114,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794273497.3698938,
+        "last_synced": 1794318046.127812,
         "status": "pending_or_private"
       }
     },
@@ -127,7 +132,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794273497.3698938,
+        "last_synced": 1794318046.127812,
         "status": "pending_or_private"
       }
     },
@@ -151,7 +156,7 @@
         "views": 1193,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1794273497.3698938,
+        "last_synced": 1794318046.127812,
         "status": "public"
       }
     },
@@ -175,7 +180,7 @@
         "views": 378,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794273497.3698938,
+        "last_synced": 1794318046.127812,
         "status": "public"
       }
     },
@@ -199,7 +204,7 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794273497.3698938,
+        "last_synced": 1794318046.127812,
         "status": "public"
       }
     },
@@ -223,14 +228,60 @@
         "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794273497.3698938,
+        "last_synced": 1794318046.127812,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "koQQRDV1IaM",
+      "source_video_id": "JtdUgJGI_Oo",
+      "title": "Stop Manually Replying to Feedback #shorts",
+      "creator": "Kevin Stratvert",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794318180.2579637,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "PBl1zmjao5g",
+      "source_video_id": "yHk7Vavmc7Q",
+      "title": "AI is a Tool, Not a Brain #shorts",
+      "creator": "AI Master",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794318254.7428377,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1794273497.3698938,
+    "last_sync": 1794318046.127812,
     "total_shorts": 6,
     "public_shorts": 4,
     "total_views": 2089,
