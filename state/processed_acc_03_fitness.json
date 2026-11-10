@@ -95,7 +95,9 @@
     "N-D49aRmS2Q",
     "nB0D1a0oC-A",
     "QkQVIYA4roE",
-    "3n2PbTJECO8"
+    "3n2PbTJECO8",
+    "wwn3YJyOzdY",
+    "4Xjg13lPjUU"
   ],
   "upload_timestamps": [
     1794317979.9906397,
@@ -124,7 +126,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317860.1738944,
+        "last_synced": 1794320905.1625168,
         "status": "public"
       }
     },
@@ -150,8 +152,8 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317860.1738944,
-        "status": "public"
+        "last_synced": 1794320905.1625168,
+        "status": "pending_or_private"
       }
     },
     {
@@ -176,7 +178,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317860.1738944,
+        "last_synced": 1794320905.1625168,
         "status": "public"
       }
     },
@@ -202,8 +204,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317860.1738944,
-        "status": "public"
+        "last_synced": 1794320905.1625168,
+        "status": "pending_or_private"
       }
     },
     {
@@ -228,7 +230,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794320905.1625168,
+        "status": "pending_or_private"
       }
     },
     {
@@ -253,20 +256,20 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794320905.1625168,
+        "status": "pending_or_private"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_03_fitness",
-    "last_sync": 1794317860.1738944,
-    "total_shorts": 4,
-    "public_shorts": 3,
-    "total_views": 9,
-    "median_views": 3,
+    "last_sync": 1794320905.1625168,
+    "total_shorts": 6,
+    "public_shorts": 1,
+    "total_views": 4,
+    "median_views": 4,
     "creator_weights": {
-      "@ChrisHeria": 1.0,
-      "@RenaissancePeriodization": 1.0
+      "@ChrisHeria": 1.0
     }
   }
 }
