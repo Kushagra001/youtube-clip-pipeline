@@ -23,14 +23,39 @@ class _SilentLogger:
     def error(self, msg): pass
 
 
-def _get_ydl(search_depth: int = 25) -> yt_dlp.YoutubeDL:
+class _CaptureLogger:
+    def __init__(self):
+        self.errors: list[str] = []
+        self.warnings: list[str] = []
+
+    def debug(self, msg): pass
+    def info(self, msg): pass
+
+    def warning(self, msg):
+        if msg:
+            self.warnings.append(str(msg))
+
+    def error(self, msg):
+        if msg:
+            self.errors.append(str(msg))
+
+    def saw_session_rate_limit(self) -> bool:
+        combined = "\n".join(self.errors + self.warnings).lower()
+        return "session has been rate-limited" in combined or "rate-limited by youtube" in combined
+
+    def saw_block(self) -> bool:
+        combined = "\n".join(self.errors + self.warnings).lower()
+        return any(m in combined for m in ("sign in to confirm", "not a bot", "http error 429", "too many requests"))
+
+
+def _get_ydl(search_depth: int = 25, use_cookies: bool = False, logger=None) -> yt_dlp.YoutubeDL:
     opts = {
         "extract_flat": True,
         "skip_download": True,
         "quiet": True,
         "no_warnings": True,
         "ignoreerrors": True,
-        "logger": _SilentLogger(),
+        "logger": logger or _SilentLogger(),
         "playlistend": search_depth,
         "socket_timeout": 25,
         "retries": 3,
@@ -44,13 +69,14 @@ def _get_ydl(search_depth: int = 25) -> yt_dlp.YoutubeDL:
     if proxy_url:
         opts["proxy"] = proxy_url
 
-    try:
-        from pipeline.download import get_cookies_path
-        cookie_path = get_cookies_path()
-        if cookie_path:
-            opts["cookiefile"] = str(cookie_path)
-    except Exception:
-        pass
+    if use_cookies:
+        try:
+            from pipeline.download import get_cookies_path
+            cookie_path = get_cookies_path()
+            if cookie_path:
+                opts["cookiefile"] = str(cookie_path)
+        except Exception:
+            pass
     return yt_dlp.YoutubeDL(opts)
 
 
@@ -72,24 +98,36 @@ def search_youtube_videos(query: str, max_results: int = 20, sort: str = "releva
 
     videos = []
     try:
-        with _get_ydl(search_depth=max_results) as ydl:
-            res = ydl.extract_info(search_target, download=False)
-            entries = res.get("entries", []) if res else []
-            for entry in entries:
-                if not entry:
-                    continue
-                v_id = entry.get("id")
-                if not v_id:
-                    continue
-                videos.append({
-                    "video_id": v_id,
-                    "url": f"https://www.youtube.com/watch?v={v_id}",
-                    "title": entry.get("title", ""),
-                    "channel": entry.get("uploader") or entry.get("channel") or "Unknown",
-                    "duration": entry.get("duration"),  # seconds (float/int or None)
-                    "view_count": entry.get("view_count") or 0,
-                    "query_source": f"{query} [{sort}]",
-                })
+        def _run_search(use_cookies: bool) -> tuple[bool, list[dict], _CaptureLogger]:
+            log = _CaptureLogger()
+            found: list[dict] = []
+            with _get_ydl(search_depth=max_results, use_cookies=use_cookies, logger=log) as ydl:
+                res = ydl.extract_info(search_target, download=False)
+                entries = res.get("entries", []) if res else []
+                for entry in entries:
+                    if not entry:
+                        continue
+                    v_id = entry.get("id")
+                    if not v_id:
+                        continue
+                    found.append({
+                        "video_id": v_id,
+                        "url": f"https://www.youtube.com/watch?v={v_id}",
+                        "title": entry.get("title", ""),
+                        "channel": entry.get("uploader") or entry.get("channel") or "Unknown",
+                        "duration": entry.get("duration"),  # seconds (float/int or None)
+                        "view_count": entry.get("view_count") or 0,
+                        "query_source": f"{query} [{sort}]",
+                    })
+            return res is None, found, log
+
+        failed_resp, videos, log_anon = _run_search(use_cookies=False)
+        if not videos and (failed_resp or log_anon.saw_block()):
+            from pipeline.download import disable_session_cookies, get_cookies_path
+            if get_cookies_path() is not None:
+                _, videos, log_cookie = _run_search(use_cookies=True)
+                if log_cookie.saw_session_rate_limit():
+                    disable_session_cookies("search")
     except Exception as e:
         print(f"  [Discovery] Warning: Search failed for query '{query}' [{sort}]: {e}")
     return videos
@@ -117,28 +155,40 @@ def get_creator_channel_videos(creator: str, max_results: int = 12) -> list[dict
         seen_ids = set()
         for target_url in channel_targets:
             try:
-                with _get_ydl(search_depth=max_results) as ydl:
+                log_anon = _CaptureLogger()
+                res = None
+                with _get_ydl(search_depth=max_results, use_cookies=False, logger=log_anon) as ydl:
                     res = ydl.extract_info(target_url, download=False)
-                    entries = res.get("entries", []) if res else []
-                    for entry in entries:
-                        if not entry:
-                            continue
-                        v_id = entry.get("id")
-                        if not v_id or v_id in seen_ids:
-                            continue
-                        seen_ids.add(v_id)
-                        videos.append({
-                            "video_id": v_id,
-                            "url": f"https://www.youtube.com/watch?v={v_id}",
-                            "title": entry.get("title", ""),
-                            "channel": entry.get("uploader") or entry.get("channel") or clean,
-                            "duration": entry.get("duration"),
-                            "view_count": entry.get("view_count") or 0,
-                            "query_source": f"channel:{clean}",
-                            "is_official_creator": True,
-                        })
-                        if len(videos) >= max_results:
-                            break
+                entries = list(res.get("entries") or []) if res else []
+                if not entries and (res is None or log_anon.saw_block()):
+                    from pipeline.download import disable_session_cookies, get_cookies_path
+                    if get_cookies_path() is not None:
+                        log_cookie = _CaptureLogger()
+                        with _get_ydl(search_depth=max_results, use_cookies=True, logger=log_cookie) as ydl_c:
+                            res_c = ydl_c.extract_info(target_url, download=False)
+                        if log_cookie.saw_session_rate_limit():
+                            disable_session_cookies("creator channel listing")
+                        if res_c:
+                            entries = list(res_c.get("entries") or [])
+                for entry in entries:
+                    if not entry:
+                        continue
+                    v_id = entry.get("id")
+                    if not v_id or v_id in seen_ids:
+                        continue
+                    seen_ids.add(v_id)
+                    videos.append({
+                        "video_id": v_id,
+                        "url": f"https://www.youtube.com/watch?v={v_id}",
+                        "title": entry.get("title", ""),
+                        "channel": entry.get("uploader") or entry.get("channel") or clean,
+                        "duration": entry.get("duration"),
+                        "view_count": entry.get("view_count") or 0,
+                        "query_source": f"channel:{clean}",
+                        "is_official_creator": True,
+                    })
+                    if len(videos) >= max_results:
+                        break
             except Exception:
                 continue
             if videos:
@@ -438,6 +488,21 @@ def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12, sta
     enriched = []
     today = datetime.datetime.now()
 
+    logger_anon = _CaptureLogger()
+    extractor_args: dict = {
+        "youtube": {
+            "player_client": ["visionos", "android_vr", "ios", "mweb", "web"],
+        }
+    }
+    try:
+        from pipeline.download import _is_pot_provider_active
+        if _is_pot_provider_active():
+            extractor_args["youtubepot-bgutilhttp"] = {
+                "base_url": ["http://127.0.0.1:4416"],
+            }
+    except Exception:
+        pass
+
     ydl_opts = {
         "extract_flat": False,
         "skip_download": True,
@@ -448,29 +513,16 @@ def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12, sta
         "ignoreerrors": True,
         "socket_timeout": 20,
         "retries": 2,
-        "logger": _SilentLogger(),
-        "extractor_args": {
-            "youtube": {
-                "player_client": ["visionos", "ios", "mweb", "web"],
-            }
-        },
+        "logger": logger_anon,
+        "extractor_args": extractor_args,
     }
     proxy_url = os.environ.get("PROXY_URL") or os.environ.get("HTTPS_PROXY") or os.environ.get("HTTP_PROXY")
     if proxy_url:
         ydl_opts["proxy"] = proxy_url
 
-    has_cookie = False
-    try:
-        from pipeline.download import get_cookies_path
-        cookie_path = get_cookies_path()
-        if cookie_path:
-            ydl_opts["cookiefile"] = str(cookie_path)
-            has_cookie = True
-    except Exception:
-        pass
-
     info_by_vid: dict[str, dict | None] = {}
     try:
+        # Anonymous-first pass to avoid burning shared session cookies across parallel runners
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             for cand in to_enrich:
                 v_id = cand["video_id"]
@@ -482,24 +534,33 @@ def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12, sta
                     info = None
                 info_by_vid[v_id] = info
 
-        if has_cookie:
-            missing_cands = [c for c in to_enrich if not _has_full_player_info(info_by_vid.get(c["video_id"]))]
-            if missing_cands:
-                anon_opts = dict(ydl_opts)
-                anon_opts.pop("cookiefile", None)
-                anon_opts["extractor_args"] = {
-                    "youtube": {
-                        "player_client": ["visionos", "android_vr", "ios", "mweb"],
-                    }
-                }
-                with yt_dlp.YoutubeDL(anon_opts) as ydl_anon:
+        # Cookie fallback ONLY for candidates that failed full player extraction anonymously
+        missing_cands = [c for c in to_enrich if not _has_full_player_info(info_by_vid.get(c["video_id"]))]
+        if missing_cands:
+            try:
+                from pipeline.download import disable_session_cookies, get_cookies_path
+                cookie_path = get_cookies_path()
+            except Exception:
+                cookie_path = None
+                disable_session_cookies = None
+
+            if cookie_path:
+                logger_cookie = _CaptureLogger()
+                cookie_opts = dict(ydl_opts)
+                cookie_opts["cookiefile"] = str(cookie_path)
+                cookie_opts["logger"] = logger_cookie
+                print(f"  [Discovery] Retrying {len(missing_cands)}/{len(to_enrich)} candidates with session cookie fallback...")
+                with yt_dlp.YoutubeDL(cookie_opts) as ydl_cookie:
                     for cand in missing_cands:
                         v_id = cand["video_id"]
                         url = cand.get("url") or f"https://www.youtube.com/watch?v={v_id}"
                         try:
-                            info_anon = ydl_anon.extract_info(url, download=False)
-                            if _has_full_player_info(info_anon) or (info_anon and not info_by_vid.get(v_id)):
-                                info_by_vid[v_id] = info_anon
+                            info_cookie = ydl_cookie.extract_info(url, download=False)
+                            if logger_cookie.saw_session_rate_limit() and disable_session_cookies:
+                                disable_session_cookies("discovery enrichment")
+                                break
+                            if _has_full_player_info(info_cookie) or (info_cookie and not info_by_vid.get(v_id)):
+                                info_by_vid[v_id] = info_cookie
                         except Exception:
                             pass
 

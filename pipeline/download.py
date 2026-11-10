@@ -10,11 +10,30 @@ DOWNLOAD_DIR = Path(__file__).resolve().parent.parent / "output" / "downloads"
 
 
 _COOKIE_LOGGED = False
+_SESSION_COOKIE_DISABLED = False
+_SESSION_COOKIE_DISABLED_LOGGED = False
+
+
+def is_session_cookies_disabled() -> bool:
+    """Returns True when session cookies have been disabled after a YouTube session rate-limit."""
+    return _SESSION_COOKIE_DISABLED
+
+
+def disable_session_cookies(reason: str = "") -> None:
+    """Disables session cookies for the remainder of this run after YouTube rate-limits the session."""
+    global _SESSION_COOKIE_DISABLED, _SESSION_COOKIE_DISABLED_LOGGED
+    _SESSION_COOKIE_DISABLED = True
+    if not _SESSION_COOKIE_DISABLED_LOGGED:
+        suffix = f" ({reason})" if reason else ""
+        print(f"  [Auth] Session cookies disabled for remainder of run{suffix}; using anonymous clients.")
+        _SESSION_COOKIE_DISABLED_LOGGED = True
 
 
 def get_cookies_path() -> Path | None:
     """Finds or creates a valid cookies file from environment secrets or workspace files."""
     global _COOKIE_LOGGED
+    if _SESSION_COOKIE_DISABLED:
+        return None
     cookie_file = None
 
     # 1. Direct explicit environment path
@@ -181,7 +200,7 @@ def _probe_duration(file_path: Path) -> float | None:
 
 
 def _base_ytdlp_args(
-    ignore_cookies: bool = False,
+    ignore_cookies: bool = True,
     player_clients: str = "visionos,ios,mweb",
 ) -> list[str]:
     args = [
@@ -198,7 +217,7 @@ def _base_ytdlp_args(
     if proxy_url:
         args.extend(["--proxy", proxy_url])
 
-    # 2. Session Cookies with Client Configuration
+    # 2. Optional Session Cookies (only attached when explicitly requested for challenge fallback)
     cookie_path = get_cookies_path() if not ignore_cookies else None
     if cookie_path:
         args.extend(["--cookies", str(cookie_path)])
@@ -225,24 +244,71 @@ def _base_ytdlp_args(
     return args
 
 
+_SESSION_RATE_LIMIT_MARKERS = (
+    "session has been rate-limited",
+    "rate-limited by youtube",
+)
+
+_CHALLENGE_FALLBACK_MARKERS = (
+    "sign in to confirm",
+    "not a bot",
+    "login_info",
+    "sabr",
+    "format is not available",
+    "try again later",
+    "rate-limited",
+    "impersonat",
+)
+
+
+def _is_http_429(text_low: str) -> bool:
+    return bool(re.search(r"\bhttp(?:\s+error)?\s+429\b", text_low)) or "too many requests" in text_low or "429: too many" in text_low
+
+
+def _is_http_403(text_low: str) -> bool:
+    return bool(re.search(r"\bhttp(?:\s+error)?\s+403\b", text_low)) or "403: forbidden" in text_low
+
+
+def _is_session_rate_limited(text_low: str) -> bool:
+    return any(m in text_low for m in _SESSION_RATE_LIMIT_MARKERS)
+
+
+def _needs_auth_fallback(text_low: str) -> bool:
+    return _is_http_403(text_low) or any(m in text_low for m in _CHALLENGE_FALLBACK_MARKERS)
+
+
 def _run_ytdlp_resilient(
     extra_args: list[str],
     player_clients: str = "visionos,ios,mweb",
     timeout: int = 180,
-    ignore_cookies: bool = False,
+    ignore_cookies: bool = True,
 ) -> subprocess.CompletedProcess:
-    """Executes yt-dlp with retries for HTTP 429 rate limits and cookie/bot/SABR fallback."""
-    cmd1 = _base_ytdlp_args(ignore_cookies=ignore_cookies, player_clients=player_clients) + extra_args
+    """Executes yt-dlp anonymous-first, with HTTP 429 backoff, cookie fallback on challenges,
+    and automatic sticky cookie cooldown + anonymous recovery if cookies hit YouTube's session limit.
+    """
+    use_cookies_first = (not ignore_cookies) and (get_cookies_path() is not None)
+    cmd1 = _base_ytdlp_args(ignore_cookies=(not use_cookies_first), player_clients=player_clients) + extra_args
     res = _run_proc_clean(cmd1, timeout=timeout)
     if res.returncode == 0:
         return res
 
     err_low = ((res.stderr or "") + "\n" + (res.stdout or "")).lower()
-    has_cookie = (not ignore_cookies) and (get_cookies_path() is not None)
 
-    # Handle HTTP 429 rate limiting with backoff and anonymous fallback
-    if "429" in err_low or "too many requests" in err_low:
-        print("  [Download] HTTP 429 rate-limit encountered. Waiting 4s and retrying...")
+    # Immediately trip sticky cookie cooldown if a cookie request hits YouTube's hourly session cap
+    if use_cookies_first and _is_session_rate_limited(err_low):
+        disable_session_cookies("session rate-limit")
+        print("  [Download] Cookie session rate-limited; retrying anonymously...")
+        cmd_anon = _base_ytdlp_args(ignore_cookies=True, player_clients=player_clients) + extra_args
+        res_anon = _run_proc_clean(cmd_anon, timeout=timeout)
+        if res_anon.returncode == 0:
+            return res_anon
+        res = res_anon
+        err_low = ((res.stderr or "") + "\n" + (res.stdout or "")).lower()
+        use_cookies_first = False
+
+    # Handle HTTP 429 rate limiting anonymously with backoff and alternate client chain
+    if _is_http_429(err_low):
+        print("  [Download] HTTP 429 rate-limit encountered. Waiting 4s and retrying anonymously...")
         time.sleep(4.0)
         cmd_429 = _base_ytdlp_args(ignore_cookies=True, player_clients=player_clients) + extra_args
         res = _run_proc_clean(cmd_429, timeout=timeout)
@@ -250,34 +316,42 @@ def _run_ytdlp_resilient(
             return res
 
         err_low = ((res.stderr or "") + "\n" + (res.stdout or "")).lower()
-        if "429" in err_low or "too many requests" in err_low:
+        if _is_http_429(err_low):
             print("  [Download] Still rate-limited (429). Waiting 6s and retrying with alternate client chain...")
             time.sleep(6.0)
             cmd_429_alt = _base_ytdlp_args(ignore_cookies=True, player_clients="android_vr,tv,web") + extra_args
             res_alt = _run_proc_clean(cmd_429_alt, timeout=timeout)
-            if res_alt.returncode == 0:
-                return res_alt
             return res_alt
         return res
 
-    # If bot challenge, cookie issue, SABR block, or missing format triggered with cookies, retry anonymously
-    fallback_markers = (
-        "sign in to confirm",
-        "bot",
-        "cookie",
-        "login_info",
-        "403",
-        "sabr",
-        "format is not available",
-        "impersonat",
-    )
-    if has_cookie and any(m in err_low for m in fallback_markers):
+    # If primary was explicit cookie and hit challenge/format/block, fall back to anonymous
+    if use_cookies_first and (_needs_auth_fallback(err_low) or "cookie" in err_low):
         print("  [Download] Primary cookie request encountered challenge/format block. Retrying anonymously...")
         cmd2 = _base_ytdlp_args(ignore_cookies=True, player_clients=player_clients) + extra_args
         res2 = _run_proc_clean(cmd2, timeout=timeout)
-        if res2.returncode == 0:
-            return res2
         return res2
+
+    # If anonymous-first hit a bot/auth/challenge block, try cookies once (unless session cookies disabled)
+    if (not use_cookies_first) and _needs_auth_fallback(err_low):
+        cookie_path = get_cookies_path()
+        if cookie_path:
+            print("  [Download] Anonymous request hit YouTube challenge/block. Retrying with session cookies...")
+            cmd_cookie = _base_ytdlp_args(ignore_cookies=False, player_clients=player_clients) + extra_args
+            res_cookie = _run_proc_clean(cmd_cookie, timeout=timeout)
+            if res_cookie.returncode == 0:
+                return res_cookie
+
+            err_cookie_low = ((res_cookie.stderr or "") + "\n" + (res_cookie.stdout or "")).lower()
+            if _is_session_rate_limited(err_cookie_low):
+                disable_session_cookies("session rate-limit")
+                if player_clients != "android_vr,tv,mweb,web":
+                    cmd_alt = _base_ytdlp_args(ignore_cookies=True, player_clients="android_vr,tv,mweb,web") + extra_args
+                    res_alt = _run_proc_clean(cmd_alt, timeout=timeout)
+                    if res_alt.returncode == 0:
+                        return res_alt
+                    return res_alt
+                return res
+            return res_cookie
 
     return res
 
@@ -379,26 +453,23 @@ def download_subtitles(url: str, video_id: str | None = None) -> Path | None:
             pass
 
     out_template = str(DOWNLOAD_DIR / f"{video_id}.%(ext)s")
-    has_cookie = get_cookies_path() is not None
     attempts: list[tuple[str, str, bool]] = [
-        ("en-orig", "visionos,ios,mweb", False),
-    ]
-    if has_cookie:
-        attempts.append(("en-orig", "visionos,android_vr,ios", True))
-    attempts.append(("en", "visionos,ios,mweb", False))
-    if has_cookie:
-        attempts.append(("en", "visionos,android_vr,ios", True))
-    attempts.extend([
-        ("en-US,en-GB,en-CA,en-AU,en-IN", "visionos,ios,mweb", False),
+        ("en-orig", "visionos,ios,mweb", True),
+        ("en", "visionos,ios,mweb", True),
+        ("en-US,en-GB,en-CA,en-AU,en-IN", "visionos,ios,mweb", True),
+        ("en-orig", "android_vr,tv,mweb,web", True),
         ("en.*", "android_vr,tv,mweb,web", True),
-    ])
+    ]
 
     last_err_tail = ""
     saw_429 = False
     saw_bot = False
     rate_limit_hits = 0
+    failed_bot_clients: set[str] = set()
 
     for idx, (sub_langs, clients, force_anon) in enumerate(attempts):
+        if clients in failed_bot_clients:
+            continue
         if idx > 0:
             time.sleep(1.5)
         cmd = [
@@ -423,11 +494,14 @@ def download_subtitles(url: str, video_id: str | None = None) -> Path | None:
 
         raw_msg = (res.stderr or res.stdout or "").strip()
         low_msg = raw_msg.lower()
-        if "429" in low_msg or "too many requests" in low_msg:
+        if _is_session_rate_limited(low_msg):
+            disable_session_cookies("subtitle rate-limit")
+        if _is_http_429(low_msg):
             saw_429 = True
             rate_limit_hits += 1
         if "sign in to confirm" in low_msg or "not a bot" in low_msg:
             saw_bot = True
+            failed_bot_clients.add(clients)
 
         if raw_msg:
             diag_lines = [

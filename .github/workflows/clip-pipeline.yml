@@ -109,7 +109,7 @@ jobs:
           curl -s http://127.0.0.1:4416/ping || echo "Warning: ping returned non-zero"
 
       - name: Stagger Network Setup
-        run: sleep $((RANDOM % 10 + 1))
+        run: sleep $((RANDOM % 25 + 1))
 
       - name: Set up Cloudflare WARP (IP Masking)
         timeout-minutes: 3
