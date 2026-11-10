@@ -95,7 +95,9 @@
     "AV855pyiz-o",
     "OrElyY7MFVs",
     "KtCEhmJ9wiQ",
-    "dJliorOTMAY"
+    "dJliorOTMAY",
+    "mgD-9MUu0yw",
+    "azCPrSJcNEg"
   ],
   "upload_timestamps": [
     1794318002.1774027,
@@ -124,8 +126,8 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317881.4746096,
-        "status": "public"
+        "last_synced": 1794320899.0173204,
+        "status": "pending_or_private"
       }
     },
     {
@@ -150,7 +152,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317881.4746096,
+        "last_synced": 1794320899.0173204,
         "status": "pending_or_private"
       }
     },
@@ -176,7 +178,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317881.4746096,
+        "last_synced": 1794320899.0173204,
         "status": "public"
       }
     },
@@ -202,8 +204,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317881.4746096,
-        "status": "public"
+        "last_synced": 1794320899.0173204,
+        "status": "pending_or_private"
       }
     },
     {
@@ -228,8 +230,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794317881.4746096,
-        "status": "public"
+        "last_synced": 1794320899.0173204,
+        "status": "pending_or_private"
       }
     },
     {
@@ -254,7 +256,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794320899.0173204,
+        "status": "public"
       }
     },
     {
@@ -279,21 +282,20 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794320899.0173204,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1794317881.4746096,
-    "total_shorts": 5,
-    "public_shorts": 3,
-    "total_views": 14,
+    "last_sync": 1794320899.0173204,
+    "total_shorts": 7,
+    "public_shorts": 1,
+    "total_views": 6,
     "median_views": 6,
     "creator_weights": {
-      "Teachingmensfashion": 1.0,
-      "BeYourBest": 1.0,
-      "The Formal Edit": 1.0
+      "BeYourBest": 1.0
     }
   }
 }
