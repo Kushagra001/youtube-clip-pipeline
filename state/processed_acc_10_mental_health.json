@@ -126,7 +126,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794321034.6383245,
+        "last_synced": 1794324604.2831357,
         "status": "pending_or_private"
       }
     },
@@ -152,7 +152,7 @@
         "views": 15,
         "likes": 0,
         "comments": 2,
-        "last_synced": 1794321034.6383245,
+        "last_synced": 1794324604.2831357,
         "status": "pending_or_private"
       }
     },
@@ -178,7 +178,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794321034.6383245,
+        "last_synced": 1794324604.2831357,
         "status": "pending_or_private"
       }
     },
@@ -204,7 +204,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794321034.6383245,
+        "last_synced": 1794324604.2831357,
         "status": "pending_or_private"
       }
     },
@@ -230,7 +230,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794321034.6383245,
+        "last_synced": 1794324604.2831357,
         "status": "pending_or_private"
       }
     },
@@ -256,7 +256,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794321034.6383245,
+        "last_synced": 1794324604.2831357,
         "status": "pending_or_private"
       }
     },
@@ -282,7 +282,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794324604.2831357,
+        "status": "pending_or_private"
       }
     },
     {
@@ -307,14 +308,15 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794324604.2831357,
+        "status": "pending_or_private"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_10_mental_health",
-    "last_sync": 1794322725.3549995,
-    "total_shorts": 6,
+    "last_sync": 1794324604.2831357,
+    "total_shorts": 8,
     "public_shorts": 0,
     "total_views": 0,
     "median_views": 100.0,
