@@ -47,22 +47,27 @@ def _get_service(token_env_var: str | None = None, channel_config: dict | None =
     refresh_token = None
     if token_env_var:
         refresh_token = os.environ.get(token_env_var)
-    if not refresh_token:
+    if not refresh_token and not token_env_var:
         refresh_token = os.environ.get("YOUTUBE_REFRESH_TOKEN")
 
-    # Fallback: check per-channel tokens if default YOUTUBE_REFRESH_TOKEN is unset
-    if not refresh_token:
+    # Fallback: check per-channel tokens only when no explicit channel token_env_var was requested
+    if not refresh_token and not token_env_var:
         for i in range(1, 11):
             cand = os.environ.get(f"YOUTUBE_REFRESH_TOKEN_ACC_{i:02d}")
-            if cand:
+            if cand and cand.strip():
                 refresh_token = cand
                 break
+
+    if refresh_token:
+        refresh_token = refresh_token.strip()
 
     if not refresh_token:
         var_name = token_env_var or "YOUTUBE_REFRESH_TOKEN"
         raise ValueError(f"Missing YouTube refresh token in environment variable: {var_name}")
 
     client_id, client_secret = _resolve_credentials_for_channel(token_env_var, channel_config)
+    client_id = client_id.strip() if client_id else None
+    client_secret = client_secret.strip() if client_secret else None
     if not client_id or not client_secret:
         raise ValueError("Missing YouTube OAuth client credentials in environment (check YOUTUBE_CLIENT_ID / P2 / P3)")
 
