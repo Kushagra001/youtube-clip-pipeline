@@ -126,8 +126,8 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794320899.0173204,
-        "status": "pending_or_private"
+        "last_synced": 1794324381.2568293,
+        "status": "public"
       }
     },
     {
@@ -152,7 +152,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794320899.0173204,
+        "last_synced": 1794324381.2568293,
         "status": "pending_or_private"
       }
     },
@@ -178,7 +178,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794320899.0173204,
+        "last_synced": 1794324381.2568293,
         "status": "public"
       }
     },
@@ -204,8 +204,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794320899.0173204,
-        "status": "pending_or_private"
+        "last_synced": 1794324381.2568293,
+        "status": "public"
       }
     },
     {
@@ -230,8 +230,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794320899.0173204,
-        "status": "pending_or_private"
+        "last_synced": 1794324381.2568293,
+        "status": "public"
       }
     },
     {
@@ -256,7 +256,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794320899.0173204,
+        "last_synced": 1794324381.2568293,
         "status": "public"
       }
     },
@@ -282,20 +282,22 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794320899.0173204,
+        "last_synced": 1794324381.2568293,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1794322807.6645339,
+    "last_sync": 1794324381.2568293,
     "total_shorts": 7,
-    "public_shorts": 1,
-    "total_views": 6,
+    "public_shorts": 3,
+    "total_views": 14,
     "median_views": 6,
     "creator_weights": {
-      "BeYourBest": 1.0
+      "Teachingmensfashion": 1.0,
+      "BeYourBest": 1.0,
+      "The Formal Edit": 1.0
     }
   }
 }
