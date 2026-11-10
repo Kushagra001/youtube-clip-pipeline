@@ -93,9 +93,14 @@
     "Wue3JQsU5-k",
     "VrZ22-iXjFk",
     "AV855pyiz-o",
-    "OrElyY7MFVs"
+    "OrElyY7MFVs",
+    "KtCEhmJ9wiQ",
+    "dJliorOTMAY"
   ],
-  "upload_timestamps": [],
+  "upload_timestamps": [
+    1794318002.1774027,
+    1794318065.3117847
+  ],
   "uploaded_shorts": [
     {
       "video_id": "Ln6I0jz4-eI",
@@ -119,7 +124,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794273894.2218268,
+        "last_synced": 1794317881.4746096,
         "status": "public"
       }
     },
@@ -145,7 +150,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794273894.2218268,
+        "last_synced": 1794317881.4746096,
         "status": "pending_or_private"
       }
     },
@@ -171,7 +176,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794273894.2218268,
+        "last_synced": 1794317881.4746096,
         "status": "public"
       }
     },
@@ -197,7 +202,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794273894.2218268,
+        "last_synced": 1794317881.4746096,
         "status": "public"
       }
     },
@@ -223,14 +228,64 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794273894.2218268,
+        "last_synced": 1794317881.4746096,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "NQCXNmgL3WE",
+      "source_video_id": "KtCEhmJ9wiQ",
+      "title": "Dermatologists Are Wrong About Food #shorts",
+      "creator": "Brandon Balfour",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794318002.1774104,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "QjkMklvN3n4",
+      "source_video_id": "KtCEhmJ9wiQ",
+      "title": "Why Sleep Is Your Best Skincare #shorts",
+      "creator": "Brandon Balfour",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794318065.311793,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1794273894.2218268,
+    "last_sync": 1794317881.4746096,
     "total_shorts": 5,
     "public_shorts": 3,
     "total_views": 14,
