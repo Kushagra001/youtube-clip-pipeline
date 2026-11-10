@@ -93,9 +93,14 @@
     "x180ZbNWQnU",
     "YdB1HMCldJY",
     "N-D49aRmS2Q",
-    "nB0D1a0oC-A"
+    "nB0D1a0oC-A",
+    "QkQVIYA4roE",
+    "3n2PbTJECO8"
   ],
-  "upload_timestamps": [],
+  "upload_timestamps": [
+    1794317979.9906397,
+    1794318025.9484074
+  ],
   "uploaded_shorts": [
     {
       "video_id": "cMEB3A4vJwI",
@@ -119,7 +124,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794274141.510793,
+        "last_synced": 1794317860.1738944,
         "status": "public"
       }
     },
@@ -145,7 +150,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794274141.510793,
+        "last_synced": 1794317860.1738944,
         "status": "public"
       }
     },
@@ -171,7 +176,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794274141.510793,
+        "last_synced": 1794317860.1738944,
         "status": "public"
       }
     },
@@ -197,14 +202,64 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794274141.510793,
+        "last_synced": 1794317860.1738944,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "hhx26yxSNxQ",
+      "source_video_id": "QkQVIYA4roE",
+      "title": "Why the Bucky Pose Breaks Your Balance #shorts",
+      "creator": "Calisthenicmovement",
+      "topic": "fitness motivation, home workouts, gym training and healthy lifestyle",
+      "tags": [
+        "homeworkout",
+        "fitnessmotivation",
+        "gymlife",
+        "calisthenics",
+        "fitfam",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794317979.990647,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "lTfRfJugqDw",
+      "source_video_id": "QkQVIYA4roE",
+      "title": "The One-Arm Pushup Anime Lie #shorts",
+      "creator": "Calisthenicmovement",
+      "topic": "fitness motivation, home workouts, gym training and healthy lifestyle",
+      "tags": [
+        "homeworkout",
+        "fitnessmotivation",
+        "gymlife",
+        "calisthenics",
+        "fitfam",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794318025.9484189,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_03_fitness",
-    "last_sync": 1794274141.510793,
+    "last_sync": 1794317860.1738944,
     "total_shorts": 4,
     "public_shorts": 3,
     "total_views": 9,
