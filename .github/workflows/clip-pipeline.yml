@@ -112,7 +112,7 @@ jobs:
         run: sleep $((RANDOM % 25 + 1))
 
       - name: Set up Cloudflare WARP (IP Masking)
-        timeout-minutes: 3
+        timeout-minutes: 1
         continue-on-error: true
         uses: fscarmen/warp-on-actions@v1.4
         with:
@@ -120,16 +120,20 @@ jobs:
           mode: wireguard
 
       - name: Verify & Guard WARP Tunnel
-        timeout-minutes: 1
+        timeout-minutes: 3
         continue-on-error: true
         run: |
-          echo "Verifying Cloudflare WARP tunnel health..."
-          TRACE=$(timeout 12 curl -fsS --max-time 8 https://www.cloudflare.com/cdn-cgi/trace || true)
-          if echo "$TRACE" | grep -q "warp=on" && timeout 12 curl -fsS --max-time 8 https://www.youtube.com/robots.txt >/dev/null; then
-            echo "Cloudflare WARP tunnel active and healthy!"
-            echo "$TRACE" | head -n 8
-          else
-            echo "::warning::Cloudflare WARP tunnel unhealthy or unresponsive; tearing down warp interface cleanly."
+          check_warp_health() {
+            local tr
+            tr=$(timeout 9 curl -fsS --max-time 6 https://www.cloudflare.com/cdn-cgi/trace 2>/dev/null || true)
+            if echo "$tr" | grep -q "warp=on" && timeout 9 curl -fsS --max-time 6 https://www.youtube.com/robots.txt >/dev/null 2>&1; then
+              echo "$tr" | head -n 8
+              return 0
+            fi
+            return 1
+          }
+
+          teardown_wireguard_warp() {
             sudo wg-quick down warp 2>/dev/null || true
             sudo resolvconf -d warp 2>/dev/null || true
             sudo ip link delete dev warp 2>/dev/null || true
@@ -137,9 +141,86 @@ jobs:
             sudo ip -4 rule del table main suppress_prefixlength 0 2>/dev/null || true
             sudo ip -6 rule del not fwmark 51820 table 51820 2>/dev/null || true
             sudo ip -6 rule del table main suppress_prefixlength 0 2>/dev/null || true
-            echo "Fallback direct egress trace:"
-            curl -s --max-time 8 https://www.cloudflare.com/cdn-cgi/trace | head -n 8 || true
+          }
+
+          echo "Verifying Cloudflare WARP tunnel health..."
+          if check_warp_health; then
+            echo "Cloudflare WARP tunnel active and healthy!"
+            exit 0
           fi
+
+          echo "::notice::Initial WARP endpoint unresponsive; trying alternate WireGuard endpoints..."
+          if ip link show warp >/dev/null 2>&1 || [ -f /etc/wireguard/warp.conf ]; then
+            if ! ip link show warp >/dev/null 2>&1 && [ -f /etc/wireguard/warp.conf ]; then
+              sudo wg-quick up warp 2>/dev/null || true
+            fi
+            PEER_KEY=$(sudo wg show warp peers 2>/dev/null | head -n 1 || true)
+            if [ -z "$PEER_KEY" ] && [ -f /etc/wireguard/warp.conf ]; then
+              PEER_KEY=$(grep -i '^PublicKey' /etc/wireguard/warp.conf | head -n 1 | sed -E 's/^PublicKey[[:space:]]*=[[:space:]]*//I' | tr -d ' \r' || true)
+            fi
+            if [ -n "$PEER_KEY" ]; then
+              for ep in \
+                "162.159.192.1:500" \
+                "162.159.192.2:4500" \
+                "162.159.193.1:2408" \
+                "162.159.193.10:1701" \
+                "162.159.195.1:2408" \
+                "188.114.96.1:2408" \
+                "188.114.97.1:500" \
+                "188.114.98.1:4500"
+              do
+                echo "Trying WARP WireGuard endpoint $ep..."
+                sudo wg set warp peer "$PEER_KEY" endpoint "$ep" persistent-keepalive 15 2>/dev/null || continue
+                sleep 1
+                if check_warp_health; then
+                  echo "Cloudflare WARP recovered via alternate WireGuard endpoint ($ep)!"
+                  exit 0
+                fi
+              done
+            fi
+          fi
+
+          echo "Alternate WireGuard endpoints unresponsive; tearing down WireGuard 'warp' and trying official warp-cli (MASQUE)..."
+          teardown_wireguard_warp
+
+          if timeout 90 bash -c '
+            curl -fsSL --max-time 15 https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg && \
+            echo "deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflare-client.list >/dev/null && \
+            sudo apt-get update -qq && \
+            sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends cloudflare-warp
+          '; then
+            sudo systemctl start warp-svc 2>/dev/null || true
+            sleep 2
+            sudo warp-cli --accept-tos registration new 2>/dev/null || true
+            sudo warp-cli --accept-tos mode warp 2>/dev/null || true
+            sudo warp-cli --accept-tos tunnel protocol set MASQUE 2>/dev/null || true
+            sudo warp-cli --accept-tos connect 2>/dev/null || true
+            for i in 1 2 3 4 5 6; do
+              sleep 3
+              if check_warp_health; then
+                echo "Cloudflare WARP recovered via official warp-cli (MASQUE)!"
+                exit 0
+              fi
+            done
+            echo "warp-cli MASQUE check failed; trying warp-cli WireGuard..."
+            sudo warp-cli --accept-tos disconnect 2>/dev/null || true
+            sudo warp-cli --accept-tos tunnel protocol set WireGuard 2>/dev/null || true
+            sudo warp-cli --accept-tos connect 2>/dev/null || true
+            for i in 1 2 3 4; do
+              sleep 3
+              if check_warp_health; then
+                echo "Cloudflare WARP recovered via official warp-cli (WireGuard)!"
+                exit 0
+              fi
+            done
+            sudo warp-cli --accept-tos disconnect 2>/dev/null || true
+            sudo systemctl stop warp-svc 2>/dev/null || true
+          fi
+
+          echo "::warning::Cloudflare WARP tunnel unhealthy or unresponsive after fallbacks; tearing down warp interface cleanly."
+          teardown_wireguard_warp
+          echo "Fallback direct egress trace:"
+          curl -s --max-time 8 https://www.cloudflare.com/cdn-cgi/trace | head -n 8 || true
 
       - name: Configure YouTube Authentication Cookies
         env:

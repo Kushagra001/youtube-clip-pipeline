@@ -319,7 +319,7 @@ def _run_ytdlp_resilient(
         if _is_http_429(err_low):
             print("  [Download] Still rate-limited (429). Waiting 6s and retrying with alternate client chain...")
             time.sleep(6.0)
-            cmd_429_alt = _base_ytdlp_args(ignore_cookies=True, player_clients="android_vr,tv,web") + extra_args
+            cmd_429_alt = _base_ytdlp_args(ignore_cookies=True, player_clients="android_vr,tv,mweb,web") + extra_args
             res_alt = _run_proc_clean(cmd_429_alt, timeout=timeout)
             return res_alt
         return res
