@@ -95,9 +95,14 @@
     "R0__e0QTtQw",
     "uwyWpuMIXQ4",
     "_noquwycq78",
-    "ft-vhYwHzxw"
+    "ft-vhYwHzxw",
+    "uLJ_FbI2UDA",
+    "j4-7XX2AhAs"
   ],
-  "upload_timestamps": [],
+  "upload_timestamps": [
+    1794322862.3925474,
+    1794322938.7458382
+  ],
   "uploaded_shorts": [
     {
       "video_id": "4GgN8c8fcwQ",
@@ -254,11 +259,61 @@
         "last_synced": 1794321034.6383245,
         "status": "pending_or_private"
       }
+    },
+    {
+      "video_id": "OUDA33FAaAM",
+      "source_video_id": "uLJ_FbI2UDA",
+      "title": "The ADHD Hack That Feels Addictive #shorts",
+      "creator": "ADHD Chatter Podcast",
+      "topic": "mental health tips, anxiety management, ADHD productivity and emotional wellness",
+      "tags": [
+        "mentalhealth",
+        "anxietytips",
+        "adhdtips",
+        "selfcare",
+        "wellnessjourney",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794322862.392556,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "zGD-ghm3kIA",
+      "source_video_id": "uLJ_FbI2UDA",
+      "title": "Bicep Curls for Your Brain #shorts",
+      "creator": "ADHD Chatter Podcast",
+      "topic": "mental health tips, anxiety management, ADHD productivity and emotional wellness",
+      "tags": [
+        "mentalhealth",
+        "anxietytips",
+        "adhdtips",
+        "selfcare",
+        "wellnessjourney",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794322938.7458491,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_10_mental_health",
-    "last_sync": 1794321034.6383245,
+    "last_sync": 1794322725.3549995,
     "total_shorts": 6,
     "public_shorts": 0,
     "total_views": 0,
