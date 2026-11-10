@@ -88,9 +88,14 @@
     "EFkyxzJtiv4",
     "cF5iP-P67fg",
     "e2FQKfcAu6I",
-    "dgRSfhoHE4g"
+    "dgRSfhoHE4g",
+    "yl46bgQ7c7E",
+    "PafvhTSC4yE"
   ],
-  "upload_timestamps": [],
+  "upload_timestamps": [
+    1794322831.1659663,
+    1794322886.9367714
+  ],
   "uploaded_shorts": [
     {
       "video_id": "GgRH1kJsYhY",
@@ -195,11 +200,61 @@
         "last_synced": 1794321046.4874513,
         "status": "pending_or_private"
       }
+    },
+    {
+      "video_id": "R_8c1Gh-8zk",
+      "source_video_id": "yl46bgQ7c7E",
+      "title": "The Paradox of Silence: Why Stopping Works #shorts",
+      "creator": "Psychoresto",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794322831.165973,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "N6mAUexCNHE",
+      "source_video_id": "yl46bgQ7c7E",
+      "title": "Explaining Yourself Is Actually Fear #shorts",
+      "creator": "Psychoresto",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794322886.9367805,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_04_motivation",
-    "last_sync": 1794321046.4874513,
+    "last_sync": 1794322730.733085,
     "total_shorts": 4,
     "public_shorts": 0,
     "total_views": 0,
