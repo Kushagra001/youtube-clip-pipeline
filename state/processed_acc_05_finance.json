@@ -114,7 +114,9 @@
     "95iRn8vKWao",
     "OJzGUXXYmZY",
     "uRCskQbL1KY",
-    "G4oiEpLPaRM"
+    "G4oiEpLPaRM",
+    "G8rogSlN0Ko",
+    "4sT2B2SRypo"
   ],
   "upload_timestamps": [
     1794325438.2456775,
@@ -143,7 +145,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794331582.0355716,
+        "last_synced": 1794351548.1260798,
         "status": "pending_or_private"
       }
     },
@@ -169,7 +171,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794331582.0355716,
+        "last_synced": 1794351548.1260798,
         "status": "pending_or_private"
       }
     },
@@ -195,7 +197,7 @@
         "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794331582.0355716,
+        "last_synced": 1794351548.1260798,
         "status": "public"
       }
     },
@@ -221,7 +223,7 @@
         "views": 34,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794331582.0355716,
+        "last_synced": 1794351548.1260798,
         "status": "public"
       }
     },
@@ -244,10 +246,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794325438.2456844,
       "stats": {
-        "views": 0,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794328989.4161122,
+        "last_synced": 1794351548.1260798,
         "status": "public"
       }
     },
@@ -273,20 +275,21 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794328989.4161122,
+        "last_synced": 1794351548.1260798,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_05_finance",
-    "last_sync": 1794331582.0355716,
+    "last_sync": 1794351548.1260798,
     "total_shorts": 6,
-    "public_shorts": 2,
-    "total_views": 41,
-    "median_views": 20.5,
+    "public_shorts": 3,
+    "total_views": 44,
+    "median_views": 7,
     "creator_weights": {
-      "@GrahamStephan": 1.0
+      "@GrahamStephan": 1.8,
+      "Mark Tilbury": 1.0
     }
   }
 }
