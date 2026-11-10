@@ -126,8 +126,8 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794320905.1625168,
-        "status": "public"
+        "last_synced": 1794324485.0816684,
+        "status": "pending_or_private"
       }
     },
     {
@@ -152,7 +152,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794320905.1625168,
+        "last_synced": 1794324485.0816684,
         "status": "pending_or_private"
       }
     },
@@ -178,8 +178,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794320905.1625168,
-        "status": "public"
+        "last_synced": 1794324485.0816684,
+        "status": "pending_or_private"
       }
     },
     {
@@ -204,7 +204,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794320905.1625168,
+        "last_synced": 1794324485.0816684,
         "status": "pending_or_private"
       }
     },
@@ -230,7 +230,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794320905.1625168,
+        "last_synced": 1794324485.0816684,
         "status": "pending_or_private"
       }
     },
@@ -256,20 +256,18 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794320905.1625168,
+        "last_synced": 1794324485.0816684,
         "status": "pending_or_private"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_03_fitness",
-    "last_sync": 1794322488.6115324,
+    "last_sync": 1794324485.0816684,
     "total_shorts": 6,
-    "public_shorts": 1,
-    "total_views": 4,
-    "median_views": 4,
-    "creator_weights": {
-      "@ChrisHeria": 1.0
-    }
+    "public_shorts": 0,
+    "total_views": 0,
+    "median_views": 100.0,
+    "creator_weights": {}
   }
 }
