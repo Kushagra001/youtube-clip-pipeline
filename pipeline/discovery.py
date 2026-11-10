@@ -414,10 +414,22 @@ def filter_and_rank_candidates(
     return valid
 
 
+def _has_full_player_info(info: dict | None) -> bool:
+    """Returns True only when info contains playable formats or caption tracks, not just scraped HTML."""
+    if not info or not isinstance(info, dict):
+        return False
+    if info.get("subtitles") or info.get("automatic_captions"):
+        return True
+    for fmt in info.get("formats") or []:
+        if fmt.get("vcodec", "none") != "none" or fmt.get("acodec", "none") != "none":
+            return True
+    return False
+
+
 def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12, state: dict | None = None) -> list[dict]:
     """Viral Velocity & Subtitle Pre-Checker with Algorithmic Retention Feedback:
     Enriches top candidate videos with exact upload date, views-per-day velocity (VPH),
-    dialogue availability, and historical channel performance feedback weights.
+    dialogue availability, original spoken language, and historical channel performance weights.
     """
     if not candidates:
         return candidates
@@ -471,7 +483,7 @@ def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12, sta
                 info_by_vid[v_id] = info
 
         if has_cookie:
-            missing_cands = [c for c in to_enrich if not info_by_vid.get(c["video_id"])]
+            missing_cands = [c for c in to_enrich if not _has_full_player_info(info_by_vid.get(c["video_id"]))]
             if missing_cands:
                 anon_opts = dict(ydl_opts)
                 anon_opts.pop("cookiefile", None)
@@ -486,7 +498,7 @@ def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12, sta
                         url = cand.get("url") or f"https://www.youtube.com/watch?v={v_id}"
                         try:
                             info_anon = ydl_anon.extract_info(url, download=False)
-                            if info_anon:
+                            if _has_full_player_info(info_anon) or (info_anon and not info_by_vid.get(v_id)):
                                 info_by_vid[v_id] = info_anon
                         except Exception:
                             pass
@@ -497,7 +509,9 @@ def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12, sta
             views = cand.get("view_count") or 0
             upload_date_str = None
             has_subs = False
+            non_en_audio = False
             info = info_by_vid.get(v_id)
+            full_player = _has_full_player_info(info)
             if info:
                 views = info.get("view_count") or views
                 cand["view_count"] = views
@@ -506,10 +520,20 @@ def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12, sta
                 subs = info.get("subtitles") or {}
                 auto_subs = info.get("automatic_captions") or {}
                 has_subs = bool(subs or auto_subs)
+                if full_player:
+                    orig_langs = [k[:-5].lower() for k in auto_subs if k.lower().endswith("-orig")]
+                    vid_lang = (info.get("language") or "").lower()
+                    non_en_audio = (
+                        bool(orig_langs) and not any(l.startswith("en") for l in orig_langs)
+                    ) or (
+                        not orig_langs and not has_subs and bool(vid_lang) and not vid_lang.startswith("en")
+                    )
+            if full_player:
                 cand["metadata_fetched"] = True
             else:
                 cand["metadata_fetched"] = False
                 missing_count += 1
+            cand["non_english_audio"] = non_en_audio
 
             age_days = 365
             if upload_date_str:
@@ -538,6 +562,7 @@ def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12, sta
 
             # Subtitle Pre-Check Multiplier: strongly prioritizes videos with verified dialogue
             sub_multiplier = 1.5 if has_subs else 0.85
+            lang_multiplier = 0.05 if non_en_audio else 1.0
             official_bonus = 60.0 if cand.get("is_official_creator") else 0.0
 
             # Algorithmic Retention Feedback Multiplier: dynamically boosts proven creators
@@ -558,7 +583,7 @@ def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12, sta
                 (rel * 25.0) +
                 (math.log10(max(views_per_day, 1.0)) * 12.0) +
                 (math.log10(max(views, 1.0)) * 1.5))
-                * recency_multiplier * sub_multiplier * analytics_mult
+                * recency_multiplier * sub_multiplier * lang_multiplier * analytics_mult
             )
 
             cand["age_days"] = age_days
@@ -688,7 +713,12 @@ def discover_and_select_videos(cfg: dict, state: dict) -> list[dict]:
     if not verified_candidates:
         verified_candidates = ranked
 
-    # 9. Cap per creator and select top videos
+    # 9. Prefer verified English-audio candidates before per-creator selection
+    eng_candidates = [c for c in verified_candidates if not c.get("non_english_audio")]
+    if eng_candidates:
+        verified_candidates = eng_candidates
+
+    # Cap per creator and select top videos
     selected = []
     creator_counts: dict[str, int] = {}
 

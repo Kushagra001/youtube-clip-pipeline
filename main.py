@@ -97,35 +97,58 @@ def process_video(item: dict | str, cfg: dict, st: dict, channel_id: str | None 
             vid_dur = item.get("duration") if isinstance(item, dict) else None
             expect_subs = bool(item.get("has_subtitles")) if isinstance(item, dict) else False
             metadata_known = item.get("metadata_fetched", True) if isinstance(item, dict) else True
-            if vid_dur and vid_dur > 360:
-                if expect_subs or not metadata_known:
-                    reason = "CC:Yes metadata" if expect_subs else "unverified metadata (discovery extraction blocked)"
-                    print(f"  [Transcript] Online captions missing/unusable for {int(vid_dur // 60)}m video ({reason}). Leaving unprocessed for retry.")
-                    raise RuntimeError(f"Subtitle extraction failed despite {reason}")
-                print(f"  [Transcript] Online captions missing/unusable and video is {int(vid_dur // 60)}m long (>6m). Skipping full download to prevent runner timeout.")
-                state_mod.mark_processed(st, video_id)
-                state_mod.save_state(st, channel_id=channel_id)
-                return
+            sub_err = download.get_last_subtitle_error()
 
-            print("  Online captions insufficient or music-only; downloading source video for Whisper transcription...")
-            try:
-                info = download.download_video(url, video_id=video_id, title=title, fetch_subs=False)
-                full_video_path = info["video_path"]
-                actual_dur = info.get("duration")
-                if actual_dur and actual_dur > 360:
-                    print(f"  [Transcript] Video duration is {int(actual_dur // 60)}m (>6m). Skipping CPU Whisper transcription to prevent runner timeout.")
+            if sub_err == "bot":
+                print(f"  [Transcript] Subtitle extraction blocked by YouTube bot check for {video_id}. Leaving unprocessed for retry.")
+                raise RuntimeError("Subtitle extraction blocked by YouTube bot check")
+
+            if vid_dur and vid_dur > 360:
+                if vid_dur <= 1800 and (sub_err == "429" or expect_subs):
+                    print(f"  [Transcript] Timedtext captions unavailable (reason={sub_err or 'CC:Yes'}) for {int(vid_dur // 60)}m video; downloading lightweight audio-only stream for tiny.en Whisper...")
+                    audio_path = None
+                    try:
+                        audio_path, _ = download.download_audio_only(url, video_id=video_id)
+                        tx = transcript_mod.transcribe_with_whisper(audio_path, model_size="tiny.en")
+                        print(f"  Transcript: {len(tx)} segments (via audio-only tiny.en Whisper)")
+                    except Exception as aud_err:
+                        print(f"  [Transcript] Audio-only Whisper fallback failed: {aud_err}")
+                        raise RuntimeError(f"Subtitle timedtext failed ({sub_err or 'CC:Yes'}) and audio Whisper fallback failed: {aud_err}")
+                    finally:
+                        if audio_path and audio_path.exists():
+                            audio_path.unlink(missing_ok=True)
+                        download.cleanup_intermediate_files(f"{video_id}_audio")
+                    if not _is_usable_transcript(tx):
+                        raise RuntimeError("Audio-only Whisper returned unusable transcript for CC:Yes video")
+                else:
+                    if expect_subs or not metadata_known or sub_err == "429":
+                        reason = "timedtext HTTP 429" if sub_err == "429" else ("CC:Yes metadata" if expect_subs else "unverified metadata (discovery extraction blocked)")
+                        print(f"  [Transcript] Online captions missing/unusable for {int(vid_dur // 60)}m video ({reason}). Leaving unprocessed for retry.")
+                        raise RuntimeError(f"Subtitle extraction failed despite {reason}")
+                    print(f"  [Transcript] Online captions missing/unusable and video is {int(vid_dur // 60)}m long (>6m). Skipping full download to prevent runner timeout.")
                     state_mod.mark_processed(st, video_id)
                     state_mod.save_state(st, channel_id=channel_id)
+                    return
+            else:
+                print("  Online captions insufficient or music-only; downloading source video for Whisper transcription...")
+                try:
+                    info = download.download_video(url, video_id=video_id, title=title, fetch_subs=False)
+                    full_video_path = info["video_path"]
+                    actual_dur = info.get("duration")
+                    if actual_dur and actual_dur > 360:
+                        print(f"  [Transcript] Video duration is {int(actual_dur // 60)}m (>6m). Skipping CPU Whisper transcription to prevent runner timeout.")
+                        state_mod.mark_processed(st, video_id)
+                        state_mod.save_state(st, channel_id=channel_id)
+                        if full_video_path and full_video_path.exists():
+                            full_video_path.unlink(missing_ok=True)
+                        return
+                    tx = transcript_mod.get_transcript(full_video_path, info.get("subtitle_path"))
+                    print(f"  Transcript: {len(tx)} segments (via Whisper)")
+                except Exception as dl_err:
+                    print(f"  [Transcript] Source video download/transcription failed: {dl_err}")
                     if full_video_path and full_video_path.exists():
                         full_video_path.unlink(missing_ok=True)
-                    return
-                tx = transcript_mod.get_transcript(full_video_path, info.get("subtitle_path"))
-                print(f"  Transcript: {len(tx)} segments (via Whisper)")
-            except Exception as dl_err:
-                print(f"  [Transcript] Source video download/transcription failed: {dl_err}")
-                if full_video_path and full_video_path.exists():
-                    full_video_path.unlink(missing_ok=True)
-                raise RuntimeError(f"Source video download/transcription failed: {dl_err}")
+                    raise RuntimeError(f"Source video download/transcription failed: {dl_err}")
     else:
         info = download.download_video(url, video_id=video_id, title=title)
         full_video_path = info["video_path"]

@@ -244,7 +244,7 @@ def _run_ytdlp_resilient(
     if "429" in err_low or "too many requests" in err_low:
         print("  [Download] HTTP 429 rate-limit encountered. Waiting 4s and retrying...")
         time.sleep(4.0)
-        cmd_429 = _base_ytdlp_args(ignore_cookies=has_cookie, player_clients=player_clients) + extra_args
+        cmd_429 = _base_ytdlp_args(ignore_cookies=True, player_clients=player_clients) + extra_args
         res = _run_proc_clean(cmd_429, timeout=timeout)
         if res.returncode == 0:
             return res
@@ -351,11 +351,22 @@ def _pick_best_vtt(video_id: str) -> Path | None:
     return valid[0][2]
 
 
+_LAST_SUBTITLE_ERROR = ""
+
+
+def get_last_subtitle_error() -> str:
+    """Returns categorized error from the last download_subtitles call ('429', 'bot', or '')."""
+    return _LAST_SUBTITLE_ERROR
+
+
 def download_subtitles(url: str, video_id: str | None = None) -> Path | None:
     """Downloads English subtitles/auto-captions without fetching video bytes.
     Queries single-track selectors sequentially (`en-orig`, then `en`, then regional/wildcard)
     with `--ignore-no-formats-error` to eliminate YouTube HTTP 429 timedtext throttling.
     """
+    global _LAST_SUBTITLE_ERROR
+    _LAST_SUBTITLE_ERROR = ""
+
     DOWNLOAD_DIR.mkdir(parents=True, exist_ok=True)
     if not video_id:
         video_id = get_video_id(url)
@@ -378,11 +389,15 @@ def download_subtitles(url: str, video_id: str | None = None) -> Path | None:
     if has_cookie:
         attempts.append(("en", "visionos,android_vr,ios", True))
     attempts.extend([
-        ("en-US,en-GB,en-CA,en-AU", "visionos,ios,mweb", False),
+        ("en-US,en-GB,en-CA,en-AU,en-IN", "visionos,ios,mweb", False),
         ("en.*", "android_vr,tv,mweb,web", True),
     ])
 
     last_err_tail = ""
+    saw_429 = False
+    saw_bot = False
+    rate_limit_hits = 0
+
     for idx, (sub_langs, clients, force_anon) in enumerate(attempts):
         if idx > 0:
             time.sleep(1.5)
@@ -403,9 +418,17 @@ def download_subtitles(url: str, video_id: str | None = None) -> Path | None:
         # Even if a warning or secondary track caused non-zero exit, check if a valid .vtt was written
         picked = _pick_best_vtt(video_id)
         if picked:
+            _LAST_SUBTITLE_ERROR = ""
             return picked
 
         raw_msg = (res.stderr or res.stdout or "").strip()
+        low_msg = raw_msg.lower()
+        if "429" in low_msg or "too many requests" in low_msg:
+            saw_429 = True
+            rate_limit_hits += 1
+        if "sign in to confirm" in low_msg or "not a bot" in low_msg:
+            saw_bot = True
+
         if raw_msg:
             diag_lines = [
                 ln.strip() for ln in raw_msg.splitlines()
@@ -420,9 +443,47 @@ def download_subtitles(url: str, video_id: str | None = None) -> Path | None:
             if diag_lines:
                 last_err_tail = " | ".join(diag_lines[-3:])
 
+        if rate_limit_hits >= 2:
+            print("  [Download] Repeated timedtext HTTP 429 rate-limits detected; stopping subtitle retries early.")
+            break
+
+    _LAST_SUBTITLE_ERROR = "429" if saw_429 else ("bot" if saw_bot else "")
     if last_err_tail:
         print(f"  [Download] Subtitle extraction note: {last_err_tail[:400]}")
     return None
+
+
+def download_audio_only(url: str, video_id: str | None = None) -> tuple[Path, float | None]:
+    """Downloads lightweight low-bitrate audio-only stream for fast CPU Whisper fallback."""
+    DOWNLOAD_DIR.mkdir(parents=True, exist_ok=True)
+    if not video_id:
+        video_id = get_video_id(url)
+
+    prefix = f"{video_id}_audio"
+    cleanup_intermediate_files(prefix)
+    out_template = str(DOWNLOAD_DIR / f"{prefix}.%(ext)s")
+
+    cmd = [
+        "-f", "ba[abr<=64][ext=m4a]/ba[abr<=96]/ba/wa",
+        "--no-playlist",
+        "--force-overwrites",
+        "-o", out_template,
+        url,
+    ]
+    res = _run_ytdlp_resilient(cmd, player_clients="visionos,ios,mweb", timeout=120)
+    candidates = [
+        p for p in DOWNLOAD_DIR.glob(f"{prefix}.*")
+        if p.is_file() and not p.name.endswith(".part") and p.stat().st_size > 1024
+    ]
+    if res.returncode != 0 or not candidates:
+        err_msg = (res.stderr or res.stdout or "").strip()
+        cleanup_intermediate_files(prefix)
+        last_error = "\n".join(err_msg.splitlines()[-4:]) if err_msg else "Audio stream unavailable"
+        raise RuntimeError(f"Audio-only download failed: {last_error}")
+
+    audio_path = candidates[0]
+    dur = _probe_duration(audio_path)
+    return audio_path, dur
 
 
 def _cleanup_section_artifacts(out_name: str, out_path: Path) -> None:
