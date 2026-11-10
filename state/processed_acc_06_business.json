@@ -94,7 +94,9 @@
     "ZpKu2wvquWg",
     "l36gir6AXFY",
     "AJnDyBLKRZs",
-    "Dr0-83M-z50"
+    "Dr0-83M-z50",
+    "0-LAT4HjWPo",
+    "gjffmgucDSw"
   ],
   "upload_timestamps": [
     1794318089.2156572,
@@ -123,7 +125,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324203.745821,
+        "last_synced": 1794327691.6397243,
         "status": "pending_or_private"
       }
     },
@@ -149,7 +151,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324203.745821,
+        "last_synced": 1794327691.6397243,
         "status": "pending_or_private"
       }
     },
@@ -175,7 +177,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324203.745821,
+        "last_synced": 1794327691.6397243,
         "status": "public"
       }
     },
@@ -201,7 +203,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324203.745821,
+        "last_synced": 1794327691.6397243,
         "status": "public"
       }
     },
@@ -227,7 +229,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324203.745821,
+        "last_synced": 1794327691.6397243,
         "status": "public"
       }
     },
@@ -253,7 +255,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324203.745821,
+        "last_synced": 1794327691.6397243,
         "status": "public"
       }
     },
@@ -279,7 +281,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324203.745821,
+        "last_synced": 1794327691.6397243,
         "status": "public"
       }
     },
@@ -305,14 +307,14 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794324203.745821,
+        "last_synced": 1794327691.6397243,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1794326207.4302285,
+    "last_sync": 1794327691.6397243,
     "total_shorts": 8,
     "public_shorts": 3,
     "total_views": 8,
