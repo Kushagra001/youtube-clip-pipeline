@@ -120,14 +120,27 @@ jobs:
           mode: wireguard
 
       - name: Verify & Guard WARP Tunnel
-        timeout-minutes: 3
+        timeout-minutes: 4
         continue-on-error: true
         run: |
-          check_warp_health() {
+          check_warp_trace() {
             local tr
-            tr=$(timeout 9 curl -fsS --max-time 6 https://www.cloudflare.com/cdn-cgi/trace 2>/dev/null || true)
-            if echo "$tr" | grep -q "warp=on" && timeout 9 curl -fsS --max-time 6 https://www.youtube.com/robots.txt >/dev/null 2>&1; then
-              echo "$tr" | head -n 8
+            tr=$(timeout 8 curl -fsS -4 --max-time 6 https://www.cloudflare.com/cdn-cgi/trace 2>/dev/null || true)
+            if echo "$tr" | grep -q "warp=on"; then
+              printf '%s\n' "$tr"
+              return 0
+            fi
+            return 1
+          }
+
+          check_yt_player() {
+            local out
+            out=$(timeout 16 yt-dlp --no-download --no-warnings \
+              --socket-timeout 10 --retries 1 \
+              --extractor-args "youtube:player_client=visionos,android_vr,ios,mweb" \
+              --extractor-args "youtubepot-bgutilhttp:base_url=http://127.0.0.1:4416" \
+              -s --print "%(id)s" "https://www.youtube.com/watch?v=jNQXAC9IVRw" 2>&1 || true)
+            if echo "$out" | grep -q "^jNQXAC9IVRw$"; then
               return 0
             fi
             return 1
@@ -143,13 +156,22 @@ jobs:
             sudo ip -6 rule del table main suppress_prefixlength 0 2>/dev/null || true
           }
 
-          echo "Verifying Cloudflare WARP tunnel health..."
-          if check_warp_health; then
-            echo "Cloudflare WARP tunnel active and healthy!"
-            exit 0
+          echo "Verifying Cloudflare WARP tunnel and YouTube player health..."
+          BAD_V4_IP=""
+          INIT_TRACE=$(check_warp_trace || true)
+          if [ -n "$INIT_TRACE" ]; then
+            echo "$INIT_TRACE" | head -n 8
+            INIT_IP=$(echo "$INIT_TRACE" | sed -n 's/^ip=//p' | head -n 1)
+            if check_yt_player; then
+              echo "Cloudflare WARP tunnel + YouTube player verified healthy!"
+              exit 0
+            fi
+            BAD_V4_IP="$INIT_IP"
+            echo "::notice::WARP tunnel up (ip=$BAD_V4_IP) but YouTube player probe failed; rotating WARP endpoint/exit..."
+          else
+            echo "::notice::Initial WARP endpoint unresponsive; trying alternate WireGuard endpoints..."
           fi
 
-          echo "::notice::Initial WARP endpoint unresponsive; trying alternate WireGuard endpoints..."
           if ip link show warp >/dev/null 2>&1 || [ -f /etc/wireguard/warp.conf ]; then
             if ! ip link show warp >/dev/null 2>&1 && [ -f /etc/wireguard/warp.conf ]; then
               sudo wg-quick up warp 2>/dev/null || true
@@ -159,28 +181,45 @@ jobs:
               PEER_KEY=$(grep -i '^PublicKey' /etc/wireguard/warp.conf | head -n 1 | sed -E 's/^PublicKey[[:space:]]*=[[:space:]]*//I' | tr -d ' \r' || true)
             fi
             if [ -n "$PEER_KEY" ]; then
+              SAME_IP_HITS=0
               for ep in \
+                "162.159.193.1:2408" \
+                "188.114.96.1:2408" \
+                "162.159.195.1:2408" \
+                "188.114.98.1:4500" \
                 "162.159.192.1:500" \
                 "162.159.192.2:4500" \
-                "162.159.193.1:2408" \
-                "162.159.193.10:1701" \
-                "162.159.195.1:2408" \
-                "188.114.96.1:2408" \
                 "188.114.97.1:500" \
-                "188.114.98.1:4500"
+                "162.159.193.10:1701"
               do
                 echo "Trying WARP WireGuard endpoint $ep..."
                 sudo wg set warp peer "$PEER_KEY" endpoint "$ep" persistent-keepalive 15 2>/dev/null || continue
                 sleep 1
-                if check_warp_health; then
-                  echo "Cloudflare WARP recovered via alternate WireGuard endpoint ($ep)!"
+                NEW_TRACE=$(check_warp_trace || true)
+                if [ -z "$NEW_TRACE" ]; then
+                  continue
+                fi
+                NEW_IP=$(echo "$NEW_TRACE" | sed -n 's/^ip=//p' | head -n 1)
+                if [ -n "$BAD_V4_IP" ] && [ "$NEW_IP" = "$BAD_V4_IP" ]; then
+                  SAME_IP_HITS=$((SAME_IP_HITS + 1))
+                  echo "Endpoint $ep still maps to flagged egress ip=$NEW_IP ($SAME_IP_HITS/2)..."
+                  if [ "$SAME_IP_HITS" -ge 2 ]; then
+                    echo "Stopping WireGuard endpoint scan early and escalating to warp-cli..."
+                    break
+                  fi
+                  continue
+                fi
+                if check_yt_player; then
+                  echo "$NEW_TRACE" | head -n 8
+                  echo "Cloudflare WARP recovered via alternate WireGuard endpoint ($ep, ip=$NEW_IP)!"
                   exit 0
                 fi
+                BAD_V4_IP="$NEW_IP"
               done
             fi
           fi
 
-          echo "Alternate WireGuard endpoints unresponsive; tearing down WireGuard 'warp' and trying official warp-cli (MASQUE)..."
+          echo "Trying official cloudflare-warp (MASQUE / WireGuard) with fresh registration..."
           teardown_wireguard_warp
 
           if timeout 90 bash -c '
@@ -190,37 +229,118 @@ jobs:
             sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends cloudflare-warp
           '; then
             sudo systemctl start warp-svc 2>/dev/null || true
-            sleep 2
+            for _ in 1 2 3 4 5; do
+              if sudo warp-cli --accept-tos status >/dev/null 2>&1; then
+                break
+              fi
+              sleep 1
+            done
+            sudo warp-cli --accept-tos registration delete 2>/dev/null || true
             sudo warp-cli --accept-tos registration new 2>/dev/null || true
             sudo warp-cli --accept-tos mode warp 2>/dev/null || true
             sudo warp-cli --accept-tos tunnel protocol set MASQUE 2>/dev/null || true
             sudo warp-cli --accept-tos connect 2>/dev/null || true
             for i in 1 2 3 4 5 6; do
               sleep 3
-              if check_warp_health; then
-                echo "Cloudflare WARP recovered via official warp-cli (MASQUE)!"
-                exit 0
+              MASQUE_TRACE=$(check_warp_trace || true)
+              if [ -n "$MASQUE_TRACE" ]; then
+                MASQUE_IP=$(echo "$MASQUE_TRACE" | sed -n 's/^ip=//p' | head -n 1)
+                if [ -n "$BAD_V4_IP" ] && [ "$MASQUE_IP" = "$BAD_V4_IP" ]; then
+                  echo "warp-cli MASQUE exited via same flagged ip=$MASQUE_IP"
+                  break
+                fi
+                if check_yt_player; then
+                  echo "$MASQUE_TRACE" | head -n 8
+                  echo "Cloudflare WARP recovered via official warp-cli (MASQUE, ip=$MASQUE_IP)!"
+                  exit 0
+                fi
+                BAD_V4_IP="$MASQUE_IP"
+                break
               fi
             done
-            echo "warp-cli MASQUE check failed; trying warp-cli WireGuard..."
+            echo "warp-cli MASQUE did not clear YouTube probe; trying warp-cli WireGuard..."
             sudo warp-cli --accept-tos disconnect 2>/dev/null || true
             sudo warp-cli --accept-tos tunnel protocol set WireGuard 2>/dev/null || true
             sudo warp-cli --accept-tos connect 2>/dev/null || true
             for i in 1 2 3 4; do
               sleep 3
-              if check_warp_health; then
-                echo "Cloudflare WARP recovered via official warp-cli (WireGuard)!"
-                exit 0
+              WGCLI_TRACE=$(check_warp_trace || true)
+              if [ -n "$WGCLI_TRACE" ]; then
+                WGCLI_IP=$(echo "$WGCLI_TRACE" | sed -n 's/^ip=//p' | head -n 1)
+                if [ -n "$BAD_V4_IP" ] && [ "$WGCLI_IP" = "$BAD_V4_IP" ]; then
+                  echo "warp-cli WireGuard also exited via flagged ip=$WGCLI_IP"
+                  break
+                fi
+                if check_yt_player; then
+                  echo "$WGCLI_TRACE" | head -n 8
+                  echo "Cloudflare WARP recovered via official warp-cli (WireGuard, ip=$WGCLI_IP)!"
+                  exit 0
+                fi
+                break
               fi
             done
             sudo warp-cli --accept-tos disconnect 2>/dev/null || true
             sudo systemctl stop warp-svc 2>/dev/null || true
           fi
 
-          echo "::warning::Cloudflare WARP tunnel unhealthy or unresponsive after fallbacks; tearing down warp interface cleanly."
-          teardown_wireguard_warp
-          echo "Fallback direct egress trace:"
-          curl -s --max-time 8 https://www.cloudflare.com/cdn-cgi/trace | head -n 8 || true
+          # Stage C: Restore WireGuard WARP interface (unique per-runner 2a09:bac... IPv6) and prefer WARP IPv6 via /etc/gai.conf
+          if [ -f /etc/wireguard/warp.conf ]; then
+            echo "Restoring WireGuard WARP interface and testing unique WARP IPv6 egress..."
+            sudo wg-quick up warp 2>/dev/null || true
+            V6_TRACE=$(timeout 8 curl -fsS -6 --max-time 6 https://www.cloudflare.com/cdn-cgi/trace 2>/dev/null || true)
+            if echo "$V6_TRACE" | grep -q "warp=on"; then
+              [ -f /etc/gai.conf ] && sudo cp /etc/gai.conf /etc/gai.conf.bak 2>/dev/null || true
+              sudo tee /etc/gai.conf >/dev/null <<'EOF'
+          label ::1/128       0
+          label ::/0          1
+          label fc00::/7      1
+          label 2002::/16     2
+          label ::/96         3
+          label ::ffff:0:0/96 4
+          precedence ::1/128       50
+          precedence ::/0          40
+          precedence fc00::/7      40
+          precedence 2002::/16     30
+          precedence ::/96         20
+          precedence ::ffff:0:0/96 10
+          EOF
+              docker cp /etc/gai.conf bgutil-provider:/etc/gai.conf 2>/dev/null || true
+              docker restart bgutil-provider >/dev/null 2>&1 || true
+              for _ in 1 2 3 4 5; do
+                if curl -sf http://127.0.0.1:4416/ping >/dev/null 2>&1; then
+                  break
+                fi
+                sleep 1
+              done
+              PREF_TRACE=$(timeout 8 curl -fsS --max-time 6 https://www.cloudflare.com/cdn-cgi/trace 2>/dev/null || true)
+              if check_yt_player; then
+                echo "$PREF_TRACE" | head -n 8
+                echo "Cloudflare WARP recovered via unique WARP IPv6 egress!"
+                exit 0
+              fi
+              echo "WARP IPv6 probe also failed; restoring default /etc/gai.conf..."
+              if [ -f /etc/gai.conf.bak ]; then
+                sudo mv /etc/gai.conf.bak /etc/gai.conf
+              else
+                sudo rm -f /etc/gai.conf
+              fi
+              docker cp /etc/gai.conf bgutil-provider:/etc/gai.conf 2>/dev/null || docker exec bgutil-provider rm -f /etc/gai.conf 2>/dev/null || true
+              docker restart bgutil-provider >/dev/null 2>&1 || true
+              sleep 2
+            fi
+          fi
+
+          # Only teardown WARP if WARP itself has zero internet/Cloudflare connectivity; keep WARP IPv4 if alive (better than raw Azure)
+          FINAL_V4=$(check_warp_trace || true)
+          if [ -n "$FINAL_V4" ]; then
+            echo "::warning::YouTube player check still failing across WARP IPv4/IPv6 paths; keeping WARP interface active rather than falling back to raw Azure."
+            echo "$FINAL_V4" | head -n 8
+          else
+            echo "::warning::Cloudflare WARP tunnel unhealthy or unresponsive after fallbacks; tearing down warp interface cleanly."
+            teardown_wireguard_warp
+            echo "Fallback direct egress trace:"
+            curl -s --max-time 8 https://www.cloudflare.com/cdn-cgi/trace | head -n 8 || true
+          fi
 
       - name: Configure YouTube Authentication Cookies
         env:

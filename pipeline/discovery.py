@@ -549,6 +549,12 @@ def enrich_candidates_virality(candidates: list[dict], max_enrich: int = 12, sta
                 cookie_opts = dict(ydl_opts)
                 cookie_opts["cookiefile"] = str(cookie_path)
                 cookie_opts["logger"] = logger_cookie
+                cookie_opts["extractor_args"] = {
+                    **{k: v for k, v in extractor_args.items() if k != "youtube"},
+                    "youtube": {
+                        "player_client": ["mweb", "web", "tv"],
+                    },
+                }
                 print(f"  [Discovery] Retrying {len(missing_cands)}/{len(to_enrich)} candidates with session cookie fallback...")
                 with yt_dlp.YoutubeDL(cookie_opts) as ydl_cookie:
                     for cand in missing_cands:

@@ -277,22 +277,49 @@ def _needs_auth_fallback(text_low: str) -> bool:
     return _is_http_403(text_low) or any(m in text_low for m in _CHALLENGE_FALLBACK_MARKERS)
 
 
+def _cookie_compatible_clients(player_clients: str) -> str:
+    """Filters/expands player clients to those supporting cookie auth in yt-dlp."""
+    allowed = {"mweb", "tv", "web", "web_safari", "web_embedded", "web_creator"}
+    parts = [c.strip() for c in player_clients.split(",") if c.strip() in allowed]
+    for fallback in ("mweb", "web", "tv"):
+        if fallback not in parts:
+            parts.append(fallback)
+    return ",".join(parts)
+
+
 def _run_ytdlp_resilient(
     extra_args: list[str],
     player_clients: str = "visionos,ios,mweb",
     timeout: int = 180,
     ignore_cookies: bool = True,
+    success_validator=None,
 ) -> subprocess.CompletedProcess:
     """Executes yt-dlp anonymous-first, with HTTP 429 backoff, cookie fallback on challenges,
     and automatic sticky cookie cooldown + anonymous recovery if cookies hit YouTube's session limit.
     """
+    def _succeeded(proc_res: subprocess.CompletedProcess) -> bool:
+        if proc_res.returncode != 0:
+            return False
+        if success_validator is None:
+            return True
+        try:
+            return bool(success_validator())
+        except Exception:
+            return False
+
     use_cookies_first = (not ignore_cookies) and (get_cookies_path() is not None)
-    cmd1 = _base_ytdlp_args(ignore_cookies=(not use_cookies_first), player_clients=player_clients) + extra_args
+    init_clients = _cookie_compatible_clients(player_clients) if use_cookies_first else player_clients
+    cmd1 = _base_ytdlp_args(ignore_cookies=(not use_cookies_first), player_clients=init_clients) + extra_args
     res = _run_proc_clean(cmd1, timeout=timeout)
-    if res.returncode == 0:
+    if _succeeded(res):
         return res
 
     err_low = ((res.stderr or "") + "\n" + (res.stdout or "")).lower()
+    # e.g. --skip-download --ignore-no-formats-error exited 0 because video genuinely has no subtitles
+    if res.returncode == 0 and not (
+        _is_http_429(err_low) or _needs_auth_fallback(err_low) or _is_session_rate_limited(err_low)
+    ):
+        return res
 
     # Immediately trip sticky cookie cooldown if a cookie request hits YouTube's hourly session cap
     if use_cookies_first and _is_session_rate_limited(err_low):
@@ -300,7 +327,7 @@ def _run_ytdlp_resilient(
         print("  [Download] Cookie session rate-limited; retrying anonymously...")
         cmd_anon = _base_ytdlp_args(ignore_cookies=True, player_clients=player_clients) + extra_args
         res_anon = _run_proc_clean(cmd_anon, timeout=timeout)
-        if res_anon.returncode == 0:
+        if _succeeded(res_anon):
             return res_anon
         res = res_anon
         err_low = ((res.stderr or "") + "\n" + (res.stdout or "")).lower()
@@ -312,7 +339,7 @@ def _run_ytdlp_resilient(
         time.sleep(4.0)
         cmd_429 = _base_ytdlp_args(ignore_cookies=True, player_clients=player_clients) + extra_args
         res = _run_proc_clean(cmd_429, timeout=timeout)
-        if res.returncode == 0:
+        if _succeeded(res):
             return res
 
         err_low = ((res.stderr or "") + "\n" + (res.stdout or "")).lower()
@@ -336,9 +363,10 @@ def _run_ytdlp_resilient(
         cookie_path = get_cookies_path()
         if cookie_path:
             print("  [Download] Anonymous request hit YouTube challenge/block. Retrying with session cookies...")
-            cmd_cookie = _base_ytdlp_args(ignore_cookies=False, player_clients=player_clients) + extra_args
+            cookie_clients = _cookie_compatible_clients(player_clients)
+            cmd_cookie = _base_ytdlp_args(ignore_cookies=False, player_clients=cookie_clients) + extra_args
             res_cookie = _run_proc_clean(cmd_cookie, timeout=timeout)
-            if res_cookie.returncode == 0:
+            if _succeeded(res_cookie):
                 return res_cookie
 
             err_cookie_low = ((res_cookie.stderr or "") + "\n" + (res_cookie.stdout or "")).lower()
@@ -347,7 +375,7 @@ def _run_ytdlp_resilient(
                 if player_clients != "android_vr,tv,mweb,web":
                     cmd_alt = _base_ytdlp_args(ignore_cookies=True, player_clients="android_vr,tv,mweb,web") + extra_args
                     res_alt = _run_proc_clean(cmd_alt, timeout=timeout)
-                    if res_alt.returncode == 0:
+                    if _succeeded(res_alt):
                         return res_alt
                     return res_alt
                 return res
@@ -484,7 +512,13 @@ def download_subtitles(url: str, video_id: str | None = None) -> Path | None:
             "-o", out_template,
             url,
         ]
-        res = _run_ytdlp_resilient(cmd, player_clients=clients, timeout=60, ignore_cookies=force_anon)
+        res = _run_ytdlp_resilient(
+            cmd,
+            player_clients=clients,
+            timeout=60,
+            ignore_cookies=force_anon,
+            success_validator=lambda: _pick_best_vtt(video_id) is not None,
+        )
 
         # Even if a warning or secondary track caused non-zero exit, check if a valid .vtt was written
         picked = _pick_best_vtt(video_id)
@@ -544,15 +578,23 @@ def download_audio_only(url: str, video_id: str | None = None) -> tuple[Path, fl
         "-o", out_template,
         url,
     ]
-    res = _run_ytdlp_resilient(cmd, player_clients="visionos,ios,mweb", timeout=120)
-    candidates = [
-        p for p in DOWNLOAD_DIR.glob(f"{prefix}.*")
-        if p.is_file() and not p.name.endswith(".part") and p.stat().st_size > 1024
-    ]
-    if res.returncode != 0 or not candidates:
-        err_msg = (res.stderr or res.stdout or "").strip()
+    last_err_msg = ""
+    candidates: list[Path] = []
+    for idx, clients in enumerate(("visionos,ios,mweb", "android_vr,tv,mweb,web")):
+        if idx > 0:
+            cleanup_intermediate_files(prefix)
+        res = _run_ytdlp_resilient(cmd, player_clients=clients, timeout=120)
+        candidates = [
+            p for p in DOWNLOAD_DIR.glob(f"{prefix}.*")
+            if p.is_file() and not p.name.endswith(".part") and p.stat().st_size > 1024
+        ]
+        if res.returncode == 0 and candidates:
+            break
+        last_err_msg = (res.stderr or res.stdout or "").strip()
+
+    if not candidates:
         cleanup_intermediate_files(prefix)
-        last_error = "\n".join(err_msg.splitlines()[-4:]) if err_msg else "Audio stream unavailable"
+        last_error = "\n".join(last_err_msg.splitlines()[-4:]) if last_err_msg else "Audio stream unavailable"
         raise RuntimeError(f"Audio-only download failed: {last_error}")
 
     audio_path = candidates[0]
