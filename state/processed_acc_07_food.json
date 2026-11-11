@@ -125,7 +125,8 @@
     "e7Rv2dCqc10",
     "pDgEBQx7wKY",
     "VegTVfu8pbE",
-    "F4lXB9p0ymE"
+    "F4lXB9p0ymE",
+    "vyt7Yg4dwBc"
   ],
   "upload_timestamps": [
     1794322621.3324704,
@@ -154,7 +155,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373884.8765893,
+        "last_synced": 1794404820.657237,
         "status": "pending_or_private"
       }
     },
@@ -180,7 +181,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373884.8765893,
+        "last_synced": 1794404820.657237,
         "status": "pending_or_private"
       }
     },
@@ -206,7 +207,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373884.8765893,
+        "last_synced": 1794404820.657237,
         "status": "public"
       }
     },
@@ -232,7 +233,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373884.8765893,
+        "last_synced": 1794404820.657237,
         "status": "public"
       }
     },
@@ -258,7 +259,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373884.8765893,
+        "last_synced": 1794404820.657237,
         "status": "public"
       }
     },
@@ -284,7 +285,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373884.8765893,
+        "last_synced": 1794404820.657237,
         "status": "public"
       }
     },
@@ -307,10 +308,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794322621.332479,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373884.8765893,
+        "last_synced": 1794404820.657237,
         "status": "public"
       }
     },
@@ -336,21 +337,22 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373884.8765893,
+        "last_synced": 1794404820.657237,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1794373884.8765893,
+    "last_sync": 1794404820.657237,
     "total_shorts": 8,
-    "public_shorts": 3,
-    "total_views": 10,
-    "median_views": 3,
+    "public_shorts": 4,
+    "total_views": 11,
+    "median_views": 2.0,
     "creator_weights": {
-      "Will Tennyson": 1.35,
-      "@JoshuaWeissman": 1.0
+      "Will Tennyson": 1.8,
+      "@JoshuaWeissman": 1.0,
+      "Epicurious": 1.0
     }
   }
 }
