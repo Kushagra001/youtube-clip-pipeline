@@ -111,11 +111,13 @@
     "Jaep7tUCJ1Q",
     "keTLb_W8210",
     "45f02LuzKhc",
-    "Q4wWhQH0ukQ"
+    "Q4wWhQH0ukQ",
+    "NpOFYQUkFdE",
+    "EXmXOolfyH8"
   ],
   "upload_timestamps": [
-    1794318002.1774027,
-    1794318065.3117847
+    1794405078.2763212,
+    1794405147.8567097
   ],
   "uploaded_shorts": [
     {
@@ -140,7 +142,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373919.0162141,
+        "last_synced": 1794404802.958494,
         "status": "public"
       }
     },
@@ -166,7 +168,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373919.0162141,
+        "last_synced": 1794404802.958494,
         "status": "pending_or_private"
       }
     },
@@ -192,7 +194,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373919.0162141,
+        "last_synced": 1794404802.958494,
         "status": "public"
       }
     },
@@ -218,7 +220,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373919.0162141,
+        "last_synced": 1794404802.958494,
         "status": "public"
       }
     },
@@ -244,7 +246,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373919.0162141,
+        "last_synced": 1794404802.958494,
         "status": "public"
       }
     },
@@ -270,7 +272,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373919.0162141,
+        "last_synced": 1794404802.958494,
         "status": "public"
       }
     },
@@ -296,14 +298,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373919.0162141,
+        "last_synced": 1794404802.958494,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "Q8qXwmjoNKs",
+      "source_video_id": "NpOFYQUkFdE",
+      "title": "The 5-Minute Habit That Fixes Your Face #shorts",
+      "creator": "Glow Mode",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794405078.2763317,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "D89khS_SxCU",
+      "source_video_id": "EXmXOolfyH8",
+      "title": "The Lazy Man's Guide to Being Interesting #shorts",
+      "creator": "Nick Alexander",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794405147.856721,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1794373919.0162141,
+    "last_sync": 1794404802.958494,
     "total_shorts": 7,
     "public_shorts": 3,
     "total_views": 14,
