@@ -113,11 +113,13 @@
     "huariiK4_us",
     "WMcNqiFFzPY",
     "wtDDjBOfTZo",
-    "jd6tIp_-MJI"
+    "jd6tIp_-MJI",
+    "FVObV4Qu6rU",
+    "ZeJXI2MAhj0"
   ],
   "upload_timestamps": [
-    1794318180.2579556,
-    1794318254.7428286
+    1794404940.6288006,
+    1794405009.116542
   ],
   "uploaded_shorts": [
     {
@@ -134,7 +136,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373900.0150483,
+        "last_synced": 1794404818.1118677,
         "status": "pending_or_private"
       }
     },
@@ -152,7 +154,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373900.0150483,
+        "last_synced": 1794404818.1118677,
         "status": "pending_or_private"
       }
     },
@@ -176,7 +178,7 @@
         "views": 1193,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1794373900.0150483,
+        "last_synced": 1794404818.1118677,
         "status": "public"
       }
     },
@@ -200,7 +202,7 @@
         "views": 378,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794373900.0150483,
+        "last_synced": 1794404818.1118677,
         "status": "public"
       }
     },
@@ -224,7 +226,7 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373900.0150483,
+        "last_synced": 1794404818.1118677,
         "status": "public"
       }
     },
@@ -248,7 +250,7 @@
         "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794373900.0150483,
+        "last_synced": 1794404818.1118677,
         "status": "public"
       }
     },
@@ -272,7 +274,7 @@
         "views": 8,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373900.0150483,
+        "last_synced": 1794404818.1118677,
         "status": "public"
       }
     },
@@ -293,20 +295,66 @@
       "scheduled_at": null,
       "uploaded_at": 1794318254.7428377,
       "stats": {
-        "views": 20,
+        "views": 21,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373900.0150483,
+        "last_synced": 1794404818.1118677,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "7g4XoX4v5go",
+      "source_video_id": "FVObV4Qu6rU",
+      "title": "Stop Asking ChatGPT Questions #shorts",
+      "creator": "9x",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794404940.6288123,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "k7_UFV1bZNI",
+      "source_video_id": "FVObV4Qu6rU",
+      "title": "The Secret to Custom AI Skills #shorts",
+      "creator": "9x",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794405009.116551,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1794373900.0150483,
+    "last_sync": 1794404818.1118677,
     "total_shorts": 8,
     "public_shorts": 6,
-    "total_views": 2117,
+    "total_views": 2118,
     "median_views": 248.0,
     "creator_weights": {
       "Matt Wolfe": 1.8,
