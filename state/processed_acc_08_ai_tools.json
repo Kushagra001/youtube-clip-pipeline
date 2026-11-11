@@ -111,7 +111,9 @@
     "0TitiOk7hbI",
     "9FDdQs3AH58",
     "huariiK4_us",
-    "WMcNqiFFzPY"
+    "WMcNqiFFzPY",
+    "wtDDjBOfTZo",
+    "jd6tIp_-MJI"
   ],
   "upload_timestamps": [
     1794318180.2579556,
@@ -132,7 +134,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794351540.4285426,
+        "last_synced": 1794373900.0150483,
         "status": "pending_or_private"
       }
     },
@@ -150,7 +152,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794351540.4285426,
+        "last_synced": 1794373900.0150483,
         "status": "pending_or_private"
       }
     },
@@ -174,7 +176,7 @@
         "views": 1193,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1794351540.4285426,
+        "last_synced": 1794373900.0150483,
         "status": "public"
       }
     },
@@ -198,7 +200,7 @@
         "views": 378,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794351540.4285426,
+        "last_synced": 1794373900.0150483,
         "status": "public"
       }
     },
@@ -222,7 +224,7 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794351540.4285426,
+        "last_synced": 1794373900.0150483,
         "status": "public"
       }
     },
@@ -246,7 +248,7 @@
         "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794351540.4285426,
+        "last_synced": 1794373900.0150483,
         "status": "public"
       }
     },
@@ -270,7 +272,7 @@
         "views": 8,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794351540.4285426,
+        "last_synced": 1794373900.0150483,
         "status": "public"
       }
     },
@@ -291,20 +293,20 @@
       "scheduled_at": null,
       "uploaded_at": 1794318254.7428377,
       "stats": {
-        "views": 16,
+        "views": 20,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794351540.4285426,
+        "last_synced": 1794373900.0150483,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1794351540.4285426,
+    "last_sync": 1794373900.0150483,
     "total_shorts": 8,
     "public_shorts": 6,
-    "total_views": 2113,
+    "total_views": 2117,
     "median_views": 248.0,
     "creator_weights": {
       "Matt Wolfe": 1.8,
