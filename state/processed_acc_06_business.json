@@ -105,11 +105,13 @@
     "gTyRQert4JY",
     "_b5kM2zDQTk",
     "qsXxckCbci0",
-    "m1WVgQ7Xkqw"
+    "m1WVgQ7Xkqw",
+    "cC0H5kyRi9Q",
+    "wLbl8TGiM8E"
   ],
   "upload_timestamps": [
-    1794318089.2156572,
-    1794318156.3605971
+    1794404914.2333772,
+    1794404999.0967493
   ],
   "uploaded_shorts": [
     {
@@ -134,7 +136,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373915.2699833,
+        "last_synced": 1794404776.1418307,
         "status": "pending_or_private"
       }
     },
@@ -160,7 +162,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373915.2699833,
+        "last_synced": 1794404776.1418307,
         "status": "pending_or_private"
       }
     },
@@ -186,7 +188,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373915.2699833,
+        "last_synced": 1794404776.1418307,
         "status": "public"
       }
     },
@@ -212,7 +214,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373915.2699833,
+        "last_synced": 1794404776.1418307,
         "status": "public"
       }
     },
@@ -238,7 +240,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373915.2699833,
+        "last_synced": 1794404776.1418307,
         "status": "public"
       }
     },
@@ -264,7 +266,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373915.2699833,
+        "last_synced": 1794404776.1418307,
         "status": "public"
       }
     },
@@ -290,7 +292,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373915.2699833,
+        "last_synced": 1794404776.1418307,
         "status": "public"
       }
     },
@@ -316,14 +318,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373915.2699833,
+        "last_synced": 1794404776.1418307,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "6Wd-cNWoiYw",
+      "source_video_id": "cC0H5kyRi9Q",
+      "title": "The Startup Trap: Too Much Money #shorts",
+      "creator": "Backstage with Millionaires",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794404914.2333882,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "jbvOlEDt9Go",
+      "source_video_id": "cC0H5kyRi9Q",
+      "title": "Porter's No-App Growth Hack #shorts",
+      "creator": "Backstage with Millionaires",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794404999.096759,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1794373915.2699833,
+    "last_sync": 1794404776.1418307,
     "total_shorts": 8,
     "public_shorts": 3,
     "total_views": 8,
