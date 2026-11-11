@@ -115,10 +115,7 @@
     "1Q7h6GZh3OQ",
     "laM1jdQXu1c"
   ],
-  "upload_timestamps": [
-    1794317979.9906397,
-    1794318025.9484074
-  ],
+  "upload_timestamps": [],
   "uploaded_shorts": [
     {
       "video_id": "cMEB3A4vJwI",
@@ -142,7 +139,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373953.6891637,
+        "last_synced": 1794404837.5505803,
         "status": "public"
       }
     },
@@ -168,7 +165,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373953.6891637,
+        "last_synced": 1794404837.5505803,
         "status": "public"
       }
     },
@@ -194,7 +191,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373953.6891637,
+        "last_synced": 1794404837.5505803,
         "status": "public"
       }
     },
@@ -220,7 +217,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373953.6891637,
+        "last_synced": 1794404837.5505803,
         "status": "public"
       }
     },
@@ -243,10 +240,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794317979.990647,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373953.6891637,
+        "last_synced": 1794404837.5505803,
         "status": "public"
       }
     },
@@ -269,23 +266,23 @@
       "scheduled_at": null,
       "uploaded_at": 1794318025.9484189,
       "stats": {
-        "views": 2,
+        "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794373953.6891637,
+        "last_synced": 1794404837.5505803,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_03_fitness",
-    "last_sync": 1794373953.6891637,
+    "last_sync": 1794404837.5505803,
     "total_shorts": 6,
-    "public_shorts": 4,
-    "total_views": 11,
-    "median_views": 2.5,
+    "public_shorts": 5,
+    "total_views": 14,
+    "median_views": 3,
     "creator_weights": {
-      "@ChrisHeria": 1.35,
+      "@ChrisHeria": 1.0,
       "@RenaissancePeriodization": 1.0,
       "Calisthenicmovement": 1.0
     }
