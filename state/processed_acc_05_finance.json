@@ -120,11 +120,13 @@
     "8J_36MGSdVI",
     "o6FT4KBlEUg",
     "Lk3PeK1OJQg",
-    "4Ney5B-Iuhw"
+    "4Ney5B-Iuhw",
+    "mW_laGZ0Hys",
+    "WPTAr14wmco"
   ],
   "upload_timestamps": [
-    1794325438.2456775,
-    1794325576.0416746
+    1794442497.23127,
+    1794442569.935046
   ],
   "uploaded_shorts": [
     {
@@ -149,7 +151,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404856.6702995,
+        "last_synced": 1794442368.7763982,
         "status": "pending_or_private"
       }
     },
@@ -175,7 +177,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404856.6702995,
+        "last_synced": 1794442368.7763982,
         "status": "pending_or_private"
       }
     },
@@ -201,7 +203,7 @@
         "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404856.6702995,
+        "last_synced": 1794442368.7763982,
         "status": "public"
       }
     },
@@ -227,7 +229,7 @@
         "views": 34,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404856.6702995,
+        "last_synced": 1794442368.7763982,
         "status": "public"
       }
     },
@@ -253,7 +255,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404856.6702995,
+        "last_synced": 1794442368.7763982,
         "status": "public"
       }
     },
@@ -279,14 +281,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404856.6702995,
+        "last_synced": 1794442368.7763982,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "fuTXZZPBTwc",
+      "source_video_id": "mW_laGZ0Hys",
+      "title": "The $50K Income Survival Rule #shorts",
+      "creator": "Humphrey Yang",
+      "topic": "personal finance, investing, budgeting and side hustles for financial freedom",
+      "tags": [
+        "personalfinance",
+        "investing",
+        "sidehustle",
+        "financialfreedom",
+        "stockmarket",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794442497.2312784,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "YPksttD18Is",
+      "source_video_id": "mW_laGZ0Hys",
+      "title": "The HSA Receipt Hack #shorts",
+      "creator": "Humphrey Yang",
+      "topic": "personal finance, investing, budgeting and side hustles for financial freedom",
+      "tags": [
+        "personalfinance",
+        "investing",
+        "sidehustle",
+        "financialfreedom",
+        "stockmarket",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794442569.9350564,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_05_finance",
-    "last_sync": 1794404856.6702995,
+    "last_sync": 1794442368.7763982,
     "total_shorts": 6,
     "public_shorts": 3,
     "total_views": 44,
