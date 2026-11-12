@@ -104,11 +104,13 @@
     "NKyyF9MQXn4",
     "QkCa--fyGjA",
     "9WOoP1A6gIg",
-    "LScqH7t3rSM"
+    "LScqH7t3rSM",
+    "DyeqDr-Z4Ac",
+    "O83DJ7nSAZk"
   ],
   "upload_timestamps": [
-    1794322831.1659663,
-    1794322886.9367714
+    1794442700.789461,
+    1794442793.062057
   ],
   "uploaded_shorts": [
     {
@@ -133,7 +135,7 @@
         "views": 1065,
         "likes": 14,
         "comments": 0,
-        "last_synced": 1794404867.318288,
+        "last_synced": 1794442536.9714143,
         "status": "public"
       }
     },
@@ -159,7 +161,7 @@
         "views": 823,
         "likes": 5,
         "comments": 0,
-        "last_synced": 1794404867.318288,
+        "last_synced": 1794442536.9714143,
         "status": "public"
       }
     },
@@ -185,7 +187,7 @@
         "views": 81,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404867.318288,
+        "last_synced": 1794442536.9714143,
         "status": "public"
       }
     },
@@ -211,7 +213,7 @@
         "views": 51,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404867.318288,
+        "last_synced": 1794442536.9714143,
         "status": "public"
       }
     },
@@ -237,7 +239,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404867.318288,
+        "last_synced": 1794442536.9714143,
         "status": "public"
       }
     },
@@ -263,14 +265,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404867.318288,
+        "last_synced": 1794442536.9714143,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "t92nIhdVdaE",
+      "source_video_id": "DyeqDr-Z4Ac",
+      "title": "Pre\u2011Game Anxiety Hack: Worst\u2011Case Scenario #shorts",
+      "creator": "Wisdom of the Stoics",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794442700.789471,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "DYXR_Uqaokw",
+      "source_video_id": "DyeqDr-Z4Ac",
+      "title": "Morning Phone Reset: 60\u2011Second Question #shorts",
+      "creator": "Wisdom of the Stoics",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794442793.062067,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_04_motivation",
-    "last_sync": 1794404867.318288,
+    "last_sync": 1794442536.9714143,
     "total_shorts": 6,
     "public_shorts": 4,
     "total_views": 2020,
