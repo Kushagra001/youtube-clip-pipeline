@@ -124,7 +124,8 @@
     "vfWkB5cWoY4",
     "QG9VtneCaQo",
     "n3XCZwwrnZE",
-    "xGy_IiNLATc"
+    "xGy_IiNLATc",
+    "H0XY3jOxhA0"
   ],
   "upload_timestamps": [
     1794442585.1189651,
@@ -153,7 +154,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494984.5231836,
+        "last_synced": 1794525548.7024205,
         "status": "pending_or_private"
       }
     },
@@ -179,7 +180,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494984.5231836,
+        "last_synced": 1794525548.7024205,
         "status": "pending_or_private"
       }
     },
@@ -205,7 +206,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494984.5231836,
+        "last_synced": 1794525548.7024205,
         "status": "pending_or_private"
       }
     },
@@ -231,7 +232,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494984.5231836,
+        "last_synced": 1794525548.7024205,
         "status": "pending_or_private"
       }
     },
@@ -257,7 +258,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494984.5231836,
+        "last_synced": 1794525548.7024205,
         "status": "public"
       }
     },
@@ -283,7 +284,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494984.5231836,
+        "last_synced": 1794525548.7024205,
         "status": "public"
       }
     },
@@ -309,7 +310,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494984.5231836,
+        "last_synced": 1794525548.7024205,
         "status": "public"
       }
     },
@@ -335,7 +336,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494984.5231836,
+        "last_synced": 1794525548.7024205,
         "status": "public"
       }
     },
@@ -361,7 +362,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494984.5231836,
+        "last_synced": 1794525548.7024205,
         "status": "public"
       }
     },
@@ -387,7 +388,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494984.5231836,
+        "last_synced": 1794525548.7024205,
         "status": "public"
       }
     },
@@ -413,7 +414,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494984.5231836,
+        "last_synced": 1794525548.7024205,
         "status": "public"
       }
     },
@@ -439,7 +440,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494984.5231836,
+        "last_synced": 1794525548.7024205,
         "status": "public"
       }
     },
@@ -465,7 +466,7 @@
         "views": 8,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494984.5231836,
+        "last_synced": 1794525548.7024205,
         "status": "public"
       }
     },
@@ -488,10 +489,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794442585.1189792,
       "stats": {
-        "views": 2,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494984.5231836,
+        "last_synced": 1794525548.7024205,
         "status": "public"
       }
     },
@@ -517,18 +518,18 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494984.5231836,
+        "last_synced": 1794525548.7024205,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_01_cats",
-    "last_sync": 1794494984.5231836,
+    "last_sync": 1794525548.7024205,
     "total_shorts": 15,
     "public_shorts": 4,
-    "total_views": 12,
-    "median_views": 1.5,
+    "total_views": 13,
+    "median_views": 2.0,
     "creator_weights": {
       "Funny And Cute Cat's Life": 1.0,
       "Funny Furry TV": 1.8,
