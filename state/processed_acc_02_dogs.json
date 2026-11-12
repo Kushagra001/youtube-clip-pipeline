@@ -111,7 +111,9 @@
     "jL6li0pU7yg",
     "xrV0rhI2fFA",
     "uV34sm6OSYA",
-    "ai7MndI6V9s"
+    "ai7MndI6V9s",
+    "nF-PTvbXYHA",
+    "Vl09bP8LoBQ"
   ],
   "upload_timestamps": [
     1794442632.412121,
@@ -140,7 +142,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494989.6794982,
+        "last_synced": 1794525551.8312182,
         "status": "pending_or_private"
       }
     },
@@ -166,7 +168,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494989.6794982,
+        "last_synced": 1794525551.8312182,
         "status": "pending_or_private"
       }
     },
@@ -192,7 +194,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494989.6794982,
+        "last_synced": 1794525551.8312182,
         "status": "public"
       }
     },
@@ -218,7 +220,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494989.6794982,
+        "last_synced": 1794525551.8312182,
         "status": "public"
       }
     },
@@ -244,7 +246,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494989.6794982,
+        "last_synced": 1794525551.8312182,
         "status": "public"
       }
     },
@@ -270,7 +272,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494989.6794982,
+        "last_synced": 1794525551.8312182,
         "status": "public"
       }
     },
@@ -293,10 +295,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794442632.4121287,
       "stats": {
-        "views": 5,
+        "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494989.6794982,
+        "last_synced": 1794525551.8312182,
         "status": "public"
       }
     },
@@ -322,20 +324,20 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494989.6794982,
+        "last_synced": 1794525551.8312182,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_02_dogs",
-    "last_sync": 1794494989.6794982,
+    "last_sync": 1794525551.8312182,
     "total_shorts": 8,
     "public_shorts": 5,
-    "total_views": 14,
+    "total_views": 16,
     "median_views": 3,
     "creator_weights": {
-      "Tom Davis Dog Training ": 1.0,
+      "Tom Davis Dog Training ": 1.35,
       "Funny Pet's Life": 1.0,
       "Daily Dose Of Internet and Daily Dose of Pets": 1.0
     }
