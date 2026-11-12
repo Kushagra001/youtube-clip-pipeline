@@ -111,11 +111,13 @@
     "NZMPqtqlMK0",
     "1PuWA9MkRWM",
     "phm_VPjijh8",
-    "4vpQNYthrIc"
+    "4vpQNYthrIc",
+    "97Ffhl6_OVM",
+    "e7JNRf07bhA"
   ],
   "upload_timestamps": [
-    1794322862.3925474,
-    1794322938.7458382
+    1794442510.5995412,
+    1794442585.4872642
   ],
   "uploaded_shorts": [
     {
@@ -140,7 +142,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404862.5294526,
+        "last_synced": 1794442374.9072287,
         "status": "public"
       }
     },
@@ -166,7 +168,7 @@
         "views": 15,
         "likes": 0,
         "comments": 2,
-        "last_synced": 1794404862.5294526,
+        "last_synced": 1794442374.9072287,
         "status": "public"
       }
     },
@@ -192,7 +194,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404862.5294526,
+        "last_synced": 1794442374.9072287,
         "status": "pending_or_private"
       }
     },
@@ -218,7 +220,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404862.5294526,
+        "last_synced": 1794442374.9072287,
         "status": "pending_or_private"
       }
     },
@@ -244,7 +246,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404862.5294526,
+        "last_synced": 1794442374.9072287,
         "status": "public"
       }
     },
@@ -270,7 +272,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404862.5294526,
+        "last_synced": 1794442374.9072287,
         "status": "public"
       }
     },
@@ -296,7 +298,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404862.5294526,
+        "last_synced": 1794442374.9072287,
         "status": "public"
       }
     },
@@ -322,14 +324,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404862.5294526,
+        "last_synced": 1794442374.9072287,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "iat6MHPYO_o",
+      "source_video_id": "97Ffhl6_OVM",
+      "title": "How a Doctor with ADHD Tops the Class #shorts",
+      "creator": "Zeliha Akpinar",
+      "topic": "mental health tips, anxiety management, ADHD productivity and emotional wellness",
+      "tags": [
+        "mentalhealth",
+        "anxietytips",
+        "adhdtips",
+        "selfcare",
+        "wellnessjourney",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794442510.5995524,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "mkonD02fllo",
+      "source_video_id": "97Ffhl6_OVM",
+      "title": "Why Boredom Creates Genius Ideas #shorts",
+      "creator": "Zeliha Akpinar",
+      "topic": "mental health tips, anxiety management, ADHD productivity and emotional wellness",
+      "tags": [
+        "mentalhealth",
+        "anxietytips",
+        "adhdtips",
+        "selfcare",
+        "wellnessjourney",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794442585.487273,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_10_mental_health",
-    "last_sync": 1794404862.5294526,
+    "last_sync": 1794442374.9072287,
     "total_shorts": 8,
     "public_shorts": 4,
     "total_views": 19,
