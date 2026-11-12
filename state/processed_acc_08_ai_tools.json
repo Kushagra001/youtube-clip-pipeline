@@ -117,11 +117,13 @@
     "FVObV4Qu6rU",
     "ZeJXI2MAhj0",
     "9Hwanevuhd8",
-    "S2TAa4P2IuY"
+    "S2TAa4P2IuY",
+    "YIl-awY250k",
+    "mWRe8w6YjO0"
   ],
   "upload_timestamps": [
-    1794404940.6288006,
-    1794405009.116542
+    1794495065.3406966,
+    1794495109.6816869
   ],
   "uploaded_shorts": [
     {
@@ -138,7 +140,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442373.1192367,
+        "last_synced": 1794494970.4090068,
         "status": "pending_or_private"
       }
     },
@@ -156,7 +158,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442373.1192367,
+        "last_synced": 1794494970.4090068,
         "status": "pending_or_private"
       }
     },
@@ -180,7 +182,7 @@
         "views": 1193,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1794442373.1192367,
+        "last_synced": 1794494970.4090068,
         "status": "public"
       }
     },
@@ -204,7 +206,7 @@
         "views": 378,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794442373.1192367,
+        "last_synced": 1794494970.4090068,
         "status": "public"
       }
     },
@@ -228,8 +230,8 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442373.1192367,
-        "status": "pending_or_private"
+        "last_synced": 1794494970.4090068,
+        "status": "public"
       }
     },
     {
@@ -252,7 +254,7 @@
         "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794442373.1192367,
+        "last_synced": 1794494970.4090068,
         "status": "public"
       }
     },
@@ -273,10 +275,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794318180.2579637,
       "stats": {
-        "views": 9,
+        "views": 10,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442373.1192367,
+        "last_synced": 1794494970.4090068,
         "status": "public"
       }
     },
@@ -297,10 +299,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794318254.7428377,
       "stats": {
-        "views": 26,
+        "views": 27,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442373.1192367,
+        "last_synced": 1794494970.4090068,
         "status": "public"
       }
     },
@@ -324,7 +326,7 @@
         "views": 47,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442373.1192367,
+        "last_synced": 1794494970.4090068,
         "status": "public"
       }
     },
@@ -345,21 +347,67 @@
       "scheduled_at": null,
       "uploaded_at": 1794405009.116551,
       "stats": {
-        "views": 38,
+        "views": 39,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442373.1192367,
+        "last_synced": 1794494970.4090068,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "Gdl5zP9mVb8",
+      "source_video_id": "YIl-awY250k",
+      "title": "Your Automation Skills Are Dying #shorts",
+      "creator": "Nick Saraev",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794495065.3407078,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "owgQ2MICpEI",
+      "source_video_id": "YIl-awY250k",
+      "title": "The $400k Business Disappearing #shorts",
+      "creator": "Nick Saraev",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794495109.6816952,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1794442373.1192367,
+    "last_sync": 1794494970.4090068,
     "total_shorts": 10,
-    "public_shorts": 7,
-    "total_views": 2091,
-    "median_views": 47,
+    "public_shorts": 8,
+    "total_views": 2212,
+    "median_views": 82.5,
     "creator_weights": {
       "Matt Wolfe": 1.8,
       "@DavidOndrej": 1.8,
