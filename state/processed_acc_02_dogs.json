@@ -107,11 +107,13 @@
     "YtIOuJoRxG4",
     "wCeuftVh0dY",
     "dYLgu_WXGtQ",
-    "3UM0IIdetZk"
+    "3UM0IIdetZk",
+    "jL6li0pU7yg",
+    "xrV0rhI2fFA"
   ],
   "upload_timestamps": [
-    1794322642.5057359,
-    1794322784.770923
+    1794442632.412121,
+    1794442723.156421
   ],
   "uploaded_shorts": [
     {
@@ -136,7 +138,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404849.2064066,
+        "last_synced": 1794442465.4208689,
         "status": "pending_or_private"
       }
     },
@@ -162,7 +164,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404849.2064066,
+        "last_synced": 1794442465.4208689,
         "status": "pending_or_private"
       }
     },
@@ -188,7 +190,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404849.2064066,
+        "last_synced": 1794442465.4208689,
         "status": "public"
       }
     },
@@ -214,7 +216,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404849.2064066,
+        "last_synced": 1794442465.4208689,
         "status": "public"
       }
     },
@@ -240,7 +242,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404849.2064066,
+        "last_synced": 1794442465.4208689,
         "status": "public"
       }
     },
@@ -266,14 +268,64 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404849.2064066,
+        "last_synced": 1794442465.4208689,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "tfBvUea-IQI",
+      "source_video_id": "jL6li0pU7yg",
+      "title": "Tibetan Mastiffs: Bred To Kill Wolves #shorts",
+      "creator": "Tom Davis Dog Training ",
+      "topic": "funny and cute dog videos for dog lovers",
+      "tags": [
+        "dogsofinstagram",
+        "dogvideos",
+        "puppylove",
+        "dogtraining",
+        "goodboy",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794442632.4121287,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "ic-m5c2dQto",
+      "source_video_id": "jL6li0pU7yg",
+      "title": "Border Collies: The Nipping Danger #shorts",
+      "creator": "Tom Davis Dog Training ",
+      "topic": "funny and cute dog videos for dog lovers",
+      "tags": [
+        "dogsofinstagram",
+        "dogvideos",
+        "puppylove",
+        "dogtraining",
+        "goodboy",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794442723.1564305,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_02_dogs",
-    "last_sync": 1794404849.2064066,
+    "last_sync": 1794442465.4208689,
     "total_shorts": 6,
     "public_shorts": 4,
     "total_views": 10,
