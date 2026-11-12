@@ -115,11 +115,13 @@
     "NpOFYQUkFdE",
     "EXmXOolfyH8",
     "y7UyKEb2ZHw",
-    "Mn9c68dYfWE"
+    "Mn9c68dYfWE",
+    "nY4DIMZOUyI",
+    "plRGhDhRqXc"
   ],
   "upload_timestamps": [
-    1794405078.2763212,
-    1794405147.8567097
+    1794495240.1590383,
+    1794495315.1001813
   ],
   "uploaded_shorts": [
     {
@@ -144,7 +146,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442485.7951994,
+        "last_synced": 1794495074.3006,
         "status": "public"
       }
     },
@@ -170,7 +172,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442485.7951994,
+        "last_synced": 1794495074.3006,
         "status": "pending_or_private"
       }
     },
@@ -196,7 +198,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442485.7951994,
+        "last_synced": 1794495074.3006,
         "status": "public"
       }
     },
@@ -222,7 +224,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442485.7951994,
+        "last_synced": 1794495074.3006,
         "status": "public"
       }
     },
@@ -248,7 +250,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442485.7951994,
+        "last_synced": 1794495074.3006,
         "status": "public"
       }
     },
@@ -274,7 +276,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442485.7951994,
+        "last_synced": 1794495074.3006,
         "status": "public"
       }
     },
@@ -300,7 +302,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442485.7951994,
+        "last_synced": 1794495074.3006,
         "status": "public"
       }
     },
@@ -323,10 +325,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794405078.2763317,
       "stats": {
-        "views": 4,
+        "views": 8,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442485.7951994,
+        "last_synced": 1794495074.3006,
         "status": "public"
       }
     },
@@ -352,23 +354,73 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442485.7951994,
+        "last_synced": 1794495074.3006,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "o_rjaLRLAz8",
+      "source_video_id": "nY4DIMZOUyI",
+      "title": "The 5-Year Ride or Die Skincare Product #shorts",
+      "creator": "taeveniti",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794495240.15905,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "GLZZNhRyD0Q",
+      "source_video_id": "nY4DIMZOUyI",
+      "title": "Skincare Is Just Delaying Death #shorts",
+      "creator": "taeveniti",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794495315.1001904,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1794442485.7951994,
+    "last_sync": 1794495074.3006,
     "total_shorts": 9,
     "public_shorts": 4,
-    "total_views": 18,
-    "median_views": 5.0,
+    "total_views": 22,
+    "median_views": 6.0,
     "creator_weights": {
       "Teachingmensfashion": 1.0,
       "BeYourBest": 1.0,
       "The Formal Edit": 1.0,
-      "Glow Mode": 1.0
+      "Glow Mode": 1.35
     }
   }
 }
