@@ -130,7 +130,9 @@
     "fq8zUdprCCw",
     "COKgCX246xM",
     "2ZLCMNq37D4",
-    "Gj9IvRIore8"
+    "Gj9IvRIore8",
+    "VlgF4hv8Y2A",
+    "ROapuJWZM2E"
   ],
   "upload_timestamps": [
     1794442646.6104076,
@@ -159,7 +161,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494980.6707535,
+        "last_synced": 1794525533.0694015,
         "status": "pending_or_private"
       }
     },
@@ -185,7 +187,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494980.6707535,
+        "last_synced": 1794525533.0694015,
         "status": "pending_or_private"
       }
     },
@@ -211,7 +213,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494980.6707535,
+        "last_synced": 1794525533.0694015,
         "status": "public"
       }
     },
@@ -237,7 +239,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494980.6707535,
+        "last_synced": 1794525533.0694015,
         "status": "public"
       }
     },
@@ -263,7 +265,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494980.6707535,
+        "last_synced": 1794525533.0694015,
         "status": "public"
       }
     },
@@ -289,7 +291,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494980.6707535,
+        "last_synced": 1794525533.0694015,
         "status": "public"
       }
     },
@@ -315,7 +317,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494980.6707535,
+        "last_synced": 1794525533.0694015,
         "status": "public"
       }
     },
@@ -341,7 +343,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494980.6707535,
+        "last_synced": 1794525533.0694015,
         "status": "public"
       }
     },
@@ -367,7 +369,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494980.6707535,
+        "last_synced": 1794525533.0694015,
         "status": "public"
       }
     },
@@ -393,14 +395,14 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794494980.6707535,
+        "last_synced": 1794525533.0694015,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1794494980.6707535,
+    "last_sync": 1794525533.0694015,
     "total_shorts": 10,
     "public_shorts": 5,
     "total_views": 12,
