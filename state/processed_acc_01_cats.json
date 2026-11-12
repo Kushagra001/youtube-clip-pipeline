@@ -120,11 +120,13 @@
     "f_NoNuzQY20",
     "5PNSXXIzXwo",
     "qun6XEcq5kI",
-    "po4ql5_y8f8"
+    "po4ql5_y8f8",
+    "vfWkB5cWoY4",
+    "QG9VtneCaQo"
   ],
   "upload_timestamps": [
-    1794325410.682862,
-    1794325490.4113505
+    1794442585.1189651,
+    1794442736.7028346
   ],
   "uploaded_shorts": [
     {
@@ -149,7 +151,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404788.1375756,
+        "last_synced": 1794442458.9574754,
         "status": "pending_or_private"
       }
     },
@@ -175,7 +177,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404788.1375756,
+        "last_synced": 1794442458.9574754,
         "status": "pending_or_private"
       }
     },
@@ -201,7 +203,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404788.1375756,
+        "last_synced": 1794442458.9574754,
         "status": "pending_or_private"
       }
     },
@@ -227,7 +229,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404788.1375756,
+        "last_synced": 1794442458.9574754,
         "status": "pending_or_private"
       }
     },
@@ -253,7 +255,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404788.1375756,
+        "last_synced": 1794442458.9574754,
         "status": "public"
       }
     },
@@ -279,7 +281,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404788.1375756,
+        "last_synced": 1794442458.9574754,
         "status": "public"
       }
     },
@@ -305,7 +307,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404788.1375756,
+        "last_synced": 1794442458.9574754,
         "status": "public"
       }
     },
@@ -331,7 +333,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404788.1375756,
+        "last_synced": 1794442458.9574754,
         "status": "public"
       }
     },
@@ -357,7 +359,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404788.1375756,
+        "last_synced": 1794442458.9574754,
         "status": "public"
       }
     },
@@ -383,7 +385,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404788.1375756,
+        "last_synced": 1794442458.9574754,
         "status": "public"
       }
     },
@@ -409,7 +411,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404788.1375756,
+        "last_synced": 1794442458.9574754,
         "status": "public"
       }
     },
@@ -435,7 +437,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404788.1375756,
+        "last_synced": 1794442458.9574754,
         "status": "public"
       }
     },
@@ -458,21 +460,71 @@
       "scheduled_at": null,
       "uploaded_at": 1794325490.4113615,
       "stats": {
-        "views": 4,
+        "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404788.1375756,
+        "last_synced": 1794442458.9574754,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "v5avmHWx8ho",
+      "source_video_id": "vfWkB5cWoY4",
+      "title": "Cat Mimics Human Laziness Perfectly #shorts",
+      "creator": "Funny And Cute Cat's Life",
+      "topic": "cute and funny cat videos for cat lovers",
+      "tags": [
+        "catsofinstagram",
+        "cutecats",
+        "catreels",
+        "funnycats",
+        "kittensofinstagram",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794442585.1189792,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "aRgJHRy3Lpc",
+      "source_video_id": "QG9VtneCaQo",
+      "title": "Never Ignore This Cat Behavior \u26a0\ufe0f #shorts",
+      "creator": "OhCrayZ",
+      "topic": "cute and funny cat videos for cat lovers",
+      "tags": [
+        "catsofinstagram",
+        "cutecats",
+        "catreels",
+        "funnycats",
+        "kittensofinstagram",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794442736.702847,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_01_cats",
-    "last_sync": 1794404788.1375756,
+    "last_sync": 1794442458.9574754,
     "total_shorts": 13,
     "public_shorts": 2,
-    "total_views": 5,
-    "median_views": 2.5,
+    "total_views": 7,
+    "median_views": 3.5,
     "creator_weights": {
       "Funny And Cute Cat's Life": 1.0,
       "Funny Furry TV": 1.35
