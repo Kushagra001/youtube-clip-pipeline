@@ -109,11 +109,13 @@
     "cC0H5kyRi9Q",
     "wLbl8TGiM8E",
     "_fXGTSN9P6w",
-    "OGs2YsqvWDg"
+    "OGs2YsqvWDg",
+    "ki_0jkW-2oc",
+    "O1As2zxy0es"
   ],
   "upload_timestamps": [
-    1794404914.2333772,
-    1794404999.0967493
+    1794495166.84031,
+    1794495276.1565154
   ],
   "uploaded_shorts": [
     {
@@ -138,7 +140,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442441.1612792,
+        "last_synced": 1794494999.857295,
         "status": "pending_or_private"
       }
     },
@@ -164,7 +166,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442441.1612792,
+        "last_synced": 1794494999.857295,
         "status": "pending_or_private"
       }
     },
@@ -190,7 +192,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442441.1612792,
+        "last_synced": 1794494999.857295,
         "status": "public"
       }
     },
@@ -216,7 +218,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442441.1612792,
+        "last_synced": 1794494999.857295,
         "status": "public"
       }
     },
@@ -242,7 +244,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442441.1612792,
+        "last_synced": 1794494999.857295,
         "status": "public"
       }
     },
@@ -268,7 +270,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442441.1612792,
+        "last_synced": 1794494999.857295,
         "status": "public"
       }
     },
@@ -294,7 +296,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442441.1612792,
+        "last_synced": 1794494999.857295,
         "status": "public"
       }
     },
@@ -320,7 +322,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442441.1612792,
+        "last_synced": 1794494999.857295,
         "status": "public"
       }
     },
@@ -346,7 +348,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442441.1612792,
+        "last_synced": 1794494999.857295,
         "status": "public"
       }
     },
@@ -372,14 +374,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794442441.1612792,
+        "last_synced": 1794494999.857295,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "qorHG5wli_Y",
+      "source_video_id": "ki_0jkW-2oc",
+      "title": "The 5 Tailwinds That Made D2C Possible #shorts",
+      "creator": "Scaler School of Business",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794495166.840324,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "sgQkK8nrx1U",
+      "source_video_id": "ki_0jkW-2oc",
+      "title": "Why Men Are Suddenly Grooming Themselves #shorts",
+      "creator": "Scaler School of Business",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794495276.1565464,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1794442441.1612792,
+    "last_sync": 1794494999.857295,
     "total_shorts": 10,
     "public_shorts": 3,
     "total_views": 8,
