@@ -126,11 +126,13 @@
     "pDgEBQx7wKY",
     "VegTVfu8pbE",
     "F4lXB9p0ymE",
-    "vyt7Yg4dwBc"
+    "vyt7Yg4dwBc",
+    "fq8zUdprCCw",
+    "COKgCX246xM"
   ],
   "upload_timestamps": [
-    1794322621.3324704,
-    1794322693.404752
+    1794442646.6104076,
+    1794442750.3741822
   ],
   "uploaded_shorts": [
     {
@@ -155,7 +157,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404820.657237,
+        "last_synced": 1794442466.019506,
         "status": "pending_or_private"
       }
     },
@@ -181,7 +183,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404820.657237,
+        "last_synced": 1794442466.019506,
         "status": "pending_or_private"
       }
     },
@@ -207,7 +209,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404820.657237,
+        "last_synced": 1794442466.019506,
         "status": "public"
       }
     },
@@ -233,7 +235,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404820.657237,
+        "last_synced": 1794442466.019506,
         "status": "public"
       }
     },
@@ -259,7 +261,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404820.657237,
+        "last_synced": 1794442466.019506,
         "status": "public"
       }
     },
@@ -285,7 +287,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404820.657237,
+        "last_synced": 1794442466.019506,
         "status": "public"
       }
     },
@@ -311,7 +313,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404820.657237,
+        "last_synced": 1794442466.019506,
         "status": "public"
       }
     },
@@ -337,14 +339,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794404820.657237,
+        "last_synced": 1794442466.019506,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "g6N053uNC4U",
+      "source_video_id": "fq8zUdprCCw",
+      "title": "Stop Freezing Giant Meat Blocks #shorts",
+      "creator": "Nova Kitchen Tips",
+      "topic": "quick and easy recipes, meal prep ideas and food hacks for home cooks",
+      "tags": [
+        "easyrecipes",
+        "mealprep",
+        "foodhacks",
+        "quickrecipes",
+        "cookinghacks",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794442646.6104195,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "a7ANs26SQDw",
+      "source_video_id": "fq8zUdprCCw",
+      "title": "Zero Prep Marinated Meat Hack #shorts",
+      "creator": "Nova Kitchen Tips",
+      "topic": "quick and easy recipes, meal prep ideas and food hacks for home cooks",
+      "tags": [
+        "easyrecipes",
+        "mealprep",
+        "foodhacks",
+        "quickrecipes",
+        "cookinghacks",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794442750.374191,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1794404820.657237,
+    "last_sync": 1794442466.019506,
     "total_shorts": 8,
     "public_shorts": 4,
     "total_views": 11,
