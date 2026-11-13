@@ -126,11 +126,13 @@
     "UgKZpcWLUls",
     "seRObltJk_U",
     "mQfY7ADUXBc",
-    "7oM-Nfl8CtQ"
+    "7oM-Nfl8CtQ",
+    "Uu5gNtHsEI4",
+    "PVgpKaXj0fk"
   ],
   "upload_timestamps": [
-    1794442497.23127,
-    1794442569.935046
+    1794548390.6950612,
+    1794548452.3236973
   ],
   "uploaded_shorts": [
     {
@@ -155,7 +157,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525555.685846,
+        "last_synced": 1794548252.0454533,
         "status": "pending_or_private"
       }
     },
@@ -181,7 +183,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525555.685846,
+        "last_synced": 1794548252.0454533,
         "status": "pending_or_private"
       }
     },
@@ -207,7 +209,7 @@
         "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525555.685846,
+        "last_synced": 1794548252.0454533,
         "status": "public"
       }
     },
@@ -233,7 +235,7 @@
         "views": 34,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525555.685846,
+        "last_synced": 1794548252.0454533,
         "status": "public"
       }
     },
@@ -259,7 +261,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525555.685846,
+        "last_synced": 1794548252.0454533,
         "status": "public"
       }
     },
@@ -285,7 +287,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525555.685846,
+        "last_synced": 1794548252.0454533,
         "status": "public"
       }
     },
@@ -311,7 +313,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525555.685846,
+        "last_synced": 1794548252.0454533,
         "status": "public"
       }
     },
@@ -334,20 +336,70 @@
       "scheduled_at": null,
       "uploaded_at": 1794442569.9350564,
       "stats": {
-        "views": 23,
+        "views": 24,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525555.685846,
+        "last_synced": 1794548252.0454533,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "OY49lILb0DY",
+      "source_video_id": "Uu5gNtHsEI4",
+      "title": "AI Pays You To Grade Homework #shorts",
+      "creator": "Edmond Remington",
+      "topic": "personal finance, investing, budgeting and side hustles for financial freedom",
+      "tags": [
+        "personalfinance",
+        "investing",
+        "sidehustle",
+        "financialfreedom",
+        "stockmarket",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794548390.6950705,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "hOY1PgEzcAo",
+      "source_video_id": "Uu5gNtHsEI4",
+      "title": "Bedroom Auctions Beat $10k Ads #shorts",
+      "creator": "Edmond Remington",
+      "topic": "personal finance, investing, budgeting and side hustles for financial freedom",
+      "tags": [
+        "personalfinance",
+        "investing",
+        "sidehustle",
+        "financialfreedom",
+        "stockmarket",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794548452.3237073,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_05_finance",
-    "last_sync": 1794525555.685846,
+    "last_sync": 1794548252.0454533,
     "total_shorts": 8,
     "public_shorts": 5,
-    "total_views": 69,
+    "total_views": 70,
     "median_views": 7,
     "creator_weights": {
       "@GrahamStephan": 1.8,
