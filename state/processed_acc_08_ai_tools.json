@@ -121,7 +121,8 @@
     "YIl-awY250k",
     "mWRe8w6YjO0",
     "uaEXcgBpLbo",
-    "tk4Ljz9p-UI"
+    "tk4Ljz9p-UI",
+    "wfiv67NixCY"
   ],
   "upload_timestamps": [
     1794495065.3406966,
@@ -142,7 +143,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525554.010857,
+        "last_synced": 1794548238.8352344,
         "status": "pending_or_private"
       }
     },
@@ -160,7 +161,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525554.010857,
+        "last_synced": 1794548238.8352344,
         "status": "pending_or_private"
       }
     },
@@ -184,7 +185,7 @@
         "views": 1193,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1794525554.010857,
+        "last_synced": 1794548238.8352344,
         "status": "public"
       }
     },
@@ -208,7 +209,7 @@
         "views": 378,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794525554.010857,
+        "last_synced": 1794548238.8352344,
         "status": "public"
       }
     },
@@ -232,7 +233,7 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525554.010857,
+        "last_synced": 1794548238.8352344,
         "status": "public"
       }
     },
@@ -256,7 +257,7 @@
         "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794525554.010857,
+        "last_synced": 1794548238.8352344,
         "status": "public"
       }
     },
@@ -280,7 +281,7 @@
         "views": 10,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525554.010857,
+        "last_synced": 1794548238.8352344,
         "status": "public"
       }
     },
@@ -304,7 +305,7 @@
         "views": 27,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525554.010857,
+        "last_synced": 1794548238.8352344,
         "status": "public"
       }
     },
@@ -328,7 +329,7 @@
         "views": 68,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525554.010857,
+        "last_synced": 1794548238.8352344,
         "status": "public"
       }
     },
@@ -349,10 +350,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794405009.116551,
       "stats": {
-        "views": 67,
+        "views": 72,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525554.010857,
+        "last_synced": 1794548238.8352344,
         "status": "public"
       }
     },
@@ -373,10 +374,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794495065.3407078,
       "stats": {
-        "views": 112,
+        "views": 174,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525554.010857,
+        "last_synced": 1794548238.8352344,
         "status": "public"
       }
     },
@@ -397,28 +398,28 @@
       "scheduled_at": null,
       "uploaded_at": 1794495109.6816952,
       "stats": {
-        "views": 51,
+        "views": 83,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525554.010857,
+        "last_synced": 1794548238.8352344,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1794525554.010857,
+    "last_sync": 1794548238.8352344,
     "total_shorts": 12,
     "public_shorts": 10,
-    "total_views": 2424,
-    "median_views": 90.0,
+    "total_views": 2523,
+    "median_views": 100.5,
     "creator_weights": {
       "Matt Wolfe": 1.8,
       "@DavidOndrej": 1.8,
       "Kevin Stratvert": 1.0,
       "AI Master": 1.0,
       "9x": 1.0,
-      "Nick Saraev": 1.0
+      "Nick Saraev": 1.35
     }
   }
 }
