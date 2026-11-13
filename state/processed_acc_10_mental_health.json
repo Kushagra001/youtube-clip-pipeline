@@ -117,11 +117,13 @@
     "51pOP8-wURk",
     "1vx8iUvfyCY",
     "U1u7VeYFmpc",
-    "8mM5Oks8yZc"
+    "8mM5Oks8yZc",
+    "RElLqVIiV_c",
+    "2RoWB8tYLMM"
   ],
   "upload_timestamps": [
-    1794442510.5995412,
-    1794442585.4872642
+    1794548372.9035027,
+    1794548438.1820652
   ],
   "uploaded_shorts": [
     {
@@ -146,7 +148,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525542.5684254,
+        "last_synced": 1794548258.0677176,
         "status": "public"
       }
     },
@@ -172,7 +174,7 @@
         "views": 15,
         "likes": 0,
         "comments": 2,
-        "last_synced": 1794525542.5684254,
+        "last_synced": 1794548258.0677176,
         "status": "public"
       }
     },
@@ -198,7 +200,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525542.5684254,
+        "last_synced": 1794548258.0677176,
         "status": "pending_or_private"
       }
     },
@@ -224,7 +226,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525542.5684254,
+        "last_synced": 1794548258.0677176,
         "status": "pending_or_private"
       }
     },
@@ -250,7 +252,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525542.5684254,
+        "last_synced": 1794548258.0677176,
         "status": "public"
       }
     },
@@ -276,7 +278,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525542.5684254,
+        "last_synced": 1794548258.0677176,
         "status": "public"
       }
     },
@@ -302,7 +304,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525542.5684254,
+        "last_synced": 1794548258.0677176,
         "status": "public"
       }
     },
@@ -328,7 +330,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525542.5684254,
+        "last_synced": 1794548258.0677176,
         "status": "public"
       }
     },
@@ -351,10 +353,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794442510.5995524,
       "stats": {
-        "views": 26,
+        "views": 29,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525542.5684254,
+        "last_synced": 1794548258.0677176,
         "status": "public"
       }
     },
@@ -380,17 +382,67 @@
         "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525542.5684254,
+        "last_synced": 1794548258.0677176,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "bRn1wffXK-U",
+      "source_video_id": "RElLqVIiV_c",
+      "title": "Why We Crave Artificial Triumph #shorts",
+      "creator": "@HealthyGamerGG",
+      "topic": "mental health tips, anxiety management, ADHD productivity and emotional wellness",
+      "tags": [
+        "mentalhealth",
+        "anxietytips",
+        "adhdtips",
+        "selfcare",
+        "wellnessjourney",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794548372.9035149,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "uhW1XGrSS6Y",
+      "source_video_id": "RElLqVIiV_c",
+      "title": "Why We Don't Quit After Failure #shorts",
+      "creator": "@HealthyGamerGG",
+      "topic": "mental health tips, anxiety management, ADHD productivity and emotional wellness",
+      "tags": [
+        "mentalhealth",
+        "anxietytips",
+        "adhdtips",
+        "selfcare",
+        "wellnessjourney",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794548438.1820743,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_10_mental_health",
-    "last_sync": 1794525542.5684254,
+    "last_sync": 1794548258.0677176,
     "total_shorts": 10,
     "public_shorts": 6,
-    "total_views": 52,
+    "total_views": 55,
     "median_views": 4.5,
     "creator_weights": {
       "@HealthyGamerGG": 1.35,
