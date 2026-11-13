@@ -122,11 +122,12 @@
     "mpIJsvfkKqU",
     "JfcYAsdBvzY",
     "FVIKu0y2aoo",
-    "gH6YmcKk0d0"
+    "gH6YmcKk0d0",
+    "w7Bjef55aoo"
   ],
   "upload_timestamps": [
-    1794495240.1590383,
-    1794495315.1001813
+    1794612263.4824016,
+    1794612309.5115404
   ],
   "uploaded_shorts": [
     {
@@ -151,7 +152,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578934.203573,
+        "last_synced": 1794612157.605241,
         "status": "public"
       }
     },
@@ -177,7 +178,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578934.203573,
+        "last_synced": 1794612157.605241,
         "status": "pending_or_private"
       }
     },
@@ -203,7 +204,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578934.203573,
+        "last_synced": 1794612157.605241,
         "status": "public"
       }
     },
@@ -229,7 +230,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578934.203573,
+        "last_synced": 1794612157.605241,
         "status": "public"
       }
     },
@@ -255,7 +256,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578934.203573,
+        "last_synced": 1794612157.605241,
         "status": "public"
       }
     },
@@ -281,7 +282,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578934.203573,
+        "last_synced": 1794612157.605241,
         "status": "public"
       }
     },
@@ -307,7 +308,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578934.203573,
+        "last_synced": 1794612157.605241,
         "status": "public"
       }
     },
@@ -330,10 +331,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794405078.2763317,
       "stats": {
-        "views": 12,
+        "views": 16,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578934.203573,
+        "last_synced": 1794612157.605241,
         "status": "public"
       }
     },
@@ -359,7 +360,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578934.203573,
+        "last_synced": 1794612157.605241,
         "status": "public"
       }
     },
@@ -385,7 +386,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578934.203573,
+        "last_synced": 1794612157.605241,
         "status": "public"
       }
     },
@@ -411,17 +412,67 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578934.203573,
+        "last_synced": 1794612157.605241,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "GVWLq63_38c",
+      "source_video_id": "w7Bjef55aoo",
+      "title": "Stop Wasting Time on Bad Skin #shorts",
+      "creator": "Alex Costa",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794612263.482413,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "nu2qdmbSxRk",
+      "source_video_id": "w7Bjef55aoo",
+      "title": "Glass Skin Is Simpler Than You Think #shorts",
+      "creator": "Alex Costa",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794612309.5115519,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1794578934.203573,
+    "last_sync": 1794612157.605241,
     "total_shorts": 11,
     "public_shorts": 7,
-    "total_views": 30,
+    "total_views": 34,
     "median_views": 2,
     "creator_weights": {
       "Teachingmensfashion": 1.8,
