@@ -127,10 +127,13 @@
     "xGy_IiNLATc",
     "H0XY3jOxhA0",
     "mQoCMIh5I2M",
-    "z8Go9czF3W0"
+    "z8Go9czF3W0",
+    "gC72uDyiKC0",
+    "JxS5E-kZc2s"
   ],
   "upload_timestamps": [
-    1794548366.1286712
+    1794548366.1286712,
+    1794579081.7190716
   ],
   "uploaded_shorts": [
     {
@@ -155,7 +158,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548226.867769,
+        "last_synced": 1794578952.2003136,
         "status": "pending_or_private"
       }
     },
@@ -181,7 +184,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548226.867769,
+        "last_synced": 1794578952.2003136,
         "status": "pending_or_private"
       }
     },
@@ -207,7 +210,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548226.867769,
+        "last_synced": 1794578952.2003136,
         "status": "pending_or_private"
       }
     },
@@ -233,7 +236,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548226.867769,
+        "last_synced": 1794578952.2003136,
         "status": "pending_or_private"
       }
     },
@@ -259,7 +262,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548226.867769,
+        "last_synced": 1794578952.2003136,
         "status": "public"
       }
     },
@@ -285,7 +288,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548226.867769,
+        "last_synced": 1794578952.2003136,
         "status": "public"
       }
     },
@@ -311,7 +314,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548226.867769,
+        "last_synced": 1794578952.2003136,
         "status": "public"
       }
     },
@@ -337,7 +340,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548226.867769,
+        "last_synced": 1794578952.2003136,
         "status": "public"
       }
     },
@@ -363,7 +366,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548226.867769,
+        "last_synced": 1794578952.2003136,
         "status": "public"
       }
     },
@@ -389,7 +392,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548226.867769,
+        "last_synced": 1794578952.2003136,
         "status": "public"
       }
     },
@@ -415,7 +418,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548226.867769,
+        "last_synced": 1794578952.2003136,
         "status": "public"
       }
     },
@@ -441,7 +444,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548226.867769,
+        "last_synced": 1794578952.2003136,
         "status": "public"
       }
     },
@@ -467,7 +470,7 @@
         "views": 8,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548226.867769,
+        "last_synced": 1794578952.2003136,
         "status": "public"
       }
     },
@@ -493,7 +496,7 @@
         "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548226.867769,
+        "last_synced": 1794578952.2003136,
         "status": "public"
       }
     },
@@ -519,7 +522,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548226.867769,
+        "last_synced": 1794578952.2003136,
         "status": "public"
       }
     },
@@ -542,6 +545,32 @@
       "scheduled_at": null,
       "uploaded_at": 1794548366.128685,
       "stats": {
+        "views": 1,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 1794578952.2003136,
+        "status": "public"
+      }
+    },
+    {
+      "video_id": "PNN21G-nQdA",
+      "source_video_id": "gC72uDyiKC0",
+      "title": "Cat Stuck In Sweater: Liquid Physics #shorts",
+      "creator": "Daily Dose of Pets",
+      "topic": "cute and funny cat videos for cat lovers",
+      "tags": [
+        "catsofinstagram",
+        "cutecats",
+        "catreels",
+        "funnycats",
+        "kittensofinstagram",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794579081.7190847,
+      "stats": {
         "views": 0,
         "likes": 0,
         "comments": 0,
@@ -551,13 +580,13 @@
   ],
   "analytics_summary": {
     "channel_id": "acc_01_cats",
-    "last_sync": 1794548226.867769,
-    "total_shorts": 15,
-    "public_shorts": 4,
-    "total_views": 15,
-    "median_views": 3.0,
+    "last_sync": 1794578952.2003136,
+    "total_shorts": 16,
+    "public_shorts": 5,
+    "total_views": 16,
+    "median_views": 1,
     "creator_weights": {
-      "Funny And Cute Cat's Life": 1.0,
+      "Funny And Cute Cat's Life": 1.8,
       "Funny Furry TV": 1.8,
       "OhCrayZ": 1.0
     }
