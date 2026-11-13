@@ -110,11 +110,12 @@
     "ROJkWbHT5a4",
     "a_e4M6x1-ro",
     "MY_0YKmEG0A",
-    "6K3wiD6ACWg"
+    "6K3wiD6ACWg",
+    "xkd36cJ6Z78"
   ],
   "upload_timestamps": [
-    1794442700.789461,
-    1794442793.062057
+    1794548404.1108432,
+    1794548518.4417562
   ],
   "uploaded_shorts": [
     {
@@ -139,7 +140,7 @@
         "views": 1065,
         "likes": 14,
         "comments": 0,
-        "last_synced": 1794525588.2087896,
+        "last_synced": 1794548260.2683816,
         "status": "public"
       }
     },
@@ -165,7 +166,7 @@
         "views": 823,
         "likes": 5,
         "comments": 0,
-        "last_synced": 1794525588.2087896,
+        "last_synced": 1794548260.2683816,
         "status": "public"
       }
     },
@@ -191,7 +192,7 @@
         "views": 81,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525588.2087896,
+        "last_synced": 1794548260.2683816,
         "status": "public"
       }
     },
@@ -217,8 +218,8 @@
         "views": 51,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525588.2087896,
-        "status": "pending_or_private"
+        "last_synced": 1794548260.2683816,
+        "status": "public"
       }
     },
     {
@@ -243,7 +244,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525588.2087896,
+        "last_synced": 1794548260.2683816,
         "status": "public"
       }
     },
@@ -266,10 +267,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794322886.9367805,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525588.2087896,
+        "last_synced": 1794548260.2683816,
         "status": "public"
       }
     },
@@ -295,7 +296,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525588.2087896,
+        "last_synced": 1794548260.2683816,
         "status": "public"
       }
     },
@@ -321,22 +322,72 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525588.2087896,
+        "last_synced": 1794548260.2683816,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "hGGVoea-z5U",
+      "source_video_id": "xkd36cJ6Z78",
+      "title": "Why You Don't Want Discipline #shorts",
+      "creator": "HealthyGamerGG",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794548404.110853,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "KDPdVYbjMhk",
+      "source_video_id": "xkd36cJ6Z78",
+      "title": "The Brain's Cost-Benefit Trap #shorts",
+      "creator": "HealthyGamerGG",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794548518.441765,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_04_motivation",
-    "last_sync": 1794525588.2087896,
+    "last_sync": 1794548260.2683816,
     "total_shorts": 8,
-    "public_shorts": 4,
-    "total_views": 1970,
-    "median_views": 452.0,
+    "public_shorts": 6,
+    "total_views": 2022,
+    "median_views": 66.0,
     "creator_weights": {
-      "@JordanBPeterson": 1.35,
+      "@JordanBPeterson": 1.8,
       "@ChrisWillx": 1.0,
-      "Psychoresto": 1.0
+      "Psychoresto": 0.65
     }
   }
 }
