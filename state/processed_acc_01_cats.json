@@ -125,11 +125,12 @@
     "QG9VtneCaQo",
     "n3XCZwwrnZE",
     "xGy_IiNLATc",
-    "H0XY3jOxhA0"
+    "H0XY3jOxhA0",
+    "mQoCMIh5I2M",
+    "z8Go9czF3W0"
   ],
   "upload_timestamps": [
-    1794442585.1189651,
-    1794442736.7028346
+    1794548366.1286712
   ],
   "uploaded_shorts": [
     {
@@ -154,7 +155,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525548.7024205,
+        "last_synced": 1794548226.867769,
         "status": "pending_or_private"
       }
     },
@@ -180,7 +181,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525548.7024205,
+        "last_synced": 1794548226.867769,
         "status": "pending_or_private"
       }
     },
@@ -206,7 +207,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525548.7024205,
+        "last_synced": 1794548226.867769,
         "status": "pending_or_private"
       }
     },
@@ -232,7 +233,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525548.7024205,
+        "last_synced": 1794548226.867769,
         "status": "pending_or_private"
       }
     },
@@ -258,7 +259,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525548.7024205,
+        "last_synced": 1794548226.867769,
         "status": "public"
       }
     },
@@ -284,7 +285,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525548.7024205,
+        "last_synced": 1794548226.867769,
         "status": "public"
       }
     },
@@ -310,7 +311,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525548.7024205,
+        "last_synced": 1794548226.867769,
         "status": "public"
       }
     },
@@ -336,7 +337,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525548.7024205,
+        "last_synced": 1794548226.867769,
         "status": "public"
       }
     },
@@ -362,7 +363,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525548.7024205,
+        "last_synced": 1794548226.867769,
         "status": "public"
       }
     },
@@ -388,7 +389,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525548.7024205,
+        "last_synced": 1794548226.867769,
         "status": "public"
       }
     },
@@ -414,7 +415,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525548.7024205,
+        "last_synced": 1794548226.867769,
         "status": "public"
       }
     },
@@ -440,7 +441,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525548.7024205,
+        "last_synced": 1794548226.867769,
         "status": "public"
       }
     },
@@ -466,7 +467,7 @@
         "views": 8,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525548.7024205,
+        "last_synced": 1794548226.867769,
         "status": "public"
       }
     },
@@ -489,10 +490,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794442585.1189792,
       "stats": {
-        "views": 3,
+        "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525548.7024205,
+        "last_synced": 1794548226.867769,
         "status": "public"
       }
     },
@@ -518,18 +519,43 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525548.7024205,
+        "last_synced": 1794548226.867769,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "c6fhpNdHiI8",
+      "source_video_id": "mQoCMIh5I2M",
+      "title": "The Ultimate Cat Apology Rejection #shorts",
+      "creator": "Funny And Cute Cat's Life",
+      "topic": "cute and funny cat videos for cat lovers",
+      "tags": [
+        "catsofinstagram",
+        "cutecats",
+        "catreels",
+        "funnycats",
+        "kittensofinstagram",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794548366.128685,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_01_cats",
-    "last_sync": 1794525548.7024205,
+    "last_sync": 1794548226.867769,
     "total_shorts": 15,
     "public_shorts": 4,
-    "total_views": 13,
-    "median_views": 2.0,
+    "total_views": 15,
+    "median_views": 3.0,
     "creator_weights": {
       "Funny And Cute Cat's Life": 1.0,
       "Funny Furry TV": 1.8,
