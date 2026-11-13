@@ -111,7 +111,9 @@
     "a_e4M6x1-ro",
     "MY_0YKmEG0A",
     "6K3wiD6ACWg",
-    "xkd36cJ6Z78"
+    "xkd36cJ6Z78",
+    "QO-s_HKXZNg",
+    "B5LSEQL3WBs"
   ],
   "upload_timestamps": [
     1794548404.1108432,
@@ -140,7 +142,7 @@
         "views": 1065,
         "likes": 14,
         "comments": 0,
-        "last_synced": 1794548260.2683816,
+        "last_synced": 1794578962.1408322,
         "status": "public"
       }
     },
@@ -166,7 +168,7 @@
         "views": 823,
         "likes": 5,
         "comments": 0,
-        "last_synced": 1794548260.2683816,
+        "last_synced": 1794578962.1408322,
         "status": "public"
       }
     },
@@ -192,7 +194,7 @@
         "views": 81,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548260.2683816,
+        "last_synced": 1794578962.1408322,
         "status": "public"
       }
     },
@@ -218,7 +220,7 @@
         "views": 51,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548260.2683816,
+        "last_synced": 1794578962.1408322,
         "status": "public"
       }
     },
@@ -244,7 +246,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548260.2683816,
+        "last_synced": 1794578962.1408322,
         "status": "public"
       }
     },
@@ -270,7 +272,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548260.2683816,
+        "last_synced": 1794578962.1408322,
         "status": "public"
       }
     },
@@ -296,7 +298,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548260.2683816,
+        "last_synced": 1794578962.1408322,
         "status": "public"
       }
     },
@@ -322,7 +324,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794548260.2683816,
+        "last_synced": 1794578962.1408322,
         "status": "public"
       }
     },
@@ -345,10 +347,11 @@
       "scheduled_at": null,
       "uploaded_at": 1794548404.110853,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794578962.1408322,
+        "status": "public"
       }
     },
     {
@@ -373,21 +376,23 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794578962.1408322,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_04_motivation",
-    "last_sync": 1794548260.2683816,
-    "total_shorts": 8,
-    "public_shorts": 6,
-    "total_views": 2022,
-    "median_views": 66.0,
+    "last_sync": 1794578962.1408322,
+    "total_shorts": 10,
+    "public_shorts": 7,
+    "total_views": 2023,
+    "median_views": 51,
     "creator_weights": {
       "@JordanBPeterson": 1.8,
-      "@ChrisWillx": 1.0,
-      "Psychoresto": 0.65
+      "@ChrisWillx": 1.35,
+      "Psychoresto": 0.65,
+      "HealthyGamerGG": 1.0
     }
   }
 }
