@@ -113,11 +113,13 @@
     "uV34sm6OSYA",
     "ai7MndI6V9s",
     "nF-PTvbXYHA",
-    "Vl09bP8LoBQ"
+    "Vl09bP8LoBQ",
+    "dH2jfepnNts",
+    "YwkYh-qpFnw"
   ],
   "upload_timestamps": [
-    1794442632.412121,
-    1794442723.156421
+    1794548426.4720163,
+    1794548479.6450374
   ],
   "uploaded_shorts": [
     {
@@ -142,7 +144,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525551.8312182,
+        "last_synced": 1794548301.6197658,
         "status": "pending_or_private"
       }
     },
@@ -168,7 +170,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525551.8312182,
+        "last_synced": 1794548301.6197658,
         "status": "pending_or_private"
       }
     },
@@ -194,7 +196,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525551.8312182,
+        "last_synced": 1794548301.6197658,
         "status": "public"
       }
     },
@@ -220,7 +222,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525551.8312182,
+        "last_synced": 1794548301.6197658,
         "status": "public"
       }
     },
@@ -246,7 +248,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525551.8312182,
+        "last_synced": 1794548301.6197658,
         "status": "public"
       }
     },
@@ -272,7 +274,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525551.8312182,
+        "last_synced": 1794548301.6197658,
         "status": "public"
       }
     },
@@ -295,10 +297,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794442632.4121287,
       "stats": {
-        "views": 7,
+        "views": 9,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525551.8312182,
+        "last_synced": 1794548301.6197658,
         "status": "public"
       }
     },
@@ -324,17 +326,67 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525551.8312182,
+        "last_synced": 1794548301.6197658,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "1gE7jJ_Oh6I",
+      "source_video_id": "dH2jfepnNts",
+      "title": "The Head Tilt That Broke My Will #shorts",
+      "creator": "Comfort Zone TV",
+      "topic": "funny and cute dog videos for dog lovers",
+      "tags": [
+        "dogsofinstagram",
+        "dogvideos",
+        "puppylove",
+        "dogtraining",
+        "goodboy",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794548426.4720268,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "ErOH0BfS7Q0",
+      "source_video_id": "dH2jfepnNts",
+      "title": "Tango's Passive Aggressive Silence #shorts",
+      "creator": "Comfort Zone TV",
+      "topic": "funny and cute dog videos for dog lovers",
+      "tags": [
+        "dogsofinstagram",
+        "dogvideos",
+        "puppylove",
+        "dogtraining",
+        "goodboy",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794548479.645046,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_02_dogs",
-    "last_sync": 1794525551.8312182,
+    "last_sync": 1794548301.6197658,
     "total_shorts": 8,
     "public_shorts": 5,
-    "total_views": 16,
+    "total_views": 18,
     "median_views": 3,
     "creator_weights": {
       "Tom Davis Dog Training ": 1.35,
