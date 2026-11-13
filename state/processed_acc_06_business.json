@@ -117,11 +117,13 @@
     "5RR6M_d6eKc",
     "CEE-irUEOC8",
     "Q78dJ0vkWe8",
-    "scmf3gd9ZjI"
+    "scmf3gd9ZjI",
+    "DH7REvnQ1y4",
+    "tRLVXvvuiHk"
   ],
   "upload_timestamps": [
-    1794495166.84031,
-    1794495276.1565154
+    1794612328.2484577,
+    1794612394.022792
   ],
   "uploaded_shorts": [
     {
@@ -146,7 +148,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578868.0752046,
+        "last_synced": 1794612175.4306843,
         "status": "pending_or_private"
       }
     },
@@ -172,7 +174,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578868.0752046,
+        "last_synced": 1794612175.4306843,
         "status": "pending_or_private"
       }
     },
@@ -198,7 +200,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578868.0752046,
+        "last_synced": 1794612175.4306843,
         "status": "public"
       }
     },
@@ -224,7 +226,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578868.0752046,
+        "last_synced": 1794612175.4306843,
         "status": "public"
       }
     },
@@ -250,7 +252,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578868.0752046,
+        "last_synced": 1794612175.4306843,
         "status": "public"
       }
     },
@@ -276,7 +278,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578868.0752046,
+        "last_synced": 1794612175.4306843,
         "status": "public"
       }
     },
@@ -302,7 +304,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578868.0752046,
+        "last_synced": 1794612175.4306843,
         "status": "public"
       }
     },
@@ -328,7 +330,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578868.0752046,
+        "last_synced": 1794612175.4306843,
         "status": "public"
       }
     },
@@ -354,7 +356,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578868.0752046,
+        "last_synced": 1794612175.4306843,
         "status": "public"
       }
     },
@@ -380,7 +382,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578868.0752046,
+        "last_synced": 1794612175.4306843,
         "status": "public"
       }
     },
@@ -406,7 +408,7 @@
         "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578868.0752046,
+        "last_synced": 1794612175.4306843,
         "status": "public"
       }
     },
@@ -432,14 +434,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578868.0752046,
+        "last_synced": 1794612175.4306843,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "OPYeSuRfkD0",
+      "source_video_id": "DH7REvnQ1y4",
+      "title": "Why Founders Get Stuck in Sales #shorts",
+      "creator": "Y Combinator",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794612328.2484703,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "ESYyH0XPY4A",
+      "source_video_id": "DH7REvnQ1y4",
+      "title": "The Internal Champion Strategy #shorts",
+      "creator": "Y Combinator",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794612394.0228033,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1794578868.0752046,
+    "last_sync": 1794612175.4306843,
     "total_shorts": 12,
     "public_shorts": 5,
     "total_views": 14,
