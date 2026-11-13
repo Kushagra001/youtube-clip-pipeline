@@ -124,11 +124,13 @@
     "tk4Ljz9p-UI",
     "wfiv67NixCY",
     "1P5xtV-Kf0o",
-    "6-sMVePCKS4"
+    "6-sMVePCKS4",
+    "Sc6TriRAGnI",
+    "l_TDLJ97Dm0"
   ],
   "upload_timestamps": [
-    1794495065.3406966,
-    1794495109.6816869
+    1794612304.9091592,
+    1794612380.4212153
   ],
   "uploaded_shorts": [
     {
@@ -145,7 +147,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578880.4462452,
+        "last_synced": 1794612165.7426372,
         "status": "pending_or_private"
       }
     },
@@ -163,7 +165,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578880.4462452,
+        "last_synced": 1794612165.7426372,
         "status": "pending_or_private"
       }
     },
@@ -187,7 +189,7 @@
         "views": 1193,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1794578880.4462452,
+        "last_synced": 1794612165.7426372,
         "status": "public"
       }
     },
@@ -211,7 +213,7 @@
         "views": 378,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794578880.4462452,
+        "last_synced": 1794612165.7426372,
         "status": "public"
       }
     },
@@ -235,7 +237,7 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578880.4462452,
+        "last_synced": 1794612165.7426372,
         "status": "public"
       }
     },
@@ -259,7 +261,7 @@
         "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794578880.4462452,
+        "last_synced": 1794612165.7426372,
         "status": "public"
       }
     },
@@ -283,7 +285,7 @@
         "views": 10,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578880.4462452,
+        "last_synced": 1794612165.7426372,
         "status": "public"
       }
     },
@@ -307,7 +309,7 @@
         "views": 27,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578880.4462452,
+        "last_synced": 1794612165.7426372,
         "status": "public"
       }
     },
@@ -328,10 +330,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794404940.6288123,
       "stats": {
-        "views": 71,
+        "views": 72,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578880.4462452,
+        "last_synced": 1794612165.7426372,
         "status": "public"
       }
     },
@@ -352,10 +354,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794405009.116551,
       "stats": {
-        "views": 73,
+        "views": 75,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578880.4462452,
+        "last_synced": 1794612165.7426372,
         "status": "public"
       }
     },
@@ -376,10 +378,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794495065.3407078,
       "stats": {
-        "views": 195,
-        "likes": 0,
+        "views": 264,
+        "likes": 1,
         "comments": 0,
-        "last_synced": 1794578880.4462452,
+        "last_synced": 1794612165.7426372,
         "status": "public"
       }
     },
@@ -400,21 +402,67 @@
       "scheduled_at": null,
       "uploaded_at": 1794495109.6816952,
       "stats": {
-        "views": 92,
+        "views": 108,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794578880.4462452,
+        "last_synced": 1794612165.7426372,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "rwOxO05ep_c",
+      "source_video_id": "Sc6TriRAGnI",
+      "title": "Gemini Swarm Verifies Encryption for Billions #shorts",
+      "creator": "@WesRoth",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794612304.909172,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "2Cdob7tM7Bk",
+      "source_video_id": "Sc6TriRAGnI",
+      "title": "AI Recreates Halls of the Mountain King Scene #shorts",
+      "creator": "@WesRoth",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794612380.4212258,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1794578880.4462452,
+    "last_sync": 1794612165.7426372,
     "total_shorts": 12,
     "public_shorts": 10,
-    "total_views": 2557,
-    "median_views": 105.0,
+    "total_views": 2645,
+    "median_views": 113.0,
     "creator_weights": {
       "Matt Wolfe": 1.8,
       "@DavidOndrej": 1.8,
