@@ -113,7 +113,9 @@
     "ki_0jkW-2oc",
     "O1As2zxy0es",
     "bAzg8BugEVY",
-    "ksRcFGLPoSk"
+    "ksRcFGLPoSk",
+    "5RR6M_d6eKc",
+    "CEE-irUEOC8"
   ],
   "upload_timestamps": [
     1794495166.84031,
@@ -142,7 +144,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525537.6253412,
+        "last_synced": 1794548210.7749248,
         "status": "pending_or_private"
       }
     },
@@ -168,7 +170,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525537.6253412,
+        "last_synced": 1794548210.7749248,
         "status": "pending_or_private"
       }
     },
@@ -194,7 +196,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525537.6253412,
+        "last_synced": 1794548210.7749248,
         "status": "public"
       }
     },
@@ -220,7 +222,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525537.6253412,
+        "last_synced": 1794548210.7749248,
         "status": "public"
       }
     },
@@ -246,7 +248,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525537.6253412,
+        "last_synced": 1794548210.7749248,
         "status": "public"
       }
     },
@@ -272,7 +274,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525537.6253412,
+        "last_synced": 1794548210.7749248,
         "status": "public"
       }
     },
@@ -298,7 +300,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525537.6253412,
+        "last_synced": 1794548210.7749248,
         "status": "public"
       }
     },
@@ -321,10 +323,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794318156.360609,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525537.6253412,
+        "last_synced": 1794548210.7749248,
         "status": "public"
       }
     },
@@ -350,7 +352,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525537.6253412,
+        "last_synced": 1794548210.7749248,
         "status": "public"
       }
     },
@@ -376,7 +378,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525537.6253412,
+        "last_synced": 1794548210.7749248,
         "status": "public"
       }
     },
@@ -402,7 +404,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525537.6253412,
+        "last_synced": 1794548210.7749248,
         "status": "public"
       }
     },
@@ -428,21 +430,22 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794525537.6253412,
+        "last_synced": 1794548210.7749248,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1794525537.6253412,
+    "last_sync": 1794548210.7749248,
     "total_shorts": 12,
-    "public_shorts": 3,
-    "total_views": 8,
-    "median_views": 3,
+    "public_shorts": 4,
+    "total_views": 9,
+    "median_views": 2.0,
     "creator_weights": {
-      "@ycombinator": 1.0,
-      "Starter Story": 1.0
+      "@ycombinator": 1.35,
+      "Starter Story": 1.0,
+      "Simon Squibb and Real Simon Squibb": 1.0
     }
   }
 }
