@@ -122,10 +122,13 @@
     "pLP7C7S3T3E",
     "Qy1yDIwI62k",
     "WCYeGjHkcqU",
-    "VAH-ixdFWFs"
+    "VAH-ixdFWFs",
+    "35z-9ybnN_w",
+    "cLDrSXhhPO8"
   ],
   "upload_timestamps": [
-    1794661907.0890732
+    1794661907.0890732,
+    1794694087.5646374
   ],
   "uploaded_shorts": [
     {
@@ -150,7 +153,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661794.50346,
+        "last_synced": 1794693961.5614872,
         "status": "pending_or_private"
       }
     },
@@ -176,7 +179,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661794.50346,
+        "last_synced": 1794693961.5614872,
         "status": "pending_or_private"
       }
     },
@@ -202,7 +205,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661794.50346,
+        "last_synced": 1794693961.5614872,
         "status": "public"
       }
     },
@@ -228,7 +231,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661794.50346,
+        "last_synced": 1794693961.5614872,
         "status": "public"
       }
     },
@@ -254,7 +257,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661794.50346,
+        "last_synced": 1794693961.5614872,
         "status": "public"
       }
     },
@@ -280,7 +283,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661794.50346,
+        "last_synced": 1794693961.5614872,
         "status": "public"
       }
     },
@@ -303,10 +306,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794442632.4121287,
       "stats": {
-        "views": 10,
+        "views": 12,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661794.50346,
+        "last_synced": 1794693961.5614872,
         "status": "public"
       }
     },
@@ -332,7 +335,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661794.50346,
+        "last_synced": 1794693961.5614872,
         "status": "public"
       }
     },
@@ -358,7 +361,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661794.50346,
+        "last_synced": 1794693961.5614872,
         "status": "public"
       }
     },
@@ -384,7 +387,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661794.50346,
+        "last_synced": 1794693961.5614872,
         "status": "public"
       }
     },
@@ -407,6 +410,32 @@
       "scheduled_at": null,
       "uploaded_at": 1794661907.0890844,
       "stats": {
+        "views": 4,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 1794693961.5614872,
+        "status": "public"
+      }
+    },
+    {
+      "video_id": "J2NYrahZj7k",
+      "source_video_id": "35z-9ybnN_w",
+      "title": "French Bulldog Tantrum Meltdown #shorts",
+      "creator": "Laugh TV",
+      "topic": "funny and cute dog videos for dog lovers",
+      "tags": [
+        "dogsofinstagram",
+        "dogvideos",
+        "puppylove",
+        "dogtraining",
+        "goodboy",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794694087.56465,
+      "stats": {
         "views": 0,
         "likes": 0,
         "comments": 0,
@@ -416,16 +445,17 @@
   ],
   "analytics_summary": {
     "channel_id": "acc_02_dogs",
-    "last_sync": 1794661794.50346,
-    "total_shorts": 10,
-    "public_shorts": 7,
-    "total_views": 22,
-    "median_views": 2,
+    "last_sync": 1794693961.5614872,
+    "total_shorts": 11,
+    "public_shorts": 8,
+    "total_views": 28,
+    "median_views": 2.5,
     "creator_weights": {
       "Tom Davis Dog Training ": 1.35,
       "Funny Pet's Life": 1.0,
-      "Daily Dose Of Internet and Daily Dose of Pets": 1.35,
-      "Comfort Zone TV": 1.0
+      "Daily Dose Of Internet and Daily Dose of Pets": 1.0,
+      "Comfort Zone TV": 1.0,
+      "The Pet Collective": 1.35
     }
   }
 }
