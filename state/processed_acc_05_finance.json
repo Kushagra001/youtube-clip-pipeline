@@ -136,7 +136,9 @@
     "AJv_ZScvQdE",
     "FhHIigwDqlc",
     "bNIAi9Sm3rY",
-    "sbaMMXSAnT0"
+    "sbaMMXSAnT0",
+    "1vYkLXfv3_M",
+    "0-ftUFQ55co"
   ],
   "upload_timestamps": [
     1794662011.803374,
@@ -165,7 +167,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661837.222227,
+        "last_synced": 1794693981.1653357,
         "status": "pending_or_private"
       }
     },
@@ -191,7 +193,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661837.222227,
+        "last_synced": 1794693981.1653357,
         "status": "pending_or_private"
       }
     },
@@ -217,7 +219,7 @@
         "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661837.222227,
+        "last_synced": 1794693981.1653357,
         "status": "public"
       }
     },
@@ -243,7 +245,7 @@
         "views": 34,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661837.222227,
+        "last_synced": 1794693981.1653357,
         "status": "public"
       }
     },
@@ -269,7 +271,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661837.222227,
+        "last_synced": 1794693981.1653357,
         "status": "public"
       }
     },
@@ -295,7 +297,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661837.222227,
+        "last_synced": 1794693981.1653357,
         "status": "public"
       }
     },
@@ -321,7 +323,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661837.222227,
+        "last_synced": 1794693981.1653357,
         "status": "public"
       }
     },
@@ -347,7 +349,7 @@
         "views": 24,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661837.222227,
+        "last_synced": 1794693981.1653357,
         "status": "public"
       }
     },
@@ -373,7 +375,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661837.222227,
+        "last_synced": 1794693981.1653357,
         "status": "public"
       }
     },
@@ -399,7 +401,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661837.222227,
+        "last_synced": 1794693981.1653357,
         "status": "public"
       }
     },
@@ -422,10 +424,11 @@
       "scheduled_at": null,
       "uploaded_at": 1794662011.8033862,
       "stats": {
-        "views": 0,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794693981.1653357,
+        "status": "public"
       }
     },
     {
@@ -447,23 +450,24 @@
       "scheduled_at": null,
       "uploaded_at": 1794662067.3389206,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794693981.1653357,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_05_finance",
-    "last_sync": 1794661837.222227,
-    "total_shorts": 10,
-    "public_shorts": 6,
-    "total_views": 74,
-    "median_views": 6.5,
+    "last_sync": 1794693981.1653357,
+    "total_shorts": 12,
+    "public_shorts": 8,
+    "total_views": 77,
+    "median_views": 4.0,
     "creator_weights": {
       "@GrahamStephan": 1.8,
-      "Mark Tilbury": 1.0,
+      "Mark Tilbury": 1.35,
       "Humphrey Yang": 1.35,
       "Edmond Remington": 1.0
     }
