@@ -124,7 +124,8 @@
     "FVIKu0y2aoo",
     "gH6YmcKk0d0",
     "w7Bjef55aoo",
-    "_6-UReFB-OU"
+    "_6-UReFB-OU",
+    "dy9nxLSaEjY"
   ],
   "upload_timestamps": [
     1794612263.4824016,
@@ -153,7 +154,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634039.7239783,
+        "last_synced": 1794661861.8633964,
         "status": "public"
       }
     },
@@ -179,7 +180,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634039.7239783,
+        "last_synced": 1794661861.8633964,
         "status": "pending_or_private"
       }
     },
@@ -205,7 +206,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634039.7239783,
+        "last_synced": 1794661861.8633964,
         "status": "public"
       }
     },
@@ -231,7 +232,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634039.7239783,
+        "last_synced": 1794661861.8633964,
         "status": "public"
       }
     },
@@ -257,7 +258,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634039.7239783,
+        "last_synced": 1794661861.8633964,
         "status": "public"
       }
     },
@@ -283,7 +284,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634039.7239783,
+        "last_synced": 1794661861.8633964,
         "status": "public"
       }
     },
@@ -309,7 +310,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634039.7239783,
+        "last_synced": 1794661861.8633964,
         "status": "public"
       }
     },
@@ -332,10 +333,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794405078.2763317,
       "stats": {
-        "views": 18,
+        "views": 20,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634039.7239783,
+        "last_synced": 1794661861.8633964,
         "status": "public"
       }
     },
@@ -361,7 +362,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634039.7239783,
+        "last_synced": 1794661861.8633964,
         "status": "public"
       }
     },
@@ -387,7 +388,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634039.7239783,
+        "last_synced": 1794661861.8633964,
         "status": "public"
       }
     },
@@ -413,7 +414,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634039.7239783,
+        "last_synced": 1794661861.8633964,
         "status": "public"
       }
     },
@@ -436,10 +437,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794612263.482413,
       "stats": {
-        "views": 0,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634039.7239783,
+        "last_synced": 1794661861.8633964,
         "status": "public"
       }
     },
@@ -462,21 +463,21 @@
       "scheduled_at": null,
       "uploaded_at": 1794612309.5115519,
       "stats": {
-        "views": 1,
+        "views": 8,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634039.7239783,
+        "last_synced": 1794661861.8633964,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1794634039.7239783,
+    "last_sync": 1794661861.8633964,
     "total_shorts": 13,
-    "public_shorts": 8,
-    "total_views": 37,
-    "median_views": 2.0,
+    "public_shorts": 9,
+    "total_views": 48,
+    "median_views": 2,
     "creator_weights": {
       "Teachingmensfashion": 1.8,
       "BeYourBest": 1.8,
@@ -484,7 +485,7 @@
       "Glow Mode": 1.8,
       "Nick Alexander": 1.0,
       "taeveniti": 1.0,
-      "Alex Costa": 1.0
+      "Alex Costa": 1.8
     }
   }
 }
