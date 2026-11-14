@@ -125,11 +125,13 @@
     "YRRjaa-Yji0",
     "jcprGTfC4vc",
     "pRRRyv-xaiA",
-    "BXsfMst4Y0k"
+    "BXsfMst4Y0k",
+    "L1HCG3BGK8I",
+    "qUz93CyNIz0"
   ],
   "upload_timestamps": [
-    1794548372.9035027,
-    1794548438.1820652
+    1794661937.0565786,
+    1794662013.329298
   ],
   "uploaded_shorts": [
     {
@@ -154,7 +156,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634080.9744427,
+        "last_synced": 1794661807.8778949,
         "status": "public"
       }
     },
@@ -180,7 +182,7 @@
         "views": 15,
         "likes": 0,
         "comments": 2,
-        "last_synced": 1794634080.9744427,
+        "last_synced": 1794661807.8778949,
         "status": "public"
       }
     },
@@ -206,7 +208,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634080.9744427,
+        "last_synced": 1794661807.8778949,
         "status": "pending_or_private"
       }
     },
@@ -232,7 +234,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634080.9744427,
+        "last_synced": 1794661807.8778949,
         "status": "pending_or_private"
       }
     },
@@ -258,7 +260,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634080.9744427,
+        "last_synced": 1794661807.8778949,
         "status": "public"
       }
     },
@@ -284,7 +286,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634080.9744427,
+        "last_synced": 1794661807.8778949,
         "status": "public"
       }
     },
@@ -307,10 +309,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794322862.392556,
       "stats": {
-        "views": 1,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634080.9744427,
+        "last_synced": 1794661807.8778949,
         "status": "public"
       }
     },
@@ -336,8 +338,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634080.9744427,
-        "status": "public"
+        "last_synced": 1794661807.8778949,
+        "status": "pending_or_private"
       }
     },
     {
@@ -359,10 +361,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794442510.5995524,
       "stats": {
-        "views": 59,
-        "likes": 0,
+        "views": 73,
+        "likes": 1,
         "comments": 0,
-        "last_synced": 1794634080.9744427,
+        "last_synced": 1794661807.8778949,
         "status": "public"
       }
     },
@@ -385,10 +387,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794442585.487273,
       "stats": {
-        "views": 7,
+        "views": 8,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634080.9744427,
+        "last_synced": 1794661807.8778949,
         "status": "public"
       }
     },
@@ -414,7 +416,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634080.9744427,
+        "last_synced": 1794661807.8778949,
         "status": "public"
       }
     },
@@ -437,23 +439,73 @@
       "scheduled_at": null,
       "uploaded_at": 1794548438.1820743,
       "stats": {
+        "views": 1,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 1794661807.8778949,
+        "status": "public"
+      }
+    },
+    {
+      "video_id": "ebbZNCW5Jbw",
+      "source_video_id": "L1HCG3BGK8I",
+      "title": "Stop Searching for the Cause of Anxiety #shorts",
+      "creator": "Sukie Baxter",
+      "topic": "mental health tips, anxiety management, ADHD productivity and emotional wellness",
+      "tags": [
+        "mentalhealth",
+        "anxietytips",
+        "adhdtips",
+        "selfcare",
+        "wellnessjourney",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794661937.056591,
+      "stats": {
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634080.9744427,
-        "status": "public"
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "RRR5rIzD5aY",
+      "source_video_id": "L1HCG3BGK8I",
+      "title": "Anxiety Is Not a Thought #shorts",
+      "creator": "Sukie Baxter",
+      "topic": "mental health tips, anxiety management, ADHD productivity and emotional wellness",
+      "tags": [
+        "mentalhealth",
+        "anxietytips",
+        "adhdtips",
+        "selfcare",
+        "wellnessjourney",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794662013.3293087,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_10_mental_health",
-    "last_sync": 1794634080.9744427,
+    "last_sync": 1794661807.8778949,
     "total_shorts": 12,
-    "public_shorts": 6,
-    "total_views": 85,
-    "median_views": 4.5,
+    "public_shorts": 7,
+    "total_views": 102,
+    "median_views": 2,
     "creator_weights": {
-      "@HealthyGamerGG": 1.35,
+      "@HealthyGamerGG": 1.8,
       "@MelRobbins": 1.0,
       "ADHD Chatter Podcast": 1.0,
       "Zeliha Akpinar": 1.8
