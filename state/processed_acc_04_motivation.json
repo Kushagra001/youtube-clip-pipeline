@@ -117,11 +117,13 @@
     "TMzcXxQYGOk",
     "_WcAnBE1NjU",
     "SE9_1PYsaP0",
-    "bdxGKn_HzJM"
+    "bdxGKn_HzJM",
+    "_z4ACnn1Gsk",
+    "OAUnxDguldw"
   ],
   "upload_timestamps": [
-    1794548404.1108432,
-    1794548518.4417562
+    1794661986.7549183,
+    1794662126.289402
   ],
   "uploaded_shorts": [
     {
@@ -146,7 +148,7 @@
         "views": 1065,
         "likes": 14,
         "comments": 0,
-        "last_synced": 1794634031.3481839,
+        "last_synced": 1794661841.0813043,
         "status": "public"
       }
     },
@@ -172,7 +174,7 @@
         "views": 823,
         "likes": 5,
         "comments": 0,
-        "last_synced": 1794634031.3481839,
+        "last_synced": 1794661841.0813043,
         "status": "public"
       }
     },
@@ -198,7 +200,7 @@
         "views": 81,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.3481839,
+        "last_synced": 1794661841.0813043,
         "status": "public"
       }
     },
@@ -224,7 +226,7 @@
         "views": 51,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.3481839,
+        "last_synced": 1794661841.0813043,
         "status": "public"
       }
     },
@@ -250,7 +252,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.3481839,
+        "last_synced": 1794661841.0813043,
         "status": "public"
       }
     },
@@ -276,7 +278,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.3481839,
+        "last_synced": 1794661841.0813043,
         "status": "public"
       }
     },
@@ -302,7 +304,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.3481839,
+        "last_synced": 1794661841.0813043,
         "status": "public"
       }
     },
@@ -328,7 +330,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.3481839,
+        "last_synced": 1794661841.0813043,
         "status": "public"
       }
     },
@@ -354,7 +356,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.3481839,
+        "last_synced": 1794661841.0813043,
         "status": "public"
       }
     },
@@ -380,14 +382,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.3481839,
+        "last_synced": 1794661841.0813043,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "DSpsciDeRBE",
+      "source_video_id": "_z4ACnn1Gsk",
+      "title": "Stop Scrolling, Boost Focus in 30 Minutes #shorts",
+      "creator": "Aerondight",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794661986.7549303,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "val6kRcB5Lw",
+      "source_video_id": "OAUnxDguldw",
+      "title": "The Impediment Advances Action #shorts",
+      "creator": "Stoic Bond",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794662126.2894118,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_04_motivation",
-    "last_sync": 1794634031.3481839,
+    "last_sync": 1794661841.0813043,
     "total_shorts": 10,
     "public_shorts": 7,
     "total_views": 2023,
