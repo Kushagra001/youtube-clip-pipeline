@@ -128,7 +128,8 @@
     "Sc6TriRAGnI",
     "l_TDLJ97Dm0",
     "SBYCw-oHjlQ",
-    "3e44xTBY_ek"
+    "3e44xTBY_ek",
+    "Z2kQ7vjAFiQ"
   ],
   "upload_timestamps": [
     1794612304.9091592,
@@ -149,7 +150,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634069.3791797,
+        "last_synced": 1794661793.4461453,
         "status": "pending_or_private"
       }
     },
@@ -167,7 +168,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634069.3791797,
+        "last_synced": 1794661793.4461453,
         "status": "pending_or_private"
       }
     },
@@ -191,7 +192,7 @@
         "views": 1193,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1794634069.3791797,
+        "last_synced": 1794661793.4461453,
         "status": "public"
       }
     },
@@ -215,7 +216,7 @@
         "views": 378,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794634069.3791797,
+        "last_synced": 1794661793.4461453,
         "status": "public"
       }
     },
@@ -239,7 +240,7 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634069.3791797,
+        "last_synced": 1794661793.4461453,
         "status": "public"
       }
     },
@@ -263,7 +264,7 @@
         "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794634069.3791797,
+        "last_synced": 1794661793.4461453,
         "status": "public"
       }
     },
@@ -287,7 +288,7 @@
         "views": 10,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634069.3791797,
+        "last_synced": 1794661793.4461453,
         "status": "public"
       }
     },
@@ -311,7 +312,7 @@
         "views": 27,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634069.3791797,
+        "last_synced": 1794661793.4461453,
         "status": "public"
       }
     },
@@ -335,7 +336,7 @@
         "views": 72,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634069.3791797,
+        "last_synced": 1794661793.4461453,
         "status": "public"
       }
     },
@@ -359,7 +360,7 @@
         "views": 75,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634069.3791797,
+        "last_synced": 1794661793.4461453,
         "status": "public"
       }
     },
@@ -380,10 +381,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794495065.3407078,
       "stats": {
-        "views": 280,
+        "views": 316,
         "likes": 1,
         "comments": 0,
-        "last_synced": 1794634069.3791797,
+        "last_synced": 1794661793.4461453,
         "status": "public"
       }
     },
@@ -404,10 +405,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794495109.6816952,
       "stats": {
-        "views": 112,
+        "views": 113,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634069.3791797,
+        "last_synced": 1794661793.4461453,
         "status": "public"
       }
     },
@@ -428,10 +429,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794612304.909172,
       "stats": {
-        "views": 44,
+        "views": 76,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634069.3791797,
+        "last_synced": 1794661793.4461453,
         "status": "public"
       }
     },
@@ -452,21 +453,21 @@
       "scheduled_at": null,
       "uploaded_at": 1794612380.4212258,
       "stats": {
-        "views": 397,
+        "views": 481,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794634069.3791797,
+        "last_synced": 1794661793.4461453,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1794634069.3791797,
+    "last_sync": 1794661793.4461453,
     "total_shorts": 14,
     "public_shorts": 12,
-    "total_views": 3106,
-    "median_views": 115.0,
+    "total_views": 3259,
+    "median_views": 115.5,
     "creator_weights": {
       "Matt Wolfe": 1.8,
       "@DavidOndrej": 1.8,
@@ -474,7 +475,7 @@
       "AI Master": 1.0,
       "9x": 1.0,
       "Nick Saraev": 1.35,
-      "@WesRoth": 1.35
+      "@WesRoth": 1.8
     }
   }
 }
