@@ -142,7 +142,9 @@
     "Qx7rWI9EUCg",
     "vgNSddHF5xY",
     "ghsw19qAG1g",
-    "hqMDJHkVn8w"
+    "hqMDJHkVn8w",
+    "aXrfzqjv1E0",
+    "n8dAvpqE0M4"
   ],
   "upload_timestamps": [
     1794661957.5747902,
@@ -171,7 +173,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661815.441357,
+        "last_synced": 1794694012.291419,
         "status": "pending_or_private"
       }
     },
@@ -197,7 +199,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661815.441357,
+        "last_synced": 1794694012.291419,
         "status": "pending_or_private"
       }
     },
@@ -223,7 +225,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661815.441357,
+        "last_synced": 1794694012.291419,
         "status": "public"
       }
     },
@@ -249,7 +251,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661815.441357,
+        "last_synced": 1794694012.291419,
         "status": "public"
       }
     },
@@ -275,7 +277,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661815.441357,
+        "last_synced": 1794694012.291419,
         "status": "public"
       }
     },
@@ -301,7 +303,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661815.441357,
+        "last_synced": 1794694012.291419,
         "status": "public"
       }
     },
@@ -327,7 +329,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661815.441357,
+        "last_synced": 1794694012.291419,
         "status": "public"
       }
     },
@@ -353,7 +355,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661815.441357,
+        "last_synced": 1794694012.291419,
         "status": "public"
       }
     },
@@ -376,10 +378,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794442646.6104195,
       "stats": {
-        "views": 1,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661815.441357,
+        "last_synced": 1794694012.291419,
         "status": "public"
       }
     },
@@ -402,10 +404,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794442750.374191,
       "stats": {
-        "views": 1,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661815.441357,
+        "last_synced": 1794694012.291419,
         "status": "public"
       }
     },
@@ -428,10 +430,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794548504.1890223,
       "stats": {
-        "views": 3,
+        "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661815.441357,
+        "last_synced": 1794694012.291419,
         "status": "public"
       }
     },
@@ -457,7 +459,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661815.441357,
+        "last_synced": 1794694012.291419,
         "status": "public"
       }
     },
@@ -480,10 +482,11 @@
       "scheduled_at": null,
       "uploaded_at": 1794661957.5748022,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794694012.291419,
+        "status": "public"
       }
     },
     {
@@ -508,23 +511,25 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794694012.291419,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1794661815.441357,
-    "total_shorts": 12,
-    "public_shorts": 8,
-    "total_views": 19,
-    "median_views": 2.0,
+    "last_sync": 1794694012.291419,
+    "total_shorts": 14,
+    "public_shorts": 9,
+    "total_views": 23,
+    "median_views": 2,
     "creator_weights": {
       "Will Tennyson": 1.8,
       "@JoshuaWeissman": 1.0,
       "Epicurious": 1.0,
       "Nova Kitchen Tips": 1.0,
-      "Marissa McNamara": 1.35
+      "Marissa McNamara": 1.35,
+      "LifebyMikeG": 1.0
     }
   }
 }
