@@ -140,11 +140,13 @@
     "g20fY2uvpRY",
     "z6tGPQ9d2h8",
     "Qx7rWI9EUCg",
-    "vgNSddHF5xY"
+    "vgNSddHF5xY",
+    "ghsw19qAG1g",
+    "hqMDJHkVn8w"
   ],
   "upload_timestamps": [
-    1794548504.189011,
-    1794548561.1449022
+    1794661957.5747902,
+    1794662028.7868133
   ],
   "uploaded_shorts": [
     {
@@ -169,7 +171,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634032.058664,
+        "last_synced": 1794661815.441357,
         "status": "pending_or_private"
       }
     },
@@ -195,7 +197,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634032.058664,
+        "last_synced": 1794661815.441357,
         "status": "pending_or_private"
       }
     },
@@ -221,7 +223,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634032.058664,
+        "last_synced": 1794661815.441357,
         "status": "public"
       }
     },
@@ -247,7 +249,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634032.058664,
+        "last_synced": 1794661815.441357,
         "status": "public"
       }
     },
@@ -273,7 +275,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634032.058664,
+        "last_synced": 1794661815.441357,
         "status": "public"
       }
     },
@@ -299,7 +301,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634032.058664,
+        "last_synced": 1794661815.441357,
         "status": "public"
       }
     },
@@ -322,10 +324,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794322621.332479,
       "stats": {
-        "views": 1,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634032.058664,
+        "last_synced": 1794661815.441357,
         "status": "public"
       }
     },
@@ -351,7 +353,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634032.058664,
+        "last_synced": 1794661815.441357,
         "status": "public"
       }
     },
@@ -374,10 +376,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794442646.6104195,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634032.058664,
+        "last_synced": 1794661815.441357,
         "status": "public"
       }
     },
@@ -403,7 +405,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634032.058664,
+        "last_synced": 1794661815.441357,
         "status": "public"
       }
     },
@@ -429,7 +431,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634032.058664,
+        "last_synced": 1794661815.441357,
         "status": "public"
       }
     },
@@ -455,18 +457,68 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634032.058664,
+        "last_synced": 1794661815.441357,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "HcwHEOn_wK4",
+      "source_video_id": "ghsw19qAG1g",
+      "title": "Stop Buying Cheap Tupperware #shorts",
+      "creator": "LifebyMikeG",
+      "topic": "quick and easy recipes, meal prep ideas and food hacks for home cooks",
+      "tags": [
+        "easyrecipes",
+        "mealprep",
+        "foodhacks",
+        "quickrecipes",
+        "cookinghacks",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794661957.5748022,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "rHmRerzn9JM",
+      "source_video_id": "ghsw19qAG1g",
+      "title": "Stop Treating Cooking Like a Chore #shorts",
+      "creator": "LifebyMikeG",
+      "topic": "quick and easy recipes, meal prep ideas and food hacks for home cooks",
+      "tags": [
+        "easyrecipes",
+        "mealprep",
+        "foodhacks",
+        "quickrecipes",
+        "cookinghacks",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794662028.7868228,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1794634032.058664,
+    "last_sync": 1794661815.441357,
     "total_shorts": 12,
-    "public_shorts": 7,
-    "total_views": 17,
-    "median_views": 2,
+    "public_shorts": 8,
+    "total_views": 19,
+    "median_views": 2.0,
     "creator_weights": {
       "Will Tennyson": 1.8,
       "@JoshuaWeissman": 1.0,
