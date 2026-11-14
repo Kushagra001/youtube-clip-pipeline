@@ -133,11 +133,13 @@
     "yHOGj2hS4gw",
     "V-4RoEb9TgY",
     "XSVBeCFuAtg",
-    "hx1ope9A_DM"
+    "hx1ope9A_DM",
+    "G6Hcx_WcTmg",
+    "fqFovpDIWUw"
   ],
   "upload_timestamps": [
-    1794548366.1286712,
-    1794579081.7190716
+    1794579081.7190716,
+    1794661890.646603
   ],
   "uploaded_shorts": [
     {
@@ -162,7 +164,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.983752,
+        "last_synced": 1794661778.6202626,
         "status": "pending_or_private"
       }
     },
@@ -188,7 +190,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.983752,
+        "last_synced": 1794661778.6202626,
         "status": "pending_or_private"
       }
     },
@@ -214,7 +216,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.983752,
+        "last_synced": 1794661778.6202626,
         "status": "pending_or_private"
       }
     },
@@ -240,7 +242,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.983752,
+        "last_synced": 1794661778.6202626,
         "status": "pending_or_private"
       }
     },
@@ -266,7 +268,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.983752,
+        "last_synced": 1794661778.6202626,
         "status": "public"
       }
     },
@@ -292,7 +294,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.983752,
+        "last_synced": 1794661778.6202626,
         "status": "public"
       }
     },
@@ -318,7 +320,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.983752,
+        "last_synced": 1794661778.6202626,
         "status": "public"
       }
     },
@@ -344,7 +346,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.983752,
+        "last_synced": 1794661778.6202626,
         "status": "public"
       }
     },
@@ -370,7 +372,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.983752,
+        "last_synced": 1794661778.6202626,
         "status": "public"
       }
     },
@@ -396,7 +398,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.983752,
+        "last_synced": 1794661778.6202626,
         "status": "public"
       }
     },
@@ -422,7 +424,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.983752,
+        "last_synced": 1794661778.6202626,
         "status": "public"
       }
     },
@@ -448,7 +450,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.983752,
+        "last_synced": 1794661778.6202626,
         "status": "public"
       }
     },
@@ -474,7 +476,7 @@
         "views": 8,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.983752,
+        "last_synced": 1794661778.6202626,
         "status": "public"
       }
     },
@@ -500,7 +502,7 @@
         "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.983752,
+        "last_synced": 1794661778.6202626,
         "status": "public"
       }
     },
@@ -526,7 +528,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.983752,
+        "last_synced": 1794661778.6202626,
         "status": "public"
       }
     },
@@ -549,10 +551,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794548366.128685,
       "stats": {
-        "views": 6,
+        "views": 8,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.983752,
+        "last_synced": 1794661778.6202626,
         "status": "public"
       }
     },
@@ -578,17 +580,42 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634031.983752,
+        "last_synced": 1794661778.6202626,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "CLJFkeIjzEQ",
+      "source_video_id": "G6Hcx_WcTmg",
+      "title": "Cat's Accusation Game Is Too Real #shorts",
+      "creator": "Funny And Cute Cat's Life",
+      "topic": "cute and funny cat videos for cat lovers",
+      "tags": [
+        "catsofinstagram",
+        "cutecats",
+        "catreels",
+        "funnycats",
+        "kittensofinstagram",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794661890.6466162,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_01_cats",
-    "last_sync": 1794634031.983752,
+    "last_sync": 1794661778.6202626,
     "total_shorts": 17,
     "public_shorts": 6,
-    "total_views": 25,
+    "total_views": 27,
     "median_views": 4.0,
     "creator_weights": {
       "Funny And Cute Cat's Life": 1.0,
