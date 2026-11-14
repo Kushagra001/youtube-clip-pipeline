@@ -121,11 +121,11 @@
     "eKczJQcywoo",
     "pLP7C7S3T3E",
     "Qy1yDIwI62k",
-    "WCYeGjHkcqU"
+    "WCYeGjHkcqU",
+    "VAH-ixdFWFs"
   ],
   "upload_timestamps": [
-    1794548426.4720163,
-    1794548479.6450374
+    1794661907.0890732
   ],
   "uploaded_shorts": [
     {
@@ -150,7 +150,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634078.713439,
+        "last_synced": 1794661794.50346,
         "status": "pending_or_private"
       }
     },
@@ -176,7 +176,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634078.713439,
+        "last_synced": 1794661794.50346,
         "status": "pending_or_private"
       }
     },
@@ -202,7 +202,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634078.713439,
+        "last_synced": 1794661794.50346,
         "status": "public"
       }
     },
@@ -228,7 +228,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634078.713439,
+        "last_synced": 1794661794.50346,
         "status": "public"
       }
     },
@@ -251,10 +251,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794322642.5057428,
       "stats": {
-        "views": 1,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634078.713439,
+        "last_synced": 1794661794.50346,
         "status": "public"
       }
     },
@@ -280,7 +280,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634078.713439,
+        "last_synced": 1794661794.50346,
         "status": "public"
       }
     },
@@ -303,10 +303,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794442632.4121287,
       "stats": {
-        "views": 9,
+        "views": 10,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634078.713439,
+        "last_synced": 1794661794.50346,
         "status": "public"
       }
     },
@@ -332,7 +332,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634078.713439,
+        "last_synced": 1794661794.50346,
         "status": "public"
       }
     },
@@ -358,7 +358,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634078.713439,
+        "last_synced": 1794661794.50346,
         "status": "public"
       }
     },
@@ -384,17 +384,42 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634078.713439,
+        "last_synced": 1794661794.50346,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "s-8hsBdllYQ",
+      "source_video_id": "VAH-ixdFWFs",
+      "title": "Mini Dachshund vs Great Dane #shorts",
+      "creator": "The Pet Collective",
+      "topic": "funny and cute dog videos for dog lovers",
+      "tags": [
+        "dogsofinstagram",
+        "dogvideos",
+        "puppylove",
+        "dogtraining",
+        "goodboy",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794661907.0890844,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_02_dogs",
-    "last_sync": 1794634078.713439,
+    "last_sync": 1794661794.50346,
     "total_shorts": 10,
     "public_shorts": 7,
-    "total_views": 20,
+    "total_views": 22,
     "median_views": 2,
     "creator_weights": {
       "Tom Davis Dog Training ": 1.35,
