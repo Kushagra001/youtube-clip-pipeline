@@ -127,11 +127,13 @@
     "sxn5kPQ4Gl0",
     "qYOFs7rU1yI",
     "wvdugigsM6I",
-    "dSEobUGK7U4"
+    "dSEobUGK7U4",
+    "n9jnftsVExk",
+    "14HtZ9gCRWw"
   ],
   "upload_timestamps": [
-    1794548432.3509843,
-    1794548507.033757
+    1794661907.909594,
+    1794661972.9301534
   ],
   "uploaded_shorts": [
     {
@@ -156,7 +158,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634051.499144,
+        "last_synced": 1794661771.3339195,
         "status": "public"
       }
     },
@@ -182,7 +184,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634051.499144,
+        "last_synced": 1794661771.3339195,
         "status": "public"
       }
     },
@@ -208,7 +210,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634051.499144,
+        "last_synced": 1794661771.3339195,
         "status": "public"
       }
     },
@@ -234,7 +236,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634051.499144,
+        "last_synced": 1794661771.3339195,
         "status": "public"
       }
     },
@@ -260,7 +262,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634051.499144,
+        "last_synced": 1794661771.3339195,
         "status": "public"
       }
     },
@@ -286,7 +288,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634051.499144,
+        "last_synced": 1794661771.3339195,
         "status": "public"
       }
     },
@@ -312,7 +314,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634051.499144,
+        "last_synced": 1794661771.3339195,
         "status": "public"
       }
     },
@@ -338,7 +340,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634051.499144,
+        "last_synced": 1794661771.3339195,
         "status": "public"
       }
     },
@@ -364,7 +366,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634051.499144,
+        "last_synced": 1794661771.3339195,
         "status": "public"
       }
     },
@@ -390,14 +392,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634051.499144,
+        "last_synced": 1794661771.3339195,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "mFUbD4GElTU",
+      "source_video_id": "n9jnftsVExk",
+      "title": "The 2-Phase Abs Strategy #shorts",
+      "creator": "THENX",
+      "topic": "fitness motivation, home workouts, gym training and healthy lifestyle",
+      "tags": [
+        "homeworkout",
+        "fitnessmotivation",
+        "gymlife",
+        "calisthenics",
+        "fitfam",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794661907.9096053,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "3IWp4BvkvO8",
+      "source_video_id": "n9jnftsVExk",
+      "title": "Finish Strong: The Final Burn #shorts",
+      "creator": "THENX",
+      "topic": "fitness motivation, home workouts, gym training and healthy lifestyle",
+      "tags": [
+        "homeworkout",
+        "fitnessmotivation",
+        "gymlife",
+        "calisthenics",
+        "fitfam",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794661972.9301634,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_03_fitness",
-    "last_sync": 1794634051.499144,
+    "last_sync": 1794661771.3339195,
     "total_shorts": 10,
     "public_shorts": 6,
     "total_views": 15,
