@@ -125,7 +125,9 @@
     "Wj1EpkvDJ9I",
     "MFQuRjCme5Q",
     "sxn5kPQ4Gl0",
-    "qYOFs7rU1yI"
+    "qYOFs7rU1yI",
+    "wvdugigsM6I",
+    "dSEobUGK7U4"
   ],
   "upload_timestamps": [
     1794548432.3509843,
@@ -154,7 +156,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794612156.912516,
+        "last_synced": 1794634051.499144,
         "status": "public"
       }
     },
@@ -180,7 +182,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794612156.912516,
+        "last_synced": 1794634051.499144,
         "status": "public"
       }
     },
@@ -206,7 +208,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794612156.912516,
+        "last_synced": 1794634051.499144,
         "status": "public"
       }
     },
@@ -232,7 +234,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794612156.912516,
+        "last_synced": 1794634051.499144,
         "status": "public"
       }
     },
@@ -258,7 +260,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794612156.912516,
+        "last_synced": 1794634051.499144,
         "status": "public"
       }
     },
@@ -284,7 +286,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794612156.912516,
+        "last_synced": 1794634051.499144,
         "status": "public"
       }
     },
@@ -310,7 +312,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794612156.912516,
+        "last_synced": 1794634051.499144,
         "status": "public"
       }
     },
@@ -336,7 +338,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794612156.912516,
+        "last_synced": 1794634051.499144,
         "status": "public"
       }
     },
@@ -362,7 +364,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794612156.912516,
+        "last_synced": 1794634051.499144,
         "status": "public"
       }
     },
@@ -388,14 +390,14 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794612156.912516,
+        "last_synced": 1794634051.499144,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_03_fitness",
-    "last_sync": 1794612156.912516,
+    "last_sync": 1794634051.499144,
     "total_shorts": 10,
     "public_shorts": 6,
     "total_views": 15,
