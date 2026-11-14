@@ -134,11 +134,13 @@
     "S51UX1ncWdo",
     "vJabNEwZIuc",
     "AJv_ZScvQdE",
-    "FhHIigwDqlc"
+    "FhHIigwDqlc",
+    "bNIAi9Sm3rY",
+    "sbaMMXSAnT0"
   ],
   "upload_timestamps": [
-    1794548390.6950612,
-    1794548452.3236973
+    1794662011.803374,
+    1794662067.3389118
   ],
   "uploaded_shorts": [
     {
@@ -163,7 +165,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634144.929998,
+        "last_synced": 1794661837.222227,
         "status": "pending_or_private"
       }
     },
@@ -189,7 +191,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634144.929998,
+        "last_synced": 1794661837.222227,
         "status": "pending_or_private"
       }
     },
@@ -215,7 +217,7 @@
         "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634144.929998,
+        "last_synced": 1794661837.222227,
         "status": "public"
       }
     },
@@ -241,7 +243,7 @@
         "views": 34,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634144.929998,
+        "last_synced": 1794661837.222227,
         "status": "public"
       }
     },
@@ -267,7 +269,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634144.929998,
+        "last_synced": 1794661837.222227,
         "status": "public"
       }
     },
@@ -293,7 +295,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634144.929998,
+        "last_synced": 1794661837.222227,
         "status": "public"
       }
     },
@@ -319,7 +321,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634144.929998,
+        "last_synced": 1794661837.222227,
         "status": "public"
       }
     },
@@ -345,7 +347,7 @@
         "views": 24,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634144.929998,
+        "last_synced": 1794661837.222227,
         "status": "public"
       }
     },
@@ -371,7 +373,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634144.929998,
+        "last_synced": 1794661837.222227,
         "status": "public"
       }
     },
@@ -397,14 +399,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794634144.929998,
+        "last_synced": 1794661837.222227,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "H37N9Wb60IU",
+      "source_video_id": "bNIAi9Sm3rY",
+      "title": "Inflation Is Eating Your Savings Alive #shorts",
+      "creator": "Humphrey Yang",
+      "topic": "personal finance, investing, budgeting and side hustles for financial freedom",
+      "tags": [
+        "personalfinance",
+        "investing",
+        "sidehustle",
+        "financialfreedom",
+        "stockmarket",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794662011.8033862,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "ODFW9JwqyH8",
+      "source_video_id": "bNIAi9Sm3rY",
+      "title": "The Math Behind Getting Rich Slowly #shorts",
+      "creator": "Humphrey Yang",
+      "topic": "personal finance, investing, budgeting and side hustles for financial freedom",
+      "tags": [
+        "personalfinance",
+        "investing",
+        "sidehustle",
+        "financialfreedom",
+        "stockmarket",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794662067.3389206,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_05_finance",
-    "last_sync": 1794634144.929998,
+    "last_sync": 1794661837.222227,
     "total_shorts": 10,
     "public_shorts": 6,
     "total_views": 74,
