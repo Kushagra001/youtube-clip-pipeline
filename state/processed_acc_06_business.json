@@ -122,7 +122,9 @@
     "tRLVXvvuiHk",
     "VVw5m7IA0no",
     "hcgbqCMXU_Y",
-    "qgc89GEO_nE"
+    "qgc89GEO_nE",
+    "IjS9eTpmhgk",
+    "dn7x0Sr2IhY"
   ],
   "upload_timestamps": [
     1794612328.2484577,
@@ -151,7 +153,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661871.6759126,
+        "last_synced": 1794693934.6336873,
         "status": "pending_or_private"
       }
     },
@@ -177,7 +179,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661871.6759126,
+        "last_synced": 1794693934.6336873,
         "status": "pending_or_private"
       }
     },
@@ -203,7 +205,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661871.6759126,
+        "last_synced": 1794693934.6336873,
         "status": "public"
       }
     },
@@ -229,7 +231,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661871.6759126,
+        "last_synced": 1794693934.6336873,
         "status": "public"
       }
     },
@@ -255,7 +257,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661871.6759126,
+        "last_synced": 1794693934.6336873,
         "status": "public"
       }
     },
@@ -281,7 +283,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661871.6759126,
+        "last_synced": 1794693934.6336873,
         "status": "public"
       }
     },
@@ -307,7 +309,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661871.6759126,
+        "last_synced": 1794693934.6336873,
         "status": "public"
       }
     },
@@ -333,7 +335,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661871.6759126,
+        "last_synced": 1794693934.6336873,
         "status": "public"
       }
     },
@@ -359,7 +361,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661871.6759126,
+        "last_synced": 1794693934.6336873,
         "status": "public"
       }
     },
@@ -382,10 +384,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794404999.096759,
       "stats": {
-        "views": 0,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661871.6759126,
+        "last_synced": 1794693934.6336873,
         "status": "public"
       }
     },
@@ -411,7 +413,7 @@
         "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661871.6759126,
+        "last_synced": 1794693934.6336873,
         "status": "public"
       }
     },
@@ -437,7 +439,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661871.6759126,
+        "last_synced": 1794693934.6336873,
         "status": "public"
       }
     },
@@ -460,10 +462,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794612328.2484703,
       "stats": {
-        "views": 1,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661871.6759126,
+        "last_synced": 1794693934.6336873,
         "status": "public"
       }
     },
@@ -489,22 +491,23 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794661871.6759126,
+        "last_synced": 1794693934.6336873,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1794661871.6759126,
+    "last_sync": 1794693934.6336873,
     "total_shorts": 14,
-    "public_shorts": 6,
-    "total_views": 15,
-    "median_views": 2.0,
+    "public_shorts": 7,
+    "total_views": 18,
+    "median_views": 2,
     "creator_weights": {
       "@ycombinator": 1.35,
       "Starter Story": 1.0,
       "Simon Squibb and Real Simon Squibb": 1.0,
+      "Backstage with Millionaires": 1.0,
       "Scaler School of Business": 1.8,
       "Y Combinator": 1.0
     }
