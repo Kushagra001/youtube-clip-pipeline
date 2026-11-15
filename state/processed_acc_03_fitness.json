@@ -135,7 +135,9 @@
     "FlBUw7UzIjw",
     "oLsonHQJOUc",
     "nNDrP_bjyj4",
-    "e_W5guIMc9Y"
+    "e_W5guIMc9Y",
+    "oqo7iNdRoaw",
+    "H_Xo1sHSPU4"
   ],
   "upload_timestamps": [
     1794750104.1311758,
@@ -164,7 +166,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.788019,
+        "last_synced": 1794782235.5015912,
         "status": "public"
       }
     },
@@ -190,7 +192,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.788019,
+        "last_synced": 1794782235.5015912,
         "status": "public"
       }
     },
@@ -216,7 +218,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.788019,
+        "last_synced": 1794782235.5015912,
         "status": "public"
       }
     },
@@ -242,7 +244,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.788019,
+        "last_synced": 1794782235.5015912,
         "status": "public"
       }
     },
@@ -268,7 +270,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.788019,
+        "last_synced": 1794782235.5015912,
         "status": "public"
       }
     },
@@ -294,7 +296,7 @@
         "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.788019,
+        "last_synced": 1794782235.5015912,
         "status": "public"
       }
     },
@@ -320,7 +322,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.788019,
+        "last_synced": 1794782235.5015912,
         "status": "public"
       }
     },
@@ -346,7 +348,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.788019,
+        "last_synced": 1794782235.5015912,
         "status": "public"
       }
     },
@@ -372,7 +374,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.788019,
+        "last_synced": 1794782235.5015912,
         "status": "public"
       }
     },
@@ -398,7 +400,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.788019,
+        "last_synced": 1794782235.5015912,
         "status": "public"
       }
     },
@@ -424,7 +426,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.788019,
+        "last_synced": 1794782235.5015912,
         "status": "public"
       }
     },
@@ -450,8 +452,8 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.788019,
-        "status": "pending_or_private"
+        "last_synced": 1794782235.5015912,
+        "status": "public"
       }
     },
     {
@@ -476,7 +478,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794782235.5015912,
+        "status": "public"
       }
     },
     {
@@ -501,21 +504,22 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794782235.5015912,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_03_fitness",
-    "last_sync": 1794749935.788019,
-    "total_shorts": 12,
-    "public_shorts": 7,
-    "total_views": 18,
-    "median_views": 2,
+    "last_sync": 1794782235.5015912,
+    "total_shorts": 14,
+    "public_shorts": 8,
+    "total_views": 21,
+    "median_views": 2.5,
     "creator_weights": {
       "@ChrisHeria": 1.35,
       "@RenaissancePeriodization": 1.0,
-      "Calisthenicmovement": 1.35,
+      "Calisthenicmovement": 1.0,
       "Lucy Lismore": 1.0,
       "THENX": 1.0
     }
