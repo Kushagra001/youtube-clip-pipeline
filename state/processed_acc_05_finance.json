@@ -142,7 +142,9 @@
     "Izw-xaVkO0g",
     "-hzzxqyZv0A",
     "YA2P_Cg8JHo",
-    "JN_D0NI7QGI"
+    "JN_D0NI7QGI",
+    "g0PQtwZVP7U",
+    "i-To1GILOhA"
   ],
   "upload_timestamps": [
     1794750078.0855584,
@@ -171,7 +173,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749958.6013782,
+        "last_synced": 1794782344.3738163,
         "status": "pending_or_private"
       }
     },
@@ -197,7 +199,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749958.6013782,
+        "last_synced": 1794782344.3738163,
         "status": "pending_or_private"
       }
     },
@@ -223,7 +225,7 @@
         "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749958.6013782,
+        "last_synced": 1794782344.3738163,
         "status": "public"
       }
     },
@@ -249,7 +251,7 @@
         "views": 34,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749958.6013782,
+        "last_synced": 1794782344.3738163,
         "status": "public"
       }
     },
@@ -275,7 +277,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749958.6013782,
+        "last_synced": 1794782344.3738163,
         "status": "public"
       }
     },
@@ -298,10 +300,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794325576.0416842,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749958.6013782,
+        "last_synced": 1794782344.3738163,
         "status": "public"
       }
     },
@@ -327,7 +329,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749958.6013782,
+        "last_synced": 1794782344.3738163,
         "status": "public"
       }
     },
@@ -353,7 +355,7 @@
         "views": 24,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749958.6013782,
+        "last_synced": 1794782344.3738163,
         "status": "public"
       }
     },
@@ -379,7 +381,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749958.6013782,
+        "last_synced": 1794782344.3738163,
         "status": "public"
       }
     },
@@ -405,7 +407,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749958.6013782,
+        "last_synced": 1794782344.3738163,
         "status": "public"
       }
     },
@@ -428,10 +430,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794662011.8033862,
       "stats": {
-        "views": 2,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749958.6013782,
+        "last_synced": 1794782344.3738163,
         "status": "public"
       }
     },
@@ -457,7 +459,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749958.6013782,
+        "last_synced": 1794782344.3738163,
         "status": "public"
       }
     },
@@ -483,7 +485,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794782344.3738163,
+        "status": "public"
       }
     },
     {
@@ -505,25 +508,28 @@
       "scheduled_at": null,
       "uploaded_at": 1794750131.849692,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794782344.3738163,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_05_finance",
-    "last_sync": 1794749958.6013782,
-    "total_shorts": 12,
-    "public_shorts": 8,
-    "total_views": 77,
-    "median_views": 4.0,
+    "last_sync": 1794782344.3738163,
+    "total_shorts": 14,
+    "public_shorts": 10,
+    "total_views": 80,
+    "median_views": 2.5,
     "creator_weights": {
       "@GrahamStephan": 1.8,
-      "Mark Tilbury": 1.35,
-      "Humphrey Yang": 1.35,
-      "Edmond Remington": 1.0
+      "Mark Tilbury": 1.8,
+      "Vincent Chan": 1.0,
+      "Humphrey Yang": 1.8,
+      "Edmond Remington": 1.0,
+      "Rahul Jain": 1.0
     }
   }
 }
