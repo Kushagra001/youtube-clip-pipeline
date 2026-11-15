@@ -122,11 +122,13 @@
     "OAUnxDguldw",
     "j6PbFSO7Lc0",
     "F-TMxOyd1dU",
-    "HUCDvFHLLVg"
+    "HUCDvFHLLVg",
+    "vultJhU9XLU",
+    "3au2nq7nAtM"
   ],
   "upload_timestamps": [
-    1794661986.7549183,
-    1794662126.289402
+    1794750120.5681942,
+    1794750190.7331908
   ],
   "uploaded_shorts": [
     {
@@ -151,7 +153,7 @@
         "views": 1066,
         "likes": 14,
         "comments": 0,
-        "last_synced": 1794720309.8635888,
+        "last_synced": 1794749956.7218695,
         "status": "public"
       }
     },
@@ -177,7 +179,7 @@
         "views": 823,
         "likes": 5,
         "comments": 0,
-        "last_synced": 1794720309.8635888,
+        "last_synced": 1794749956.7218695,
         "status": "public"
       }
     },
@@ -203,7 +205,7 @@
         "views": 81,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720309.8635888,
+        "last_synced": 1794749956.7218695,
         "status": "public"
       }
     },
@@ -229,7 +231,7 @@
         "views": 51,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720309.8635888,
+        "last_synced": 1794749956.7218695,
         "status": "public"
       }
     },
@@ -255,7 +257,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720309.8635888,
+        "last_synced": 1794749956.7218695,
         "status": "public"
       }
     },
@@ -281,7 +283,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720309.8635888,
+        "last_synced": 1794749956.7218695,
         "status": "public"
       }
     },
@@ -307,7 +309,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720309.8635888,
+        "last_synced": 1794749956.7218695,
         "status": "public"
       }
     },
@@ -333,7 +335,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720309.8635888,
+        "last_synced": 1794749956.7218695,
         "status": "public"
       }
     },
@@ -359,7 +361,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720309.8635888,
+        "last_synced": 1794749956.7218695,
         "status": "public"
       }
     },
@@ -385,7 +387,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720309.8635888,
+        "last_synced": 1794749956.7218695,
         "status": "public"
       }
     },
@@ -411,7 +413,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720309.8635888,
+        "last_synced": 1794749956.7218695,
         "status": "public"
       }
     },
@@ -437,14 +439,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720309.8635888,
+        "last_synced": 1794749956.7218695,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "kso2biNdIrY",
+      "source_video_id": "vultJhU9XLU",
+      "title": "Stop Letting The Mob Steal Your Mind #shorts",
+      "creator": "@DailyStoic",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794750120.5682082,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "CIkVaTgZrdk",
+      "source_video_id": "vultJhU9XLU",
+      "title": "Asking For Help Is Refusing To Give Up #shorts",
+      "creator": "@DailyStoic",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794750190.7332041,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_04_motivation",
-    "last_sync": 1794720309.8635888,
+    "last_sync": 1794749956.7218695,
     "total_shorts": 12,
     "public_shorts": 8,
     "total_views": 2025,
