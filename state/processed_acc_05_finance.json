@@ -140,11 +140,13 @@
     "1vYkLXfv3_M",
     "0-ftUFQ55co",
     "Izw-xaVkO0g",
-    "-hzzxqyZv0A"
+    "-hzzxqyZv0A",
+    "YA2P_Cg8JHo",
+    "JN_D0NI7QGI"
   ],
   "upload_timestamps": [
-    1794662011.803374,
-    1794662067.3389118
+    1794750078.0855584,
+    1794750131.8496783
   ],
   "uploaded_shorts": [
     {
@@ -169,7 +171,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720344.0903103,
+        "last_synced": 1794749958.6013782,
         "status": "pending_or_private"
       }
     },
@@ -195,7 +197,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720344.0903103,
+        "last_synced": 1794749958.6013782,
         "status": "pending_or_private"
       }
     },
@@ -221,7 +223,7 @@
         "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720344.0903103,
+        "last_synced": 1794749958.6013782,
         "status": "public"
       }
     },
@@ -247,7 +249,7 @@
         "views": 34,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720344.0903103,
+        "last_synced": 1794749958.6013782,
         "status": "public"
       }
     },
@@ -273,7 +275,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720344.0903103,
+        "last_synced": 1794749958.6013782,
         "status": "public"
       }
     },
@@ -299,7 +301,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720344.0903103,
+        "last_synced": 1794749958.6013782,
         "status": "public"
       }
     },
@@ -325,7 +327,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720344.0903103,
+        "last_synced": 1794749958.6013782,
         "status": "public"
       }
     },
@@ -351,7 +353,7 @@
         "views": 24,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720344.0903103,
+        "last_synced": 1794749958.6013782,
         "status": "public"
       }
     },
@@ -377,7 +379,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720344.0903103,
+        "last_synced": 1794749958.6013782,
         "status": "public"
       }
     },
@@ -403,7 +405,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720344.0903103,
+        "last_synced": 1794749958.6013782,
         "status": "public"
       }
     },
@@ -429,7 +431,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720344.0903103,
+        "last_synced": 1794749958.6013782,
         "status": "public"
       }
     },
@@ -455,14 +457,64 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720344.0903103,
+        "last_synced": 1794749958.6013782,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "UV2stF_Mzvg",
+      "source_video_id": "YA2P_Cg8JHo",
+      "title": "Your Patience is the Ultimate Alpha #shorts",
+      "creator": "Rahul Jain",
+      "topic": "personal finance, investing, budgeting and side hustles for financial freedom",
+      "tags": [
+        "personalfinance",
+        "investing",
+        "sidehustle",
+        "financialfreedom",
+        "stockmarket",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794750078.0855713,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "XPiPVK609pY",
+      "source_video_id": "YA2P_Cg8JHo",
+      "title": "The 60% Crash Test for Investors #shorts",
+      "creator": "Rahul Jain",
+      "topic": "personal finance, investing, budgeting and side hustles for financial freedom",
+      "tags": [
+        "personalfinance",
+        "investing",
+        "sidehustle",
+        "financialfreedom",
+        "stockmarket",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794750131.849692,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_05_finance",
-    "last_sync": 1794720344.0903103,
+    "last_sync": 1794749958.6013782,
     "total_shorts": 12,
     "public_shorts": 8,
     "total_views": 77,
