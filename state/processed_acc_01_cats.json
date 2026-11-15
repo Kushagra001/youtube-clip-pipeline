@@ -139,11 +139,13 @@
     "L1NdFN0-8n4",
     "VwPa4k-7C0M",
     "593uZJMA5tU",
-    "tpiyEe_CqB4"
+    "tpiyEe_CqB4",
+    "RZU2hiAV_zU",
+    "9CZds4bZpMk"
   ],
   "upload_timestamps": [
-    1794661890.646603,
-    1794694180.6821594
+    1794694180.6821594,
+    1794750065.712761
   ],
   "uploaded_shorts": [
     {
@@ -168,7 +170,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
+        "last_synced": 1794749942.4425693,
         "status": "pending_or_private"
       }
     },
@@ -194,7 +196,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
+        "last_synced": 1794749942.4425693,
         "status": "pending_or_private"
       }
     },
@@ -220,7 +222,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
+        "last_synced": 1794749942.4425693,
         "status": "pending_or_private"
       }
     },
@@ -246,7 +248,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
+        "last_synced": 1794749942.4425693,
         "status": "pending_or_private"
       }
     },
@@ -272,7 +274,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
+        "last_synced": 1794749942.4425693,
         "status": "public"
       }
     },
@@ -298,7 +300,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
+        "last_synced": 1794749942.4425693,
         "status": "public"
       }
     },
@@ -324,7 +326,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
+        "last_synced": 1794749942.4425693,
         "status": "public"
       }
     },
@@ -350,7 +352,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
+        "last_synced": 1794749942.4425693,
         "status": "public"
       }
     },
@@ -376,7 +378,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
+        "last_synced": 1794749942.4425693,
         "status": "public"
       }
     },
@@ -402,7 +404,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
+        "last_synced": 1794749942.4425693,
         "status": "public"
       }
     },
@@ -428,7 +430,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
+        "last_synced": 1794749942.4425693,
         "status": "public"
       }
     },
@@ -454,7 +456,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
+        "last_synced": 1794749942.4425693,
         "status": "public"
       }
     },
@@ -480,7 +482,7 @@
         "views": 8,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
+        "last_synced": 1794749942.4425693,
         "status": "public"
       }
     },
@@ -506,7 +508,7 @@
         "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
+        "last_synced": 1794749942.4425693,
         "status": "public"
       }
     },
@@ -532,7 +534,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
+        "last_synced": 1794749942.4425693,
         "status": "public"
       }
     },
@@ -555,10 +557,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794548366.128685,
       "stats": {
-        "views": 24,
+        "views": 25,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
+        "last_synced": 1794749942.4425693,
         "status": "public"
       }
     },
@@ -584,7 +586,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
+        "last_synced": 1794749942.4425693,
         "status": "public"
       }
     },
@@ -610,7 +612,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
+        "last_synced": 1794749942.4425693,
         "status": "public"
       }
     },
@@ -633,25 +635,51 @@
       "scheduled_at": null,
       "uploaded_at": 1794694180.6821752,
       "stats": {
+        "views": 1,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 1794749942.4425693,
+        "status": "public"
+      }
+    },
+    {
+      "video_id": "oBWW-O5Wy_A",
+      "source_video_id": "RZU2hiAV_zU",
+      "title": "Picky Cats Are Gentle With Babies #shorts",
+      "creator": "Funny And Cute Cat's Life",
+      "topic": "cute and funny cat videos for cat lovers",
+      "tags": [
+        "catsofinstagram",
+        "cutecats",
+        "catreels",
+        "funnycats",
+        "kittensofinstagram",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794750065.7127764,
+      "stats": {
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720371.172115,
-        "status": "public"
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_01_cats",
-    "last_sync": 1794720371.172115,
+    "last_sync": 1794749942.4425693,
     "total_shorts": 19,
-    "public_shorts": 6,
-    "total_views": 44,
-    "median_views": 4.0,
+    "public_shorts": 7,
+    "total_views": 46,
+    "median_views": 3,
     "creator_weights": {
-      "Funny And Cute Cat's Life": 1.35,
-      "Funny Furry TV": 1.35,
-      "OhCrayZ": 1.0
+      "Funny And Cute Cat's Life": 1.8,
+      "Funny Furry TV": 1.8,
+      "OhCrayZ": 1.0,
+      "Meow of the Day": 1.0
     }
   }
 }
