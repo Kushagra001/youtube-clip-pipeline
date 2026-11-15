@@ -133,11 +133,13 @@
     "kIVxdIWy7Eo",
     "o9cWzgkeT4c",
     "FlBUw7UzIjw",
-    "oLsonHQJOUc"
+    "oLsonHQJOUc",
+    "nNDrP_bjyj4",
+    "e_W5guIMc9Y"
   ],
   "upload_timestamps": [
-    1794661907.909594,
-    1794661972.9301534
+    1794750104.1311758,
+    1794750190.28099
   ],
   "uploaded_shorts": [
     {
@@ -162,7 +164,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720307.7079678,
+        "last_synced": 1794749935.788019,
         "status": "public"
       }
     },
@@ -188,7 +190,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720307.7079678,
+        "last_synced": 1794749935.788019,
         "status": "public"
       }
     },
@@ -214,7 +216,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720307.7079678,
+        "last_synced": 1794749935.788019,
         "status": "public"
       }
     },
@@ -240,7 +242,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720307.7079678,
+        "last_synced": 1794749935.788019,
         "status": "public"
       }
     },
@@ -266,7 +268,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720307.7079678,
+        "last_synced": 1794749935.788019,
         "status": "public"
       }
     },
@@ -289,10 +291,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794318025.9484189,
       "stats": {
-        "views": 4,
+        "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720307.7079678,
+        "last_synced": 1794749935.788019,
         "status": "public"
       }
     },
@@ -318,7 +320,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720307.7079678,
+        "last_synced": 1794749935.788019,
         "status": "public"
       }
     },
@@ -344,7 +346,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720307.7079678,
+        "last_synced": 1794749935.788019,
         "status": "public"
       }
     },
@@ -370,7 +372,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720307.7079678,
+        "last_synced": 1794749935.788019,
         "status": "public"
       }
     },
@@ -396,7 +398,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720307.7079678,
+        "last_synced": 1794749935.788019,
         "status": "public"
       }
     },
@@ -422,7 +424,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720307.7079678,
+        "last_synced": 1794749935.788019,
         "status": "public"
       }
     },
@@ -448,22 +450,72 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720307.7079678,
-        "status": "public"
+        "last_synced": 1794749935.788019,
+        "status": "pending_or_private"
+      }
+    },
+    {
+      "video_id": "QbrNWen54ls",
+      "source_video_id": "nNDrP_bjyj4",
+      "title": "The Poo Sandwich: Hack Your Brain for Gym #shorts",
+      "creator": "Dr Faye Bate",
+      "topic": "fitness motivation, home workouts, gym training and healthy lifestyle",
+      "tags": [
+        "homeworkout",
+        "fitnessmotivation",
+        "gymlife",
+        "calisthenics",
+        "fitfam",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794750104.1311893,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "mA8hYi7WHyQ",
+      "source_video_id": "nNDrP_bjyj4",
+      "title": "Menopause Is Closer Than You Think #shorts",
+      "creator": "Dr Faye Bate",
+      "topic": "fitness motivation, home workouts, gym training and healthy lifestyle",
+      "tags": [
+        "homeworkout",
+        "fitnessmotivation",
+        "gymlife",
+        "calisthenics",
+        "fitfam",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794750190.2810059,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_03_fitness",
-    "last_sync": 1794720307.7079678,
+    "last_sync": 1794749935.788019,
     "total_shorts": 12,
-    "public_shorts": 8,
-    "total_views": 20,
-    "median_views": 2.5,
+    "public_shorts": 7,
+    "total_views": 18,
+    "median_views": 2,
     "creator_weights": {
       "@ChrisHeria": 1.35,
       "@RenaissancePeriodization": 1.0,
-      "Calisthenicmovement": 1.0,
+      "Calisthenicmovement": 1.35,
       "Lucy Lismore": 1.0,
       "THENX": 1.0
     }
