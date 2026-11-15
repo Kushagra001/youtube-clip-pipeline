@@ -131,11 +131,13 @@
     "IHOieCU4WQs",
     "JQFZNQS6eQ0",
     "Zm6umzXVJOE",
-    "sTZQ1ye9vRM"
+    "sTZQ1ye9vRM",
+    "bj_PSYBCUsM",
+    "ds9pEAB72kI"
   ],
   "upload_timestamps": [
-    1794661937.0565786,
-    1794662013.329298
+    1794750149.1242068,
+    1794750209.5824177
   ],
   "uploaded_shorts": [
     {
@@ -160,7 +162,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.276914,
+        "last_synced": 1794750029.039067,
         "status": "public"
       }
     },
@@ -186,7 +188,7 @@
         "views": 15,
         "likes": 0,
         "comments": 2,
-        "last_synced": 1794720326.276914,
+        "last_synced": 1794750029.039067,
         "status": "public"
       }
     },
@@ -212,7 +214,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.276914,
+        "last_synced": 1794750029.039067,
         "status": "pending_or_private"
       }
     },
@@ -238,7 +240,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.276914,
+        "last_synced": 1794750029.039067,
         "status": "pending_or_private"
       }
     },
@@ -264,7 +266,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.276914,
+        "last_synced": 1794750029.039067,
         "status": "public"
       }
     },
@@ -290,7 +292,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.276914,
+        "last_synced": 1794750029.039067,
         "status": "public"
       }
     },
@@ -316,7 +318,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.276914,
+        "last_synced": 1794750029.039067,
         "status": "public"
       }
     },
@@ -342,7 +344,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.276914,
+        "last_synced": 1794750029.039067,
         "status": "public"
       }
     },
@@ -365,10 +367,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794442510.5995524,
       "stats": {
-        "views": 109,
+        "views": 111,
         "likes": 1,
         "comments": 0,
-        "last_synced": 1794720326.276914,
+        "last_synced": 1794750029.039067,
         "status": "public"
       }
     },
@@ -394,7 +396,7 @@
         "views": 8,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.276914,
+        "last_synced": 1794750029.039067,
         "status": "public"
       }
     },
@@ -420,7 +422,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.276914,
+        "last_synced": 1794750029.039067,
         "status": "public"
       }
     },
@@ -446,7 +448,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.276914,
+        "last_synced": 1794750029.039067,
         "status": "public"
       }
     },
@@ -472,7 +474,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.276914,
+        "last_synced": 1794750029.039067,
         "status": "public"
       }
     },
@@ -498,17 +500,67 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.276914,
+        "last_synced": 1794750029.039067,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "X35fVW10hEQ",
+      "source_video_id": "bj_PSYBCUsM",
+      "title": "You Didn't Forget, You Never Heard It #shorts",
+      "creator": "HealthyGamerGG",
+      "topic": "mental health tips, anxiety management, ADHD productivity and emotional wellness",
+      "tags": [
+        "mentalhealth",
+        "anxietytips",
+        "adhdtips",
+        "selfcare",
+        "wellnessjourney",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794750149.1242182,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "QZ00Vvmr-mY",
+      "source_video_id": "bj_PSYBCUsM",
+      "title": "The ADHD Dread Loop Explained #shorts",
+      "creator": "HealthyGamerGG",
+      "topic": "mental health tips, anxiety management, ADHD productivity and emotional wellness",
+      "tags": [
+        "mentalhealth",
+        "anxietytips",
+        "adhdtips",
+        "selfcare",
+        "wellnessjourney",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794750209.582428,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_10_mental_health",
-    "last_sync": 1794720326.276914,
+    "last_sync": 1794750029.039067,
     "total_shorts": 14,
     "public_shorts": 8,
-    "total_views": 139,
+    "total_views": 141,
     "median_views": 2.0,
     "creator_weights": {
       "@HealthyGamerGG": 1.8,
