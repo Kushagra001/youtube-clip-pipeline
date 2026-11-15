@@ -126,11 +126,13 @@
     "35z-9ybnN_w",
     "cLDrSXhhPO8",
     "yhUqCM7e42c",
-    "Cn9SmlfsYzk"
+    "Cn9SmlfsYzk",
+    "RbB-ezU-R2w",
+    "pxn0wL_uSm4"
   ],
   "upload_timestamps": [
-    1794661907.0890732,
-    1794694087.5646374
+    1794694087.5646374,
+    1794750150.1626537
   ],
   "uploaded_shorts": [
     {
@@ -155,7 +157,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.921888,
+        "last_synced": 1794749996.6187024,
         "status": "pending_or_private"
       }
     },
@@ -181,7 +183,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.921888,
+        "last_synced": 1794749996.6187024,
         "status": "pending_or_private"
       }
     },
@@ -207,7 +209,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.921888,
+        "last_synced": 1794749996.6187024,
         "status": "public"
       }
     },
@@ -233,7 +235,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.921888,
+        "last_synced": 1794749996.6187024,
         "status": "public"
       }
     },
@@ -259,7 +261,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.921888,
+        "last_synced": 1794749996.6187024,
         "status": "public"
       }
     },
@@ -285,7 +287,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.921888,
+        "last_synced": 1794749996.6187024,
         "status": "public"
       }
     },
@@ -308,10 +310,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794442632.4121287,
       "stats": {
-        "views": 12,
+        "views": 13,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.921888,
+        "last_synced": 1794749996.6187024,
         "status": "public"
       }
     },
@@ -337,7 +339,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.921888,
+        "last_synced": 1794749996.6187024,
         "status": "public"
       }
     },
@@ -363,7 +365,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.921888,
+        "last_synced": 1794749996.6187024,
         "status": "public"
       }
     },
@@ -389,7 +391,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.921888,
+        "last_synced": 1794749996.6187024,
         "status": "public"
       }
     },
@@ -412,10 +414,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794661907.0890844,
       "stats": {
-        "views": 6,
+        "views": 8,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.921888,
+        "last_synced": 1794749996.6187024,
         "status": "public"
       }
     },
@@ -438,25 +440,50 @@
       "scheduled_at": null,
       "uploaded_at": 1794694087.56465,
       "stats": {
-        "views": 1,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720326.921888,
+        "last_synced": 1794749996.6187024,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "bvcAmBy98MM",
+      "source_video_id": "RbB-ezU-R2w",
+      "title": "Puppy's Gym Is Just The Floor #shorts",
+      "creator": "Funny Pet's Life",
+      "topic": "funny and cute dog videos for dog lovers",
+      "tags": [
+        "dogsofinstagram",
+        "dogvideos",
+        "puppylove",
+        "dogtraining",
+        "goodboy",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794750150.1626658,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_02_dogs",
-    "last_sync": 1794720326.921888,
+    "last_sync": 1794749996.6187024,
     "total_shorts": 12,
     "public_shorts": 9,
-    "total_views": 31,
-    "median_views": 2,
+    "total_views": 36,
+    "median_views": 3,
     "creator_weights": {
-      "Tom Davis Dog Training ": 1.8,
+      "Tom Davis Dog Training ": 1.35,
       "Funny Pet's Life": 1.0,
-      "Daily Dose Of Internet and Daily Dose of Pets": 1.35,
+      "Daily Dose Of Internet and Daily Dose of Pets": 1.0,
       "Comfort Zone TV": 1.0,
       "The Pet Collective": 1.8,
       "Laugh TV": 1.0
