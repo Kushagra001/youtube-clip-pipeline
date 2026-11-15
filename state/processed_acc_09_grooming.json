@@ -128,7 +128,9 @@
     "dy9nxLSaEjY",
     "7lRhVxTQwVA",
     "5c7QjezI8ho",
-    "R8Da_rXg2ek"
+    "R8Da_rXg2ek",
+    "3cpcItOFE3U",
+    "jVwVOgRyymk"
   ],
   "upload_timestamps": [
     1794720634.5968559,
@@ -157,7 +159,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.4699335,
+        "last_synced": 1794782312.5941837,
         "status": "public"
       }
     },
@@ -183,7 +185,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.4699335,
+        "last_synced": 1794782312.5941837,
         "status": "pending_or_private"
       }
     },
@@ -209,7 +211,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.4699335,
+        "last_synced": 1794782312.5941837,
         "status": "public"
       }
     },
@@ -235,7 +237,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.4699335,
+        "last_synced": 1794782312.5941837,
         "status": "public"
       }
     },
@@ -261,7 +263,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.4699335,
+        "last_synced": 1794782312.5941837,
         "status": "public"
       }
     },
@@ -287,7 +289,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.4699335,
+        "last_synced": 1794782312.5941837,
         "status": "public"
       }
     },
@@ -313,7 +315,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.4699335,
+        "last_synced": 1794782312.5941837,
         "status": "public"
       }
     },
@@ -339,7 +341,7 @@
         "views": 21,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.4699335,
+        "last_synced": 1794782312.5941837,
         "status": "public"
       }
     },
@@ -365,7 +367,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.4699335,
+        "last_synced": 1794782312.5941837,
         "status": "public"
       }
     },
@@ -391,7 +393,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.4699335,
+        "last_synced": 1794782312.5941837,
         "status": "public"
       }
     },
@@ -417,7 +419,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.4699335,
+        "last_synced": 1794782312.5941837,
         "status": "public"
       }
     },
@@ -443,7 +445,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.4699335,
+        "last_synced": 1794782312.5941837,
         "status": "public"
       }
     },
@@ -469,7 +471,7 @@
         "views": 13,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.4699335,
+        "last_synced": 1794782312.5941837,
         "status": "public"
       }
     },
@@ -495,7 +497,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.4699335,
+        "last_synced": 1794782312.5941837,
         "status": "public"
       }
     },
@@ -518,21 +520,21 @@
       "scheduled_at": null,
       "uploaded_at": 1794720697.162804,
       "stats": {
-        "views": 0,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794749935.4699335,
+        "last_synced": 1794782312.5941837,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1794749935.4699335,
+    "last_sync": 1794782312.5941837,
     "total_shorts": 15,
-    "public_shorts": 9,
-    "total_views": 55,
-    "median_views": 3,
+    "public_shorts": 10,
+    "total_views": 58,
+    "median_views": 3.0,
     "creator_weights": {
       "Teachingmensfashion": 1.35,
       "BeYourBest": 1.35,
@@ -540,7 +542,8 @@
       "Glow Mode": 1.8,
       "Nick Alexander": 1.0,
       "taeveniti": 1.0,
-      "Alex Costa": 1.8
+      "Alex Costa": 1.8,
+      "Self Guide": 1.0
     }
   }
 }
