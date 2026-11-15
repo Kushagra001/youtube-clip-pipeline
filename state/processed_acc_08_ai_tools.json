@@ -131,11 +131,12 @@
     "3e44xTBY_ek",
     "Z2kQ7vjAFiQ",
     "2TM8W66NI_8",
-    "yMKHtJpgZzc"
+    "yMKHtJpgZzc",
+    "45-qbcAeUbM"
   ],
   "upload_timestamps": [
-    1794612304.9091592,
-    1794612380.4212153
+    1794720422.5895524,
+    1794720471.7785337
   ],
   "uploaded_shorts": [
     {
@@ -152,7 +153,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693957.0150886,
+        "last_synced": 1794720315.6742244,
         "status": "pending_or_private"
       }
     },
@@ -170,7 +171,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693957.0150886,
+        "last_synced": 1794720315.6742244,
         "status": "pending_or_private"
       }
     },
@@ -194,7 +195,7 @@
         "views": 1193,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1794693957.0150886,
+        "last_synced": 1794720315.6742244,
         "status": "public"
       }
     },
@@ -218,7 +219,7 @@
         "views": 378,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794693957.0150886,
+        "last_synced": 1794720315.6742244,
         "status": "public"
       }
     },
@@ -242,7 +243,7 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693957.0150886,
+        "last_synced": 1794720315.6742244,
         "status": "public"
       }
     },
@@ -266,7 +267,7 @@
         "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794693957.0150886,
+        "last_synced": 1794720315.6742244,
         "status": "public"
       }
     },
@@ -290,7 +291,7 @@
         "views": 10,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693957.0150886,
+        "last_synced": 1794720315.6742244,
         "status": "public"
       }
     },
@@ -314,7 +315,7 @@
         "views": 27,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693957.0150886,
+        "last_synced": 1794720315.6742244,
         "status": "public"
       }
     },
@@ -338,7 +339,7 @@
         "views": 72,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693957.0150886,
+        "last_synced": 1794720315.6742244,
         "status": "public"
       }
     },
@@ -362,7 +363,7 @@
         "views": 75,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693957.0150886,
+        "last_synced": 1794720315.6742244,
         "status": "public"
       }
     },
@@ -386,7 +387,7 @@
         "views": 316,
         "likes": 1,
         "comments": 0,
-        "last_synced": 1794693957.0150886,
+        "last_synced": 1794720315.6742244,
         "status": "public"
       }
     },
@@ -410,7 +411,7 @@
         "views": 113,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693957.0150886,
+        "last_synced": 1794720315.6742244,
         "status": "public"
       }
     },
@@ -431,10 +432,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794612304.909172,
       "stats": {
-        "views": 82,
+        "views": 84,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693957.0150886,
+        "last_synced": 1794720315.6742244,
         "status": "public"
       }
     },
@@ -455,20 +456,66 @@
       "scheduled_at": null,
       "uploaded_at": 1794612380.4212258,
       "stats": {
-        "views": 494,
+        "views": 496,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794693957.0150886,
+        "last_synced": 1794720315.6742244,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "whPAQ0PyELw",
+      "source_video_id": "45-qbcAeUbM",
+      "title": "Stop Bloating Skills \u2013 Less is More #shorts",
+      "creator": "@DavidOndrej",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794720422.5895653,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "nQaGZxHnwNU",
+      "source_video_id": "45-qbcAeUbM",
+      "title": "Minimal Skills, Maximum Impact #shorts",
+      "creator": "@DavidOndrej",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794720471.7785447,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1794693957.0150886,
+    "last_sync": 1794720315.6742244,
     "total_shorts": 14,
     "public_shorts": 12,
-    "total_views": 3278,
+    "total_views": 3282,
     "median_views": 115.5,
     "creator_weights": {
       "Matt Wolfe": 1.8,
