@@ -124,11 +124,13 @@
     "hcgbqCMXU_Y",
     "qgc89GEO_nE",
     "IjS9eTpmhgk",
-    "dn7x0Sr2IhY"
+    "dn7x0Sr2IhY",
+    "I78h9HrSndE",
+    "Th8JoIan4dg"
   ],
   "upload_timestamps": [
-    1794612328.2484577,
-    1794612394.022792
+    1794720426.4532325,
+    1794720475.4126287
   ],
   "uploaded_shorts": [
     {
@@ -153,7 +155,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693934.6336873,
+        "last_synced": 1794720334.2507346,
         "status": "pending_or_private"
       }
     },
@@ -179,7 +181,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693934.6336873,
+        "last_synced": 1794720334.2507346,
         "status": "pending_or_private"
       }
     },
@@ -205,7 +207,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693934.6336873,
+        "last_synced": 1794720334.2507346,
         "status": "public"
       }
     },
@@ -231,7 +233,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693934.6336873,
+        "last_synced": 1794720334.2507346,
         "status": "public"
       }
     },
@@ -257,7 +259,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693934.6336873,
+        "last_synced": 1794720334.2507346,
         "status": "public"
       }
     },
@@ -283,7 +285,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693934.6336873,
+        "last_synced": 1794720334.2507346,
         "status": "public"
       }
     },
@@ -309,7 +311,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693934.6336873,
+        "last_synced": 1794720334.2507346,
         "status": "public"
       }
     },
@@ -335,7 +337,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693934.6336873,
+        "last_synced": 1794720334.2507346,
         "status": "public"
       }
     },
@@ -361,7 +363,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693934.6336873,
+        "last_synced": 1794720334.2507346,
         "status": "public"
       }
     },
@@ -387,7 +389,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693934.6336873,
+        "last_synced": 1794720334.2507346,
         "status": "public"
       }
     },
@@ -413,7 +415,7 @@
         "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693934.6336873,
+        "last_synced": 1794720334.2507346,
         "status": "public"
       }
     },
@@ -439,7 +441,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693934.6336873,
+        "last_synced": 1794720334.2507346,
         "status": "public"
       }
     },
@@ -462,10 +464,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794612328.2484703,
       "stats": {
-        "views": 2,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693934.6336873,
+        "last_synced": 1794720334.2507346,
         "status": "public"
       }
     },
@@ -491,24 +493,74 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693934.6336873,
+        "last_synced": 1794720334.2507346,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "m6KGc4UGOwI",
+      "source_video_id": "I78h9HrSndE",
+      "title": "Why Monthly Subscriptions Beat One-Time Sales #shorts",
+      "creator": "Sebastian Ghiorghiu",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794720426.4532447,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "M0LPp7bhPxI",
+      "source_video_id": "I78h9HrSndE",
+      "title": "The Moment I Thought I Failed #shorts",
+      "creator": "Sebastian Ghiorghiu",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794720475.412639,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1794693934.6336873,
+    "last_sync": 1794720334.2507346,
     "total_shorts": 14,
     "public_shorts": 7,
-    "total_views": 18,
-    "median_views": 2,
+    "total_views": 19,
+    "median_views": 3,
     "creator_weights": {
-      "@ycombinator": 1.35,
+      "@ycombinator": 1.0,
       "Starter Story": 1.0,
       "Simon Squibb and Real Simon Squibb": 1.0,
       "Backstage with Millionaires": 1.0,
-      "Scaler School of Business": 1.8,
+      "Scaler School of Business": 1.35,
       "Y Combinator": 1.0
     }
   }
