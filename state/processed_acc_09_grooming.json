@@ -126,11 +126,12 @@
     "w7Bjef55aoo",
     "_6-UReFB-OU",
     "dy9nxLSaEjY",
-    "7lRhVxTQwVA"
+    "7lRhVxTQwVA",
+    "5c7QjezI8ho"
   ],
   "upload_timestamps": [
-    1794612263.4824016,
-    1794612309.5115404
+    1794720634.5968559,
+    1794720697.1627934
   ],
   "uploaded_shorts": [
     {
@@ -155,7 +156,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693951.9659483,
+        "last_synced": 1794720354.0147917,
         "status": "public"
       }
     },
@@ -181,7 +182,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693951.9659483,
+        "last_synced": 1794720354.0147917,
         "status": "pending_or_private"
       }
     },
@@ -207,7 +208,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693951.9659483,
+        "last_synced": 1794720354.0147917,
         "status": "public"
       }
     },
@@ -233,7 +234,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693951.9659483,
+        "last_synced": 1794720354.0147917,
         "status": "public"
       }
     },
@@ -259,7 +260,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693951.9659483,
+        "last_synced": 1794720354.0147917,
         "status": "public"
       }
     },
@@ -285,7 +286,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693951.9659483,
+        "last_synced": 1794720354.0147917,
         "status": "public"
       }
     },
@@ -311,8 +312,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693951.9659483,
-        "status": "pending_or_private"
+        "last_synced": 1794720354.0147917,
+        "status": "public"
       }
     },
     {
@@ -337,7 +338,7 @@
         "views": 21,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693951.9659483,
+        "last_synced": 1794720354.0147917,
         "status": "public"
       }
     },
@@ -363,7 +364,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693951.9659483,
+        "last_synced": 1794720354.0147917,
         "status": "public"
       }
     },
@@ -389,7 +390,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693951.9659483,
+        "last_synced": 1794720354.0147917,
         "status": "public"
       }
     },
@@ -415,7 +416,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693951.9659483,
+        "last_synced": 1794720354.0147917,
         "status": "public"
       }
     },
@@ -438,10 +439,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794612263.482413,
       "stats": {
-        "views": 2,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693951.9659483,
+        "last_synced": 1794720354.0147917,
         "status": "public"
       }
     },
@@ -464,24 +465,74 @@
       "scheduled_at": null,
       "uploaded_at": 1794612309.5115519,
       "stats": {
-        "views": 9,
+        "views": 13,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693951.9659483,
+        "last_synced": 1794720354.0147917,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "kmd8tbMcLls",
+      "source_video_id": "5c7QjezI8ho",
+      "title": "Dress to Stand Out Instantly #shorts",
+      "creator": "Self Guide",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794720634.596867,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "vU2-QpN4EM4",
+      "source_video_id": "5c7QjezI8ho",
+      "title": "Stop Skipping Grooming Basics #shorts",
+      "creator": "Self Guide",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794720697.162804,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1794693951.9659483,
+    "last_sync": 1794720354.0147917,
     "total_shorts": 13,
     "public_shorts": 9,
-    "total_views": 50,
-    "median_views": 2,
+    "total_views": 55,
+    "median_views": 3,
     "creator_weights": {
-      "Teachingmensfashion": 1.8,
-      "BeYourBest": 1.8,
+      "Teachingmensfashion": 1.35,
+      "BeYourBest": 1.35,
       "The Formal Edit": 1.0,
       "Glow Mode": 1.8,
       "Nick Alexander": 1.0,
