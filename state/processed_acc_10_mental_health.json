@@ -129,7 +129,9 @@
     "L1HCG3BGK8I",
     "qUz93CyNIz0",
     "IHOieCU4WQs",
-    "JQFZNQS6eQ0"
+    "JQFZNQS6eQ0",
+    "Zm6umzXVJOE",
+    "sTZQ1ye9vRM"
   ],
   "upload_timestamps": [
     1794661937.0565786,
@@ -158,7 +160,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693986.1453593,
+        "last_synced": 1794720326.276914,
         "status": "public"
       }
     },
@@ -184,7 +186,7 @@
         "views": 15,
         "likes": 0,
         "comments": 2,
-        "last_synced": 1794693986.1453593,
+        "last_synced": 1794720326.276914,
         "status": "public"
       }
     },
@@ -210,7 +212,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693986.1453593,
+        "last_synced": 1794720326.276914,
         "status": "pending_or_private"
       }
     },
@@ -236,7 +238,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693986.1453593,
+        "last_synced": 1794720326.276914,
         "status": "pending_or_private"
       }
     },
@@ -262,7 +264,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693986.1453593,
+        "last_synced": 1794720326.276914,
         "status": "public"
       }
     },
@@ -288,7 +290,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693986.1453593,
+        "last_synced": 1794720326.276914,
         "status": "public"
       }
     },
@@ -314,7 +316,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693986.1453593,
+        "last_synced": 1794720326.276914,
         "status": "public"
       }
     },
@@ -340,7 +342,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693986.1453593,
+        "last_synced": 1794720326.276914,
         "status": "public"
       }
     },
@@ -363,10 +365,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794442510.5995524,
       "stats": {
-        "views": 103,
+        "views": 109,
         "likes": 1,
         "comments": 0,
-        "last_synced": 1794693986.1453593,
+        "last_synced": 1794720326.276914,
         "status": "public"
       }
     },
@@ -392,7 +394,7 @@
         "views": 8,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693986.1453593,
+        "last_synced": 1794720326.276914,
         "status": "public"
       }
     },
@@ -418,7 +420,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693986.1453593,
+        "last_synced": 1794720326.276914,
         "status": "public"
       }
     },
@@ -444,7 +446,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693986.1453593,
+        "last_synced": 1794720326.276914,
         "status": "public"
       }
     },
@@ -470,7 +472,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693986.1453593,
+        "last_synced": 1794720326.276914,
         "status": "public"
       }
     },
@@ -496,17 +498,17 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794693986.1453593,
+        "last_synced": 1794720326.276914,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_10_mental_health",
-    "last_sync": 1794693986.1453593,
+    "last_sync": 1794720326.276914,
     "total_shorts": 14,
     "public_shorts": 8,
-    "total_views": 133,
+    "total_views": 139,
     "median_views": 2.0,
     "creator_weights": {
       "@HealthyGamerGG": 1.8,
