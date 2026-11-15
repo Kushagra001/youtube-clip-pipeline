@@ -146,11 +146,13 @@
     "aXrfzqjv1E0",
     "n8dAvpqE0M4",
     "k2Ht2arrwBc",
-    "5xw0VstkpIA"
+    "5xw0VstkpIA",
+    "NzruALe567Y",
+    "1N6hbRbyAeQ"
   ],
   "upload_timestamps": [
-    1794661957.5747902,
-    1794662028.7868133
+    1794750098.491879,
+    1794750205.833847
   ],
   "uploaded_shorts": [
     {
@@ -175,7 +177,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720375.922907,
+        "last_synced": 1794749959.75188,
         "status": "pending_or_private"
       }
     },
@@ -201,7 +203,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720375.922907,
+        "last_synced": 1794749959.75188,
         "status": "pending_or_private"
       }
     },
@@ -227,7 +229,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720375.922907,
+        "last_synced": 1794749959.75188,
         "status": "public"
       }
     },
@@ -253,7 +255,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720375.922907,
+        "last_synced": 1794749959.75188,
         "status": "public"
       }
     },
@@ -279,7 +281,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720375.922907,
+        "last_synced": 1794749959.75188,
         "status": "public"
       }
     },
@@ -305,7 +307,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720375.922907,
+        "last_synced": 1794749959.75188,
         "status": "public"
       }
     },
@@ -331,7 +333,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720375.922907,
+        "last_synced": 1794749959.75188,
         "status": "public"
       }
     },
@@ -357,7 +359,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720375.922907,
+        "last_synced": 1794749959.75188,
         "status": "public"
       }
     },
@@ -383,7 +385,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720375.922907,
+        "last_synced": 1794749959.75188,
         "status": "public"
       }
     },
@@ -409,7 +411,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720375.922907,
+        "last_synced": 1794749959.75188,
         "status": "public"
       }
     },
@@ -435,7 +437,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720375.922907,
+        "last_synced": 1794749959.75188,
         "status": "public"
       }
     },
@@ -461,7 +463,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720375.922907,
+        "last_synced": 1794749959.75188,
         "status": "public"
       }
     },
@@ -487,7 +489,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720375.922907,
+        "last_synced": 1794749959.75188,
         "status": "public"
       }
     },
@@ -513,14 +515,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794720375.922907,
+        "last_synced": 1794749959.75188,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "ToKDQOjq3Xw",
+      "source_video_id": "NzruALe567Y",
+      "title": "Frozen Spinach Hack for Creamy Pasta #shorts",
+      "creator": "Jamie Oliver",
+      "topic": "quick and easy recipes, meal prep ideas and food hacks for home cooks",
+      "tags": [
+        "easyrecipes",
+        "mealprep",
+        "foodhacks",
+        "quickrecipes",
+        "cookinghacks",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794750098.4918935,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "3cII999HxMY",
+      "source_video_id": "1N6hbRbyAeQ",
+      "title": "The 15-Second Garlic Ginger Paste Hack #shorts",
+      "creator": "Chef Jack Ovens",
+      "topic": "quick and easy recipes, meal prep ideas and food hacks for home cooks",
+      "tags": [
+        "easyrecipes",
+        "mealprep",
+        "foodhacks",
+        "quickrecipes",
+        "cookinghacks",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794750205.8338602,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1794720375.922907,
+    "last_sync": 1794749959.75188,
     "total_shorts": 14,
     "public_shorts": 9,
     "total_views": 25,
