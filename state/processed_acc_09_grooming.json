@@ -131,11 +131,13 @@
     "R8Da_rXg2ek",
     "3cpcItOFE3U",
     "jVwVOgRyymk",
-    "TyMB3cbi76g"
+    "TyMB3cbi76g",
+    "Lkba7NLlBDI",
+    "3Ny2gEOR1iU"
   ],
   "upload_timestamps": [
-    1794720634.5968559,
-    1794720697.1627934
+    1794841966.5991926,
+    1794842034.9676273
   ],
   "uploaded_shorts": [
     {
@@ -160,7 +162,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8110008,
+        "last_synced": 1794841796.592302,
         "status": "public"
       }
     },
@@ -186,7 +188,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8110008,
+        "last_synced": 1794841796.592302,
         "status": "pending_or_private"
       }
     },
@@ -212,7 +214,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8110008,
+        "last_synced": 1794841796.592302,
         "status": "public"
       }
     },
@@ -238,7 +240,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8110008,
+        "last_synced": 1794841796.592302,
         "status": "public"
       }
     },
@@ -264,7 +266,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8110008,
+        "last_synced": 1794841796.592302,
         "status": "public"
       }
     },
@@ -290,7 +292,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8110008,
+        "last_synced": 1794841796.592302,
         "status": "public"
       }
     },
@@ -316,7 +318,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8110008,
+        "last_synced": 1794841796.592302,
         "status": "public"
       }
     },
@@ -342,7 +344,7 @@
         "views": 21,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8110008,
+        "last_synced": 1794841796.592302,
         "status": "public"
       }
     },
@@ -368,7 +370,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8110008,
+        "last_synced": 1794841796.592302,
         "status": "public"
       }
     },
@@ -394,7 +396,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8110008,
+        "last_synced": 1794841796.592302,
         "status": "public"
       }
     },
@@ -420,7 +422,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8110008,
+        "last_synced": 1794841796.592302,
         "status": "public"
       }
     },
@@ -446,7 +448,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8110008,
+        "last_synced": 1794841796.592302,
         "status": "public"
       }
     },
@@ -472,7 +474,7 @@
         "views": 14,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8110008,
+        "last_synced": 1794841796.592302,
         "status": "public"
       }
     },
@@ -498,7 +500,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8110008,
+        "last_synced": 1794841796.592302,
         "status": "public"
       }
     },
@@ -521,21 +523,71 @@
       "scheduled_at": null,
       "uploaded_at": 1794720697.162804,
       "stats": {
-        "views": 3,
+        "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8110008,
+        "last_synced": 1794841796.592302,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "THBHIldANc8",
+      "source_video_id": "Lkba7NLlBDI",
+      "title": "Burn Fat While Gaming #shorts",
+      "creator": "Teachingmensfashion",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794841966.5992048,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "ln1AKricP0c",
+      "source_video_id": "Lkba7NLlBDI",
+      "title": "Delete Love Handles No Diet #shorts",
+      "creator": "Teachingmensfashion",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794842034.96764,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1794806577.8110008,
+    "last_sync": 1794841796.592302,
     "total_shorts": 15,
     "public_shorts": 10,
-    "total_views": 59,
-    "median_views": 3.0,
+    "total_views": 60,
+    "median_views": 3.5,
     "creator_weights": {
       "Teachingmensfashion": 1.35,
       "BeYourBest": 1.35,
