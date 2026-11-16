@@ -128,11 +128,12 @@
     "D28YLKppg5U",
     "_J_bOqPhuZA",
     "Km1_EYgKYc8",
-    "cH0gED2stDM"
+    "cH0gED2stDM",
+    "BtijFzEyOTg"
   ],
   "upload_timestamps": [
-    1794750120.5681942,
-    1794750190.7331908
+    1794841864.9047284,
+    1794841929.9538856
   ],
   "uploaded_shorts": [
     {
@@ -157,7 +158,7 @@
         "views": 1066,
         "likes": 14,
         "comments": 0,
-        "last_synced": 1794806561.2903256,
+        "last_synced": 1794841746.2277122,
         "status": "public"
       }
     },
@@ -183,7 +184,7 @@
         "views": 823,
         "likes": 5,
         "comments": 0,
-        "last_synced": 1794806561.2903256,
+        "last_synced": 1794841746.2277122,
         "status": "public"
       }
     },
@@ -209,7 +210,7 @@
         "views": 81,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806561.2903256,
+        "last_synced": 1794841746.2277122,
         "status": "public"
       }
     },
@@ -235,7 +236,7 @@
         "views": 51,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806561.2903256,
+        "last_synced": 1794841746.2277122,
         "status": "public"
       }
     },
@@ -261,7 +262,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806561.2903256,
+        "last_synced": 1794841746.2277122,
         "status": "public"
       }
     },
@@ -287,7 +288,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806561.2903256,
+        "last_synced": 1794841746.2277122,
         "status": "public"
       }
     },
@@ -313,7 +314,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806561.2903256,
+        "last_synced": 1794841746.2277122,
         "status": "public"
       }
     },
@@ -339,7 +340,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806561.2903256,
+        "last_synced": 1794841746.2277122,
         "status": "public"
       }
     },
@@ -365,7 +366,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806561.2903256,
+        "last_synced": 1794841746.2277122,
         "status": "public"
       }
     },
@@ -391,7 +392,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806561.2903256,
+        "last_synced": 1794841746.2277122,
         "status": "public"
       }
     },
@@ -417,7 +418,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806561.2903256,
+        "last_synced": 1794841746.2277122,
         "status": "public"
       }
     },
@@ -443,7 +444,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806561.2903256,
+        "last_synced": 1794841746.2277122,
         "status": "public"
       }
     },
@@ -469,7 +470,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806561.2903256,
+        "last_synced": 1794841746.2277122,
         "status": "public"
       }
     },
@@ -495,14 +496,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806561.2903256,
+        "last_synced": 1794841746.2277122,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "xsZceG8D-cQ",
+      "source_video_id": "BtijFzEyOTg",
+      "title": "The Emperor's Morning Ritual #shorts",
+      "creator": "Stoic Journal",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794841864.9047403,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "7emrpxzSpXY",
+      "source_video_id": "BtijFzEyOTg",
+      "title": "Reframe Failure as Fuel #shorts",
+      "creator": "Stoic Journal",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794841929.9538956,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_04_motivation",
-    "last_sync": 1794806561.2903256,
+    "last_sync": 1794841746.2277122,
     "total_shorts": 14,
     "public_shorts": 8,
     "total_views": 2027,
