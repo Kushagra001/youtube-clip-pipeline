@@ -129,11 +129,12 @@
     "Th8JoIan4dg",
     "NdcygytQlYQ",
     "Tk-EI2yYT3A",
-    "g5Vd0-y3rG8"
+    "g5Vd0-y3rG8",
+    "NKd0EaQEQTY",
+    "K8UgjzJTdHw"
   ],
   "upload_timestamps": [
-    1794720426.4532325,
-    1794720475.4126287
+    1794806886.975441
   ],
   "uploaded_shorts": [
     {
@@ -158,7 +159,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782224.411038,
+        "last_synced": 1794806579.7357073,
         "status": "pending_or_private"
       }
     },
@@ -184,7 +185,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782224.411038,
+        "last_synced": 1794806579.7357073,
         "status": "pending_or_private"
       }
     },
@@ -210,7 +211,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782224.411038,
+        "last_synced": 1794806579.7357073,
         "status": "public"
       }
     },
@@ -236,7 +237,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782224.411038,
+        "last_synced": 1794806579.7357073,
         "status": "public"
       }
     },
@@ -262,7 +263,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782224.411038,
+        "last_synced": 1794806579.7357073,
         "status": "public"
       }
     },
@@ -288,7 +289,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782224.411038,
+        "last_synced": 1794806579.7357073,
         "status": "public"
       }
     },
@@ -314,7 +315,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782224.411038,
+        "last_synced": 1794806579.7357073,
         "status": "public"
       }
     },
@@ -340,7 +341,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782224.411038,
+        "last_synced": 1794806579.7357073,
         "status": "public"
       }
     },
@@ -366,7 +367,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782224.411038,
+        "last_synced": 1794806579.7357073,
         "status": "public"
       }
     },
@@ -392,7 +393,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782224.411038,
+        "last_synced": 1794806579.7357073,
         "status": "public"
       }
     },
@@ -418,7 +419,7 @@
         "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782224.411038,
+        "last_synced": 1794806579.7357073,
         "status": "public"
       }
     },
@@ -444,7 +445,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782224.411038,
+        "last_synced": 1794806579.7357073,
         "status": "public"
       }
     },
@@ -470,7 +471,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782224.411038,
+        "last_synced": 1794806579.7357073,
         "status": "public"
       }
     },
@@ -496,7 +497,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782224.411038,
+        "last_synced": 1794806579.7357073,
         "status": "public"
       }
     },
@@ -522,7 +523,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782224.411038,
+        "last_synced": 1794806579.7357073,
         "status": "public"
       }
     },
@@ -548,14 +549,39 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782224.411038,
+        "last_synced": 1794806579.7357073,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "CJR0xN8Ule8",
+      "source_video_id": "K8UgjzJTdHw",
+      "title": "Fitness Changed My Life From D To A #shorts",
+      "creator": "The Diary Of A CEO",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794806886.975455,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1794782224.411038,
+    "last_sync": 1794806579.7357073,
     "total_shorts": 16,
     "public_shorts": 7,
     "total_views": 19,
