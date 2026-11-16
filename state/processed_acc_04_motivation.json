@@ -126,7 +126,9 @@
     "vultJhU9XLU",
     "3au2nq7nAtM",
     "D28YLKppg5U",
-    "_J_bOqPhuZA"
+    "_J_bOqPhuZA",
+    "Km1_EYgKYc8",
+    "cH0gED2stDM"
   ],
   "upload_timestamps": [
     1794750120.5681942,
@@ -155,7 +157,7 @@
         "views": 1066,
         "likes": 14,
         "comments": 0,
-        "last_synced": 1794782221.7825954,
+        "last_synced": 1794806561.2903256,
         "status": "public"
       }
     },
@@ -181,7 +183,7 @@
         "views": 823,
         "likes": 5,
         "comments": 0,
-        "last_synced": 1794782221.7825954,
+        "last_synced": 1794806561.2903256,
         "status": "public"
       }
     },
@@ -207,7 +209,7 @@
         "views": 81,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782221.7825954,
+        "last_synced": 1794806561.2903256,
         "status": "public"
       }
     },
@@ -233,7 +235,7 @@
         "views": 51,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782221.7825954,
+        "last_synced": 1794806561.2903256,
         "status": "public"
       }
     },
@@ -259,7 +261,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782221.7825954,
+        "last_synced": 1794806561.2903256,
         "status": "public"
       }
     },
@@ -285,7 +287,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782221.7825954,
+        "last_synced": 1794806561.2903256,
         "status": "public"
       }
     },
@@ -311,7 +313,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782221.7825954,
+        "last_synced": 1794806561.2903256,
         "status": "public"
       }
     },
@@ -337,7 +339,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782221.7825954,
+        "last_synced": 1794806561.2903256,
         "status": "public"
       }
     },
@@ -360,10 +362,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794548404.110853,
       "stats": {
-        "views": 1,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782221.7825954,
+        "last_synced": 1794806561.2903256,
         "status": "public"
       }
     },
@@ -389,7 +391,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782221.7825954,
+        "last_synced": 1794806561.2903256,
         "status": "public"
       }
     },
@@ -415,7 +417,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782221.7825954,
+        "last_synced": 1794806561.2903256,
         "status": "public"
       }
     },
@@ -441,7 +443,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782221.7825954,
+        "last_synced": 1794806561.2903256,
         "status": "public"
       }
     },
@@ -467,7 +469,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782221.7825954,
+        "last_synced": 1794806561.2903256,
         "status": "public"
       }
     },
@@ -493,17 +495,17 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782221.7825954,
+        "last_synced": 1794806561.2903256,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_04_motivation",
-    "last_sync": 1794782221.7825954,
+    "last_sync": 1794806561.2903256,
     "total_shorts": 14,
     "public_shorts": 8,
-    "total_views": 2026,
+    "total_views": 2027,
     "median_views": 26.5,
     "creator_weights": {
       "@JordanBPeterson": 1.8,
