@@ -134,11 +134,13 @@
     "yMKHtJpgZzc",
     "45-qbcAeUbM",
     "mFysqIcP7So",
-    "KDyPHt4lW60"
+    "KDyPHt4lW60",
+    "pjYntsza2FA",
+    "pvl3z_GyU2Y"
   ],
   "upload_timestamps": [
-    1794720422.5895524,
-    1794720471.7785337
+    1794806832.5161994,
+    1794806894.1170971
   ],
   "uploaded_shorts": [
     {
@@ -155,7 +157,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782270.4404793,
+        "last_synced": 1794806625.9523396,
         "status": "pending_or_private"
       }
     },
@@ -173,7 +175,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782270.4404793,
+        "last_synced": 1794806625.9523396,
         "status": "pending_or_private"
       }
     },
@@ -197,7 +199,7 @@
         "views": 1198,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1794782270.4404793,
+        "last_synced": 1794806625.9523396,
         "status": "public"
       }
     },
@@ -221,7 +223,7 @@
         "views": 378,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794782270.4404793,
+        "last_synced": 1794806625.9523396,
         "status": "public"
       }
     },
@@ -245,7 +247,7 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782270.4404793,
+        "last_synced": 1794806625.9523396,
         "status": "public"
       }
     },
@@ -269,7 +271,7 @@
         "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794782270.4404793,
+        "last_synced": 1794806625.9523396,
         "status": "public"
       }
     },
@@ -293,7 +295,7 @@
         "views": 10,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782270.4404793,
+        "last_synced": 1794806625.9523396,
         "status": "public"
       }
     },
@@ -317,7 +319,7 @@
         "views": 27,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782270.4404793,
+        "last_synced": 1794806625.9523396,
         "status": "public"
       }
     },
@@ -341,7 +343,7 @@
         "views": 72,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782270.4404793,
+        "last_synced": 1794806625.9523396,
         "status": "public"
       }
     },
@@ -365,7 +367,7 @@
         "views": 75,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782270.4404793,
+        "last_synced": 1794806625.9523396,
         "status": "public"
       }
     },
@@ -386,10 +388,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794495065.3407078,
       "stats": {
-        "views": 316,
+        "views": 315,
         "likes": 1,
         "comments": 0,
-        "last_synced": 1794782270.4404793,
+        "last_synced": 1794806625.9523396,
         "status": "public"
       }
     },
@@ -410,10 +412,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794495109.6816952,
       "stats": {
-        "views": 113,
+        "views": 111,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782270.4404793,
+        "last_synced": 1794806625.9523396,
         "status": "public"
       }
     },
@@ -434,10 +436,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794612304.909172,
       "stats": {
-        "views": 118,
+        "views": 127,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782270.4404793,
+        "last_synced": 1794806625.9523396,
         "status": "public"
       }
     },
@@ -458,10 +460,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794612380.4212258,
       "stats": {
-        "views": 1100,
+        "views": 1108,
         "likes": 5,
         "comments": 0,
-        "last_synced": 1794782270.4404793,
+        "last_synced": 1794806625.9523396,
         "status": "public"
       }
     },
@@ -485,7 +487,7 @@
         "views": 90,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782270.4404793,
+        "last_synced": 1794806625.9523396,
         "status": "public"
       }
     },
@@ -509,18 +511,64 @@
         "views": 91,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794782270.4404793,
+        "last_synced": 1794806625.9523396,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "URSI6P3JwPg",
+      "source_video_id": "pjYntsza2FA",
+      "title": "The software moat is dead #shorts",
+      "creator": "@WesRoth",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794806832.5162134,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "xd88snOtshc",
+      "source_video_id": "pvl3z_GyU2Y",
+      "title": "Build a Custom App in 2 Minutes #shorts",
+      "creator": "Matt Wolfe and Peter Yang",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794806894.1171103,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1794782270.4404793,
+    "last_sync": 1794806625.9523396,
     "total_shorts": 16,
     "public_shorts": 14,
-    "total_views": 4106,
-    "median_views": 115.5,
+    "total_views": 4120,
+    "median_views": 114.5,
     "creator_weights": {
       "Matt Wolfe": 1.8,
       "@DavidOndrej": 1.35,
