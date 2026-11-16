@@ -131,10 +131,13 @@
     "Tk-EI2yYT3A",
     "g5Vd0-y3rG8",
     "NKd0EaQEQTY",
-    "K8UgjzJTdHw"
+    "K8UgjzJTdHw",
+    "IWdvG9Up8Mc",
+    "gRcBu8LyfGo"
   ],
   "upload_timestamps": [
-    1794806886.975441
+    1794806886.975441,
+    1794841963.5015266
   ],
   "uploaded_shorts": [
     {
@@ -159,7 +162,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806579.7357073,
+        "last_synced": 1794841836.9735477,
         "status": "pending_or_private"
       }
     },
@@ -185,7 +188,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806579.7357073,
+        "last_synced": 1794841836.9735477,
         "status": "pending_or_private"
       }
     },
@@ -211,7 +214,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806579.7357073,
+        "last_synced": 1794841836.9735477,
         "status": "public"
       }
     },
@@ -237,7 +240,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806579.7357073,
+        "last_synced": 1794841836.9735477,
         "status": "public"
       }
     },
@@ -263,7 +266,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806579.7357073,
+        "last_synced": 1794841836.9735477,
         "status": "public"
       }
     },
@@ -289,7 +292,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806579.7357073,
+        "last_synced": 1794841836.9735477,
         "status": "public"
       }
     },
@@ -315,7 +318,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806579.7357073,
+        "last_synced": 1794841836.9735477,
         "status": "public"
       }
     },
@@ -341,7 +344,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806579.7357073,
+        "last_synced": 1794841836.9735477,
         "status": "public"
       }
     },
@@ -367,7 +370,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806579.7357073,
+        "last_synced": 1794841836.9735477,
         "status": "public"
       }
     },
@@ -393,7 +396,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806579.7357073,
+        "last_synced": 1794841836.9735477,
         "status": "public"
       }
     },
@@ -419,7 +422,7 @@
         "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806579.7357073,
+        "last_synced": 1794841836.9735477,
         "status": "public"
       }
     },
@@ -445,7 +448,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806579.7357073,
+        "last_synced": 1794841836.9735477,
         "status": "public"
       }
     },
@@ -468,10 +471,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794612328.2484703,
       "stats": {
-        "views": 3,
+        "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806579.7357073,
+        "last_synced": 1794841836.9735477,
         "status": "public"
       }
     },
@@ -497,7 +500,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806579.7357073,
+        "last_synced": 1794841836.9735477,
         "status": "public"
       }
     },
@@ -523,7 +526,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806579.7357073,
+        "last_synced": 1794841836.9735477,
         "status": "public"
       }
     },
@@ -549,7 +552,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806579.7357073,
+        "last_synced": 1794841836.9735477,
         "status": "public"
       }
     },
@@ -575,16 +578,42 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
+        "last_synced": 1794841836.9735477,
+        "status": "public"
+      }
+    },
+    {
+      "video_id": "oeqsAnRLEDo",
+      "source_video_id": "IWdvG9Up8Mc",
+      "title": "The 3-Point AI Business Framework #shorts",
+      "creator": "Sandeep Swadia",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794841963.5015407,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
         "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1794806579.7357073,
-    "total_shorts": 16,
+    "last_sync": 1794841836.9735477,
+    "total_shorts": 17,
     "public_shorts": 7,
-    "total_views": 19,
+    "total_views": 20,
     "median_views": 3,
     "creator_weights": {
       "@ycombinator": 1.0,
@@ -592,7 +621,7 @@
       "Simon Squibb and Real Simon Squibb": 1.0,
       "Backstage with Millionaires": 1.0,
       "Scaler School of Business": 1.35,
-      "Y Combinator": 1.0
+      "Y Combinator": 1.35
     }
   }
 }
