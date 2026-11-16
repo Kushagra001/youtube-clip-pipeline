@@ -136,7 +136,9 @@
     "mFysqIcP7So",
     "KDyPHt4lW60",
     "pjYntsza2FA",
-    "pvl3z_GyU2Y"
+    "pvl3z_GyU2Y",
+    "dSHSsMY8u88",
+    "xtzv9rD8sKs"
   ],
   "upload_timestamps": [
     1794806832.5161994,
@@ -157,7 +159,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806625.9523396,
+        "last_synced": 1794841745.5863051,
         "status": "pending_or_private"
       }
     },
@@ -175,7 +177,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806625.9523396,
+        "last_synced": 1794841745.5863051,
         "status": "pending_or_private"
       }
     },
@@ -199,7 +201,7 @@
         "views": 1198,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1794806625.9523396,
+        "last_synced": 1794841745.5863051,
         "status": "public"
       }
     },
@@ -223,7 +225,7 @@
         "views": 378,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794806625.9523396,
+        "last_synced": 1794841745.5863051,
         "status": "public"
       }
     },
@@ -247,7 +249,7 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806625.9523396,
+        "last_synced": 1794841745.5863051,
         "status": "public"
       }
     },
@@ -271,7 +273,7 @@
         "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1794806625.9523396,
+        "last_synced": 1794841745.5863051,
         "status": "public"
       }
     },
@@ -295,7 +297,7 @@
         "views": 10,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806625.9523396,
+        "last_synced": 1794841745.5863051,
         "status": "public"
       }
     },
@@ -319,7 +321,7 @@
         "views": 27,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806625.9523396,
+        "last_synced": 1794841745.5863051,
         "status": "public"
       }
     },
@@ -343,7 +345,7 @@
         "views": 72,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806625.9523396,
+        "last_synced": 1794841745.5863051,
         "status": "public"
       }
     },
@@ -367,7 +369,7 @@
         "views": 75,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806625.9523396,
+        "last_synced": 1794841745.5863051,
         "status": "public"
       }
     },
@@ -391,7 +393,7 @@
         "views": 315,
         "likes": 1,
         "comments": 0,
-        "last_synced": 1794806625.9523396,
+        "last_synced": 1794841745.5863051,
         "status": "public"
       }
     },
@@ -415,7 +417,7 @@
         "views": 111,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806625.9523396,
+        "last_synced": 1794841745.5863051,
         "status": "public"
       }
     },
@@ -436,10 +438,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794612304.909172,
       "stats": {
-        "views": 127,
+        "views": 128,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806625.9523396,
+        "last_synced": 1794841745.5863051,
         "status": "public"
       }
     },
@@ -460,10 +462,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794612380.4212258,
       "stats": {
-        "views": 1108,
+        "views": 1110,
         "likes": 5,
         "comments": 0,
-        "last_synced": 1794806625.9523396,
+        "last_synced": 1794841745.5863051,
         "status": "public"
       }
     },
@@ -484,10 +486,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794720422.5895653,
       "stats": {
-        "views": 90,
+        "views": 91,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806625.9523396,
+        "last_synced": 1794841745.5863051,
         "status": "public"
       }
     },
@@ -508,10 +510,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794720471.7785447,
       "stats": {
-        "views": 91,
+        "views": 95,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806625.9523396,
+        "last_synced": 1794841745.5863051,
         "status": "public"
       }
     },
@@ -532,10 +534,11 @@
       "scheduled_at": null,
       "uploaded_at": 1794806832.5162134,
       "stats": {
-        "views": 0,
+        "views": 31,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794841745.5863051,
+        "status": "public"
       }
     },
     {
@@ -555,19 +558,20 @@
       "scheduled_at": null,
       "uploaded_at": 1794806894.1171103,
       "stats": {
-        "views": 0,
+        "views": 174,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794841745.5863051,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1794806625.9523396,
-    "total_shorts": 16,
-    "public_shorts": 14,
-    "total_views": 4120,
+    "last_sync": 1794841745.5863051,
+    "total_shorts": 18,
+    "public_shorts": 16,
+    "total_views": 4333,
     "median_views": 114.5,
     "creator_weights": {
       "Matt Wolfe": 1.8,
@@ -576,7 +580,8 @@
       "AI Master": 1.0,
       "9x": 1.0,
       "Nick Saraev": 1.35,
-      "@WesRoth": 1.8
+      "@WesRoth": 1.8,
+      "Matt Wolfe and Peter Yang": 1.35
     }
   }
 }
