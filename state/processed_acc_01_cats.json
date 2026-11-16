@@ -145,11 +145,13 @@
     "KMccYaibY7c",
     "nd3HQcWK6Fo",
     "paWE-GvDO1c",
-    "F5A3RiYZdxQ"
+    "F5A3RiYZdxQ",
+    "Y3OCO1pRt8s",
+    "sVi1go-hqh0"
   ],
   "upload_timestamps": [
-    1794750065.712761,
-    1794782394.0695133
+    1794782394.0695133,
+    1794841919.498763
   ],
   "uploaded_shorts": [
     {
@@ -174,7 +176,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "pending_or_private"
       }
     },
@@ -200,7 +202,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "pending_or_private"
       }
     },
@@ -226,7 +228,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "pending_or_private"
       }
     },
@@ -252,7 +254,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "pending_or_private"
       }
     },
@@ -278,7 +280,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "public"
       }
     },
@@ -304,7 +306,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "public"
       }
     },
@@ -330,7 +332,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "public"
       }
     },
@@ -356,7 +358,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "public"
       }
     },
@@ -382,7 +384,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "public"
       }
     },
@@ -408,7 +410,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "public"
       }
     },
@@ -434,7 +436,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "public"
       }
     },
@@ -460,7 +462,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "public"
       }
     },
@@ -486,7 +488,7 @@
         "views": 8,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "public"
       }
     },
@@ -512,7 +514,7 @@
         "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "public"
       }
     },
@@ -538,7 +540,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "public"
       }
     },
@@ -561,10 +563,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794548366.128685,
       "stats": {
-        "views": 26,
+        "views": 27,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "public"
       }
     },
@@ -590,7 +592,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "public"
       }
     },
@@ -616,7 +618,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "public"
       }
     },
@@ -642,7 +644,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "public"
       }
     },
@@ -665,10 +667,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794750065.7127764,
       "stats": {
-        "views": 4,
-        "likes": 0,
+        "views": 7,
+        "likes": 1,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "public"
       }
     },
@@ -694,21 +696,46 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806577.8552701,
+        "last_synced": 1794841780.6655567,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "0LtJ21WjHDU",
+      "source_video_id": "Y3OCO1pRt8s",
+      "title": "Why Cats Actually Do This Every Day \ud83d\udc31 #shorts",
+      "creator": "Funny Moments",
+      "topic": "cute and funny cat videos for cat lovers",
+      "tags": [
+        "catsofinstagram",
+        "cutecats",
+        "catreels",
+        "funnycats",
+        "kittensofinstagram",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794841919.4987772,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_01_cats",
-    "last_sync": 1794806577.8552701,
+    "last_sync": 1794841780.6655567,
     "total_shorts": 21,
     "public_shorts": 8,
-    "total_views": 53,
-    "median_views": 3.5,
+    "total_views": 57,
+    "median_views": 4.0,
     "creator_weights": {
-      "Funny And Cute Cat's Life": 1.8,
-      "Funny Furry TV": 1.8,
+      "Funny And Cute Cat's Life": 1.35,
+      "Funny Furry TV": 1.35,
       "OhCrayZ": 1.0,
       "Meow of the Day": 1.0
     }
