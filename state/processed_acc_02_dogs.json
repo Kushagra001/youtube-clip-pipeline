@@ -132,11 +132,13 @@
     "Pc4GmKNFRsM",
     "A1CVa6NrPpk",
     "rZVpo5HbDf8",
-    "IjSISLZCKPs"
+    "IjSISLZCKPs",
+    "BzmBD8NOKUc",
+    "y7dKQSYfokU"
   ],
   "upload_timestamps": [
-    1794750150.1626537,
-    1794782365.4304752
+    1794782365.4304752,
+    1794841863.3944998
   ],
   "uploaded_shorts": [
     {
@@ -161,7 +163,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806608.605662,
+        "last_synced": 1794841727.3450518,
         "status": "pending_or_private"
       }
     },
@@ -187,7 +189,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806608.605662,
+        "last_synced": 1794841727.3450518,
         "status": "pending_or_private"
       }
     },
@@ -213,7 +215,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806608.605662,
+        "last_synced": 1794841727.3450518,
         "status": "public"
       }
     },
@@ -239,7 +241,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806608.605662,
+        "last_synced": 1794841727.3450518,
         "status": "public"
       }
     },
@@ -265,7 +267,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806608.605662,
+        "last_synced": 1794841727.3450518,
         "status": "public"
       }
     },
@@ -291,7 +293,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806608.605662,
+        "last_synced": 1794841727.3450518,
         "status": "public"
       }
     },
@@ -317,7 +319,7 @@
         "views": 14,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806608.605662,
+        "last_synced": 1794841727.3450518,
         "status": "public"
       }
     },
@@ -343,7 +345,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806608.605662,
+        "last_synced": 1794841727.3450518,
         "status": "public"
       }
     },
@@ -369,7 +371,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806608.605662,
+        "last_synced": 1794841727.3450518,
         "status": "public"
       }
     },
@@ -395,7 +397,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806608.605662,
+        "last_synced": 1794841727.3450518,
         "status": "public"
       }
     },
@@ -418,10 +420,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794661907.0890844,
       "stats": {
-        "views": 9,
+        "views": 10,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806608.605662,
+        "last_synced": 1794841727.3450518,
         "status": "public"
       }
     },
@@ -447,7 +449,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806608.605662,
+        "last_synced": 1794841727.3450518,
         "status": "public"
       }
     },
@@ -473,7 +475,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806608.605662,
+        "last_synced": 1794841727.3450518,
         "status": "public"
       }
     },
@@ -499,17 +501,42 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794806608.605662,
+        "last_synced": 1794841727.3450518,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "HRa8KiiC-eQ",
+      "source_video_id": "BzmBD8NOKUc",
+      "title": "Chihuahuas Bite Harder Than Rottweilers #shorts",
+      "creator": "Tom Davis Dog Training ",
+      "topic": "funny and cute dog videos for dog lovers",
+      "tags": [
+        "dogsofinstagram",
+        "dogvideos",
+        "puppylove",
+        "dogtraining",
+        "goodboy",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794841863.3945134,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_02_dogs",
-    "last_sync": 1794806608.605662,
+    "last_sync": 1794841727.3450518,
     "total_shorts": 14,
     "public_shorts": 10,
-    "total_views": 41,
+    "total_views": 42,
     "median_views": 3.0,
     "creator_weights": {
       "Tom Davis Dog Training ": 1.35,
