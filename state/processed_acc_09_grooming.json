@@ -134,11 +134,13 @@
     "TyMB3cbi76g",
     "Lkba7NLlBDI",
     "3Ny2gEOR1iU",
-    "F3F1o1-Eqi8"
+    "F3F1o1-Eqi8",
+    "eNa24ZY9mW8",
+    "ZxxPZuQrUng"
   ],
   "upload_timestamps": [
-    1794841966.5991926,
-    1794842034.9676273
+    1794930224.3635788,
+    1794930294.4622319
   ],
   "uploaded_shorts": [
     {
@@ -163,7 +165,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879836.6468778,
+        "last_synced": 1794930072.5427172,
         "status": "public"
       }
     },
@@ -189,7 +191,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879836.6468778,
+        "last_synced": 1794930072.5427172,
         "status": "pending_or_private"
       }
     },
@@ -215,7 +217,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879836.6468778,
+        "last_synced": 1794930072.5427172,
         "status": "public"
       }
     },
@@ -241,7 +243,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879836.6468778,
+        "last_synced": 1794930072.5427172,
         "status": "public"
       }
     },
@@ -267,7 +269,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879836.6468778,
+        "last_synced": 1794930072.5427172,
         "status": "public"
       }
     },
@@ -293,7 +295,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879836.6468778,
+        "last_synced": 1794930072.5427172,
         "status": "public"
       }
     },
@@ -319,7 +321,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879836.6468778,
+        "last_synced": 1794930072.5427172,
         "status": "public"
       }
     },
@@ -342,10 +344,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794405078.2763317,
       "stats": {
-        "views": 21,
+        "views": 22,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879836.6468778,
+        "last_synced": 1794930072.5427172,
         "status": "public"
       }
     },
@@ -371,7 +373,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879836.6468778,
+        "last_synced": 1794930072.5427172,
         "status": "public"
       }
     },
@@ -397,7 +399,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879836.6468778,
+        "last_synced": 1794930072.5427172,
         "status": "public"
       }
     },
@@ -423,7 +425,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879836.6468778,
+        "last_synced": 1794930072.5427172,
         "status": "public"
       }
     },
@@ -449,7 +451,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879836.6468778,
+        "last_synced": 1794930072.5427172,
         "status": "public"
       }
     },
@@ -475,7 +477,7 @@
         "views": 14,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879836.6468778,
+        "last_synced": 1794930072.5427172,
         "status": "public"
       }
     },
@@ -501,7 +503,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879836.6468778,
+        "last_synced": 1794930072.5427172,
         "status": "public"
       }
     },
@@ -524,10 +526,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794720697.162804,
       "stats": {
-        "views": 5,
+        "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879836.6468778,
+        "last_synced": 1794930072.5427172,
         "status": "public"
       }
     },
@@ -553,7 +555,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879836.6468778,
+        "last_synced": 1794930072.5427172,
         "status": "public"
       }
     },
@@ -576,29 +578,79 @@
       "scheduled_at": null,
       "uploaded_at": 1794842034.96764,
       "stats": {
+        "views": 1,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 1794930072.5427172,
+        "status": "public"
+      }
+    },
+    {
+      "video_id": "HepPaDA6omg",
+      "source_video_id": "eNa24ZY9mW8",
+      "title": "Small Talk Is A Trust Signal, Not Chit-Chat #shorts",
+      "creator": "@GentlemansGazette",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794930224.363593,
+      "stats": {
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879836.6468778,
-        "status": "public"
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "q_UQlq7Z11Q",
+      "source_video_id": "eNa24ZY9mW8",
+      "title": "Compliment Their Taste, Not Their Face #shorts",
+      "creator": "@GentlemansGazette",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794930294.4622452,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1794879836.6468778,
+    "last_sync": 1794930072.5427172,
     "total_shorts": 17,
-    "public_shorts": 10,
-    "total_views": 61,
-    "median_views": 4.0,
+    "public_shorts": 11,
+    "total_views": 64,
+    "median_views": 3,
     "creator_weights": {
-      "Teachingmensfashion": 1.35,
+      "Teachingmensfashion": 1.0,
       "BeYourBest": 1.35,
       "The Formal Edit": 1.0,
       "Glow Mode": 1.8,
       "Nick Alexander": 1.0,
-      "taeveniti": 0.65,
-      "Alex Costa": 1.35,
+      "taeveniti": 1.0,
+      "Alex Costa": 1.8,
       "Self Guide": 1.35
     }
   }
