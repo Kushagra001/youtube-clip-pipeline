@@ -150,11 +150,13 @@
     "bb6_M_srMBk",
     "YmGqYy2tGRc",
     "JcBTr-BhL_0",
-    "-bqeNE1DOzA"
+    "-bqeNE1DOzA",
+    "Ex4x0qvOqAM",
+    "gTZSVThRWF8"
   ],
   "upload_timestamps": [
-    1794841903.1249726,
-    1794841991.3258545
+    1794930228.2760792,
+    1794930313.4339597
   ],
   "uploaded_shorts": [
     {
@@ -179,7 +181,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879839.7744749,
+        "last_synced": 1794930038.5875192,
         "status": "pending_or_private"
       }
     },
@@ -205,7 +207,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879839.7744749,
+        "last_synced": 1794930038.5875192,
         "status": "pending_or_private"
       }
     },
@@ -231,7 +233,7 @@
         "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879839.7744749,
+        "last_synced": 1794930038.5875192,
         "status": "public"
       }
     },
@@ -257,7 +259,7 @@
         "views": 34,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879839.7744749,
+        "last_synced": 1794930038.5875192,
         "status": "public"
       }
     },
@@ -283,7 +285,7 @@
         "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879839.7744749,
+        "last_synced": 1794930038.5875192,
         "status": "public"
       }
     },
@@ -309,7 +311,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879839.7744749,
+        "last_synced": 1794930038.5875192,
         "status": "public"
       }
     },
@@ -335,7 +337,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879839.7744749,
+        "last_synced": 1794930038.5875192,
         "status": "public"
       }
     },
@@ -361,7 +363,7 @@
         "views": 24,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879839.7744749,
+        "last_synced": 1794930038.5875192,
         "status": "public"
       }
     },
@@ -387,7 +389,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879839.7744749,
+        "last_synced": 1794930038.5875192,
         "status": "public"
       }
     },
@@ -413,7 +415,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879839.7744749,
+        "last_synced": 1794930038.5875192,
         "status": "public"
       }
     },
@@ -436,10 +438,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794662011.8033862,
       "stats": {
-        "views": 3,
+        "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879839.7744749,
+        "last_synced": 1794930038.5875192,
         "status": "public"
       }
     },
@@ -462,10 +464,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794662067.3389206,
       "stats": {
-        "views": 1,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879839.7744749,
+        "last_synced": 1794930038.5875192,
         "status": "public"
       }
     },
@@ -491,7 +493,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879839.7744749,
+        "last_synced": 1794930038.5875192,
         "status": "public"
       }
     },
@@ -517,7 +519,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879839.7744749,
+        "last_synced": 1794930038.5875192,
         "status": "public"
       }
     },
@@ -540,10 +542,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794841903.124987,
       "stats": {
-        "views": 1,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879839.7744749,
+        "last_synced": 1794930038.5875192,
         "status": "public"
       }
     },
@@ -569,25 +571,75 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879839.7744749,
+        "last_synced": 1794930038.5875192,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "Q9JEzpX97dM",
+      "source_video_id": "Ex4x0qvOqAM",
+      "title": "Nominal vs Real GDP Explained in 40 Seconds #shorts",
+      "creator": "Akshat Shrivastava",
+      "topic": "personal finance, investing, budgeting and side hustles for financial freedom",
+      "tags": [
+        "personalfinance",
+        "investing",
+        "sidehustle",
+        "financialfreedom",
+        "stockmarket",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794930228.2760925,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "bOjMKGm-2-M",
+      "source_video_id": "Ex4x0qvOqAM",
+      "title": "Why Rising Bond Yields Hurt Indian Growth #shorts",
+      "creator": "Akshat Shrivastava",
+      "topic": "personal finance, investing, budgeting and side hustles for financial freedom",
+      "tags": [
+        "personalfinance",
+        "investing",
+        "sidehustle",
+        "financialfreedom",
+        "stockmarket",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794930313.4339714,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_05_finance",
-    "last_sync": 1794879839.7744749,
+    "last_sync": 1794930038.5875192,
     "total_shorts": 16,
     "public_shorts": 12,
-    "total_views": 89,
-    "median_views": 2.5,
+    "total_views": 94,
+    "median_views": 4.0,
     "creator_weights": {
       "@GrahamStephan": 1.8,
-      "Mark Tilbury": 1.8,
+      "Mark Tilbury": 1.35,
       "Vincent Chan": 1.0,
-      "Humphrey Yang": 1.8,
+      "Humphrey Yang": 1.35,
       "Edmond Remington": 1.0,
-      "Rahul Jain": 1.8
+      "Rahul Jain": 1.35
     }
   }
 }
