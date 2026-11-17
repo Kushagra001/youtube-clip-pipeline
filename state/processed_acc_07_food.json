@@ -154,11 +154,13 @@
     "7sYRNksiwTo",
     "9ZqdgmaO6gM",
     "6dDCYIvP0yY",
-    "o61b33Yw7W4"
+    "o61b33Yw7W4",
+    "uSROE-AoMkk",
+    "sif3mn9UFH4"
   ],
   "upload_timestamps": [
-    1794841953.543888,
-    1794842009.431283
+    1794930145.6483572,
+    1794930189.9446516
   ],
   "uploaded_shorts": [
     {
@@ -183,7 +185,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879875.792753,
+        "last_synced": 1794930009.2146406,
         "status": "pending_or_private"
       }
     },
@@ -209,7 +211,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879875.792753,
+        "last_synced": 1794930009.2146406,
         "status": "pending_or_private"
       }
     },
@@ -235,7 +237,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879875.792753,
+        "last_synced": 1794930009.2146406,
         "status": "public"
       }
     },
@@ -261,7 +263,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879875.792753,
+        "last_synced": 1794930009.2146406,
         "status": "public"
       }
     },
@@ -287,7 +289,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879875.792753,
+        "last_synced": 1794930009.2146406,
         "status": "public"
       }
     },
@@ -313,7 +315,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879875.792753,
+        "last_synced": 1794930009.2146406,
         "status": "public"
       }
     },
@@ -339,7 +341,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879875.792753,
+        "last_synced": 1794930009.2146406,
         "status": "public"
       }
     },
@@ -365,7 +367,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879875.792753,
+        "last_synced": 1794930009.2146406,
         "status": "public"
       }
     },
@@ -391,7 +393,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879875.792753,
+        "last_synced": 1794930009.2146406,
         "status": "public"
       }
     },
@@ -414,10 +416,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794442750.374191,
       "stats": {
-        "views": 3,
+        "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879875.792753,
+        "last_synced": 1794930009.2146406,
         "status": "public"
       }
     },
@@ -443,7 +445,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879875.792753,
+        "last_synced": 1794930009.2146406,
         "status": "public"
       }
     },
@@ -469,7 +471,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879875.792753,
+        "last_synced": 1794930009.2146406,
         "status": "public"
       }
     },
@@ -492,10 +494,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794661957.5748022,
       "stats": {
-        "views": 9,
+        "views": 10,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879875.792753,
+        "last_synced": 1794930009.2146406,
         "status": "public"
       }
     },
@@ -521,7 +523,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879875.792753,
+        "last_synced": 1794930009.2146406,
         "status": "public"
       }
     },
@@ -544,10 +546,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794750098.4918935,
       "stats": {
-        "views": 12,
+        "views": 14,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879875.792753,
+        "last_synced": 1794930009.2146406,
         "status": "public"
       }
     },
@@ -570,10 +572,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794750205.8338602,
       "stats": {
-        "views": 27,
+        "views": 31,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879875.792753,
+        "last_synced": 1794930009.2146406,
         "status": "public"
       }
     },
@@ -596,10 +598,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794841953.543901,
       "stats": {
-        "views": 0,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879875.792753,
+        "last_synced": 1794930009.2146406,
         "status": "public"
       }
     },
@@ -625,18 +627,68 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879875.792753,
+        "last_synced": 1794930009.2146406,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "IlkDk1L-ZLo",
+      "source_video_id": "uSROE-AoMkk",
+      "title": "Why You Shouldn't Overcook Your Braise #shorts",
+      "creator": "@BrianLagerstrom",
+      "topic": "quick and easy recipes, meal prep ideas and food hacks for home cooks",
+      "tags": [
+        "easyrecipes",
+        "mealprep",
+        "foodhacks",
+        "quickrecipes",
+        "cookinghacks",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794930145.6483722,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "3JFM_fiADCc",
+      "source_video_id": "uSROE-AoMkk",
+      "title": "The Perfect Steak and Ale Pie Texture #shorts",
+      "creator": "@BrianLagerstrom",
+      "topic": "quick and easy recipes, meal prep ideas and food hacks for home cooks",
+      "tags": [
+        "easyrecipes",
+        "mealprep",
+        "foodhacks",
+        "quickrecipes",
+        "cookinghacks",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794930189.9446645,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1794879875.792753,
+    "last_sync": 1794930009.2146406,
     "total_shorts": 18,
-    "public_shorts": 13,
-    "total_views": 76,
-    "median_views": 3,
+    "public_shorts": 14,
+    "total_views": 86,
+    "median_views": 3.0,
     "creator_weights": {
       "Will Tennyson": 1.35,
       "@JoshuaWeissman": 1.0,
@@ -645,7 +697,8 @@
       "Marissa McNamara": 1.0,
       "LifebyMikeG": 1.35,
       "Jamie Oliver": 1.8,
-      "Chef Jack Ovens": 1.8
+      "Chef Jack Ovens": 1.8,
+      "The Fit Mother Project - Fitness For Busy Moms": 1.0
     }
   }
 }
