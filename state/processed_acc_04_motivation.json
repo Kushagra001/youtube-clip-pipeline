@@ -131,11 +131,13 @@
     "cH0gED2stDM",
     "BtijFzEyOTg",
     "V7GiPB1qbRg",
-    "LPfAthTVwEA"
+    "LPfAthTVwEA",
+    "3mIE7WWTMVc",
+    "C0xtMUaZvrk"
   ],
   "upload_timestamps": [
-    1794841864.9047284,
-    1794841929.9538856
+    1794930181.3851304,
+    1794930264.4871562
   ],
   "uploaded_shorts": [
     {
@@ -160,7 +162,7 @@
         "views": 1066,
         "likes": 14,
         "comments": 0,
-        "last_synced": 1794879869.8070016,
+        "last_synced": 1794930050.3226755,
         "status": "public"
       }
     },
@@ -186,7 +188,7 @@
         "views": 823,
         "likes": 5,
         "comments": 0,
-        "last_synced": 1794879869.8070016,
+        "last_synced": 1794930050.3226755,
         "status": "public"
       }
     },
@@ -212,7 +214,7 @@
         "views": 81,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879869.8070016,
+        "last_synced": 1794930050.3226755,
         "status": "public"
       }
     },
@@ -238,7 +240,7 @@
         "views": 51,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879869.8070016,
+        "last_synced": 1794930050.3226755,
         "status": "public"
       }
     },
@@ -264,7 +266,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879869.8070016,
+        "last_synced": 1794930050.3226755,
         "status": "public"
       }
     },
@@ -290,7 +292,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879869.8070016,
+        "last_synced": 1794930050.3226755,
         "status": "public"
       }
     },
@@ -316,8 +318,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879869.8070016,
-        "status": "pending_or_private"
+        "last_synced": 1794930050.3226755,
+        "status": "public"
       }
     },
     {
@@ -342,7 +344,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879869.8070016,
+        "last_synced": 1794930050.3226755,
         "status": "public"
       }
     },
@@ -368,7 +370,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879869.8070016,
+        "last_synced": 1794930050.3226755,
         "status": "public"
       }
     },
@@ -394,7 +396,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879869.8070016,
+        "last_synced": 1794930050.3226755,
         "status": "public"
       }
     },
@@ -417,10 +419,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794661986.7549303,
       "stats": {
-        "views": 2,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879869.8070016,
+        "last_synced": 1794930050.3226755,
         "status": "public"
       }
     },
@@ -446,7 +448,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879869.8070016,
+        "last_synced": 1794930050.3226755,
         "status": "public"
       }
     },
@@ -472,7 +474,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879869.8070016,
+        "last_synced": 1794930050.3226755,
         "status": "public"
       }
     },
@@ -498,7 +500,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879869.8070016,
+        "last_synced": 1794930050.3226755,
         "status": "public"
       }
     },
@@ -524,7 +526,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879869.8070016,
+        "last_synced": 1794930050.3226755,
         "status": "public"
       }
     },
@@ -550,18 +552,68 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879869.8070016,
+        "last_synced": 1794930050.3226755,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "SVuPETwygwk",
+      "source_video_id": "3mIE7WWTMVc",
+      "title": "Why Work Is the Only Path to Success #shorts",
+      "creator": "@JordanBPeterson",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794930181.3851538,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "hnOfYeXHqLs",
+      "source_video_id": "C0xtMUaZvrk",
+      "title": "You Are Not Your Thoughts #shorts",
+      "creator": "Psychoresto",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794930264.4871693,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_04_motivation",
-    "last_sync": 1794879869.8070016,
+    "last_sync": 1794930050.3226755,
     "total_shorts": 16,
     "public_shorts": 8,
-    "total_views": 2027,
-    "median_views": 26.5,
+    "total_views": 2028,
+    "median_views": 27.0,
     "creator_weights": {
       "@JordanBPeterson": 1.8,
       "@ChrisWillx": 1.8,
