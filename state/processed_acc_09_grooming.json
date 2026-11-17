@@ -133,7 +133,8 @@
     "jVwVOgRyymk",
     "TyMB3cbi76g",
     "Lkba7NLlBDI",
-    "3Ny2gEOR1iU"
+    "3Ny2gEOR1iU",
+    "F3F1o1-Eqi8"
   ],
   "upload_timestamps": [
     1794841966.5991926,
@@ -162,7 +163,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794841796.592302,
+        "last_synced": 1794879836.6468778,
         "status": "public"
       }
     },
@@ -188,7 +189,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794841796.592302,
+        "last_synced": 1794879836.6468778,
         "status": "pending_or_private"
       }
     },
@@ -214,7 +215,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794841796.592302,
+        "last_synced": 1794879836.6468778,
         "status": "public"
       }
     },
@@ -240,7 +241,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794841796.592302,
+        "last_synced": 1794879836.6468778,
         "status": "public"
       }
     },
@@ -266,7 +267,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794841796.592302,
+        "last_synced": 1794879836.6468778,
         "status": "public"
       }
     },
@@ -292,7 +293,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794841796.592302,
+        "last_synced": 1794879836.6468778,
         "status": "public"
       }
     },
@@ -318,7 +319,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794841796.592302,
+        "last_synced": 1794879836.6468778,
         "status": "public"
       }
     },
@@ -344,7 +345,7 @@
         "views": 21,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794841796.592302,
+        "last_synced": 1794879836.6468778,
         "status": "public"
       }
     },
@@ -370,7 +371,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794841796.592302,
+        "last_synced": 1794879836.6468778,
         "status": "public"
       }
     },
@@ -396,7 +397,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794841796.592302,
+        "last_synced": 1794879836.6468778,
         "status": "public"
       }
     },
@@ -422,7 +423,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794841796.592302,
+        "last_synced": 1794879836.6468778,
         "status": "public"
       }
     },
@@ -448,7 +449,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794841796.592302,
+        "last_synced": 1794879836.6468778,
         "status": "public"
       }
     },
@@ -474,7 +475,7 @@
         "views": 14,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794841796.592302,
+        "last_synced": 1794879836.6468778,
         "status": "public"
       }
     },
@@ -500,7 +501,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794841796.592302,
+        "last_synced": 1794879836.6468778,
         "status": "public"
       }
     },
@@ -523,10 +524,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794720697.162804,
       "stats": {
-        "views": 4,
+        "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794841796.592302,
+        "last_synced": 1794879836.6468778,
         "status": "public"
       }
     },
@@ -552,7 +553,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794879836.6468778,
+        "status": "public"
       }
     },
     {
@@ -577,26 +579,27 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1794879836.6468778,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1794841796.592302,
-    "total_shorts": 15,
+    "last_sync": 1794879836.6468778,
+    "total_shorts": 17,
     "public_shorts": 10,
-    "total_views": 60,
-    "median_views": 3.5,
+    "total_views": 61,
+    "median_views": 4.0,
     "creator_weights": {
       "Teachingmensfashion": 1.35,
       "BeYourBest": 1.35,
       "The Formal Edit": 1.0,
       "Glow Mode": 1.8,
       "Nick Alexander": 1.0,
-      "taeveniti": 1.0,
-      "Alex Costa": 1.8,
-      "Self Guide": 1.0
+      "taeveniti": 0.65,
+      "Alex Costa": 1.35,
+      "Self Guide": 1.35
     }
   }
 }
