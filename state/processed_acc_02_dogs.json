@@ -136,11 +136,13 @@
     "BzmBD8NOKUc",
     "y7dKQSYfokU",
     "_WziA8Iq2II",
-    "CwHkoFr18QI"
+    "CwHkoFr18QI",
+    "GSFc7UbdfVo",
+    "j0ikVKUh4HM"
   ],
   "upload_timestamps": [
-    1794841863.3944998,
-    1794879982.1244757
+    1794879982.1244757,
+    1794930181.0465343
   ],
   "uploaded_shorts": [
     {
@@ -165,7 +167,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879827.9468083,
+        "last_synced": 1794930023.4545822,
         "status": "pending_or_private"
       }
     },
@@ -191,7 +193,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879827.9468083,
+        "last_synced": 1794930023.4545822,
         "status": "pending_or_private"
       }
     },
@@ -217,7 +219,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879827.9468083,
+        "last_synced": 1794930023.4545822,
         "status": "public"
       }
     },
@@ -243,7 +245,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879827.9468083,
+        "last_synced": 1794930023.4545822,
         "status": "public"
       }
     },
@@ -269,7 +271,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879827.9468083,
+        "last_synced": 1794930023.4545822,
         "status": "public"
       }
     },
@@ -295,7 +297,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879827.9468083,
+        "last_synced": 1794930023.4545822,
         "status": "public"
       }
     },
@@ -321,7 +323,7 @@
         "views": 14,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879827.9468083,
+        "last_synced": 1794930023.4545822,
         "status": "public"
       }
     },
@@ -347,7 +349,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879827.9468083,
+        "last_synced": 1794930023.4545822,
         "status": "public"
       }
     },
@@ -373,7 +375,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879827.9468083,
+        "last_synced": 1794930023.4545822,
         "status": "public"
       }
     },
@@ -399,7 +401,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879827.9468083,
+        "last_synced": 1794930023.4545822,
         "status": "public"
       }
     },
@@ -425,7 +427,7 @@
         "views": 10,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879827.9468083,
+        "last_synced": 1794930023.4545822,
         "status": "public"
       }
     },
@@ -448,10 +450,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794694087.56465,
       "stats": {
-        "views": 4,
+        "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879827.9468083,
+        "last_synced": 1794930023.4545822,
         "status": "public"
       }
     },
@@ -477,7 +479,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879827.9468083,
+        "last_synced": 1794930023.4545822,
         "status": "public"
       }
     },
@@ -500,10 +502,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794782365.430488,
       "stats": {
-        "views": 1,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879827.9468083,
+        "last_synced": 1794930023.4545822,
         "status": "public"
       }
     },
@@ -526,10 +528,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794841863.3945134,
       "stats": {
-        "views": 2,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879827.9468083,
+        "last_synced": 1794930023.4545822,
         "status": "public"
       }
     },
@@ -555,16 +557,42 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
+        "last_synced": 1794930023.4545822,
+        "status": "public"
+      }
+    },
+    {
+      "video_id": "_tyF8VzqUag",
+      "source_video_id": "GSFc7UbdfVo",
+      "title": "One-Legged Puppy Defies All Odds #shorts",
+      "creator": "@TheDodo",
+      "topic": "funny and cute dog videos for dog lovers",
+      "tags": [
+        "dogsofinstagram",
+        "dogvideos",
+        "puppylove",
+        "dogtraining",
+        "goodboy",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794930181.0465493,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
         "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_02_dogs",
-    "last_sync": 1794879827.9468083,
-    "total_shorts": 15,
+    "last_sync": 1794930023.4545822,
+    "total_shorts": 16,
     "public_shorts": 11,
-    "total_views": 44,
+    "total_views": 47,
     "median_views": 3,
     "creator_weights": {
       "Tom Davis Dog Training ": 1.35,
