@@ -143,11 +143,13 @@
     "SEm3RtZF9SQ",
     "6IighujbKlg",
     "x0UKQEG-mi4",
-    "12xHxUnBEiI"
+    "12xHxUnBEiI",
+    "fD4OyUDfL3U",
+    "AdqrTg_hpEQ"
   ],
   "upload_timestamps": [
-    1794842065.2561266,
-    1794842172.9273117
+    1794930210.3695421,
+    1794930269.8155882
   ],
   "uploaded_shorts": [
     {
@@ -172,8 +174,8 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879955.5945861,
-        "status": "pending_or_private"
+        "last_synced": 1794930021.9069133,
+        "status": "public"
       }
     },
     {
@@ -198,8 +200,8 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879955.5945861,
-        "status": "pending_or_private"
+        "last_synced": 1794930021.9069133,
+        "status": "public"
       }
     },
     {
@@ -224,8 +226,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879955.5945861,
-        "status": "pending_or_private"
+        "last_synced": 1794930021.9069133,
+        "status": "public"
       }
     },
     {
@@ -250,8 +252,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879955.5945861,
-        "status": "pending_or_private"
+        "last_synced": 1794930021.9069133,
+        "status": "public"
       }
     },
     {
@@ -276,8 +278,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879955.5945861,
-        "status": "pending_or_private"
+        "last_synced": 1794930021.9069133,
+        "status": "public"
       }
     },
     {
@@ -302,8 +304,8 @@
         "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879955.5945861,
-        "status": "pending_or_private"
+        "last_synced": 1794930021.9069133,
+        "status": "public"
       }
     },
     {
@@ -328,8 +330,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879955.5945861,
-        "status": "pending_or_private"
+        "last_synced": 1794930021.9069133,
+        "status": "public"
       }
     },
     {
@@ -354,8 +356,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879955.5945861,
-        "status": "pending_or_private"
+        "last_synced": 1794930021.9069133,
+        "status": "public"
       }
     },
     {
@@ -380,8 +382,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879955.5945861,
-        "status": "pending_or_private"
+        "last_synced": 1794930021.9069133,
+        "status": "public"
       }
     },
     {
@@ -406,8 +408,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879955.5945861,
-        "status": "pending_or_private"
+        "last_synced": 1794930021.9069133,
+        "status": "public"
       }
     },
     {
@@ -432,8 +434,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879955.5945861,
-        "status": "pending_or_private"
+        "last_synced": 1794930021.9069133,
+        "status": "public"
       }
     },
     {
@@ -458,8 +460,8 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879955.5945861,
-        "status": "pending_or_private"
+        "last_synced": 1794930021.9069133,
+        "status": "public"
       }
     },
     {
@@ -484,8 +486,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879955.5945861,
-        "status": "pending_or_private"
+        "last_synced": 1794930021.9069133,
+        "status": "public"
       }
     },
     {
@@ -510,8 +512,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879955.5945861,
-        "status": "pending_or_private"
+        "last_synced": 1794930021.9069133,
+        "status": "public"
       }
     },
     {
@@ -533,11 +535,11 @@
       "scheduled_at": null,
       "uploaded_at": 1794842065.2561393,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879955.5945861,
-        "status": "pending_or_private"
+        "last_synced": 1794930021.9069133,
+        "status": "public"
       }
     },
     {
@@ -562,18 +564,75 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879955.5945861,
-        "status": "pending_or_private"
+        "last_synced": 1794930021.9069133,
+        "status": "public"
+      }
+    },
+    {
+      "video_id": "UN3ibS47oyU",
+      "source_video_id": "fD4OyUDfL3U",
+      "title": "Why Progressive Overload Matters #shorts",
+      "creator": "Flow High Performance",
+      "topic": "fitness motivation, home workouts, gym training and healthy lifestyle",
+      "tags": [
+        "homeworkout",
+        "fitnessmotivation",
+        "gymlife",
+        "calisthenics",
+        "fitfam",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794930210.3695626,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "rVySsBDKfzQ",
+      "source_video_id": "fD4OyUDfL3U",
+      "title": "Rest Periods: Hypertrophy vs Strength #shorts",
+      "creator": "Flow High Performance",
+      "topic": "fitness motivation, home workouts, gym training and healthy lifestyle",
+      "tags": [
+        "homeworkout",
+        "fitnessmotivation",
+        "gymlife",
+        "calisthenics",
+        "fitfam",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794930269.8156006,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_03_fitness",
-    "last_sync": 1794879955.5945861,
+    "last_sync": 1794930021.9069133,
     "total_shorts": 16,
-    "public_shorts": 0,
-    "total_views": 0,
-    "median_views": 100.0,
-    "creator_weights": {}
+    "public_shorts": 10,
+    "total_views": 24,
+    "median_views": 2.0,
+    "creator_weights": {
+      "@ChrisHeria": 1.35,
+      "@RenaissancePeriodization": 1.0,
+      "Calisthenicmovement": 1.0,
+      "Lucy Lismore": 1.0,
+      "Body Project": 1.0,
+      "THENX": 1.35
+    }
   }
 }
