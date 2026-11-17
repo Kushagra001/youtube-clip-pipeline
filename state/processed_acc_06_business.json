@@ -135,11 +135,13 @@
     "IWdvG9Up8Mc",
     "gRcBu8LyfGo",
     "y1-9yeYLJUo",
-    "BanDS5A-hLU"
+    "BanDS5A-hLU",
+    "DbfcX173pg8",
+    "DgQHG0Ej91Q"
   ],
   "upload_timestamps": [
-    1794806886.975441,
-    1794841963.5015266
+    1794930259.4110117,
+    1794930335.6899633
   ],
   "uploaded_shorts": [
     {
@@ -164,7 +166,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879928.1566498,
+        "last_synced": 1794930061.3159502,
         "status": "pending_or_private"
       }
     },
@@ -190,7 +192,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879928.1566498,
+        "last_synced": 1794930061.3159502,
         "status": "pending_or_private"
       }
     },
@@ -216,7 +218,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879928.1566498,
+        "last_synced": 1794930061.3159502,
         "status": "public"
       }
     },
@@ -242,7 +244,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879928.1566498,
+        "last_synced": 1794930061.3159502,
         "status": "public"
       }
     },
@@ -268,7 +270,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879928.1566498,
+        "last_synced": 1794930061.3159502,
         "status": "public"
       }
     },
@@ -294,7 +296,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879928.1566498,
+        "last_synced": 1794930061.3159502,
         "status": "public"
       }
     },
@@ -320,7 +322,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879928.1566498,
+        "last_synced": 1794930061.3159502,
         "status": "public"
       }
     },
@@ -346,7 +348,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879928.1566498,
+        "last_synced": 1794930061.3159502,
         "status": "public"
       }
     },
@@ -372,7 +374,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879928.1566498,
+        "last_synced": 1794930061.3159502,
         "status": "public"
       }
     },
@@ -398,7 +400,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879928.1566498,
+        "last_synced": 1794930061.3159502,
         "status": "public"
       }
     },
@@ -424,7 +426,7 @@
         "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879928.1566498,
+        "last_synced": 1794930061.3159502,
         "status": "public"
       }
     },
@@ -450,7 +452,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879928.1566498,
+        "last_synced": 1794930061.3159502,
         "status": "public"
       }
     },
@@ -476,7 +478,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879928.1566498,
+        "last_synced": 1794930061.3159502,
         "status": "public"
       }
     },
@@ -502,7 +504,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879928.1566498,
+        "last_synced": 1794930061.3159502,
         "status": "public"
       }
     },
@@ -528,7 +530,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879928.1566498,
+        "last_synced": 1794930061.3159502,
         "status": "public"
       }
     },
@@ -554,7 +556,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879928.1566498,
+        "last_synced": 1794930061.3159502,
         "status": "public"
       }
     },
@@ -580,7 +582,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879928.1566498,
+        "last_synced": 1794930061.3159502,
         "status": "public"
       }
     },
@@ -606,14 +608,64 @@
         "views": 10,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794879928.1566498,
+        "last_synced": 1794930061.3159502,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "ficOsRIOW5s",
+      "source_video_id": "DbfcX173pg8",
+      "title": "Why Most People Stay Broke (Explained) \ud83d\udcc9 #shorts",
+      "creator": "@MyFirstMillionPod",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794930259.411043,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "EtKcZgLUBSw",
+      "source_video_id": "DbfcX173pg8",
+      "title": "Why Most People Stay Broke (Explained) \ud83d\udcc9 #shorts",
+      "creator": "@MyFirstMillionPod",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1794930335.689977,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1794879928.1566498,
+    "last_sync": 1794930061.3159502,
     "total_shorts": 18,
     "public_shorts": 8,
     "total_views": 32,
