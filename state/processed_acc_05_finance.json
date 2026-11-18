@@ -182,7 +182,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963484.6819863,
+        "last_synced": 1795015968.880258,
         "status": "pending_or_private"
       }
     },
@@ -208,7 +208,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963484.6819863,
+        "last_synced": 1795015968.880258,
         "status": "pending_or_private"
       }
     },
@@ -234,8 +234,8 @@
         "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963484.6819863,
-        "status": "public"
+        "last_synced": 1795015968.880258,
+        "status": "pending_or_private"
       }
     },
     {
@@ -260,8 +260,8 @@
         "views": 34,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963484.6819863,
-        "status": "public"
+        "last_synced": 1795015968.880258,
+        "status": "pending_or_private"
       }
     },
     {
@@ -286,8 +286,8 @@
         "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963484.6819863,
-        "status": "public"
+        "last_synced": 1795015968.880258,
+        "status": "pending_or_private"
       }
     },
     {
@@ -312,8 +312,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963484.6819863,
-        "status": "public"
+        "last_synced": 1795015968.880258,
+        "status": "pending_or_private"
       }
     },
     {
@@ -338,8 +338,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963484.6819863,
-        "status": "public"
+        "last_synced": 1795015968.880258,
+        "status": "pending_or_private"
       }
     },
     {
@@ -364,8 +364,8 @@
         "views": 24,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963484.6819863,
-        "status": "public"
+        "last_synced": 1795015968.880258,
+        "status": "pending_or_private"
       }
     },
     {
@@ -390,8 +390,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963484.6819863,
-        "status": "public"
+        "last_synced": 1795015968.880258,
+        "status": "pending_or_private"
       }
     },
     {
@@ -416,8 +416,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963484.6819863,
-        "status": "public"
+        "last_synced": 1795015968.880258,
+        "status": "pending_or_private"
       }
     },
     {
@@ -442,8 +442,8 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963484.6819863,
-        "status": "public"
+        "last_synced": 1795015968.880258,
+        "status": "pending_or_private"
       }
     },
     {
@@ -468,8 +468,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963484.6819863,
-        "status": "public"
+        "last_synced": 1795015968.880258,
+        "status": "pending_or_private"
       }
     },
     {
@@ -494,8 +494,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963484.6819863,
-        "status": "public"
+        "last_synced": 1795015968.880258,
+        "status": "pending_or_private"
       }
     },
     {
@@ -520,8 +520,8 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963484.6819863,
-        "status": "public"
+        "last_synced": 1795015968.880258,
+        "status": "pending_or_private"
       }
     },
     {
@@ -546,8 +546,8 @@
         "views": 9,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963484.6819863,
-        "status": "public"
+        "last_synced": 1795015968.880258,
+        "status": "pending_or_private"
       }
     },
     {
@@ -572,8 +572,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963484.6819863,
-        "status": "public"
+        "last_synced": 1795015968.880258,
+        "status": "pending_or_private"
       }
     },
     {
@@ -598,8 +598,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963484.6819863,
-        "status": "public"
+        "last_synced": 1795015968.880258,
+        "status": "pending_or_private"
       }
     },
     {
@@ -624,26 +624,18 @@
         "views": 36,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963484.6819863,
-        "status": "public"
+        "last_synced": 1795015968.880258,
+        "status": "pending_or_private"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_05_finance",
-    "last_sync": 1794963484.6819863,
+    "last_sync": 1795015968.880258,
     "total_shorts": 18,
-    "public_shorts": 14,
-    "total_views": 138,
-    "median_views": 6.0,
-    "creator_weights": {
-      "@GrahamStephan": 1.8,
-      "Mark Tilbury": 1.0,
-      "Vincent Chan": 1.0,
-      "Humphrey Yang": 1.35,
-      "Edmond Remington": 1.0,
-      "Rahul Jain": 1.0,
-      "Akshat Shrivastava": 1.8
-    }
+    "public_shorts": 0,
+    "total_views": 0,
+    "median_views": 100.0,
+    "creator_weights": {}
   }
 }
