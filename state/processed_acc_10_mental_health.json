@@ -143,7 +143,9 @@
     "1rn_Clc-MM0",
     "jQcyyKd5xN8",
     "KXvyd-tkrmc",
-    "dLVzwNp9GMY"
+    "dLVzwNp9GMY",
+    "TWzD_9qCezA",
+    "nFkHV7LfVUc"
   ],
   "upload_timestamps": [
     1794930152.9431717,
@@ -172,7 +174,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "public"
       }
     },
@@ -198,7 +200,7 @@
         "views": 15,
         "likes": 0,
         "comments": 2,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "public"
       }
     },
@@ -224,7 +226,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "pending_or_private"
       }
     },
@@ -250,7 +252,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "pending_or_private"
       }
     },
@@ -276,7 +278,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "public"
       }
     },
@@ -302,7 +304,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "public"
       }
     },
@@ -328,7 +330,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "public"
       }
     },
@@ -354,7 +356,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "public"
       }
     },
@@ -380,7 +382,7 @@
         "views": 114,
         "likes": 1,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "public"
       }
     },
@@ -406,7 +408,7 @@
         "views": 8,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "public"
       }
     },
@@ -432,8 +434,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
-        "status": "pending_or_private"
+        "last_synced": 1795015150.337955,
+        "status": "public"
       }
     },
     {
@@ -458,7 +460,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "public"
       }
     },
@@ -484,7 +486,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "public"
       }
     },
@@ -510,7 +512,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "public"
       }
     },
@@ -536,7 +538,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "public"
       }
     },
@@ -562,7 +564,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "public"
       }
     },
@@ -588,7 +590,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "public"
       }
     },
@@ -614,7 +616,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "public"
       }
     },
@@ -637,10 +639,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794930152.9431877,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "public"
       }
     },
@@ -666,18 +668,18 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963252.2048018,
+        "last_synced": 1795015150.337955,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_10_mental_health",
-    "last_sync": 1794963252.2048018,
+    "last_sync": 1795015150.337955,
     "total_shorts": 20,
-    "public_shorts": 11,
-    "total_views": 153,
-    "median_views": 2,
+    "public_shorts": 12,
+    "total_views": 154,
+    "median_views": 2.0,
     "creator_weights": {
       "@HealthyGamerGG": 1.8,
       "@MelRobbins": 1.0,
@@ -685,7 +687,8 @@
       "Zeliha Akpinar": 1.8,
       "Sukie Baxter": 1.0,
       "HealthyGamerGG": 1.0,
-      "Therapy in a Nutshell": 1.0
+      "Therapy in a Nutshell": 1.0,
+      "@hubermanlab": 1.0
     }
   }
 }
