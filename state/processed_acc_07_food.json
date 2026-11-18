@@ -157,7 +157,9 @@
     "o61b33Yw7W4",
     "uSROE-AoMkk",
     "sif3mn9UFH4",
-    "MDiRRAvfZDE"
+    "MDiRRAvfZDE",
+    "6RihjWJ8VDI",
+    "sKren-PKhec"
   ],
   "upload_timestamps": [
     1794930145.6483572,
@@ -186,7 +188,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "pending_or_private"
       }
     },
@@ -212,7 +214,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "pending_or_private"
       }
     },
@@ -238,7 +240,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "public"
       }
     },
@@ -264,7 +266,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "public"
       }
     },
@@ -290,7 +292,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "public"
       }
     },
@@ -316,7 +318,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "public"
       }
     },
@@ -342,7 +344,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "public"
       }
     },
@@ -368,7 +370,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "public"
       }
     },
@@ -394,7 +396,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "public"
       }
     },
@@ -420,7 +422,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "public"
       }
     },
@@ -446,7 +448,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "public"
       }
     },
@@ -472,7 +474,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "public"
       }
     },
@@ -498,7 +500,7 @@
         "views": 11,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "public"
       }
     },
@@ -524,7 +526,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "public"
       }
     },
@@ -547,10 +549,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794750098.4918935,
       "stats": {
-        "views": 14,
+        "views": 16,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "public"
       }
     },
@@ -573,10 +575,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794750205.8338602,
       "stats": {
-        "views": 32,
+        "views": 34,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "public"
       }
     },
@@ -602,7 +604,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "public"
       }
     },
@@ -628,7 +630,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "public"
       }
     },
@@ -654,7 +656,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "public"
       }
     },
@@ -680,17 +682,17 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1794963491.8517876,
+        "last_synced": 1795015143.2375665,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1794963491.8517876,
+    "last_sync": 1795015143.2375665,
     "total_shorts": 20,
     "public_shorts": 15,
-    "total_views": 89,
+    "total_views": 93,
     "median_views": 3,
     "creator_weights": {
       "Will Tennyson": 1.35,
