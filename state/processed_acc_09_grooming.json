@@ -140,7 +140,8 @@
     "x2s84PsCuj0",
     "aipziyVs8dY",
     "Yol3mqmdk-U",
-    "eLZNERSQL9Q"
+    "eLZNERSQL9Q",
+    "TedKD4Qnab0"
   ],
   "upload_timestamps": [
     1795047629.6342971,
@@ -169,8 +170,8 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -195,7 +196,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
+        "last_synced": 1795119096.9711025,
         "status": "pending_or_private"
       }
     },
@@ -221,8 +222,8 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -247,8 +248,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -273,8 +274,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -299,8 +300,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -325,8 +326,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -351,8 +352,8 @@
         "views": 30,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -377,8 +378,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -403,8 +404,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -429,8 +430,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -455,8 +456,8 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -481,8 +482,8 @@
         "views": 14,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -507,8 +508,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -533,8 +534,8 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -559,8 +560,8 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -582,11 +583,11 @@
       "scheduled_at": null,
       "uploaded_at": 1794842034.96764,
       "stats": {
-        "views": 1,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -608,11 +609,11 @@
       "scheduled_at": null,
       "uploaded_at": 1794930224.363593,
       "stats": {
-        "views": 1,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -634,11 +635,11 @@
       "scheduled_at": null,
       "uploaded_at": 1794930294.4622452,
       "stats": {
-        "views": 2,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -660,11 +661,11 @@
       "scheduled_at": null,
       "uploaded_at": 1795047629.6343102,
       "stats": {
-        "views": 0,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     },
     {
@@ -686,21 +687,32 @@
       "scheduled_at": null,
       "uploaded_at": 1795047707.0420892,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795073007.527452,
-        "status": "pending_or_private"
+        "last_synced": 1795119096.9711025,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1795073007.527452,
+    "last_sync": 1795119096.9711025,
     "total_shorts": 21,
-    "public_shorts": 0,
-    "total_views": 0,
-    "median_views": 100.0,
-    "creator_weights": {}
+    "public_shorts": 16,
+    "total_views": 86,
+    "median_views": 3.0,
+    "creator_weights": {
+      "Teachingmensfashion": 1.35,
+      "BeYourBest": 1.35,
+      "The Formal Edit": 1.0,
+      "Glow Mode": 1.8,
+      "Nick Alexander": 1.0,
+      "taeveniti": 1.0,
+      "Alex Costa": 1.8,
+      "Self Guide": 1.35,
+      "@GentlemansGazette": 1.0,
+      "Style With Faizy": 1.0
+    }
   }
 }
