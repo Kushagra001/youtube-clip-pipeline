@@ -153,11 +153,12 @@
     "-bqeNE1DOzA",
     "Ex4x0qvOqAM",
     "gTZSVThRWF8",
-    "Psl-Erz5jCI"
+    "Psl-Erz5jCI",
+    "9ps341A2QAg"
   ],
   "upload_timestamps": [
-    1794930228.2760792,
-    1794930313.4339597
+    1795046609.7202568,
+    1795046666.1530569
   ],
   "uploaded_shorts": [
     {
@@ -182,7 +183,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015968.880258,
+        "last_synced": 1795046477.3661318,
         "status": "pending_or_private"
       }
     },
@@ -208,7 +209,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015968.880258,
+        "last_synced": 1795046477.3661318,
         "status": "pending_or_private"
       }
     },
@@ -234,8 +235,8 @@
         "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015968.880258,
-        "status": "pending_or_private"
+        "last_synced": 1795046477.3661318,
+        "status": "public"
       }
     },
     {
@@ -260,8 +261,8 @@
         "views": 34,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015968.880258,
-        "status": "pending_or_private"
+        "last_synced": 1795046477.3661318,
+        "status": "public"
       }
     },
     {
@@ -286,8 +287,8 @@
         "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015968.880258,
-        "status": "pending_or_private"
+        "last_synced": 1795046477.3661318,
+        "status": "public"
       }
     },
     {
@@ -312,8 +313,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015968.880258,
-        "status": "pending_or_private"
+        "last_synced": 1795046477.3661318,
+        "status": "public"
       }
     },
     {
@@ -338,8 +339,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015968.880258,
-        "status": "pending_or_private"
+        "last_synced": 1795046477.3661318,
+        "status": "public"
       }
     },
     {
@@ -364,8 +365,8 @@
         "views": 24,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015968.880258,
-        "status": "pending_or_private"
+        "last_synced": 1795046477.3661318,
+        "status": "public"
       }
     },
     {
@@ -390,8 +391,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015968.880258,
-        "status": "pending_or_private"
+        "last_synced": 1795046477.3661318,
+        "status": "public"
       }
     },
     {
@@ -416,8 +417,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015968.880258,
-        "status": "pending_or_private"
+        "last_synced": 1795046477.3661318,
+        "status": "public"
       }
     },
     {
@@ -442,8 +443,8 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015968.880258,
-        "status": "pending_or_private"
+        "last_synced": 1795046477.3661318,
+        "status": "public"
       }
     },
     {
@@ -468,8 +469,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015968.880258,
-        "status": "pending_or_private"
+        "last_synced": 1795046477.3661318,
+        "status": "public"
       }
     },
     {
@@ -494,8 +495,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015968.880258,
-        "status": "pending_or_private"
+        "last_synced": 1795046477.3661318,
+        "status": "public"
       }
     },
     {
@@ -520,8 +521,8 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015968.880258,
-        "status": "pending_or_private"
+        "last_synced": 1795046477.3661318,
+        "status": "public"
       }
     },
     {
@@ -546,8 +547,8 @@
         "views": 9,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015968.880258,
-        "status": "pending_or_private"
+        "last_synced": 1795046477.3661318,
+        "status": "public"
       }
     },
     {
@@ -569,11 +570,11 @@
       "scheduled_at": null,
       "uploaded_at": 1794841991.325867,
       "stats": {
-        "views": 2,
+        "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015968.880258,
-        "status": "pending_or_private"
+        "last_synced": 1795046477.3661318,
+        "status": "public"
       }
     },
     {
@@ -595,11 +596,11 @@
       "scheduled_at": null,
       "uploaded_at": 1794930228.2760925,
       "stats": {
-        "views": 1,
+        "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015968.880258,
-        "status": "pending_or_private"
+        "last_synced": 1795046477.3661318,
+        "status": "public"
       }
     },
     {
@@ -621,21 +622,79 @@
       "scheduled_at": null,
       "uploaded_at": 1794930313.4339714,
       "stats": {
-        "views": 36,
+        "views": 88,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015968.880258,
-        "status": "pending_or_private"
+        "last_synced": 1795046477.3661318,
+        "status": "public"
+      }
+    },
+    {
+      "video_id": "PD6IJwHykXk",
+      "source_video_id": "9ps341A2QAg",
+      "title": "I Spent $100K On AI So You Don't Have To #shorts",
+      "creator": "Shane Hummus",
+      "topic": "personal finance, investing, budgeting and side hustles for financial freedom",
+      "tags": [
+        "personalfinance",
+        "investing",
+        "sidehustle",
+        "financialfreedom",
+        "stockmarket",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795046609.7202702,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "yUoNun9ju_M",
+      "source_video_id": "9ps341A2QAg",
+      "title": "Claude Turns Weekends Into Minutes #shorts",
+      "creator": "Shane Hummus",
+      "topic": "personal finance, investing, budgeting and side hustles for financial freedom",
+      "tags": [
+        "personalfinance",
+        "investing",
+        "sidehustle",
+        "financialfreedom",
+        "stockmarket",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795046666.1530685,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_05_finance",
-    "last_sync": 1795015968.880258,
+    "last_sync": 1795046477.3661318,
     "total_shorts": 18,
-    "public_shorts": 0,
-    "total_views": 0,
-    "median_views": 100.0,
-    "creator_weights": {}
+    "public_shorts": 14,
+    "total_views": 195,
+    "median_views": 6.0,
+    "creator_weights": {
+      "@GrahamStephan": 1.8,
+      "Mark Tilbury": 1.0,
+      "Vincent Chan": 1.0,
+      "Humphrey Yang": 1.35,
+      "Edmond Remington": 1.0,
+      "Rahul Jain": 1.0,
+      "Akshat Shrivastava": 1.8
+    }
   }
 }
