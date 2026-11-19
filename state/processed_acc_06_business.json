@@ -171,7 +171,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "pending_or_private"
       }
     },
@@ -197,7 +197,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "pending_or_private"
       }
     },
@@ -223,7 +223,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "public"
       }
     },
@@ -249,7 +249,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "public"
       }
     },
@@ -275,7 +275,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "public"
       }
     },
@@ -301,7 +301,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "public"
       }
     },
@@ -327,7 +327,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "public"
       }
     },
@@ -353,7 +353,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "public"
       }
     },
@@ -379,7 +379,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "public"
       }
     },
@@ -405,7 +405,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "public"
       }
     },
@@ -431,7 +431,7 @@
         "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "public"
       }
     },
@@ -457,7 +457,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "public"
       }
     },
@@ -483,7 +483,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "public"
       }
     },
@@ -509,7 +509,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "public"
       }
     },
@@ -535,7 +535,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "public"
       }
     },
@@ -561,7 +561,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "public"
       }
     },
@@ -587,7 +587,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "public"
       }
     },
@@ -613,7 +613,7 @@
         "views": 12,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "public"
       }
     },
@@ -639,7 +639,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "public"
       }
     },
@@ -665,7 +665,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795047382.7399113,
+        "last_synced": 1795072485.1422143,
         "status": "public"
       }
     },
@@ -688,10 +688,11 @@
       "scheduled_at": null,
       "uploaded_at": 1795047512.8874688,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1795072485.1422143,
+        "status": "public"
       }
     },
     {
@@ -716,25 +717,27 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1795072485.1422143,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1795047382.7399113,
-    "total_shorts": 20,
-    "public_shorts": 10,
-    "total_views": 36,
-    "median_views": 2.5,
+    "last_sync": 1795072485.1422143,
+    "total_shorts": 22,
+    "public_shorts": 11,
+    "total_views": 37,
+    "median_views": 2,
     "creator_weights": {
       "@ycombinator": 1.35,
       "Starter Story": 1.0,
-      "Simon Squibb and Real Simon Squibb": 0.65,
+      "Simon Squibb and Real Simon Squibb": 1.0,
       "Backstage with Millionaires": 1.0,
-      "Scaler School of Business": 1.35,
+      "Scaler School of Business": 1.8,
       "Y Combinator": 1.8,
-      "Sandeep Swadia": 1.8
+      "Sandeep Swadia": 1.8,
+      "Varun Mayya": 1.0
     }
   }
 }
