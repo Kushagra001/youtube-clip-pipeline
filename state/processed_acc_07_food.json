@@ -159,11 +159,13 @@
     "sif3mn9UFH4",
     "MDiRRAvfZDE",
     "6RihjWJ8VDI",
-    "sKren-PKhec"
+    "sKren-PKhec",
+    "6SjCBgyKv9I",
+    "6t_qxX7opvA"
   ],
   "upload_timestamps": [
-    1794930145.6483572,
-    1794930189.9446516
+    1795047626.8505676,
+    1795047688.904078
   ],
   "uploaded_shorts": [
     {
@@ -188,7 +190,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "pending_or_private"
       }
     },
@@ -214,7 +216,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "pending_or_private"
       }
     },
@@ -240,7 +242,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "public"
       }
     },
@@ -266,7 +268,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "public"
       }
     },
@@ -292,8 +294,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
-        "status": "public"
+        "last_synced": 1795047487.5539145,
+        "status": "pending_or_private"
       }
     },
     {
@@ -318,7 +320,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "public"
       }
     },
@@ -344,7 +346,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "public"
       }
     },
@@ -370,7 +372,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "public"
       }
     },
@@ -396,7 +398,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "public"
       }
     },
@@ -422,7 +424,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "public"
       }
     },
@@ -448,7 +450,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "public"
       }
     },
@@ -474,7 +476,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "public"
       }
     },
@@ -500,7 +502,7 @@
         "views": 11,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "public"
       }
     },
@@ -526,7 +528,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "public"
       }
     },
@@ -549,10 +551,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794750098.4918935,
       "stats": {
-        "views": 16,
+        "views": 17,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "public"
       }
     },
@@ -575,10 +577,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794750205.8338602,
       "stats": {
-        "views": 34,
+        "views": 38,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "public"
       }
     },
@@ -604,7 +606,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "public"
       }
     },
@@ -630,7 +632,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "public"
       }
     },
@@ -653,10 +655,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794930145.6483722,
       "stats": {
-        "views": 1,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "public"
       }
     },
@@ -682,17 +684,67 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015143.2375665,
+        "last_synced": 1795047487.5539145,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "fx0TLSxtvJg",
+      "source_video_id": "6SjCBgyKv9I",
+      "title": "Eat The Rainbow For Max Nutrients #shorts",
+      "creator": "Doobydobap",
+      "topic": "quick and easy recipes, meal prep ideas and food hacks for home cooks",
+      "tags": [
+        "easyrecipes",
+        "mealprep",
+        "foodhacks",
+        "quickrecipes",
+        "cookinghacks",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795047626.8505814,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "asXZJA6WiJw",
+      "source_video_id": "6SjCBgyKv9I",
+      "title": "Watermelon Celery Juice Color Theory Fail #shorts",
+      "creator": "Doobydobap",
+      "topic": "quick and easy recipes, meal prep ideas and food hacks for home cooks",
+      "tags": [
+        "easyrecipes",
+        "mealprep",
+        "foodhacks",
+        "quickrecipes",
+        "cookinghacks",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795047688.90409,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1795015143.2375665,
+    "last_sync": 1795047487.5539145,
     "total_shorts": 20,
     "public_shorts": 15,
-    "total_views": 93,
+    "total_views": 100,
     "median_views": 3,
     "creator_weights": {
       "Will Tennyson": 1.35,
