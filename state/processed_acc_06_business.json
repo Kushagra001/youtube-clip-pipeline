@@ -140,11 +140,13 @@
     "DgQHG0Ej91Q",
     "bPmhfM1HRWI",
     "VEZB69wGPyE",
-    "jDPsZM82hC0"
+    "jDPsZM82hC0",
+    "9NjA41wShTI",
+    "zlrb_X6fYZ0"
   ],
   "upload_timestamps": [
-    1794930259.4110117,
-    1794930335.6899633
+    1795047512.8874543,
+    1795047593.3519237
   ],
   "uploaded_shorts": [
     {
@@ -169,7 +171,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "pending_or_private"
       }
     },
@@ -195,7 +197,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "pending_or_private"
       }
     },
@@ -221,7 +223,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "public"
       }
     },
@@ -247,7 +249,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "public"
       }
     },
@@ -273,7 +275,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "public"
       }
     },
@@ -299,7 +301,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "public"
       }
     },
@@ -325,7 +327,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "public"
       }
     },
@@ -351,7 +353,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "public"
       }
     },
@@ -377,7 +379,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "public"
       }
     },
@@ -403,7 +405,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "public"
       }
     },
@@ -429,7 +431,7 @@
         "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "public"
       }
     },
@@ -455,7 +457,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "public"
       }
     },
@@ -481,7 +483,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "public"
       }
     },
@@ -507,7 +509,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "public"
       }
     },
@@ -533,7 +535,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "public"
       }
     },
@@ -559,7 +561,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "public"
       }
     },
@@ -585,7 +587,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "public"
       }
     },
@@ -611,7 +613,7 @@
         "views": 12,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "public"
       }
     },
@@ -637,7 +639,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "public"
       }
     },
@@ -663,14 +665,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015208.997113,
+        "last_synced": 1795047382.7399113,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "oTapBzTpoaU",
+      "source_video_id": "9NjA41wShTI",
+      "title": "Why Video Editors Are the New Gold #shorts",
+      "creator": "Varun Mayya",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795047512.8874688,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "QJaxDnvQJ2U",
+      "source_video_id": "9NjA41wShTI",
+      "title": "The Comment Section Growth Hack #shorts",
+      "creator": "Varun Mayya",
+      "topic": "entrepreneurship, startup stories, online business and founder lessons",
+      "tags": [
+        "entrepreneur",
+        "startuplife",
+        "businesstips",
+        "founder",
+        "onlinebusiness",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795047593.3519373,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_06_business",
-    "last_sync": 1795015208.997113,
+    "last_sync": 1795047382.7399113,
     "total_shorts": 20,
     "public_shorts": 10,
     "total_views": 36,
