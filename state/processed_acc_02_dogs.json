@@ -142,11 +142,13 @@
     "ell4BO-Vmnk",
     "DhXwFGeHKyM",
     "OY7BCrZHx94",
-    "cQA4ezThqN4"
+    "cQA4ezThqN4",
+    "ONFGFxPv154",
+    "JEipcW3Ym6Y"
   ],
   "upload_timestamps": [
-    1794930181.0465343,
-    1795015390.1929436
+    1795015390.1929436,
+    1795046671.6173003
   ],
   "uploaded_shorts": [
     {
@@ -171,7 +173,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015161.3518987,
+        "last_synced": 1795046515.1831882,
         "status": "pending_or_private"
       }
     },
@@ -197,7 +199,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015161.3518987,
+        "last_synced": 1795046515.1831882,
         "status": "pending_or_private"
       }
     },
@@ -223,7 +225,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015161.3518987,
+        "last_synced": 1795046515.1831882,
         "status": "public"
       }
     },
@@ -249,7 +251,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015161.3518987,
+        "last_synced": 1795046515.1831882,
         "status": "public"
       }
     },
@@ -275,7 +277,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015161.3518987,
+        "last_synced": 1795046515.1831882,
         "status": "public"
       }
     },
@@ -301,7 +303,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015161.3518987,
+        "last_synced": 1795046515.1831882,
         "status": "public"
       }
     },
@@ -327,7 +329,7 @@
         "views": 14,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015161.3518987,
+        "last_synced": 1795046515.1831882,
         "status": "public"
       }
     },
@@ -353,7 +355,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015161.3518987,
+        "last_synced": 1795046515.1831882,
         "status": "public"
       }
     },
@@ -379,7 +381,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015161.3518987,
+        "last_synced": 1795046515.1831882,
         "status": "public"
       }
     },
@@ -405,7 +407,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015161.3518987,
+        "last_synced": 1795046515.1831882,
         "status": "public"
       }
     },
@@ -431,7 +433,7 @@
         "views": 10,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015161.3518987,
+        "last_synced": 1795046515.1831882,
         "status": "public"
       }
     },
@@ -457,7 +459,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015161.3518987,
+        "last_synced": 1795046515.1831882,
         "status": "public"
       }
     },
@@ -483,7 +485,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015161.3518987,
+        "last_synced": 1795046515.1831882,
         "status": "public"
       }
     },
@@ -509,7 +511,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015161.3518987,
+        "last_synced": 1795046515.1831882,
         "status": "public"
       }
     },
@@ -535,7 +537,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015161.3518987,
+        "last_synced": 1795046515.1831882,
         "status": "public"
       }
     },
@@ -558,10 +560,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794879982.124489,
       "stats": {
-        "views": 1,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015161.3518987,
+        "last_synced": 1795046515.1831882,
         "status": "public"
       }
     },
@@ -587,7 +589,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015161.3518987,
+        "last_synced": 1795046515.1831882,
         "status": "public"
       }
     },
@@ -613,16 +615,42 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
+        "last_synced": 1795046515.1831882,
+        "status": "public"
+      }
+    },
+    {
+      "video_id": "Is0mbCPx06o",
+      "source_video_id": "ONFGFxPv154",
+      "title": "Why Small Dogs Act Like Monsters #shorts",
+      "creator": "Tom Davis Dog Training ",
+      "topic": "funny and cute dog videos for dog lovers",
+      "tags": [
+        "dogsofinstagram",
+        "dogvideos",
+        "puppylove",
+        "dogtraining",
+        "goodboy",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795046671.6173148,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
         "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_02_dogs",
-    "last_sync": 1795015161.3518987,
-    "total_shorts": 17,
+    "last_sync": 1795046515.1831882,
+    "total_shorts": 18,
     "public_shorts": 12,
-    "total_views": 49,
+    "total_views": 50,
     "median_views": 3.0,
     "creator_weights": {
       "Tom Davis Dog Training ": 1.35,
