@@ -136,11 +136,13 @@
     "C0xtMUaZvrk",
     "7mV46zHreLI",
     "_itTQaiu4G0",
-    "snV3Rogbtvo"
+    "snV3Rogbtvo",
+    "Ojy4k6Jn0IA",
+    "uX52YFuvl6g"
   ],
   "upload_timestamps": [
-    1794930181.3851304,
-    1794930264.4871562
+    1795046699.9924133,
+    1795046790.1691353
   ],
   "uploaded_shorts": [
     {
@@ -165,7 +167,7 @@
         "views": 1067,
         "likes": 14,
         "comments": 0,
-        "last_synced": 1795015737.5948515,
+        "last_synced": 1795046506.909899,
         "status": "public"
       }
     },
@@ -191,7 +193,7 @@
         "views": 823,
         "likes": 5,
         "comments": 0,
-        "last_synced": 1795015737.5948515,
+        "last_synced": 1795046506.909899,
         "status": "public"
       }
     },
@@ -217,7 +219,7 @@
         "views": 81,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015737.5948515,
+        "last_synced": 1795046506.909899,
         "status": "public"
       }
     },
@@ -243,7 +245,7 @@
         "views": 51,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015737.5948515,
+        "last_synced": 1795046506.909899,
         "status": "public"
       }
     },
@@ -269,7 +271,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015737.5948515,
+        "last_synced": 1795046506.909899,
         "status": "public"
       }
     },
@@ -295,7 +297,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015737.5948515,
+        "last_synced": 1795046506.909899,
         "status": "public"
       }
     },
@@ -321,7 +323,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015737.5948515,
+        "last_synced": 1795046506.909899,
         "status": "public"
       }
     },
@@ -347,7 +349,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015737.5948515,
+        "last_synced": 1795046506.909899,
         "status": "public"
       }
     },
@@ -373,7 +375,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015737.5948515,
+        "last_synced": 1795046506.909899,
         "status": "public"
       }
     },
@@ -399,7 +401,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015737.5948515,
+        "last_synced": 1795046506.909899,
         "status": "public"
       }
     },
@@ -425,7 +427,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015737.5948515,
+        "last_synced": 1795046506.909899,
         "status": "public"
       }
     },
@@ -451,7 +453,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015737.5948515,
+        "last_synced": 1795046506.909899,
         "status": "public"
       }
     },
@@ -477,7 +479,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015737.5948515,
+        "last_synced": 1795046506.909899,
         "status": "public"
       }
     },
@@ -503,7 +505,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015737.5948515,
+        "last_synced": 1795046506.909899,
         "status": "public"
       }
     },
@@ -529,8 +531,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015737.5948515,
-        "status": "public"
+        "last_synced": 1795046506.909899,
+        "status": "pending_or_private"
       }
     },
     {
@@ -555,7 +557,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015737.5948515,
+        "last_synced": 1795046506.909899,
         "status": "public"
       }
     },
@@ -581,7 +583,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015737.5948515,
+        "last_synced": 1795046506.909899,
         "status": "public"
       }
     },
@@ -607,14 +609,64 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015737.5948515,
+        "last_synced": 1795046506.909899,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "3vnOTM02sEw",
+      "source_video_id": "Ojy4k6Jn0IA",
+      "title": "Seneca's Travel Rule: Expect the Chaos #shorts",
+      "creator": "@DailyStoic",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795046699.992429,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "JXZdzRPZOxQ",
+      "source_video_id": "Ojy4k6Jn0IA",
+      "title": "The Stoic Way to Handle Flight Chaos #shorts",
+      "creator": "@DailyStoic",
+      "topic": "stoicism, discipline, success mindset and mental toughness for young men",
+      "tags": [
+        "mindset",
+        "discipline",
+        "stoicism",
+        "successmindset",
+        "mentalstrength",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795046790.1691484,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_04_motivation",
-    "last_sync": 1795015737.5948515,
+    "last_sync": 1795046506.909899,
     "total_shorts": 18,
     "public_shorts": 8,
     "total_views": 2029,
