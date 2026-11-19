@@ -149,11 +149,12 @@
     "96hYuizB9Qg",
     "z7jMnMM4yos",
     "BvhCofdLHYQ",
-    "CUjV6LCAlvs"
+    "CUjV6LCAlvs",
+    "1IJorUVTwWw",
+    "3IQVNjWH60A"
   ],
   "upload_timestamps": [
-    1794930210.3695421,
-    1794930269.8155882
+    1795046651.2410955
   ],
   "uploaded_shorts": [
     {
@@ -178,7 +179,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015222.1197236,
+        "last_synced": 1795046470.2091825,
         "status": "public"
       }
     },
@@ -204,7 +205,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015222.1197236,
+        "last_synced": 1795046470.2091825,
         "status": "public"
       }
     },
@@ -230,7 +231,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015222.1197236,
+        "last_synced": 1795046470.2091825,
         "status": "public"
       }
     },
@@ -256,7 +257,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015222.1197236,
+        "last_synced": 1795046470.2091825,
         "status": "public"
       }
     },
@@ -282,7 +283,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015222.1197236,
+        "last_synced": 1795046470.2091825,
         "status": "public"
       }
     },
@@ -308,7 +309,7 @@
         "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015222.1197236,
+        "last_synced": 1795046470.2091825,
         "status": "public"
       }
     },
@@ -334,7 +335,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015222.1197236,
+        "last_synced": 1795046470.2091825,
         "status": "public"
       }
     },
@@ -360,7 +361,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015222.1197236,
+        "last_synced": 1795046470.2091825,
         "status": "public"
       }
     },
@@ -386,7 +387,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015222.1197236,
+        "last_synced": 1795046470.2091825,
         "status": "public"
       }
     },
@@ -412,7 +413,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015222.1197236,
+        "last_synced": 1795046470.2091825,
         "status": "public"
       }
     },
@@ -438,7 +439,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015222.1197236,
+        "last_synced": 1795046470.2091825,
         "status": "public"
       }
     },
@@ -464,7 +465,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015222.1197236,
+        "last_synced": 1795046470.2091825,
         "status": "public"
       }
     },
@@ -490,7 +491,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015222.1197236,
+        "last_synced": 1795046470.2091825,
         "status": "public"
       }
     },
@@ -516,7 +517,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015222.1197236,
+        "last_synced": 1795046470.2091825,
         "status": "public"
       }
     },
@@ -542,7 +543,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015222.1197236,
+        "last_synced": 1795046470.2091825,
         "status": "public"
       }
     },
@@ -568,7 +569,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015222.1197236,
+        "last_synced": 1795046470.2091825,
         "status": "public"
       }
     },
@@ -594,7 +595,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015222.1197236,
+        "last_synced": 1795046470.2091825,
         "status": "public"
       }
     },
@@ -617,20 +618,45 @@
       "scheduled_at": null,
       "uploaded_at": 1794930269.8156006,
       "stats": {
-        "views": 4,
+        "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795015222.1197236,
+        "last_synced": 1795046470.2091825,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "IWCxbKxXQJg",
+      "source_video_id": "3IQVNjWH60A",
+      "title": "Why You Suddenly Can't Press The Bar #shorts",
+      "creator": "Jeff Nippard",
+      "topic": "fitness motivation, home workouts, gym training and healthy lifestyle",
+      "tags": [
+        "homeworkout",
+        "fitnessmotivation",
+        "gymlife",
+        "calisthenics",
+        "fitfam",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795046651.2411096,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_03_fitness",
-    "last_sync": 1795015222.1197236,
+    "last_sync": 1795046470.2091825,
     "total_shorts": 18,
     "public_shorts": 11,
-    "total_views": 29,
+    "total_views": 30,
     "median_views": 2,
     "creator_weights": {
       "@ChrisHeria": 1.35,
@@ -639,7 +665,7 @@
       "Lucy Lismore": 1.0,
       "Body Project": 1.0,
       "THENX": 1.35,
-      "Flow High Performance": 1.35
+      "Flow High Performance": 1.8
     }
   }
 }
