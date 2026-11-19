@@ -167,8 +167,8 @@
         "views": 1067,
         "likes": 14,
         "comments": 0,
-        "last_synced": 1795046506.909899,
-        "status": "public"
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     },
     {
@@ -193,8 +193,8 @@
         "views": 823,
         "likes": 5,
         "comments": 0,
-        "last_synced": 1795046506.909899,
-        "status": "public"
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     },
     {
@@ -219,8 +219,8 @@
         "views": 81,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795046506.909899,
-        "status": "public"
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     },
     {
@@ -245,8 +245,8 @@
         "views": 51,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795046506.909899,
-        "status": "public"
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     },
     {
@@ -271,8 +271,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795046506.909899,
-        "status": "public"
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     },
     {
@@ -297,8 +297,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795046506.909899,
-        "status": "public"
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     },
     {
@@ -323,8 +323,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795046506.909899,
-        "status": "public"
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     },
     {
@@ -349,8 +349,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795046506.909899,
-        "status": "public"
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     },
     {
@@ -375,8 +375,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795046506.909899,
-        "status": "public"
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     },
     {
@@ -401,8 +401,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795046506.909899,
-        "status": "public"
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     },
     {
@@ -427,8 +427,8 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795046506.909899,
-        "status": "public"
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     },
     {
@@ -453,8 +453,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795046506.909899,
-        "status": "public"
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     },
     {
@@ -479,8 +479,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795046506.909899,
-        "status": "public"
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     },
     {
@@ -505,8 +505,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795046506.909899,
-        "status": "public"
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     },
     {
@@ -531,7 +531,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795046506.909899,
+        "last_synced": 1795072897.590663,
         "status": "pending_or_private"
       }
     },
@@ -557,8 +557,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795046506.909899,
-        "status": "public"
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     },
     {
@@ -583,8 +583,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795046506.909899,
-        "status": "public"
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     },
     {
@@ -609,8 +609,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795046506.909899,
-        "status": "public"
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     },
     {
@@ -635,7 +635,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     },
     {
@@ -660,23 +661,18 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 0
+        "last_synced": 1795072897.590663,
+        "status": "pending_or_private"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_04_motivation",
-    "last_sync": 1795046506.909899,
-    "total_shorts": 18,
-    "public_shorts": 8,
-    "total_views": 2029,
-    "median_views": 27.0,
-    "creator_weights": {
-      "@JordanBPeterson": 1.8,
-      "@ChrisWillx": 1.8,
-      "Psychoresto": 0.65,
-      "HealthyGamerGG": 1.0,
-      "Aerondight": 1.0
-    }
+    "last_sync": 1795072897.590663,
+    "total_shorts": 20,
+    "public_shorts": 0,
+    "total_views": 0,
+    "median_views": 100.0,
+    "creator_weights": {}
   }
 }
