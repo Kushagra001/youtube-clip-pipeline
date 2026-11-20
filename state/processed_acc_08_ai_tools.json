@@ -147,11 +147,13 @@
     "nn29T4yPc8E",
     "tEysfZGzJc8",
     "CWhkEbykVoE",
-    "-y4swMaeJeI"
+    "-y4swMaeJeI",
+    "1uAetuID7u0",
+    "NyfYxpXiw_0"
   ],
   "upload_timestamps": [
-    1795047903.0088522,
-    1795047971.4937387
+    1795155740.8641486,
+    1795155796.2242177
   ],
   "uploaded_shorts": [
     {
@@ -168,7 +170,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "pending_or_private"
       }
     },
@@ -186,7 +188,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "pending_or_private"
       }
     },
@@ -210,7 +212,7 @@
         "views": 1198,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -234,7 +236,7 @@
         "views": 380,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -258,7 +260,7 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -282,7 +284,7 @@
         "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -306,7 +308,7 @@
         "views": 10,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -330,7 +332,7 @@
         "views": 27,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -354,7 +356,7 @@
         "views": 72,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -378,7 +380,7 @@
         "views": 75,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -402,7 +404,7 @@
         "views": 318,
         "likes": 1,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -426,7 +428,7 @@
         "views": 111,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -450,7 +452,7 @@
         "views": 131,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -471,10 +473,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794612380.4212258,
       "stats": {
-        "views": 1112,
+        "views": 1113,
         "likes": 5,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -498,7 +500,7 @@
         "views": 92,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -522,7 +524,7 @@
         "views": 95,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -546,7 +548,7 @@
         "views": 33,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -570,7 +572,7 @@
         "views": 202,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -594,7 +596,7 @@
         "views": 112,
         "likes": 1,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -615,10 +617,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794930338.9292216,
       "stats": {
-        "views": 761,
+        "views": 759,
         "likes": 4,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -639,10 +641,10 @@
       "scheduled_at": null,
       "uploaded_at": 1795047903.0088658,
       "stats": {
-        "views": 63,
+        "views": 65,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
       }
     },
@@ -663,20 +665,66 @@
       "scheduled_at": null,
       "uploaded_at": 1795047971.4937506,
       "stats": {
-        "views": 84,
-        "likes": 1,
+        "views": 90,
+        "likes": 2,
         "comments": 0,
-        "last_synced": 1795119196.8942769,
+        "last_synced": 1795155621.5017352,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "A3GJ8WgSANU",
+      "source_video_id": "1uAetuID7u0",
+      "title": "Stop Opening Your Computer for Dashboards #shorts",
+      "creator": "Paul J Lipsky",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795155740.8641658,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "EnP6TJ1jAuE",
+      "source_video_id": "1uAetuID7u0",
+      "title": "ChatGPT Drafts Your Emails While You Sleep #shorts",
+      "creator": "Paul J Lipsky",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795155796.224231,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1795119196.8942769,
+    "last_sync": 1795155621.5017352,
     "total_shorts": 22,
     "public_shorts": 20,
-    "total_views": 5394,
+    "total_views": 5401,
     "median_views": 111.5,
     "creator_weights": {
       "Matt Wolfe": 1.8,
