@@ -149,9 +149,14 @@
     "2rOzAk9r6_A",
     "Cl3-Ebtefss",
     "5TJvGMAtb6U",
-    "L8F5IJVpNIg"
+    "L8F5IJVpNIg",
+    "fWCocjh5aK0",
+    "qKcRUOWYQ9w"
   ],
-  "upload_timestamps": [],
+  "upload_timestamps": [
+    1795204138.4266353,
+    1795204209.380172
+  ],
   "uploaded_shorts": [
     {
       "video_id": "4GgN8c8fcwQ",
@@ -175,8 +180,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -201,8 +206,8 @@
         "views": 17,
         "likes": 0,
         "comments": 2,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -227,7 +232,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
+        "last_synced": 1795204004.4745831,
         "status": "pending_or_private"
       }
     },
@@ -253,7 +258,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
+        "last_synced": 1795204004.4745831,
         "status": "pending_or_private"
       }
     },
@@ -279,8 +284,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -305,8 +310,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -331,8 +336,8 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -357,8 +362,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -380,11 +385,11 @@
       "scheduled_at": null,
       "uploaded_at": 1794442510.5995524,
       "stats": {
-        "views": 114,
-        "likes": 1,
+        "views": 117,
+        "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -409,8 +414,8 @@
         "views": 8,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -435,8 +440,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -461,8 +466,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -484,11 +489,11 @@
       "scheduled_at": null,
       "uploaded_at": 1794661937.056591,
       "stats": {
-        "views": 1,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -513,8 +518,8 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -539,8 +544,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -565,8 +570,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -591,8 +596,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -614,11 +619,11 @@
       "scheduled_at": null,
       "uploaded_at": 1794841997.4253852,
       "stats": {
-        "views": 2,
+        "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -640,11 +645,11 @@
       "scheduled_at": null,
       "uploaded_at": 1794930152.9431877,
       "stats": {
-        "views": 1,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -669,8 +674,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -695,8 +700,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
       }
     },
     {
@@ -718,21 +723,80 @@
       "scheduled_at": null,
       "uploaded_at": 1795046745.8383136,
       "stats": {
-        "views": 2,
+        "views": 4,
         "likes": 1,
         "comments": 0,
-        "last_synced": 1795155841.7066832,
-        "status": "pending_or_private"
+        "last_synced": 1795204004.4745831,
+        "status": "public"
+      }
+    },
+    {
+      "video_id": "1mEoVJNzbQo",
+      "source_video_id": "fWCocjh5aK0",
+      "title": "PhD in Thinking with ADHD #shorts",
+      "creator": "TEDx Talks",
+      "topic": "mental health tips, anxiety management, ADHD productivity and emotional wellness",
+      "tags": [
+        "mentalhealth",
+        "anxietytips",
+        "adhdtips",
+        "selfcare",
+        "wellnessjourney",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795204138.42665,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "shPDgMr_D8U",
+      "source_video_id": "fWCocjh5aK0",
+      "title": "ADHD: The Exploration Superpower #shorts",
+      "creator": "TEDx Talks",
+      "topic": "mental health tips, anxiety management, ADHD productivity and emotional wellness",
+      "tags": [
+        "mentalhealth",
+        "anxietytips",
+        "adhdtips",
+        "selfcare",
+        "wellnessjourney",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795204209.3801832,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_10_mental_health",
-    "last_sync": 1795155841.7066832,
+    "last_sync": 1795204004.4745831,
     "total_shorts": 22,
-    "public_shorts": 0,
-    "total_views": 0,
-    "median_views": 100.0,
-    "creator_weights": {}
+    "public_shorts": 13,
+    "total_views": 167,
+    "median_views": 3,
+    "creator_weights": {
+      "@HealthyGamerGG": 1.35,
+      "@MelRobbins": 1.0,
+      "ADHD Chatter Podcast": 1.0,
+      "Zeliha Akpinar": 1.8,
+      "Sukie Baxter": 1.0,
+      "HealthyGamerGG": 1.0,
+      "Therapy in a Nutshell": 1.35,
+      "@hubermanlab": 1.0
+    }
   }
 }
