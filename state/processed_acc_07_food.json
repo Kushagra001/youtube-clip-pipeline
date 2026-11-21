@@ -165,7 +165,9 @@
     "1m9ReeKwJ4I",
     "qb4JbUjr5tM",
     "0Ec1H-7mgZw",
-    "RSJuo5Xu0AI"
+    "RSJuo5Xu0AI",
+    "ARJjqOtW2Ic",
+    "O1ehKe3wEbc"
   ],
   "upload_timestamps": [
     1795155834.2779746,
@@ -194,7 +196,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "pending_or_private"
       }
     },
@@ -220,7 +222,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "pending_or_private"
       }
     },
@@ -246,7 +248,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -272,7 +274,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -298,7 +300,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -324,7 +326,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -350,7 +352,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -376,7 +378,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -402,7 +404,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -428,7 +430,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -454,7 +456,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -480,7 +482,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -506,7 +508,7 @@
         "views": 14,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -532,7 +534,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -558,7 +560,7 @@
         "views": 17,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -581,10 +583,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794750205.8338602,
       "stats": {
-        "views": 43,
+        "views": 44,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -610,7 +612,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -636,7 +638,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -659,10 +661,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794930145.6483722,
       "stats": {
-        "views": 4,
+        "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -688,7 +690,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -714,7 +716,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -737,10 +739,10 @@
       "scheduled_at": null,
       "uploaded_at": 1795047688.90409,
       "stats": {
-        "views": 1,
+        "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -766,7 +768,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     },
@@ -792,17 +794,17 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203976.6862347,
+        "last_synced": 1795241041.3877203,
         "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_07_food",
-    "last_sync": 1795203976.6862347,
+    "last_sync": 1795241041.3877203,
     "total_shorts": 24,
     "public_shorts": 18,
-    "total_views": 114,
+    "total_views": 118,
     "median_views": 3.0,
     "creator_weights": {
       "Will Tennyson": 1.35,
