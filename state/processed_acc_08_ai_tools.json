@@ -153,11 +153,13 @@
     "-I9Csc3khis",
     "9RYDaLnB6ec",
     "-0uvPVwPFgM",
-    "-9Iw86Y991E"
+    "-9Iw86Y991E",
+    "oXmofS-sjwI",
+    "D_YzcH0VsGY"
   ],
   "upload_timestamps": [
-    1795155740.8641486,
-    1795155796.2242177
+    1795287314.3799064,
+    1795287393.836665
   ],
   "uploaded_shorts": [
     {
@@ -174,7 +176,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "pending_or_private"
       }
     },
@@ -192,7 +194,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "pending_or_private"
       }
     },
@@ -216,7 +218,7 @@
         "views": 1198,
         "likes": 12,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -240,7 +242,7 @@
         "views": 380,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -264,7 +266,7 @@
         "views": 118,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -288,7 +290,7 @@
         "views": 400,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -312,7 +314,7 @@
         "views": 10,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -336,7 +338,7 @@
         "views": 27,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -360,7 +362,7 @@
         "views": 72,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -384,7 +386,7 @@
         "views": 75,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -408,7 +410,7 @@
         "views": 318,
         "likes": 1,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -432,7 +434,7 @@
         "views": 111,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -453,10 +455,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794612304.909172,
       "stats": {
-        "views": 131,
+        "views": 132,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -480,7 +482,7 @@
         "views": 1114,
         "likes": 5,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -504,7 +506,7 @@
         "views": 92,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -528,7 +530,7 @@
         "views": 95,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -552,7 +554,7 @@
         "views": 33,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -576,7 +578,7 @@
         "views": 202,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -600,7 +602,7 @@
         "views": 112,
         "likes": 1,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -621,10 +623,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794930338.9292216,
       "stats": {
-        "views": 758,
+        "views": 759,
         "likes": 4,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -645,10 +647,10 @@
       "scheduled_at": null,
       "uploaded_at": 1795047903.0088658,
       "stats": {
-        "views": 78,
+        "views": 81,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -669,10 +671,10 @@
       "scheduled_at": null,
       "uploaded_at": 1795047971.4937506,
       "stats": {
-        "views": 146,
+        "views": 151,
         "likes": 2,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -693,10 +695,10 @@
       "scheduled_at": null,
       "uploaded_at": 1795155740.8641658,
       "stats": {
-        "views": 173,
+        "views": 174,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
       }
     },
@@ -717,21 +719,67 @@
       "scheduled_at": null,
       "uploaded_at": 1795155796.224231,
       "stats": {
-        "views": 197,
+        "views": 198,
         "likes": 1,
         "comments": 0,
-        "last_synced": 1795241005.9571912,
+        "last_synced": 1795287161.8321953,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "ErK15IRJgPQ",
+      "source_video_id": "oXmofS-sjwI",
+      "title": "Gems vs Folders: The AI Upgrade #shorts",
+      "creator": "Sandeep Swadia",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795287314.3799224,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "ros9ZDvM9mI",
+      "source_video_id": "oXmofS-sjwI",
+      "title": "Context Switching Kills 40% Productivity #shorts",
+      "creator": "Sandeep Swadia",
+      "topic": "AI tools, automation and productivity hacks for non-technical everyday users",
+      "tags": [
+        "aitools",
+        "artificialintelligence",
+        "automation",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795287393.8366797,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_08_ai_tools",
-    "last_sync": 1795241005.9571912,
+    "last_sync": 1795287161.8321953,
     "total_shorts": 24,
     "public_shorts": 22,
-    "total_views": 5840,
-    "median_views": 124.5,
+    "total_views": 5852,
+    "median_views": 125.0,
     "creator_weights": {
       "Matt Wolfe": 1.8,
       "@DavidOndrej": 1.35,
