@@ -147,7 +147,8 @@
     "JEipcW3Ym6Y",
     "ZhPYN53HvKc",
     "PyUCpAvF0UA",
-    "e1P0UP3KwfI"
+    "e1P0UP3KwfI",
+    "yelitBiNous"
   ],
   "upload_timestamps": [
     1795155366.2460577,
@@ -176,7 +177,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
+        "last_synced": 1795241016.3609538,
         "status": "pending_or_private"
       }
     },
@@ -202,7 +203,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
+        "last_synced": 1795241016.3609538,
         "status": "pending_or_private"
       }
     },
@@ -228,7 +229,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
+        "last_synced": 1795241016.3609538,
         "status": "public"
       }
     },
@@ -254,7 +255,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
+        "last_synced": 1795241016.3609538,
         "status": "public"
       }
     },
@@ -280,7 +281,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
+        "last_synced": 1795241016.3609538,
         "status": "public"
       }
     },
@@ -306,7 +307,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
+        "last_synced": 1795241016.3609538,
         "status": "public"
       }
     },
@@ -332,7 +333,7 @@
         "views": 17,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
+        "last_synced": 1795241016.3609538,
         "status": "public"
       }
     },
@@ -358,8 +359,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
-        "status": "pending_or_private"
+        "last_synced": 1795241016.3609538,
+        "status": "public"
       }
     },
     {
@@ -384,8 +385,8 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
-        "status": "pending_or_private"
+        "last_synced": 1795241016.3609538,
+        "status": "public"
       }
     },
     {
@@ -410,8 +411,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
-        "status": "pending_or_private"
+        "last_synced": 1795241016.3609538,
+        "status": "public"
       }
     },
     {
@@ -436,8 +437,8 @@
         "views": 10,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
-        "status": "pending_or_private"
+        "last_synced": 1795241016.3609538,
+        "status": "public"
       }
     },
     {
@@ -462,8 +463,8 @@
         "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
-        "status": "pending_or_private"
+        "last_synced": 1795241016.3609538,
+        "status": "public"
       }
     },
     {
@@ -488,8 +489,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
-        "status": "pending_or_private"
+        "last_synced": 1795241016.3609538,
+        "status": "public"
       }
     },
     {
@@ -514,8 +515,8 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
-        "status": "pending_or_private"
+        "last_synced": 1795241016.3609538,
+        "status": "public"
       }
     },
     {
@@ -537,11 +538,11 @@
       "scheduled_at": null,
       "uploaded_at": 1794841863.3945134,
       "stats": {
-        "views": 4,
+        "views": 5,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
-        "status": "pending_or_private"
+        "last_synced": 1795241016.3609538,
+        "status": "public"
       }
     },
     {
@@ -566,8 +567,8 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
-        "status": "pending_or_private"
+        "last_synced": 1795241016.3609538,
+        "status": "public"
       }
     },
     {
@@ -592,8 +593,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
-        "status": "pending_or_private"
+        "last_synced": 1795241016.3609538,
+        "status": "public"
       }
     },
     {
@@ -618,8 +619,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
-        "status": "pending_or_private"
+        "last_synced": 1795241016.3609538,
+        "status": "public"
       }
     },
     {
@@ -641,11 +642,11 @@
       "scheduled_at": null,
       "uploaded_at": 1795046671.6173148,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
-        "status": "pending_or_private"
+        "last_synced": 1795241016.3609538,
+        "status": "public"
       }
     },
     {
@@ -667,11 +668,11 @@
       "scheduled_at": null,
       "uploaded_at": 1795155366.2460752,
       "stats": {
-        "views": 0,
+        "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
-        "status": "pending_or_private"
+        "last_synced": 1795241016.3609538,
+        "status": "public"
       }
     },
     {
@@ -696,22 +697,26 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795203948.2403374,
-        "status": "pending_or_private"
+        "last_synced": 1795241016.3609538,
+        "status": "public"
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_02_dogs",
-    "last_sync": 1795203948.2403374,
+    "last_sync": 1795241016.3609538,
     "total_shorts": 21,
-    "public_shorts": 5,
-    "total_views": 28,
-    "median_views": 3,
+    "public_shorts": 14,
+    "total_views": 60,
+    "median_views": 3.0,
     "creator_weights": {
-      "Tom Davis Dog Training ": 1.8,
+      "Tom Davis Dog Training ": 1.35,
       "Funny Pet's Life": 1.0,
-      "Daily Dose Of Internet and Daily Dose of Pets": 1.0
+      "Daily Dose Of Internet and Daily Dose of Pets": 1.0,
+      "Comfort Zone TV": 1.0,
+      "The Pet Collective": 1.35,
+      "Laugh TV": 1.8,
+      "Dog Whisperer with Cesar Millan": 1.0
     }
   }
 }
