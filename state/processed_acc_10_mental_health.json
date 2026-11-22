@@ -154,11 +154,13 @@
     "qKcRUOWYQ9w",
     "At9Zhpfm_Cg",
     "35lS7gJVTyA",
-    "Hvs_49dikDQ"
+    "Hvs_49dikDQ",
+    "ToZhRR3BKvA",
+    "yj6_1t1PAcE"
   ],
   "upload_timestamps": [
-    1795204138.4266353,
-    1795204209.380172
+    1795326133.9673367,
+    1795326199.302887
   ],
   "uploaded_shorts": [
     {
@@ -183,7 +185,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -209,7 +211,7 @@
         "views": 17,
         "likes": 0,
         "comments": 2,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -235,7 +237,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "pending_or_private"
       }
     },
@@ -261,7 +263,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "pending_or_private"
       }
     },
@@ -287,7 +289,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -313,7 +315,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -339,7 +341,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -365,8 +367,8 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
-        "status": "pending_or_private"
+        "last_synced": 1795326020.0506396,
+        "status": "public"
       }
     },
     {
@@ -388,10 +390,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794442510.5995524,
       "stats": {
-        "views": 118,
+        "views": 119,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -417,7 +419,7 @@
         "views": 8,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -443,7 +445,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -469,8 +471,8 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
-        "status": "public"
+        "last_synced": 1795326020.0506396,
+        "status": "pending_or_private"
       }
     },
     {
@@ -495,7 +497,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -521,7 +523,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -547,7 +549,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -573,7 +575,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -599,7 +601,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -625,7 +627,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -651,7 +653,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -677,7 +679,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -703,7 +705,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -729,7 +731,7 @@
         "views": 4,
         "likes": 1,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -755,7 +757,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
       }
     },
@@ -781,20 +783,70 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795287069.5822995,
+        "last_synced": 1795326020.0506396,
         "status": "public"
+      }
+    },
+    {
+      "video_id": "JpoNDR6wIzM",
+      "source_video_id": "ToZhRR3BKvA",
+      "title": "Your Anger Scale Goes To 20 #shorts",
+      "creator": "@HealthyGamerGG",
+      "topic": "mental health tips, anxiety management, ADHD productivity and emotional wellness",
+      "tags": [
+        "mentalhealth",
+        "anxietytips",
+        "adhdtips",
+        "selfcare",
+        "wellnessjourney",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795326133.967354,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
+      }
+    },
+    {
+      "video_id": "etgGuZuWgTM",
+      "source_video_id": "ToZhRR3BKvA",
+      "title": "Why Criticism Never Gets Easier #shorts",
+      "creator": "@HealthyGamerGG",
+      "topic": "mental health tips, anxiety management, ADHD productivity and emotional wellness",
+      "tags": [
+        "mentalhealth",
+        "anxietytips",
+        "adhdtips",
+        "selfcare",
+        "wellnessjourney",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795326199.3028996,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_10_mental_health",
-    "last_sync": 1795287069.5822995,
+    "last_sync": 1795326020.0506396,
     "total_shorts": 24,
-    "public_shorts": 13,
-    "total_views": 170,
-    "median_views": 3,
+    "public_shorts": 12,
+    "total_views": 169,
+    "median_views": 3.0,
     "creator_weights": {
-      "@HealthyGamerGG": 1.35,
+      "@HealthyGamerGG": 1.8,
       "@MelRobbins": 1.0,
       "ADHD Chatter Podcast": 1.0,
       "Zeliha Akpinar": 1.8,
