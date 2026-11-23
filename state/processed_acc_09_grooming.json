@@ -151,11 +151,12 @@
     "azCPrSJcNEg",
     "_bTgPQBxNNE",
     "0vsJs8f9TgY",
-    "b5j9Uip0scI"
+    "b5j9Uip0scI",
+    "r4ewo2zwgCY"
   ],
   "upload_timestamps": [
-    1795390025.0766785,
-    1795415228.180192
+    1795415228.180192,
+    1795477698.8283203
   ],
   "uploaded_shorts": [
     {
@@ -180,7 +181,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -206,7 +207,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "pending_or_private"
       }
     },
@@ -232,7 +233,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -258,7 +259,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -284,7 +285,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -310,7 +311,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -336,7 +337,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -362,7 +363,7 @@
         "views": 30,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -388,7 +389,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -414,7 +415,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -440,7 +441,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -466,7 +467,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -492,7 +493,7 @@
         "views": 14,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -518,7 +519,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -544,7 +545,7 @@
         "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -570,7 +571,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -596,7 +597,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -622,7 +623,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -645,10 +646,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794930294.4622452,
       "stats": {
-        "views": 3,
+        "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -674,7 +675,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -700,7 +701,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -726,7 +727,7 @@
         "views": 9,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -752,7 +753,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -778,7 +779,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -801,10 +802,10 @@
       "scheduled_at": null,
       "uploaded_at": 1795287283.778178,
       "stats": {
-        "views": 7,
+        "views": 9,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -830,7 +831,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795415089.9630797,
+        "last_synced": 1795477567.3218272,
         "status": "public"
       }
     },
@@ -856,16 +857,42 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
+        "last_synced": 1795477567.3218272,
+        "status": "public"
+      }
+    },
+    {
+      "video_id": "wjc6T2oHn7M",
+      "source_video_id": "r4ewo2zwgCY",
+      "title": "The Mullet Was Ancient Military Gear #shorts",
+      "creator": "Glowin' Up",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795477698.82834,
+      "stats": {
+        "views": 0,
+        "likes": 0,
+        "comments": 0,
         "last_synced": 0
       }
     }
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1795415089.9630797,
-    "total_shorts": 26,
+    "last_sync": 1795477567.3218272,
+    "total_shorts": 27,
     "public_shorts": 21,
-    "total_views": 111,
+    "total_views": 114,
     "median_views": 3,
     "creator_weights": {
       "Teachingmensfashion": 1.35,
