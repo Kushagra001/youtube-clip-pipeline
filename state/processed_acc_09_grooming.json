@@ -152,11 +152,12 @@
     "_bTgPQBxNNE",
     "0vsJs8f9TgY",
     "b5j9Uip0scI",
-    "r4ewo2zwgCY"
+    "r4ewo2zwgCY",
+    "6eP0uQBPPeo"
   ],
   "upload_timestamps": [
-    1795415228.180192,
-    1795477698.8283203
+    1795477698.8283203,
+    1795510771.7308342
   ],
   "uploaded_shorts": [
     {
@@ -181,7 +182,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -207,7 +208,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "pending_or_private"
       }
     },
@@ -233,7 +234,7 @@
         "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -259,7 +260,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -285,7 +286,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -311,7 +312,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -337,7 +338,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -363,7 +364,7 @@
         "views": 30,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -389,7 +390,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -415,7 +416,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -441,7 +442,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -467,7 +468,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -493,7 +494,7 @@
         "views": 14,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -519,7 +520,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -545,7 +546,7 @@
         "views": 7,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -571,7 +572,7 @@
         "views": 4,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -597,7 +598,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -623,7 +624,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -646,10 +647,10 @@
       "scheduled_at": null,
       "uploaded_at": 1794930294.4622452,
       "stats": {
-        "views": 4,
+        "views": 6,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -675,7 +676,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -701,7 +702,7 @@
         "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -727,7 +728,7 @@
         "views": 9,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -753,7 +754,7 @@
         "views": 3,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -779,7 +780,7 @@
         "views": 1,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -805,7 +806,7 @@
         "views": 9,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -831,7 +832,7 @@
         "views": 0,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -854,10 +855,10 @@
       "scheduled_at": null,
       "uploaded_at": 1795415228.1802082,
       "stats": {
-        "views": 0,
+        "views": 2,
         "likes": 0,
         "comments": 0,
-        "last_synced": 1795477567.3218272,
+        "last_synced": 1795510636.9133081,
         "status": "public"
       }
     },
@@ -880,6 +881,32 @@
       "scheduled_at": null,
       "uploaded_at": 1795477698.82834,
       "stats": {
+        "views": 2,
+        "likes": 0,
+        "comments": 0,
+        "last_synced": 1795510636.9133081,
+        "status": "public"
+      }
+    },
+    {
+      "video_id": "3bZaHx5d6o4",
+      "source_video_id": "6eP0uQBPPeo",
+      "title": "The Science of Calm Dominance #shorts",
+      "creator": "Teachingmensfashion",
+      "topic": "men's skincare routines, haircare tips and grooming for modern men",
+      "tags": [
+        "mensgrooming",
+        "mensskincare",
+        "menshaircare",
+        "groomingformen",
+        "menstyle",
+        "shorts",
+        "viral"
+      ],
+      "privacy_status": "public",
+      "scheduled_at": null,
+      "uploaded_at": 1795510771.7308495,
+      "stats": {
         "views": 0,
         "likes": 0,
         "comments": 0,
@@ -889,10 +916,10 @@
   ],
   "analytics_summary": {
     "channel_id": "acc_09_grooming",
-    "last_sync": 1795477567.3218272,
-    "total_shorts": 27,
-    "public_shorts": 21,
-    "total_views": 114,
+    "last_sync": 1795510636.9133081,
+    "total_shorts": 28,
+    "public_shorts": 23,
+    "total_views": 120,
     "median_views": 3,
     "creator_weights": {
       "Teachingmensfashion": 1.35,
@@ -903,10 +930,11 @@
       "taeveniti": 1.0,
       "Alex Costa": 1.8,
       "Self Guide": 1.35,
-      "@GentlemansGazette": 1.0,
+      "@GentlemansGazette": 1.35,
       "Style With Faizy": 1.0,
       "Allison Baek": 1.35,
-      "@AlexCosta": 1.35
+      "@AlexCosta": 1.35,
+      "Glowin' Up": 1.0
     }
   }
 }
